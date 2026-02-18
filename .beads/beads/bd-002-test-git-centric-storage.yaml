@@ -10,17 +10,20 @@ description: This bead tests that beads are properly saved to the beads-sync git
 status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771431380-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    dispatch_count: "1"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-18T17:06:12Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T16:47:52.288595891Z
-updatedat: 2026-02-18T16:47:52.288728148Z
+updatedat: 2026-02-18T21:31:34.053909534Z
 closedat: null
