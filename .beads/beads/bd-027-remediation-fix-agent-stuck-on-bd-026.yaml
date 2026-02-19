@@ -18,22 +18,37 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_output: '{"action": "read_bead_conversation", "bead_id": "bd-026", "notes": "Thought: The conversation history is still truncated. Acting: reading the full conversation history of bead bd-026 again to ensure I get the complete context."}'
+    agent_task_id: task-bd-027-1771543130129046619
+    agent_tokens: "269152"
+    agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771543130
     conversation_session_id: 7eaed557-eb18-4244-8f44-e4a1b58f4cc2
     correlation_id: dispatch-bd-027-1771543130127892619
     created_by: dispatcher_auto_remediation
     dispatch_count: "3"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-19T23:18:50Z"
     last_error: command parameter required
+    last_failed_at: "2026-02-19T23:28:37Z"
+    last_run_at: "2026-02-19T23:28:37Z"
+    loop_detected: "false"
+    loop_iterations: "18"
+    provider_id: sparky-local
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-19T23:00:01Z"
     remediation_for: bd-026
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-19T23:28:37Z"
     requires_persona: remediation-specialist
     stuck_agent_id: agent-1771534515-Devops Engineer (Default)
     stuck_iterations: "15"
     stuck_terminal_reason: inner_loop
+    terminal_reason: inner_loop
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:59:52.630615243Z
-updatedat: 2026-02-19T23:18:50.131918897Z
+updatedat: 2026-02-19T23:28:37.994333654Z
 closedat: null
