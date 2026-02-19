@@ -26,7 +26,7 @@ context:
     conversation_session_id: 7eaed557-eb18-4244-8f44-e4a1b58f4cc2
     correlation_id: dispatch-bd-027-1771543130127892619
     created_by: dispatcher_auto_remediation
-    dispatch_count: "4"
+    dispatch_count: "5"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-19T23:18:50Z"
     last_error: command parameter required
@@ -50,5 +50,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:59:52.630615243Z
-updatedat: 2026-02-19T23:30:42.795765556Z
+updatedat: 2026-02-19T23:30:43.806675297Z
 closedat: null
