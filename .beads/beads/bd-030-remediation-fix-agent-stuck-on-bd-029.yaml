@@ -35,8 +35,8 @@ context:
     loop_iterations: "14"
     provider_id: ollama-server
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-19T23:34:18Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-19T23:36:48Z"
     remediation_for: bd-029
     requires_persona: remediation-specialist
     stuck_agent_id: agent-1771534515-Engineering Manager (Default)
@@ -47,5 +47,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T23:34:15.894042086Z
-updatedat: 2026-02-19T23:36:15.198768176Z
+updatedat: 2026-02-19T23:36:48.390817823Z
 closedat: null
