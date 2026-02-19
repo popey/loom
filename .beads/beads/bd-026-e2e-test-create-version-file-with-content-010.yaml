@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-026
+type: task
+title: '[E2E Test] Create VERSION file with content 0.1.0'
+description: ""
+status: open
+priority: 2
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-19T22:46:01.972818803Z
+updatedat: 2026-02-19T22:46:01.973326861Z
+closedat: null
