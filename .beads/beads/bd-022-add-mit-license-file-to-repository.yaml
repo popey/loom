@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-022
+type: task
+title: Add MIT license file to repository
+description: Create a LICENSE file at the root of the repository containing the standard MIT License text with copyright holder set to the Loom project. This is a simple file creation task to validate the autonomous pipeline.
+status: open
+priority: 1
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-19T21:25:24.277298603Z
+updatedat: 2026-02-19T21:25:24.277513356Z
+closedat: null
