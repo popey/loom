@@ -29,11 +29,11 @@ context:
     last_run_at: "2026-02-19T03:15:43Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: unexpected status code 401: {"error":{"message":"Authentication Error, No api key passed in.","type":"auth_error","param":"None","code":"401"}}'
     loop_detected: "false"
-    loop_detection_reason: Repeated authentication errors (6 attempts) - provider credentials invalid or missing
+    loop_detection_reason: Repeated authentication errors (7 attempts) - provider credentials invalid or missing
     progress_summary: No progress data
     provider_id: nvidia-cloud-1
-    ralph_blocked_at: "2026-02-19T22:39:34Z"
-    ralph_blocked_reason: 'dispatch_count=21 exceeded max_hops=20, stuck in loop: Repeated authentication errors (6 attempts) - provider credentials invalid or missing'
+    ralph_blocked_at: "2026-02-19T22:39:37Z"
+    ralph_blocked_reason: 'dispatch_count=21 exceeded max_hops=20, stuck in loop: Repeated authentication errors (7 attempts) - provider credentials invalid or missing'
     redispatch_requested: "false"
     redispatch_requested_at: "2026-02-19T22:39:33Z"
     revert_status: not_attempted
@@ -41,5 +41,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T16:47:52.288595891Z
-updatedat: 2026-02-19T22:39:34.981555265Z
+updatedat: 2026-02-19T22:39:37.278139477Z
 closedat: null
