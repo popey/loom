@@ -18,13 +18,28 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_output: '{"action": "bash", "command": "go build -v ./...", "notes": "Thought: The build is still failing, and we need more detailed output. Acting: running the build with verbose output to identify the issue."}'
+    agent_task_id: task-bd-022-1771538182739366102
+    agent_tokens: "129409"
+    agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771538182
     conversation_session_id: 10722dd3-60c8-4a17-ac69-03d5bf96d9dc
     dispatch_count: "4"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
+    last_failed_at: "2026-02-19T22:22:34Z"
+    last_run_at: "2026-02-19T22:22:34Z"
+    loop_detected: "false"
+    loop_iterations: "22"
+    provider_id: ollama-server
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-19T21:25:27Z"
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-19T22:22:34Z"
+    terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T21:25:24.277298603Z
-updatedat: 2026-02-19T21:56:21.031291062Z
+updatedat: 2026-02-19T22:22:34.810772236Z
 closedat: null
