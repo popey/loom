@@ -27,7 +27,7 @@ context:
     correlation_id: dispatch-bd-022-1771539877392760011
     dispatch_count: "5"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    failed_at: "2026-02-19T22:29:15Z"
+    failed_at: "2026-02-19T22:29:25Z"
     last_error: command parameter required
     last_failed_at: "2026-02-19T22:27:12Z"
     last_run_at: "2026-02-19T22:27:12Z"
@@ -44,5 +44,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T21:25:24.277298603Z
-updatedat: 2026-02-19T22:29:15.210718735Z
+updatedat: 2026-02-19T22:29:25.86313041Z
 closedat: null
