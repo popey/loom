@@ -35,12 +35,12 @@ context:
     loop_iterations: "23"
     provider_id: vllm-local
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-19T22:28:58Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-19T23:39:04Z"
     terminal_reason: completed
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:28:56.236352795Z
-updatedat: 2026-02-19T23:38:24.350888665Z
+updatedat: 2026-02-19T23:39:04.051714167Z
 closedat: null
