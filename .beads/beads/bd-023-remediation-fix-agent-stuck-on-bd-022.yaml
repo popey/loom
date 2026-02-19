@@ -18,19 +18,34 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_output: '{"action": "bash", "command": "go test -v ./...", "notes": "Thought: The `go test -v ./...` command ran successfully, but the tests are still failing. I need to capture the detailed test output to identify the specific errors. Acting: running the `go test -v ./...` command again to capture the detailed output."}'
+    agent_task_id: task-bd-023-1771539764049823442
+    agent_tokens: "211376"
+    agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771539284
     conversation_session_id: d32e7c97-975d-4d1d-a2ba-094e61b41ac1
     created_by: dispatcher_auto_remediation
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
+    last_failed_at: "2026-02-19T22:24:34Z"
+    last_run_at: "2026-02-19T22:24:34Z"
+    loop_detected: "false"
+    loop_iterations: "20"
+    provider_id: ollama-server
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-19T22:22:38Z"
     remediation_for: bd-022
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-19T22:24:34Z"
     requires_persona: remediation-specialist
     stuck_agent_id: agent-1771534515-Engineering Manager (Default)
     stuck_iterations: "22"
     stuck_terminal_reason: progress_stagnant
+    terminal_reason: inner_loop
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:22:35.075360957Z
-updatedat: 2026-02-19T22:22:42.313069543Z
+updatedat: 2026-02-19T22:24:34.686498159Z
 closedat: null
