@@ -20,7 +20,7 @@ tags: []
 context:
     conversation_session_id: 8cbb4dc0-677f-4c59-99bf-87feacaa4d8b
     correlation_id: dispatch-bd-026-1771541328882901365
-    dispatch_count: "1"
+    dispatch_count: "2"
     failed_at: "2026-02-19T22:48:48Z"
     last_error: command parameter required
     redispatch_requested: "true"
@@ -29,5 +29,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:46:01.972818803Z
-updatedat: 2026-02-19T22:48:48.887843472Z
+updatedat: 2026-02-19T22:53:47.755469705Z
 closedat: null
