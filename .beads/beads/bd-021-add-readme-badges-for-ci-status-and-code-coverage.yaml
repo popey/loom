@@ -7,7 +7,7 @@ id: bd-021
 type: task
 title: Add README badges for CI status and code coverage
 description: Add shields.io badges to the README.md showing CI build status, code coverage percentage, and Go version. This is a small, self-contained task to verify the autonomous work pipeline.
-status: open
+status: blocked
 priority: 2
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -20,26 +20,26 @@ tags: []
 context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 954c6765-5f26-4f8c-a050-0c1b14ff60f5
-    correlation_id: dispatch-bd-021-1771535328437078260
+    correlation_id: dispatch-bd-021-1771535349349078494
     dispatch_count: "22"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-19T21:09:09.352359338Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":20},{"timestamp":"2026-02-19T21:09:14.410810999Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":20},{"timestamp":"2026-02-19T21:09:14.854320085Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":21},{"timestamp":"2026-02-19T21:09:19.408855709Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":21},{"timestamp":"2026-02-19T21:09:19.822591711Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":22}]'
-    failed_at: "2026-02-19T22:28:48Z"
+    error_history: '[{"timestamp":"2026-02-19T21:09:09.352359338Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":20},{"timestamp":"2026-02-19T21:09:14.410810999Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":20},{"timestamp":"2026-02-19T21:09:14.854320085Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":21},{"timestamp":"2026-02-19T21:09:19.408855709Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":21},{"timestamp":"2026-02-19T21:09:19.822591711Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":22},{"timestamp":"2026-02-19T22:28:50.119050134Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":22}]'
+    failed_at: "2026-02-19T22:28:49Z"
     last_error: command parameter required
     last_run_at: "2026-02-19T21:09:25Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://test/v1/chat/completions": dial tcp: lookup test on 127.0.0.11:53: server misbehaving'
     loop_detected: "false"
-    loop_detection_reason: 'Identical error repeated 5 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://test/v1/cha'
+    loop_detection_reason: 'Identical error repeated 6 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://test/v1/cha'
     progress_summary: No progress data
     provider_id: sparky-local
-    ralph_blocked_at: "2026-02-19T21:09:19Z"
-    ralph_blocked_reason: 'dispatch_count=22 exceeded max_hops=20, stuck in loop: Identical error repeated 5 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://test/v1/cha'
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-19T22:28:50Z"
+    ralph_blocked_reason: 'dispatch_count=22 exceeded max_hops=20, stuck in loop: Identical error repeated 6 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://test/v1/cha'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-19T20:58:09Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T20:58:08.869596237Z
-updatedat: 2026-02-19T22:28:48.041582389Z
+updatedat: 2026-02-19T22:28:50.11909959Z
 closedat: null
