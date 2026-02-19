@@ -21,16 +21,16 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 954c6765-5f26-4f8c-a050-0c1b14ff60f5
     dispatch_count: "18"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    last_run_at: "2026-02-19T21:08:45Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    last_run_at: "2026-02-19T21:08:57Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://test/v1/chat/completions": dial tcp: lookup test on 127.0.0.11:53: server misbehaving'
     loop_detected: "false"
-    provider_id: test-provider
+    provider_id: vllm-local
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-19T20:58:09Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T20:58:08.869596237Z
-updatedat: 2026-02-19T21:08:48.0199516Z
+updatedat: 2026-02-19T21:08:57.340925326Z
 closedat: null
