@@ -25,7 +25,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Devops Engineer (Default)-1771541629
     conversation_session_id: 8cbb4dc0-677f-4c59-99bf-87feacaa4d8b
     correlation_id: dispatch-bd-026-1771541629426710692
-    dispatch_count: "3"
+    dispatch_count: "4"
     dispatch_history: '["agent-1771534515-Devops Engineer (Default)"]'
     failed_at: "2026-02-19T22:53:52Z"
     last_error: command parameter required
@@ -44,5 +44,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:46:01.972818803Z
-updatedat: 2026-02-19T23:02:01.601192193Z
+updatedat: 2026-02-19T23:02:01.98964734Z
 closedat: null
