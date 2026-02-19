@@ -25,7 +25,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771539284
     conversation_session_id: 10722dd3-60c8-4a17-ac69-03d5bf96d9dc
     correlation_id: dispatch-bd-022-1771542741397399293
-    dispatch_count: "12"
+    dispatch_count: "13"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-19T23:12:21Z"
     last_error: command parameter required
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T21:25:24.277298603Z
-updatedat: 2026-02-19T23:12:21.399016049Z
+updatedat: 2026-02-19T23:18:52.308457434Z
 closedat: null
