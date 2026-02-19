@@ -18,16 +18,22 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Project Manager (Default)
     conversation_session_id: f437b4c9-9b2c-4018-87d2-cb83e2c0d726
     correlation_id: dispatch-bd-025-1771541627753717996
     dispatch_count: "5"
+    dispatch_history: '["agent-1771534515-Project Manager (Default)"]'
     failed_at: "2026-02-19T22:53:49Z"
     last_error: command parameter required
+    last_run_at: "2026-02-19T23:33:55Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.19.0.1:8000/v1/chat/completions": context deadline exceeded (Client.Timeout exceeded while awaiting headers)'
+    loop_detected: "false"
+    provider_id: vllm-local
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-19T22:28:58Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:28:56.236352795Z
-updatedat: 2026-02-19T23:18:55.708875548Z
+updatedat: 2026-02-19T23:33:55.73895207Z
 closedat: null
