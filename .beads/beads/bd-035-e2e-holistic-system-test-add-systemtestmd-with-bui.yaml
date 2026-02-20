@@ -28,10 +28,10 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: de7e9da3-6e86-43f7-b2bd-324a4b19f039
     dispatch_count: "74"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-20T20:54:34.657263245Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": context canceled","dispatch":69},{"timestamp":"2026-02-20T20:56:14.656616184Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": context canceled","dispatch":70},{"timestamp":"2026-02-20T20:58:04.657726271Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": context canceled","dispatch":71},{"timestamp":"2026-02-20T21:01:19.156163734Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": context canceled","dispatch":73}]'
-    last_run_at: "2026-02-20T20:59:14Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.19.0.1:8000/v1/chat/completions": context canceled'
+    last_run_at: "2026-02-20T21:01:49Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://test/v1/chat/completions": dial tcp: lookup test on 127.0.0.11:53: server misbehaving'
     loop_detected: "false"
     provider_id: test-provider
     redispatch_requested: "true"
@@ -40,5 +40,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T20:14:28.23873663Z
-updatedat: 2026-02-20T21:01:19.157471578Z
+updatedat: 2026-02-20T21:01:49.107067727Z
 closedat: null
