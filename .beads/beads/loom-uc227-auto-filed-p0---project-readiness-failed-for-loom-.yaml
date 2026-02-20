@@ -23,8 +23,8 @@ context:
     agent_task_id: task-loom-uc227-1771383726342930463
     agent_tokens: "100712"
     agent_worker_id: worker-agent-1771383212-QA Engineer (Default)-1771383510
-    conversation_session_id: bae2203b-5911-40a2-94a3-00b1e4031d76
-    dispatch_count: "2"
+    conversation_session_id: a3a0f1b1-b927-43b5-a2b8-03419e4e25ea
+    dispatch_count: "1"
     dispatch_history: '["agent-1770537362-Devops Engineer (Default)","agent-1771383212-QA Engineer (Default)"]'
     last_failed_at: "2026-02-18T03:03:08Z"
     last_run_at: "2026-02-18T03:03:08Z"
@@ -41,5 +41,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-09T09:29:18Z
-updatedat: 2026-02-20T22:27:59.855181549Z
+updatedat: 2026-02-20T22:28:01.860884785Z
 closedat: null
