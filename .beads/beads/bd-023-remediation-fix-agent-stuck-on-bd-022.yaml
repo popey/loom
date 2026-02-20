@@ -27,15 +27,15 @@ context:
     correlation_id: dispatch-bd-023-1771548890215636815
     created_by: dispatcher_auto_remediation
     dispatch_count: "13"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-20T00:54:50Z"
     last_error: command parameter required
     last_failed_at: "2026-02-19T22:24:34Z"
-    last_run_at: "2026-02-20T00:40:08Z"
+    last_run_at: "2026-02-20T00:54:50Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://sparky.local:8000/v1/chat/completions": dial tcp 10.11.100.116:8000: connect: connection refused'
     loop_detected: "false"
     loop_iterations: "20"
-    provider_id: nvidia-cloud-1
+    provider_id: ollama-server
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-19T22:22:38Z"
@@ -51,5 +51,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:22:35.075360957Z
-updatedat: 2026-02-20T00:54:50.23164175Z
+updatedat: 2026-02-20T00:54:50.263578404Z
 closedat: null
