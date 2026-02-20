@@ -23,10 +23,10 @@ context:
     correlation_id: dispatch-bd-031-1771549221236570949
     created_by: dispatcher_auto_remediation
     dispatch_count: "11"
-    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
     failed_at: "2026-02-20T01:00:21Z"
     last_error: command parameter required
-    last_run_at: "2026-02-20T01:00:21Z"
+    last_run_at: "2026-02-20T01:00:57Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://sparky.local:8000/v1/chat/completions": dial tcp 10.11.100.116:8000: connect: connection refused'
     loop_detected: "false"
     provider_id: ollama-server
@@ -41,5 +41,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T23:43:25.174528343Z
-updatedat: 2026-02-20T01:00:55.784355077Z
+updatedat: 2026-02-20T01:00:57.392998263Z
 closedat: null
