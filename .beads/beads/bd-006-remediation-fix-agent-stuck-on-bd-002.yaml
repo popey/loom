@@ -18,19 +18,34 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Devops Engineer (Default)
+    agent_output: '{"action": "read", "path": "internal/actions/feedback.go", "notes": "Thought: The previous reads of ''internal/actions/feedback.go'' have been truncated. I need to ensure I get the full content to identify any issues related to feedback processing. Acting: reading the full content of ''internal/actions/feedback.go'' again."}'
+    agent_task_id: task-bd-006-1771626490497424749
+    agent_tokens: "254275"
+    agent_worker_id: worker-agent-1771534515-Devops Engineer (Default)-1771623658
     conversation_session_id: b5683658-e0b8-4ecf-af4e-86215c5572d5
     created_by: dispatcher_auto_remediation
     dispatch_count: "2"
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)"]'
+    last_failed_at: "2026-02-20T22:30:10Z"
+    last_run_at: "2026-02-20T22:30:10Z"
+    loop_detected: "false"
+    loop_iterations: "15"
+    provider_id: sparky-local
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-18T03:16:26Z"
     remediation_for: bd-002
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-20T22:30:10Z"
     requires_persona: remediation-specialist
     stuck_agent_id: agent-1771383212-QA Engineer (Default)
     stuck_iterations: "10"
     stuck_terminal_reason: progress_stagnant
+    terminal_reason: inner_loop
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T03:16:23.243037936Z
-updatedat: 2026-02-20T22:28:09.485867815Z
+updatedat: 2026-02-20T22:30:10.161400611Z
 closedat: null
