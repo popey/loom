@@ -25,16 +25,16 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771545210
     conversation_session_id: 10722dd3-60c8-4a17-ac69-03d5bf96d9dc
     correlation_id: dispatch-bd-022-1771545367112368505
-    dispatch_count: "18"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_count: "19"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-19T23:56:07Z"
     last_error: command parameter required
     last_failed_at: "2026-02-19T23:51:25Z"
-    last_run_at: "2026-02-19T23:55:33Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://sparky.local:8000/v1/chat/completions": context deadline exceeded (Client.Timeout exceeded while awaiting headers)'
+    last_run_at: "2026-02-20T00:11:48Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.19.0.1:8000/v1/chat/completions": EOF'
     loop_detected: "false"
     loop_iterations: "6"
-    provider_id: vllm-local
+    provider_id: sparky-local
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-19T23:56:03Z"
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T21:25:24.277298603Z
-updatedat: 2026-02-19T23:56:07.258116809Z
+updatedat: 2026-02-20T00:56:06.881884772Z
 closedat: null
