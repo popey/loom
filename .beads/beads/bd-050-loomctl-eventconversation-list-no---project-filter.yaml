@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-050
+type: task
+title: 'loomctl event/conversation list: no --project filter'
+description: loomctl event list and loomctl conversation list have no --project flag. In a multi-project system, events and conversations need to be queryable by project. The backend /api/v1/events and /api/v1/conversations endpoints need project_id query params. Add --project flag to both CLI commands and nested routes /api/v1/projects/{id}/events and /api/v1/projects/{id}/conversations. Without this, operators must fetch all events/conversations globally and filter manually.
+status: open
+priority: 0
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-20T23:13:21.21187876Z
+updatedat: 2026-02-20T23:13:21.212355165Z
+closedat: null
