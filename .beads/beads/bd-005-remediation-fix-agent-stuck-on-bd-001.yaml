@@ -25,7 +25,7 @@ context:
     agent_worker_id: worker-agent-1771378629-QA Engineer (Default)-1771384233
     conversation_session_id: 39d5d6ba-673a-4099-ad5f-b091fe4f7049
     created_by: dispatcher_auto_remediation
-    dispatch_count: "2"
+    dispatch_count: "3"
     dispatch_history: '["agent-1771378629-QA Engineer (Default)"]'
     last_failed_at: "2026-02-18T03:16:47Z"
     last_run_at: "2026-02-18T03:16:47Z"
@@ -47,5 +47,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T03:16:04.135647151Z
-updatedat: 2026-02-20T22:28:12.056092886Z
+updatedat: 2026-02-20T22:45:36.295952715Z
 closedat: null
