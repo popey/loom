@@ -18,7 +18,7 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Devops Engineer (Default)
+    agent_id: agent-1771534515-CEO (Default)
     agent_output: '{"action": "read_bead_conversation", "bead_id": "bd-026", "notes": "Thought: The conversation history is still truncated. Acting: reading the full conversation history of bead bd-026 again to ensure I get the complete context."}'
     agent_task_id: task-bd-027-1771543130129046619
     agent_tokens: "269152"
@@ -27,13 +27,13 @@ context:
     correlation_id: dispatch-bd-027-1771549327322286153
     created_by: dispatcher_auto_remediation
     dispatch_count: "22"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)"]'
     error_history: '[{"timestamp":"2026-02-20T01:02:05.735840517Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": dial tcp 172.19.0.1:8000: connect: connection refused","dispatch":20},{"timestamp":"2026-02-20T01:02:49.259319377Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://sparky.local:8000/v1/chat/completions\": dial tcp 10.11.100.116:8000: connect: connection refused","dispatch":21}]'
     failed_at: "2026-02-20T01:02:07Z"
     last_error: command parameter required
     last_failed_at: "2026-02-19T23:28:37Z"
-    last_run_at: "2026-02-20T01:02:06Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://sparky.local:8000/v1/chat/completions": dial tcp 10.11.100.116:8000: connect: connection refused'
+    last_run_at: "2026-02-20T01:02:50Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.19.0.1:8000/v1/chat/completions": dial tcp 172.19.0.1:8000: connect: connection refused'
     loop_detected: "false"
     loop_iterations: "18"
     provider_id: ollama-server
@@ -52,5 +52,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:59:52.630615243Z
-updatedat: 2026-02-20T01:02:49.262487792Z
+updatedat: 2026-02-20T01:02:50.867061355Z
 closedat: null
