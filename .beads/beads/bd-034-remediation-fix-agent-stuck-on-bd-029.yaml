@@ -23,10 +23,10 @@ context:
     correlation_id: dispatch-bd-034-1771548961494021335
     created_by: dispatcher_auto_remediation
     dispatch_count: "4"
-    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)"]'
+    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     failed_at: "2026-02-20T00:56:01Z"
     last_error: command parameter required
-    last_run_at: "2026-02-20T00:56:37Z"
+    last_run_at: "2026-02-20T00:57:10Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.19.0.1:8000/v1/chat/completions": dial tcp 172.19.0.1:8000: connect: connection refused'
     loop_detected: "false"
     provider_id: ollama-server
@@ -41,5 +41,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T23:54:32.754972063Z
-updatedat: 2026-02-20T00:57:08.585900431Z
+updatedat: 2026-02-20T00:57:10.260494504Z
 closedat: null
