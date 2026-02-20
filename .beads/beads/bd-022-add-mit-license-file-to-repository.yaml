@@ -18,7 +18,7 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_id: agent-1771534515-Code Reviewer (Default)
     agent_output: '{"action": "done", "reason": "Added MIT license file to repository, committed, and pushed", "notes": "Thought: The changes have been successfully pushed to the remote repository. Acting: marking the task as done."}'
     agent_task_id: task-bd-022-1771545210348579943
     agent_tokens: "186203"
@@ -26,15 +26,15 @@ context:
     conversation_session_id: 10722dd3-60c8-4a17-ac69-03d5bf96d9dc
     correlation_id: dispatch-bd-022-1771545367112368505
     dispatch_count: "19"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)"]'
     failed_at: "2026-02-19T23:56:07Z"
     last_error: command parameter required
     last_failed_at: "2026-02-19T23:51:25Z"
-    last_run_at: "2026-02-20T00:11:48Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.19.0.1:8000/v1/chat/completions": EOF'
+    last_run_at: "2026-02-20T00:56:08Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.19.0.1:8000/v1/chat/completions": dial tcp 172.19.0.1:8000: connect: connection refused'
     loop_detected: "false"
     loop_iterations: "6"
-    provider_id: sparky-local
+    provider_id: ollama-server
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-19T23:56:03Z"
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T21:25:24.277298603Z
-updatedat: 2026-02-20T00:56:06.881884772Z
+updatedat: 2026-02-20T00:56:08.523473145Z
 closedat: null
