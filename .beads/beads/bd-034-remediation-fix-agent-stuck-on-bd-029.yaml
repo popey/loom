@@ -18,16 +18,16 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-CEO (Default)
+    agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 3c483dd5-095a-4f94-b144-97ae3481f4fd
     correlation_id: dispatch-bd-034-1771549386708040750
     created_by: dispatcher_auto_remediation
     dispatch_count: "17"
-    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-CEO (Default)"]'
+    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-20T01:03:06Z"
     last_error: command parameter required
-    last_run_at: "2026-02-20T01:02:30Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.19.0.1:8000/v1/chat/completions": dial tcp 172.19.0.1:8000: connect: connection refused'
+    last_run_at: "2026-02-20T01:03:06Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://sparky.local:8000/v1/chat/completions": dial tcp 10.11.100.116:8000: connect: connection refused'
     loop_detected: "false"
     provider_id: ollama-server
     redispatch_requested: "true"
@@ -41,5 +41,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T23:54:32.754972063Z
-updatedat: 2026-02-20T01:03:06.710450079Z
+updatedat: 2026-02-20T01:03:06.731919074Z
 closedat: null
