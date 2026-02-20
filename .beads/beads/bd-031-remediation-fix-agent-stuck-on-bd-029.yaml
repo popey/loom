@@ -22,9 +22,9 @@ context:
     conversation_session_id: c4199fab-5d1b-413b-9343-be2f564115b0
     correlation_id: dispatch-bd-031-1771549578135045964
     created_by: dispatcher_auto_remediation
-    dispatch_count: "22"
+    dispatch_count: "23"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-20T01:06:15.007901547Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://sparky.local:8000/v1/chat/completions\": dial tcp 10.11.100.116:8000: connect: connection refused","dispatch":20},{"timestamp":"2026-02-20T01:06:16.485560328Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://sparky.local:8000/v1/chat/completions\": dial tcp 10.11.100.116:8000: connect: connection refused","dispatch":21}]'
+    error_history: '[{"timestamp":"2026-02-20T01:06:15.007901547Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://sparky.local:8000/v1/chat/completions\": dial tcp 10.11.100.116:8000: connect: connection refused","dispatch":20},{"timestamp":"2026-02-20T01:06:16.485560328Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://sparky.local:8000/v1/chat/completions\": dial tcp 10.11.100.116:8000: connect: connection refused","dispatch":21},{"timestamp":"2026-02-20T01:07:01.190714974Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": dial tcp 172.19.0.1:8000: connect: connection refused","dispatch":22}]'
     failed_at: "2026-02-20T01:06:18Z"
     last_error: command parameter required
     last_run_at: "2026-02-20T01:06:16Z"
@@ -42,5 +42,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T23:43:25.174528343Z
-updatedat: 2026-02-20T01:06:18.13801408Z
+updatedat: 2026-02-20T01:07:01.192768606Z
 closedat: null
