@@ -27,12 +27,12 @@ context:
     correlation_id: dispatch-bd-023-1771549084635840270
     created_by: dispatcher_auto_remediation
     dispatch_count: "21"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
     error_history: '[{"timestamp":"2026-02-20T00:58:02.943326462Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://sparky.local:8000/v1/chat/completions\": dial tcp 10.11.100.116:8000: connect: connection refused","dispatch":20}]'
     failed_at: "2026-02-20T00:58:04Z"
     last_error: command parameter required
     last_failed_at: "2026-02-19T22:24:34Z"
-    last_run_at: "2026-02-20T00:57:32Z"
+    last_run_at: "2026-02-20T00:58:04Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://sparky.local:8000/v1/chat/completions": dial tcp 10.11.100.116:8000: connect: connection refused'
     loop_detected: "false"
     loop_iterations: "20"
@@ -52,5 +52,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:22:35.075360957Z
-updatedat: 2026-02-20T00:58:04.638476722Z
+updatedat: 2026-02-20T00:58:04.665895411Z
 closedat: null
