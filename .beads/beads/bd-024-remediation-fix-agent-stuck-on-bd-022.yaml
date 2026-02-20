@@ -20,11 +20,11 @@ tags: []
 context:
     agent_id: agent-1771534515-Code Reviewer (Default)
     conversation_session_id: 495e26b1-22a6-40e7-af75-59df80a3a346
-    correlation_id: dispatch-bd-024-1771543065502126597
+    correlation_id: dispatch-bd-024-1771548995889543243
     created_by: dispatcher_auto_remediation
     dispatch_count: "13"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)"]'
-    failed_at: "2026-02-19T23:17:47Z"
+    failed_at: "2026-02-20T00:56:35Z"
     last_error: command parameter required
     last_run_at: "2026-02-20T00:56:04Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.19.0.1:8000/v1/chat/completions": dial tcp 172.19.0.1:8000: connect: connection refused'
@@ -41,5 +41,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:27:12.288032022Z
-updatedat: 2026-02-20T00:56:35.005365788Z
+updatedat: 2026-02-20T00:56:35.890583462Z
 closedat: null
