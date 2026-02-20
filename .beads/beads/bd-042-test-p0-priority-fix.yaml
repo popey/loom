@@ -7,7 +7,7 @@ id: bd-042
 type: task
 title: test P0 priority fix
 description: verify priority 0 works
-status: open
+status: closed
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -24,5 +24,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:11:23.187449461Z
-updatedat: 2026-02-20T23:11:27.455535923Z
-closedat: null
+updatedat: 2026-02-20T23:11:47.72173622Z
+closedat: 2026-02-20T23:11:47.721729996Z
