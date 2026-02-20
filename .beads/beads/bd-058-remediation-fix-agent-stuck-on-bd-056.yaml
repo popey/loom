@@ -18,19 +18,34 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_output: '{"action": "read", "path": "cmd/loomctl/main.go", "notes": "Thought: The file content is still truncated. Acting: reading the full content of ''main.go'' to identify the issue causing the inner loop."}'
+    agent_task_id: task-bd-058-1771629911958856919
+    agent_tokens: "193952"
+    agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771629066
     conversation_session_id: 2fe56938-ef9a-4a43-bb79-cf07b0a641d1
     created_by: dispatcher_auto_remediation
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
+    last_failed_at: "2026-02-20T23:29:22Z"
+    last_run_at: "2026-02-20T23:29:22Z"
+    loop_detected: "false"
+    loop_iterations: "13"
+    provider_id: vllm-local
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T23:25:07Z"
     remediation_for: bd-056
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-20T23:29:22Z"
     requires_persona: remediation-specialist
     stuck_agent_id: agent-1771534515-Engineering Manager (Default)
     stuck_iterations: "12"
     stuck_terminal_reason: inner_loop
+    terminal_reason: inner_loop
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:25:01.784800241Z
-updatedat: 2026-02-20T23:25:10.8403973Z
+updatedat: 2026-02-20T23:29:22.91581358Z
 closedat: null
