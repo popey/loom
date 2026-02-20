@@ -7,10 +7,10 @@ id: loom-uc227
 type: task
 title: '[auto-filed] P0 - Project readiness failed for loom-self'
 description: "Project readiness failed for loom-self.\n\nIssues:\n- git remote access failed: git ls-remote failed: exit status 128: ssh_askpass: exec(/usr/X11R6/bin/ssh-askpass): No such file or directory\r\nHost key verification failed.\r\nfatal: Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.\n- beads path missing: data/projects/loom-self/.beads\n\nProject SSH public key (register this with your git host):\nssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHqhB8uG2MZxybZL5qctdKkKKN8AHxGxonTQOK0vFnvd jkh@plubbit.local"
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -24,7 +24,7 @@ context:
     agent_tokens: "100712"
     agent_worker_id: worker-agent-1771383212-QA Engineer (Default)-1771383510
     conversation_session_id: bae2203b-5911-40a2-94a3-00b1e4031d76
-    dispatch_count: "1"
+    dispatch_count: "2"
     dispatch_history: '["agent-1770537362-Devops Engineer (Default)","agent-1771383212-QA Engineer (Default)"]'
     last_failed_at: "2026-02-18T03:03:08Z"
     last_run_at: "2026-02-18T03:03:08Z"
@@ -41,5 +41,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-09T09:29:18Z
-updatedat: 2026-02-20T20:38:31.747065173Z
+updatedat: 2026-02-20T22:27:59.855181549Z
 closedat: null
