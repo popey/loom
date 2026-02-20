@@ -18,19 +18,34 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-CEO (Default)
+    agent_output: '{"action": "scope", "path": ".beads/issues.jsonl", "notes": "Thought: The ''interactions.jsonl'' file is empty and does not contain any information about bead bd-001. I''ll scope the ''.beads/issues.jsonl'' file to see if it contains any issue logs that might include information about bead bd-001. Acting: scoping the ''.beads/issues.jsonl'' file."}'
+    agent_task_id: task-bd-003-1771626485520808506
+    agent_tokens: "265721"
+    agent_worker_id: worker-agent-1771534515-CEO (Default)-1771623658
     conversation_session_id: 67968651-6304-47a7-b585-387206797d89
     created_by: dispatcher_auto_remediation
     dispatch_count: "3"
+    dispatch_history: '["agent-1771534515-CEO (Default)"]'
+    last_failed_at: "2026-02-20T22:30:42Z"
+    last_run_at: "2026-02-20T22:30:42Z"
+    loop_detected: "false"
+    loop_iterations: "21"
+    provider_id: vllm-local
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-18T03:13:36Z"
     remediation_for: bd-001
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-20T22:30:42Z"
     requires_persona: remediation-specialist
     stuck_agent_id: agent-1771383212-Engineering Manager (Default)
     stuck_iterations: "7"
     stuck_terminal_reason: progress_stagnant
+    terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T03:13:36.398301444Z
-updatedat: 2026-02-20T22:28:04.440472928Z
+updatedat: 2026-02-20T22:30:42.719258399Z
 closedat: null
