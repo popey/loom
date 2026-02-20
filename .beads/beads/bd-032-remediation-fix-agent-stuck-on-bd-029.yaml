@@ -24,11 +24,11 @@ context:
     agent_tokens: "396501"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771544735
     conversation_session_id: 22013b5f-4c19-4910-b929-1b3f4d451bd7
-    correlation_id: dispatch-bd-032-1771549063783502496
+    correlation_id: dispatch-bd-032-1771549096236785342
     created_by: dispatcher_auto_remediation
     dispatch_count: "11"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)"]'
-    failed_at: "2026-02-20T00:57:43Z"
+    failed_at: "2026-02-20T00:58:16Z"
     last_error: command parameter required
     last_failed_at: "2026-02-19T23:52:46Z"
     last_run_at: "2026-02-20T00:57:43Z"
@@ -51,5 +51,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T23:49:39.184463523Z
-updatedat: 2026-02-20T00:58:14.592372885Z
+updatedat: 2026-02-20T00:58:16.240507137Z
 closedat: null
