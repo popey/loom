@@ -14,10 +14,10 @@ description: |-
     4. A section titled ## Verification showing that all tests pass
 
     Once the file is created, run `git add SYSTEM_TEST.md && git commit -m "docs: add system test verification document"` and push to origin/main.
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -25,21 +25,15 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Engineering Manager (Default)
-    conversation_session_id: de7e9da3-6e86-43f7-b2bd-324a4b19f039
-    dispatch_count: "78"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-20T20:54:34.657263245Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": context canceled","dispatch":69},{"timestamp":"2026-02-20T20:56:14.656616184Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": context canceled","dispatch":70},{"timestamp":"2026-02-20T20:58:04.657726271Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": context canceled","dispatch":71},{"timestamp":"2026-02-20T21:01:19.156163734Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": context canceled","dispatch":73},{"timestamp":"2026-02-20T21:02:28.499016414Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":74},{"timestamp":"2026-02-20T21:03:29.037310964Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":75},{"timestamp":"2026-02-20T21:04:28.49935793Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":76},{"timestamp":"2026-02-20T21:05:28.498246307Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":77},{"timestamp":"2026-02-20T21:21:08.119067539Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://test/v1/chat/completions\": dial tcp: lookup test on 127.0.0.11:53: server misbehaving","dispatch":78}]'
-    last_run_at: "2026-02-20T21:05:38Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://test/v1/chat/completions": dial tcp: lookup test on 127.0.0.11:53: server misbehaving'
+    dispatch_count: "0"
+    dispatch_history: '[]'
+    error_history: '[]'
+    last_run_at: ""
+    last_run_error: ""
     loop_detected: "false"
-    loop_detection_reason: 'Identical error repeated 5 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://test/v1/cha'
+    loop_detection_reason: ""
     progress_summary: No progress data
-    provider_id: ollama-server
-    ralph_blocked_at: "2026-02-20T21:21:08Z"
-    ralph_blocked_reason: 'dispatch_count=78 exceeded max_hops=20, stuck in loop: Identical error repeated 5 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://test/v1/cha'
     redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-20T21:21:05Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
