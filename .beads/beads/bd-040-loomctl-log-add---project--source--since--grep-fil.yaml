@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-040
+type: task
+title: 'loomctl log: add --project/--source/--since/--grep filters'
+description: 'loomctl log recent/stream has no filtering capability. Currently requires raw SQL or docker exec to filter logs. Missing flags: --project (filter by project), --source (filter by service/source), --since (time window), --grep (regex match). Backend /api/v1/logs endpoint needs corresponding query params. This blocked operational debugging requiring docker exec psql workarounds.'
+status: open
+priority: 2
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-20T23:08:19.842246593Z
+updatedat: 2026-02-20T23:08:19.842520292Z
+closedat: null
