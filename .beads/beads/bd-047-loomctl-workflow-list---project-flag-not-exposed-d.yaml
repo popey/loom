@@ -7,7 +7,7 @@ id: bd-047
 type: task
 title: 'loomctl workflow list: --project flag not exposed despite backend support'
 description: 'The backend GET /api/v1/workflows endpoint accepts a project_id query parameter, but loomctl workflow list does not expose a --project flag. This means operators cannot filter workflows by project from the CLI, requiring curl or raw API calls. Fix: add --project flag to workflow list and pass it as project_id query param. Also add workflow filtering to GET /api/v1/projects/{id}/workflows nested route for consistency.'
-status: open
+status: closed
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -18,11 +18,12 @@ parent: ""
 children: []
 tags: []
 context:
+    close_reason: Fixed in commit 91e26d5
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T23:12:57Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:51.363138184Z
-updatedat: 2026-02-20T23:12:57.454972243Z
-closedat: null
+updatedat: 2026-02-20T23:42:51.146151376Z
+closedat: 2026-02-20T23:42:51.146147744Z
