@@ -18,19 +18,34 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Code Reviewer (Default)
+    agent_output: '{"action": "read_bead_conversation", "bead_id": "loom-mvedn", "notes": "Thought: The conversation history is still not providing the full context needed to diagnose the issue. Acting: reading the full conversation history of bead loom-mvedn again to ensure I capture all relevant messages."}'
+    agent_task_id: task-bd-037-1771628273304431548
+    agent_tokens: "94965"
+    agent_worker_id: worker-agent-1771534515-Code Reviewer (Default)-1771628161
     conversation_session_id: ce673f40-d96f-4764-a15f-6e73e4550a92
     created_by: dispatcher_auto_remediation
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)"]'
+    last_failed_at: "2026-02-20T22:58:50Z"
+    last_run_at: "2026-02-20T22:58:50Z"
+    loop_detected: "false"
+    loop_iterations: "11"
+    provider_id: ollama-server
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T22:57:49Z"
     remediation_for: loom-mvedn
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-20T22:58:50Z"
     requires_persona: remediation-specialist
     stuck_agent_id: agent-1771534515-Code Reviewer (Default)
     stuck_iterations: "16"
     stuck_terminal_reason: progress_stagnant
+    terminal_reason: inner_loop
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T22:57:43.594641393Z
-updatedat: 2026-02-20T22:57:52.195144943Z
+updatedat: 2026-02-20T22:58:50.121188746Z
 closedat: null
