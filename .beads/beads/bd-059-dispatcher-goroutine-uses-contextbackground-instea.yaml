@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-059
+type: task
+title: 'dispatcher: goroutine uses context.Background() instead of request context'
+description: 'internal/dispatch/dispatcher.go ~line 618-648: goroutine spawned with context.Background() instead of the caller''s context. If the parent request/operation is cancelled, the goroutine continues running indefinitely causing goroutine leaks. Fix: pass the request context and propagate cancellation.'
+status: open
+priority: 1
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-20T23:40:23.056787535Z
+updatedat: 2026-02-20T23:40:23.057173049Z
+closedat: null
