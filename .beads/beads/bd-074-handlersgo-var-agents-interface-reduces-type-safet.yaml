@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-074
+type: task
+title: 'handlers.go: var agents interface{} reduces type safety'
+description: 'internal/api/handlers.go line ~89: ''var agents interface{}'' is used to hold either []*models.Agent result. This loses type safety and prevents compile-time checks. Fix: use specific type []*models.Agent and avoid interface{} in API response construction.'
+status: open
+priority: 1
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-20T23:40:42.859064421Z
+updatedat: 2026-02-20T23:40:42.859376381Z
+closedat: null
