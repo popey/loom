@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-042
+type: task
+title: test P0 priority fix
+description: verify priority 0 works
+status: open
+priority: 0
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-20T23:11:23.187449461Z
+updatedat: 2026-02-20T23:11:23.187679288Z
+closedat: null
