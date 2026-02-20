@@ -42,13 +42,13 @@ context:
     progress_summary: No progress data
     provider_id: ollama-server
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-20T21:28:34Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-20T21:30:35Z"
     revert_status: not_attempted
     terminal_reason: completed
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T20:14:28.23873663Z
-updatedat: 2026-02-20T21:30:30.741212432Z
+updatedat: 2026-02-20T21:30:35.61185922Z
 closedat: null
