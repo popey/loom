@@ -18,19 +18,34 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Code Reviewer (Default)
+    agent_output: '{"action": "read", "path": ".beads/interactions.jsonl", "notes": "Thought: The bead file for loom-mvedn is still empty and does not provide the detailed conversation history. Acting: re-reading the interactions.jsonl file to ensure I capture all messages and context."}'
+    agent_task_id: task-bd-039-1771628514803489091
+    agent_tokens: "368199"
+    agent_worker_id: worker-agent-1771534515-Code Reviewer (Default)-1771628161
     conversation_session_id: 21510b6a-8960-4ebf-a4cd-e7e4f680151a
     created_by: dispatcher_auto_remediation
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)"]'
+    last_failed_at: "2026-02-20T23:03:59Z"
+    last_run_at: "2026-02-20T23:03:59Z"
+    loop_detected: "false"
+    loop_iterations: "23"
+    provider_id: sparky-local
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T23:01:49Z"
     remediation_for: loom-mvedn
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-20T23:03:59Z"
     requires_persona: remediation-specialist
     stuck_agent_id: agent-1771534515-Code Reviewer (Default)
     stuck_iterations: "13"
     stuck_terminal_reason: inner_loop
+    terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:01:48.460226538Z
-updatedat: 2026-02-20T23:01:53.050419942Z
+updatedat: 2026-02-20T23:03:59.633609282Z
 closedat: null
