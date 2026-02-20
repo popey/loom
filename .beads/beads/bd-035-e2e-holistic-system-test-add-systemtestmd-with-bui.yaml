@@ -28,9 +28,9 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: de7e9da3-6e86-43f7-b2bd-324a4b19f039
     dispatch_count: "70"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-20T20:54:34.657263245Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.19.0.1:8000/v1/chat/completions\": context canceled","dispatch":69}]'
-    last_run_at: "2026-02-20T20:54:04Z"
+    last_run_at: "2026-02-20T20:55:44Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.19.0.1:8000/v1/chat/completions": context canceled'
     loop_detected: "false"
     provider_id: sparky-local
@@ -40,5 +40,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T20:14:28.23873663Z
-updatedat: 2026-02-20T20:54:34.65800801Z
+updatedat: 2026-02-20T20:55:44.674468854Z
 closedat: null
