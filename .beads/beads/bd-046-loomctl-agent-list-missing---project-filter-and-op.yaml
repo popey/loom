@@ -7,7 +7,7 @@ id: bd-046
 type: task
 title: 'loomctl agent list: missing --project filter and operational columns'
 description: 'loomctl agent list has no --project flag, forcing operators to see all agents across all projects mixed together. Also missing columns: provider_id (which LLM provider this agent is using), current_bead (what bead the agent is currently working on), last_active (last heartbeat timestamp), dispatch_count (how many tasks dispatched to this agent). The backend /api/v1/agents endpoint needs a project_id query param. A nested route GET /api/v1/projects/{id}/agents should also be added for project-scoped queries.'
-status: open
+status: closed
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -18,11 +18,12 @@ parent: ""
 children: []
 tags: []
 context:
+    close_reason: Fixed in commit 91e26d5
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T23:12:47Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:40.915459121Z
-updatedat: 2026-02-20T23:12:47.455307489Z
-closedat: null
+updatedat: 2026-02-20T23:42:49.740941174Z
+closedat: 2026-02-20T23:42:49.740938726Z
