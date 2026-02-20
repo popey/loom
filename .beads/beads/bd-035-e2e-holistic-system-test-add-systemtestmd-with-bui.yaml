@@ -33,11 +33,12 @@ context:
     loop_detected: "false"
     loop_detection_reason: ""
     progress_summary: No progress data
-    redispatch_requested: "false"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-20T21:25:05Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T20:14:28.23873663Z
-updatedat: 2026-02-20T21:21:08.119156693Z
+updatedat: 2026-02-20T21:25:05.213841269Z
 closedat: null
