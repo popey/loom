@@ -26,9 +26,10 @@ context:
     conversation_session_id: b5683658-e0b8-4ecf-af4e-86215c5572d5
     created_by: dispatcher_auto_remediation
     dispatch_count: "5"
-    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
     last_failed_at: "2026-02-20T22:42:46Z"
-    last_run_at: "2026-02-20T22:42:46Z"
+    last_run_at: "2026-02-20T22:55:59Z"
+    last_run_error: 'action loop failed: context canceled'
     loop_detected: "false"
     loop_iterations: "15"
     provider_id: sparky-local
@@ -47,5 +48,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T03:16:23.243037936Z
-updatedat: 2026-02-20T22:45:31.453536967Z
+updatedat: 2026-02-20T22:55:59.224890656Z
 closedat: null
