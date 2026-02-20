@@ -14,7 +14,7 @@ description: |-
     4. A section titled ## Verification showing that all tests pass
 
     Once the file is created, run `git add SYSTEM_TEST.md && git commit -m "docs: add system test verification document"` and then push to origin main using `git push origin HEAD:main`.
-    
+
     IMPORTANT: Do NOT use 'done' action until after you have verified with git log that the commit exists AND verified the push succeeded.
 status: open
 priority: 1
@@ -35,11 +35,12 @@ context:
     loop_detected: "false"
     loop_detection_reason: ""
     progress_summary: No progress data
-    redispatch_requested: "false"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-20T21:41:09Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T20:14:28.23873663Z
-updatedat: 2026-02-20T21:21:08.119156693Z
+updatedat: 2026-02-20T21:41:09.790141845Z
 closedat: null
