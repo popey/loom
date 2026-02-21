@@ -18,13 +18,20 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Devops Engineer (Default)
     conversation_session_id: fa197b01-8a8b-4c2e-9e8c-770af61f1729
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)"]'
+    last_run_at: "2026-02-21T07:37:49Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.69186499999999}
+    loop_detected: "false"
+    provider_id: tokenhub
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T00:38:24Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:28.578487485Z
-updatedat: 2026-02-21T07:37:48.154667111Z
+updatedat: 2026-02-21T07:37:49.365757503Z
 closedat: null
