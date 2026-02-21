@@ -7,10 +7,10 @@ id: bd-070
 type: task
 title: 'dispatch_phases: actionHashes/actionTypeCount maps have no sync protection'
 description: 'internal/dispatch/dispatch_phases.go lines ~741-742: actionHashes and actionTypeCount are written without synchronization in ExecuteTaskWithLoop. If called from concurrent goroutines, data races occur. Fix: protect with sync.RWMutex or use sync.Map.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,11 +18,12 @@ parent: ""
 children: []
 tags: []
 context:
+    dispatch_count: "1"
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T00:38:11Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:35.093684796Z
-updatedat: 2026-02-21T05:29:16.90938152Z
+updatedat: 2026-02-21T07:25:53.224517084Z
 closedat: null
