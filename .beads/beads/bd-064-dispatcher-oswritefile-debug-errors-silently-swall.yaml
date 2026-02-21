@@ -7,10 +7,10 @@ id: bd-064
 type: task
 title: 'dispatcher: os.WriteFile debug errors silently swallowed'
 description: 'internal/dispatch/dispatcher.go lines ~465, 470, 484: os.WriteFile() errors are ignored when writing debug output. Silent failure loses diagnostic data when /tmp is unavailable or disk is full. Fix: if err := os.WriteFile(...); err != nil { log.Printf("[Dispatcher] debug write failed: %v", err) }'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Devops Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,11 +18,12 @@ parent: ""
 children: []
 tags: []
 context:
+    dispatch_count: "1"
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T00:38:24Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:28.578487485Z
-updatedat: 2026-02-21T05:29:10.082200595Z
+updatedat: 2026-02-21T07:37:46.556993739Z
 closedat: null
