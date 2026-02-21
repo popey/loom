@@ -23,7 +23,7 @@ context:
     dispatch_count: "21"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-21T07:35:25.831451306Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:35:36.789001674Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:35:46.423619921Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20}]'
-    last_run_at: "2026-02-21T07:29:41Z"
+    last_run_at: "2026-02-21T07:35:47Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.69186499999999}
     loop_detected: "false"
@@ -34,5 +34,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:35.093684796Z
-updatedat: 2026-02-21T07:35:46.424179093Z
+updatedat: 2026-02-21T07:35:47.538184503Z
 closedat: null
