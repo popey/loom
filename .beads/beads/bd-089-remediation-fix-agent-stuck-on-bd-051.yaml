@@ -18,7 +18,7 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_id: agent-1771534515-Code Reviewer (Default)
     agent_output: '{"action": "search", "query": "EOF", "notes": "Thought: Since ''failed to send request'' did not yield any results, I will search for ''EOF'' to identify any related errors. Acting: searching for ''EOF''."}'
     agent_task_id: task-bd-089-1771648764096294636
     agent_tokens: "191273"
@@ -26,12 +26,14 @@ context:
     conversation_session_id: 03d8f2c9-da82-450c-a145-eb9013377d10
     created_by: dispatcher_auto_remediation
     dispatch_count: "4"
-    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)"]'
     last_failed_at: "2026-02-21T04:41:02Z"
-    last_run_at: "2026-02-21T04:41:02Z"
+    last_run_at: "2026-02-21T07:12:53Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.69186499999999}
     loop_detected: "false"
     loop_iterations: "14"
-    provider_id: vllm-local
+    provider_id: tokenhub
     provider_model: ""
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T05:28:24Z"
@@ -48,5 +50,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T04:11:27.220297194Z
-updatedat: 2026-02-21T07:12:50.001330379Z
+updatedat: 2026-02-21T07:12:53.151129231Z
 closedat: null
