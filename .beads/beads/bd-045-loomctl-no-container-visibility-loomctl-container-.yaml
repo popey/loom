@@ -7,10 +7,10 @@ id: bd-045
 type: task
 title: 'loomctl: no container visibility (loomctl container list/status)'
 description: 'loomctl has no container subcommand. Operators cannot see which project containers are running, their health, startup logs, or resource usage without ''docker ps'' or ''docker logs''. Required commands: ''loomctl container list'' (show all project containers, status, uptime), ''loomctl container logs <project>'' (tail container logs), ''loomctl container restart <project>'' (restart project container), ''loomctl container status <project>'' (health + registered agents). The backend Orchestrator already tracks container state — this needs CLI exposure.'
-status: in_progress
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Code Reviewer (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,13 +18,29 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Code Reviewer (Default)
+    agent_output: '{"action":"search","query":"containers","notes":"Search repo"}'
+    agent_task_id: task-bd-045-1771655832538952379
+    agent_tokens: "467112"
+    agent_worker_id: worker-agent-1771534515-Code Reviewer (Default)-1771652034
     conversation_session_id: edafb430-c47e-49be-83d1-6cf5463bcb40
     dispatch_count: "1"
-    redispatch_requested: "true"
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)"]'
+    last_failed_at: "2026-02-21T06:45:18Z"
+    last_run_at: "2026-02-21T06:45:18Z"
+    loop_detected: "false"
+    loop_iterations: "38"
+    provider_id: tokenhub
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-20T23:12:37Z"
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-21T06:45:18Z"
+    stuck_at: "2026-02-21T06:45:18Z"
+    terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:30.483868481Z
-updatedat: 2026-02-21T06:37:11.589263501Z
+updatedat: 2026-02-21T06:45:18.681271863Z
 closedat: null
