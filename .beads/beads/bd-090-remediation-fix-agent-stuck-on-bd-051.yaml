@@ -18,7 +18,7 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_id: agent-1771534515-Product Manager (Default)
     agent_output: '{"action": "search", "query": "failed to send request", "notes": "Thought: Since searching for the specific error message did not yield any results, I will search for the phrase ''failed to send request'' to see if there are any related errors or issues in the conversation history. Acting: searching for ''failed to send request'' in the conversation history of bead bd-051."}'
     agent_task_id: task-bd-090-1771648334154050940
     agent_tokens: "157097"
@@ -26,13 +26,14 @@ context:
     conversation_session_id: 048c4a6b-35a4-43a4-8a2f-25b4bd687885
     created_by: dispatcher_auto_remediation
     dispatch_count: "6"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Product Manager (Default)"]'
     last_failed_at: "2026-02-21T04:33:33Z"
-    last_run_at: "2026-02-21T04:33:33Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://sparky.local:8001/v1/chat/completions": EOF'
+    last_run_at: "2026-02-21T07:12:09Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.69186499999999}
     loop_detected: "false"
     loop_iterations: "11"
-    provider_id: sparky-local
+    provider_id: tokenhub
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T04:36:10Z"
@@ -49,5 +50,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T04:21:38.209356532Z
-updatedat: 2026-02-21T07:12:07.747863268Z
+updatedat: 2026-02-21T07:12:09.858693452Z
 closedat: null
