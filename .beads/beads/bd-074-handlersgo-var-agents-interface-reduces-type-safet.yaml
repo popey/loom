@@ -23,7 +23,7 @@ context:
     dispatch_count: "22"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-21T07:27:06.936678703Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:27:06.944107209Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:27:17.125170456Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:35:49.457122938Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21}]'
-    last_run_at: "2026-02-21T07:27:20Z"
+    last_run_at: "2026-02-21T07:35:56Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.69186499999999}
     loop_detected: "false"
@@ -34,5 +34,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:42.859064421Z
-updatedat: 2026-02-21T07:35:49.457783342Z
+updatedat: 2026-02-21T07:35:56.18757591Z
 closedat: null
