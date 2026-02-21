@@ -33,8 +33,8 @@ context:
     loop_iterations: "14"
     provider_id: vllm-local
     provider_model: ""
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-21T04:36:09Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-21T05:28:24Z"
     remediation_for: bd-051
     remediation_needed: "true"
     remediation_requested_at: "2026-02-21T04:41:02Z"
@@ -48,5 +48,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T04:11:27.220297194Z
-updatedat: 2026-02-21T04:41:02.079328628Z
+updatedat: 2026-02-21T05:28:24.57019231Z
 closedat: null
