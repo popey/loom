@@ -18,13 +18,19 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 919d0f25-da95-42dd-adab-b4cfd531c174
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
+    last_run_at: "2026-02-21T23:54:12Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://localhost:8090/v1/chat/completions": dial tcp [::1]:8090: connect: connection refused'
+    loop_detected: "false"
+    provider_id: tokenhub
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T23:47:49Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:48.845059967Z
-updatedat: 2026-02-21T23:54:09.195622046Z
+updatedat: 2026-02-21T23:54:12.07918487Z
 closedat: null
