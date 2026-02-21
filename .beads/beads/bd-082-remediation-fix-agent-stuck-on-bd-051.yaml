@@ -18,7 +18,7 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-QA Engineer (Default)
+    agent_id: agent-1771534515-Engineering Manager (Default)
     agent_output: '{"action": "scope", "path": "internal/api/", "notes": "Thought: The `internal/` directory contains many subdirectories, and `internal/api/` seems like a promising location for API-related commands, including project-related commands. Acting: scoping the `internal/api/` directory."}'
     agent_task_id: task-bd-082-1771642823792930061
     agent_tokens: "458299"
@@ -26,12 +26,14 @@ context:
     conversation_session_id: 6e03258b-fa38-426c-acff-512b3eadd90a
     created_by: dispatcher_auto_remediation
     dispatch_count: "3"
-    dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-QA Engineer (Default)"]'
+    dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Engineering Manager (Default)"]'
     last_failed_at: "2026-02-21T03:25:28Z"
-    last_run_at: "2026-02-21T03:25:28Z"
+    last_run_at: "2026-02-21T07:15:11Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.69186499999999}
     loop_detected: "false"
     loop_iterations: "19"
-    provider_id: ollama-server
+    provider_id: tokenhub
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T03:27:32Z"
@@ -48,5 +50,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T02:21:36.784124509Z
-updatedat: 2026-02-21T07:15:09.394111754Z
+updatedat: 2026-02-21T07:15:11.401647498Z
 closedat: null
