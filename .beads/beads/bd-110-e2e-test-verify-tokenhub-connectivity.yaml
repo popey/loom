@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-110
+type: task
+title: 'E2E test: verify TokenHub connectivity'
+description: Simple test bead to verify that Loom can send requests through TokenHub. Just acknowledge this bead with a brief message confirming that the LLM call succeeded.
+status: open
+priority: 0
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-21T23:07:59.061649105Z
+updatedat: 2026-02-21T23:07:59.062092773Z
+closedat: null
