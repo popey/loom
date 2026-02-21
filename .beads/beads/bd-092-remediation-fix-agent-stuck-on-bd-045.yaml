@@ -33,8 +33,8 @@ context:
     loop_iterations: "36"
     provider_id: tokenhub
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-21T06:45:24Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-21T07:06:24Z"
     remediation_for: bd-045
     remediation_needed: "true"
     remediation_requested_at: "2026-02-21T07:04:21Z"
@@ -48,5 +48,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T06:45:19.043084965Z
-updatedat: 2026-02-21T07:04:21.729412938Z
+updatedat: 2026-02-21T07:06:24.857553694Z
 closedat: null
