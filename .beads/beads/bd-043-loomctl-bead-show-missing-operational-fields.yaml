@@ -7,10 +7,10 @@ id: bd-043
 type: task
 title: 'loomctl bead show: missing operational fields'
 description: loomctl bead show does not display ralph_blocked_reason, error_history, dispatch_count, or close_reason fields from the bead YAML context. These are critical for debugging stuck/blocked beads without resorting to docker exec or raw file reads. The bead show command should render these fields in its output table/JSON. The API response from GET /api/v1/beads/{id} must also include the full context map, not just a subset.
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-CEO (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,11 +18,12 @@ parent: ""
 children: []
 tags: []
 context:
+    dispatch_count: "1"
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T23:12:17Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:08.896950889Z
-updatedat: 2026-02-21T05:28:51.751362627Z
+updatedat: 2026-02-21T05:51:24.869622731Z
 closedat: null
