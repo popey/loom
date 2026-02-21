@@ -7,10 +7,10 @@ id: bd-048
 type: task
 title: 'API: missing nested project routes for all resources'
 description: 'The API has no nested project routes for most resources, making project-scoped queries impossible without client-side filtering. Missing routes: GET /api/v1/projects/{id}/agents, GET /api/v1/projects/{id}/beads, GET /api/v1/projects/{id}/workflows, GET /api/v1/projects/{id}/logs, GET /api/v1/projects/{id}/events, GET /api/v1/projects/{id}/conversations. These nested routes are fundamental for multi-project installations where an operator wants to see all resources belonging to a specific project without fetching the entire global list.'
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Devops Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,11 +18,12 @@ parent: ""
 children: []
 tags: []
 context:
+    dispatch_count: "1"
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T23:13:07Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:00.406249991Z
-updatedat: 2026-02-21T05:28:43.330700314Z
+updatedat: 2026-02-21T06:37:12.54047049Z
 closedat: null
