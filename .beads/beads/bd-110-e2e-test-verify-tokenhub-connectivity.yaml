@@ -21,8 +21,8 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: efc428fa-4c5d-46a5-ace8-84fccbcb942e
     dispatch_count: "4"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    last_run_at: "2026-02-21T23:53:29Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    last_run_at: "2026-02-21T23:54:00Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://localhost:8090/v1/chat/completions": dial tcp [::1]:8090: connect: connection refused'
     loop_detected: "false"
     provider_id: tokenhub
@@ -32,5 +32,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T23:07:59.061649105Z
-updatedat: 2026-02-21T23:53:59.46077444Z
+updatedat: 2026-02-21T23:54:00.437237013Z
 closedat: null
