@@ -25,7 +25,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771639152
     conversation_session_id: 3cdc70fe-36f3-45ea-be22-ea9d962d7ad5
     created_by: dispatcher_auto_remediation
-    dispatch_count: "10"
+    dispatch_count: "11"
     dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)"]'
     last_failed_at: "2026-02-21T04:16:25Z"
     last_run_at: "2026-02-21T07:08:45Z"
@@ -50,5 +50,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T03:20:00.864424138Z
-updatedat: 2026-02-21T07:08:45.434287775Z
+updatedat: 2026-02-21T07:08:58.022358887Z
 closedat: null
