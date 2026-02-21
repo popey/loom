@@ -7,7 +7,7 @@ id: bd-059
 type: task
 title: 'dispatcher: goroutine uses context.Background() instead of request context'
 description: 'internal/dispatch/dispatcher.go ~line 618-648: goroutine spawned with context.Background() instead of the caller''s context. If the parent request/operation is cancelled, the goroutine continues running indefinitely causing goroutine leaks. Fix: pass the request context and propagate cancellation.'
-status: in_progress
+status: blocked
 priority: 1
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -22,17 +22,22 @@ context:
     conversation_session_id: f6693d68-e483-4c89-b60c-2af1f2dac4cb
     dispatch_count: "23"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-21T07:44:04.860010028Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:44:14.859111963Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21},{"timestamp":"2026-02-21T07:44:24.858687056Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":22}]'
+    error_history: '[{"timestamp":"2026-02-21T07:44:04.860010028Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:44:14.859111963Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21},{"timestamp":"2026-02-21T07:44:24.858687056Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":22},{"timestamp":"2026-02-21T07:44:29.271076495Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":23},{"timestamp":"2026-02-21T07:44:35.926227142Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":23}]'
     last_run_at: "2026-02-21T07:44:26Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.69186499999999}
     loop_detected: "false"
+    loop_detection_reason: Repeated rate limit errors (5 attempts) - exhausted provider quota
+    progress_summary: No progress data
     provider_id: tokenhub
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-21T07:44:35Z"
+    ralph_blocked_reason: 'dispatch_count=23 exceeded max_hops=20, stuck in loop: Repeated rate limit errors (5 attempts) - exhausted provider quota'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-21T00:38:28Z"
+    revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:23.056787535Z
-updatedat: 2026-02-21T07:44:26.457337858Z
+updatedat: 2026-02-21T07:44:35.926278614Z
 closedat: null
