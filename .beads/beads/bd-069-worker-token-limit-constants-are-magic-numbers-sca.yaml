@@ -10,7 +10,7 @@ description: 'internal/worker/worker.go lines 288-341: token limit calculations 
 status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -24,5 +24,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:33.935773466Z
-updatedat: 2026-02-21T00:38:14.462373639Z
+updatedat: 2026-02-21T05:29:15.875055617Z
 closedat: null
