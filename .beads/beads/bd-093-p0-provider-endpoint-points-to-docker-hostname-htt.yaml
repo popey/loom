@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-093
+type: task
+title: 'P0: Provider endpoint points to Docker hostname http://tokenhub:8080/v1 instead of http://localhost:8090/v1'
+description: 'The registered TokenHub provider endpoint is ''http://tokenhub:8080/v1'' — a Docker Compose internal hostname that doesn''t resolve outside Docker. The actual TokenHub instance runs on http://localhost:8090/v1. This means EVERY LLM request from Loom fails at the TCP level (connection refused or DNS failure). Fix: Update the provider registration endpoint via the API or bootstrap script to point to the correct URL. This is the single biggest blocker — nothing works until the endpoint is correct.'
+status: open
+priority: 0
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-21T22:27:36.866423493Z
+updatedat: 2026-02-21T22:27:36.866655463Z
+closedat: null
