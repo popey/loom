@@ -18,13 +18,26 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-QA Engineer (Default)
+    agent_output: ""
+    agent_task_id: task-bd-049-1771655842085816217
+    agent_tokens: "23268"
+    agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771652034
     conversation_session_id: b0227635-a2af-436b-aeea-a051e05b436b
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-QA Engineer (Default)"]'
+    last_failed_at: "2026-02-21T06:37:54Z"
+    last_run_at: "2026-02-21T06:37:54Z"
+    loop_detected: "false"
+    loop_iterations: "5"
+    provider_id: tokenhub
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T23:13:17Z"
+    terminal_reason: parse_failures
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:12.266569589Z
-updatedat: 2026-02-21T06:37:17.721104865Z
+updatedat: 2026-02-21T06:37:54.929155652Z
 closedat: null
