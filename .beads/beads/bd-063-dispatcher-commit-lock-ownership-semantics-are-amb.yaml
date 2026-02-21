@@ -7,10 +7,10 @@ id: bd-063
 type: task
 title: 'dispatcher: commit lock ownership semantics are ambiguous and racy'
 description: 'internal/dispatch/dispatcher.go lines 87-92, 344-420: commitLock/commitStateMutex/commitQueue interact with unclear ownership. The queue processor goroutine sends on ResultCh without owning the lock, and lock release is the caller''s responsibility. This violates lock ownership patterns and risks deadlock/race. Fix: refactor so queue processor owns the full lock lifecycle.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,11 +18,12 @@ parent: ""
 children: []
 tags: []
 context:
+    dispatch_count: "1"
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T00:38:25Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:26.294403941Z
-updatedat: 2026-02-21T05:29:08.10767083Z
+updatedat: 2026-02-21T07:40:54.698610457Z
 closedat: null
