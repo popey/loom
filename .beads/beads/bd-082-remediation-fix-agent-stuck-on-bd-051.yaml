@@ -19,6 +19,8 @@ children: []
 tags: []
 context:
     created_by: dispatcher_auto_remediation
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-21T02:21:42Z"
     remediation_for: bd-051
     requires_persona: remediation-specialist
     stuck_agent_id: agent-1771534515-CEO (Default)
@@ -28,5 +30,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T02:21:36.784124509Z
-updatedat: 2026-02-21T02:21:36.784913641Z
+updatedat: 2026-02-21T02:21:42.825889708Z
 closedat: null
