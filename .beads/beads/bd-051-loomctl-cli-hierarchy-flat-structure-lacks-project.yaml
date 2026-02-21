@@ -7,10 +7,10 @@ id: bd-051
 type: task
 title: 'loomctl CLI hierarchy: flat structure lacks project-first nesting'
 description: 'loomctl has a flat command hierarchy. Context should flow from project downward: ''loomctl project loom bead list'' should be equivalent to ''loomctl bead list --project loom''. The CLI should support: ''loomctl project <id> <resource> <action>'' as the primary interface, with --project flags as secondary. Additionally, ''loomctl project <id>'' alone should show a dashboard of that project''s agents, open beads, recent activity, and container status. This mirrors kubectl''s namespace model (kubectl -n <ns> get pods) and makes context explicit.'
-status: in_progress
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-CEO (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -43,5 +43,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:32.015434352Z
-updatedat: 2026-02-21T04:31:42.827923802Z
+updatedat: 2026-02-21T05:28:32.150584797Z
 closedat: null
