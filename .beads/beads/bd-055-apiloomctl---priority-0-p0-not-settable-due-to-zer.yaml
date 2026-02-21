@@ -7,7 +7,7 @@ id: bd-055
 type: task
 title: 'API/loomctl: --priority 0 (P0) not settable due to zero-value bug'
 description: 'The POST /api/v1/beads handler treated priority=0 as ''not set'' and silently overrode it to priority=2 (medium). This made P0 (highest priority) impossible to assign via the API or loomctl. Root cause: handler checked ''if req.Priority == 0 { req.Priority = 2 }'' using a non-pointer int. Fix applied: changed Priority field to *int in request struct so nil vs 0 are distinguishable. This was fixed in the handler but should be audited across all API handlers that use the same anti-pattern for other int fields (e.g., max_hops, timeout values).'
-status: in_progress
+status: closed
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Project Manager (Default)
@@ -18,19 +18,26 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_id: agent-1771534515-Project Manager (Default)
+    agent_output: '{"action": "done", "reason": "Fixed the zero-value bug in handlers_motivations.go by changing CooldownMinutes and Priority from int to *int in CreateMotivationRequest. This allows users to explicitly set these values to 0 (for immediate re-triggering or P0 priority) while still defaulting to sensible values (5 min cooldown, priority 0) when not specified. The fix mirrors the pattern already applied to the beads handler. All tests pass, changes committed and pushed.", "notes": "Work complete. The audit found that handlers_motivations.go had the same anti-pattern as the beads handler. Other handlers (streaming, repl) either pass int values directly to downstream systems (correct) or use > 0 checks which are appropriate for timeout values."}'
+    agent_task_id: task-bd-055-1771655844914118934
+    agent_tokens: "881507"
+    agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771652034
     conversation_session_id: b6fb2bc7-f7aa-4960-8bc7-7aff64d5626b
     dispatch_count: "2"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
-    last_run_at: "2026-02-21T00:52:04Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)"]'
+    last_run_at: "2026-02-21T07:03:29Z"
     last_run_error: 'action loop failed: context canceled'
     loop_detected: "false"
-    provider_id: ollama-server
-    redispatch_requested: "true"
+    loop_iterations: "28"
+    provider_id: tokenhub
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-20T23:13:57Z"
+    terminal_reason: completed
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:54.631493418Z
-updatedat: 2026-02-21T06:37:22.086792211Z
-closedat: null
+updatedat: 2026-02-21T07:03:29.457934545Z
+closedat: 2026-02-21T07:03:29.457931553Z
