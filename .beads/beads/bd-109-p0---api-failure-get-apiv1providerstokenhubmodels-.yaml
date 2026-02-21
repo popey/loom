@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-109
+type: task
+title: P0 - API failure GET /api/v1/providers/tokenhub/models 502
+description: "API request failed\n\nMethod: GET\nPath: /api/v1/providers/tokenhub/models\nStatus: 502\nQuery: \nRemote: 172.19.0.1:45514\nUser: admin\nTimestamp: 2026-02-21T23:03:34Z\n"
+status: open
+priority: 0
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-21T23:03:34.974117737Z
+updatedat: 2026-02-21T23:03:34.974363804Z
+closedat: null
