@@ -10,7 +10,7 @@ description: 'internal/dispatch/dispatcher.go lines 87-92, 344-420: commitLock/c
 status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -24,5 +24,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:26.294403941Z
-updatedat: 2026-02-21T00:38:25.840158717Z
+updatedat: 2026-02-21T05:29:08.10767083Z
 closedat: null
