@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-103
+type: task
+title: 'P3: Close obsolete beads referencing deleted provider CRUD endpoints'
+description: 'Multiple beads reference API endpoints that were deleted during the TokenHub-only refactoring: bd-008 ''DELETE /api/v1/providers/update-test 500'', bd-009 ''DELETE /api/v1/providers/prov-scan 500'', bd-011 ''DELETE /api/v1/providers/prov-int 500'', bd-012 ''DELETE /api/v1/providers/test-provider 500'', bd-013 ''DELETE /api/v1/providers/update-defaults 500'', bd-014 ''DELETE /api/v1/providers/api-key-provider 500'', bd-015 ''DELETE /api/v1/providers/defaults-test 500'', bd-018 ''DELETE /api/v1/providers/test-del 500'', bd-019 ''POST /api/v1/agents 500''. These beads are for bugs in code that no longer exists. They should all be closed with reason ''obsolete — endpoint deleted in TokenHub-only refactoring''.'
+status: open
+priority: 3
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-21T22:28:17.712946526Z
+updatedat: 2026-02-21T22:28:17.713123839Z
+closedat: null
