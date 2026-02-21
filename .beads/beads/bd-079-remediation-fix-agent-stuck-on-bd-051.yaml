@@ -34,8 +34,8 @@ context:
     loop_iterations: "10"
     provider_id: ollama-server
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-21T04:04:52Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-21T04:12:32Z"
     remediation_for: bd-051
     remediation_needed: "true"
     remediation_requested_at: "2026-02-21T04:10:31Z"
@@ -49,5 +49,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T01:40:17.592471311Z
-updatedat: 2026-02-21T04:10:31.804392321Z
+updatedat: 2026-02-21T04:12:32.826755367Z
 closedat: null
