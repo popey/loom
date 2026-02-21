@@ -33,8 +33,8 @@ context:
     loop_iterations: "19"
     provider_id: sparky-local
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-21T04:28:52Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-21T04:34:04Z"
     remediation_for: bd-051
     remediation_needed: "true"
     remediation_requested_at: "2026-02-21T04:32:04Z"
@@ -48,5 +48,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T04:28:45.817503814Z
-updatedat: 2026-02-21T04:32:04.158838147Z
+updatedat: 2026-02-21T04:34:04.486075937Z
 closedat: null
