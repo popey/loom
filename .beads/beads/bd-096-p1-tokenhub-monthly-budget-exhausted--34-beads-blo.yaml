@@ -20,7 +20,7 @@ tags: []
 context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 006f3cb0-3f14-42d3-9c58-7124356e79d1
-    dispatch_count: "1"
+    dispatch_count: "2"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
     last_run_at: "2026-02-21T23:53:50Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://localhost:8090/v1/chat/completions": dial tcp [::1]:8090: connect: connection refused'
@@ -32,5 +32,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:44.695433593Z
-updatedat: 2026-02-21T23:53:50.424868994Z
+updatedat: 2026-02-21T23:54:20.512075653Z
 closedat: null
