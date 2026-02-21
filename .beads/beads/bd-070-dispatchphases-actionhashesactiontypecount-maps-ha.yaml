@@ -7,7 +7,7 @@ id: bd-070
 type: task
 title: 'dispatch_phases: actionHashes/actionTypeCount maps have no sync protection'
 description: 'internal/dispatch/dispatch_phases.go lines ~741-742: actionHashes and actionTypeCount are written without synchronization in ExecuteTaskWithLoop. If called from concurrent goroutines, data races occur. Fix: protect with sync.RWMutex or use sync.Map.'
-status: in_progress
+status: blocked
 priority: 1
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -22,17 +22,22 @@ context:
     conversation_session_id: 4bea0376-d3da-471f-858e-67139ffe9ece
     dispatch_count: "22"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-21T07:35:25.831451306Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:35:36.789001674Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:35:46.423619921Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:36:03.792388274Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21}]'
+    error_history: '[{"timestamp":"2026-02-21T07:35:25.831451306Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:35:36.789001674Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:35:46.423619921Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:36:03.792388274Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21},{"timestamp":"2026-02-21T07:36:20.800761961Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":22}]'
     last_run_at: "2026-02-21T07:36:06Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.69186499999999}
     loop_detected: "false"
+    loop_detection_reason: Repeated rate limit errors (5 attempts) - exhausted provider quota
+    progress_summary: No progress data
     provider_id: tokenhub
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-21T07:36:20Z"
+    ralph_blocked_reason: 'dispatch_count=22 exceeded max_hops=20, stuck in loop: Repeated rate limit errors (5 attempts) - exhausted provider quota'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-21T00:38:11Z"
+    revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:35.093684796Z
-updatedat: 2026-02-21T07:36:06.873189889Z
+updatedat: 2026-02-21T07:36:20.800848474Z
 closedat: null
