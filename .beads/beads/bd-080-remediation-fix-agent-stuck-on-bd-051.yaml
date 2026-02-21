@@ -29,7 +29,7 @@ context:
     dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
     error_history: '[{"timestamp":"2026-02-21T07:10:09.065548847Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:10:17.34686929Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21},{"timestamp":"2026-02-21T07:10:26.463830865Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":22},{"timestamp":"2026-02-21T07:10:33.857013134Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":23}]'
     last_failed_at: "2026-02-21T01:46:45Z"
-    last_run_at: "2026-02-21T07:10:28Z"
+    last_run_at: "2026-02-21T07:10:35Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.69186499999999}
     loop_detected: "false"
@@ -51,5 +51,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T01:45:53.682086652Z
-updatedat: 2026-02-21T07:10:33.86034642Z
+updatedat: 2026-02-21T07:10:35.537068756Z
 closedat: null
