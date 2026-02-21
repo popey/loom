@@ -34,8 +34,8 @@ context:
     loop_iterations: "10"
     provider_id: vllm-local
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-21T03:31:17Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-21T03:36:52Z"
     remediation_for: bd-056
     remediation_needed: "true"
     remediation_requested_at: "2026-02-21T03:34:50Z"
@@ -49,5 +49,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:46:31.664708351Z
-updatedat: 2026-02-21T03:34:50.560671885Z
+updatedat: 2026-02-21T03:36:52.83672902Z
 closedat: null
