@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-097
+type: task
+title: 'P1: Beads reference deleted providers (ollama-server, sparky-local, vllm-local, nvidia-cloud-*)'
+description: '35 beads reference ''ollama-server'', 18 reference ''sparky-local'', 15 reference ''vllm-local'', 5 reference ''nvidia-cloud-*'' — all providers that no longer exist after the TokenHub-only refactoring. These ghost provider references in bead context cause confusion in diagnostics and may prevent proper re-dispatch if the dispatcher checks provider_id validity. Fix: 1) Batch-update all blocked beads to set provider_id=tokenhub in context, 2) Add a migration/cleanup step to the bootstrap that clears stale provider references, 3) Consider whether the dispatcher should ignore context.provider_id and always use the live provider selection.'
+status: open
+priority: 1
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-21T22:27:48.845059967Z
+updatedat: 2026-02-21T22:27:48.845221089Z
+closedat: null
