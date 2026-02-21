@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-105
+type: task
+title: 'P2: Provider marked ''healthy'' at registration time without actual health check'
+description: 'When a provider is registered via the API, its status defaults to ''pending'' in the registry (registry.go line 58), but the API handler or bootstrap sets it to ''healthy'' immediately. The dispatcher then trusts this status (isProviderHealthy checks for ''healthy'' or ''active''). But the heartbeat has never run (last_heartbeat_at is zero-time), so ''healthy'' is an unverified claim. Fix: 1) Default to ''pending'' at registration, 2) Require at least one successful heartbeat before promoting to ''healthy'', 3) Or run an immediate health check at registration time before accepting the provider.'
+status: open
+priority: 2
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-21T22:28:22.579475954Z
+updatedat: 2026-02-21T22:28:22.579648579Z
+closedat: null
