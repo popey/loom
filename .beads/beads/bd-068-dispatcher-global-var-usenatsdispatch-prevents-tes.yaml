@@ -7,10 +7,10 @@ id: bd-068
 type: task
 title: 'dispatcher: global var UseNATSDispatch prevents test isolation'
 description: 'internal/dispatch/dispatcher.go line ~112: ''var UseNATSDispatch bool'' is a package-level mutable global. Concurrent tests cannot safely change this setting. Fix: move to a config struct field or dependency-injected interface so tests can set it per-instance.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,11 +18,12 @@ parent: ""
 children: []
 tags: []
 context:
+    dispatch_count: "1"
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T00:38:17Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:32.585011819Z
-updatedat: 2026-02-21T05:29:14.901811148Z
+updatedat: 2026-02-21T07:36:08.785722527Z
 closedat: null
