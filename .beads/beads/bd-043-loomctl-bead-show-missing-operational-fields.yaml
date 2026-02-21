@@ -18,13 +18,20 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-CEO (Default)
     conversation_session_id: 07b4edb1-c6f3-4240-98f6-0a623dd03d4c
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-CEO (Default)"]'
+    last_run_at: "2026-02-21T05:52:29Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 4: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
+    loop_detected: "false"
+    provider_id: tokenhub
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T23:12:17Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:08.896950889Z
-updatedat: 2026-02-21T05:51:26.362422357Z
+updatedat: 2026-02-21T05:52:29.317280837Z
 closedat: null
