@@ -10,7 +10,7 @@ description: 'The POST /api/v1/beads handler treated priority=0 as ''not set'' a
 status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,13 +18,19 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: b6fb2bc7-f7aa-4960-8bc7-7aff64d5626b
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
+    last_run_at: "2026-02-21T00:52:04Z"
+    last_run_error: 'action loop failed: context canceled'
+    loop_detected: "false"
+    provider_id: ollama-server
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T23:13:57Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:54.631493418Z
-updatedat: 2026-02-21T00:28:45.655194102Z
+updatedat: 2026-02-21T05:28:40.246916979Z
 closedat: null
