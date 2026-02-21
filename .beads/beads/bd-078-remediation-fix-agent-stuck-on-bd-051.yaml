@@ -25,9 +25,9 @@ context:
     agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771639152
     conversation_session_id: d62e8c74-2e6f-45a2-9f66-a394fd04cc36
     created_by: dispatcher_auto_remediation
-    dispatch_count: "21"
+    dispatch_count: "22"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-21T07:25:02.454948873Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20}]'
+    error_history: '[{"timestamp":"2026-02-21T07:25:02.454948873Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:25:07.651195514Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21}]'
     last_failed_at: "2026-02-21T02:30:22Z"
     last_run_at: "2026-02-21T07:25:03Z"
     last_run_error: |
@@ -51,5 +51,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T01:21:16.699008677Z
-updatedat: 2026-02-21T07:25:03.491169998Z
+updatedat: 2026-02-21T07:25:07.654918695Z
 closedat: null
