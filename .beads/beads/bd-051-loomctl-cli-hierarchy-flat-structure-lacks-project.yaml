@@ -7,10 +7,10 @@ id: bd-051
 type: task
 title: 'loomctl CLI hierarchy: flat structure lacks project-first nesting'
 description: 'loomctl has a flat command hierarchy. Context should flow from project downward: ''loomctl project loom bead list'' should be equivalent to ''loomctl bead list --project loom''. The CLI should support: ''loomctl project <id> <resource> <action>'' as the primary interface, with --project flags as secondary. Additionally, ''loomctl project <id>'' alone should show a dashboard of that project''s agents, open beads, recent activity, and container status. This mirrors kubectl''s namespace model (kubectl -n <ns> get pods) and makes context explicit.'
-status: in_progress
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-CEO (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,29 +18,29 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Code Reviewer (Default)
-    agent_output: '{"action": "scope", "path": "cmd/loom/", "notes": "Thought: Since reading the `main.go` file in `cmd/loomctl/` did not provide the definition of `newProjectCommand()`, I will re-scope the `cmd/loom/` directory to see if the definition might be located there. Acting: re-scoping the `cmd/loom/` directory."}'
-    agent_task_id: task-bd-051-1771638505807833520
-    agent_tokens: "727840"
-    agent_worker_id: worker-agent-1771534515-Code Reviewer (Default)-1771631643
+    agent_id: agent-1771534515-CEO (Default)
+    agent_output: '{"action": "scope", "path": "internal/api/", "notes": "Thought: Since the `internal/` directory contains many subdirectories, I will re-scope the `internal/api/` directory to focus on API-related files that might contain the definition of `newProjectCommand()` or related project commands. Acting: re-scoping the `internal/api/` directory."}'
+    agent_task_id: task-bd-051-1771639173042120779
+    agent_tokens: "324914"
+    agent_worker_id: worker-agent-1771534515-CEO (Default)-1771639152
     conversation_session_id: 1e5bde85-2fbe-4b5e-b787-a29b059d1f48
     dispatch_count: "5"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
-    last_failed_at: "2026-02-21T01:53:13Z"
-    last_run_at: "2026-02-21T01:53:13Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-CEO (Default)"]'
+    last_failed_at: "2026-02-21T02:21:36Z"
+    last_run_at: "2026-02-21T02:21:36Z"
     loop_detected: "false"
-    loop_iterations: "26"
+    loop_iterations: "12"
     provider_id: sparky-local
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
-    redispatch_requested_at: "2026-02-21T01:55:15Z"
+    redispatch_requested_at: "2026-02-21T02:23:42Z"
     remediation_needed: "true"
-    remediation_requested_at: "2026-02-21T01:53:13Z"
-    stuck_at: "2026-02-21T01:53:13Z"
+    remediation_requested_at: "2026-02-21T02:21:36Z"
+    stuck_at: "2026-02-21T02:21:36Z"
     terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:32.015434352Z
-updatedat: 2026-02-21T01:59:31.703473801Z
+updatedat: 2026-02-21T02:23:42.825261581Z
 closedat: null
