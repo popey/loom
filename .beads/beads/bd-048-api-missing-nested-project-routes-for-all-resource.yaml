@@ -18,13 +18,26 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Devops Engineer (Default)
+    agent_output: ""
+    agent_task_id: task-bd-048-1771655836227468442
+    agent_tokens: "196410"
+    agent_worker_id: worker-agent-1771534515-Devops Engineer (Default)-1771652034
     conversation_session_id: 9594b969-5952-48a2-b582-3f7900cd8bec
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)"]'
+    last_failed_at: "2026-02-21T06:39:53Z"
+    last_run_at: "2026-02-21T06:39:53Z"
+    loop_detected: "false"
+    loop_iterations: "19"
+    provider_id: tokenhub
+    provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-20T23:13:07Z"
+    terminal_reason: parse_failures
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:00.406249991Z
-updatedat: 2026-02-21T06:37:15.235987414Z
+updatedat: 2026-02-21T06:39:53.184547431Z
 closedat: null
