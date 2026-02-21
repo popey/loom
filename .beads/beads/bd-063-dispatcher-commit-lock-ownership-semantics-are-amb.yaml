@@ -7,7 +7,7 @@ id: bd-063
 type: task
 title: 'dispatcher: commit lock ownership semantics are ambiguous and racy'
 description: 'internal/dispatch/dispatcher.go lines 87-92, 344-420: commitLock/commitStateMutex/commitQueue interact with unclear ownership. The queue processor goroutine sends on ResultCh without owning the lock, and lock release is the caller''s responsibility. This violates lock ownership patterns and risks deadlock/race. Fix: refactor so queue processor owns the full lock lifecycle.'
-status: in_progress
+status: blocked
 priority: 1
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -27,12 +27,17 @@ context:
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.69186499999999}
     loop_detected: "false"
+    loop_detection_reason: Repeated rate limit errors (5 attempts) - exhausted provider quota
+    progress_summary: No progress data
     provider_id: tokenhub
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-21T07:45:54Z"
+    ralph_blocked_reason: 'dispatch_count=24 exceeded max_hops=20, stuck in loop: Repeated rate limit errors (5 attempts) - exhausted provider quota'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-21T00:38:25Z"
+    revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:26.294403941Z
-updatedat: 2026-02-21T07:45:46.891989754Z
+updatedat: 2026-02-21T07:45:54.871853373Z
 closedat: null
