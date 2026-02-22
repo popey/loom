@@ -10,7 +10,7 @@ description: '34 beads show 429 errors: {"budget_usd":100,"error":"monthly budge
 status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -24,28 +24,39 @@ context:
     agent_tokens: "23980"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771718701
     conversation_session_id: 006f3cb0-3f14-42d3-9c58-7124356e79d1
-    dispatch_count: "0"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-22T01:49:32.083603493Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:49:32.736036744Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:49:42.08408476Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:49:43.326267527Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:49:52.083762751Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20}]'
-    last_failed_at: "2026-02-22T00:45:38Z"
+    dispatch_count: ""
+    dispatch_history: ""
+    error_history: ""
+    failed_at: ""
+    last_error: ""
+    last_failed_at: ""
     last_run_at: "2026-02-22T01:49:00Z"
-    last_run_error: |
-        action loop failed: LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
-    loop_detected: "false"
-    loop_detection_reason: Repeated provider errors (5 attempts) - provider unavailable or unhealthy
-    loop_iterations: "5"
+    last_run_error: ""
+    loop_detected: ""
+    loop_detection_reason: ""
+    loop_iterations: ""
     progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
     ralph_blocked_at: ""
     ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    redispatch_requested: ""
     redispatch_requested_at: "2026-02-21T23:47:50Z"
-    revert_status: not_attempted
-    terminal_reason: parse_failures
+    remediation_for: ""
+    remediation_needed: ""
+    remediation_requested_at: ""
+    requires_persona: ""
+    reset_at: "2026-02-22T16:05:10Z"
+    reset_reason: mass_reset_provider_healthy
+    revert_status: ""
+    stuck_agent_id: ""
+    stuck_at: ""
+    stuck_iterations: ""
+    stuck_terminal_reason: ""
+    terminal_reason: ""
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:44.695433593Z
-updatedat: 2026-02-22T02:05:52.950960524Z
+updatedat: 2026-02-22T16:05:14.13170677Z
 closedat: null
