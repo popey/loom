@@ -35,7 +35,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771718701
     conversation_session_id: ca81e1c4-5e6f-48f1-aadf-344249ef3a9a
     correlation_id: dispatch-bd-095-1771803692942951349
-    dispatch_count: "5"
+    dispatch_count: "6"
     dispatch_history: '["agent-1771534515-QA Engineer (Default)"]'
     error_history: ""
     failed_at: "2026-02-22T23:41:35Z"
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:43.784784292Z
-updatedat: 2026-02-22T23:41:35.402429772Z
+updatedat: 2026-02-22T23:42:54.421955073Z
 closedat: null
