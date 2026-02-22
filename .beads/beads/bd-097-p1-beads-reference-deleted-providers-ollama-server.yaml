@@ -7,10 +7,10 @@ id: bd-097
 type: task
 title: 'P1: Beads reference deleted providers (ollama-server, sparky-local, vllm-local, nvidia-cloud-*)'
 description: '35 beads reference ''ollama-server'', 18 reference ''sparky-local'', 15 reference ''vllm-local'', 5 reference ''nvidia-cloud-*'' — all providers that no longer exist after the TokenHub-only refactoring. These ghost provider references in bead context cause confusion in diagnostics and may prevent proper re-dispatch if the dispatcher checks provider_id validity. Fix: 1) Batch-update all blocked beads to set provider_id=tokenhub in context, 2) Add a migration/cleanup step to the bootstrap that clears stale provider references, 3) Consider whether the dispatcher should ignore context.provider_id and always use the live provider selection.'
-status: in_progress
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Product Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -31,29 +31,29 @@ context:
           ],
           "notes": "Re-running the search specifically within the .beads/beads directory with an extremely high limit to ensure we capture all relevant references."
         }
-    agent_task_id: task-bd-097-1771721121565561983
-    agent_tokens: "134139"
-    agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
+    agent_task_id: task-bd-097-1771722922291638441
+    agent_tokens: "168763"
+    agent_worker_id: worker-agent-1771534515-Product Manager (Default)-1771718701
     conversation_session_id: 919d0f25-da95-42dd-adab-b4cfd531c174
     dispatch_count: "10"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)"]'
-    last_failed_at: "2026-02-22T00:47:30Z"
-    last_run_at: "2026-02-22T00:55:43Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)"]'
+    last_failed_at: "2026-02-22T01:18:01Z"
+    last_run_at: "2026-02-22T01:18:01Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
     loop_detected: "false"
-    loop_iterations: "17"
+    loop_iterations: "16"
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    redispatch_requested: "true"
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-22T00:49:33Z"
     remediation_needed: "true"
-    remediation_requested_at: "2026-02-22T00:47:30Z"
-    stuck_at: "2026-02-22T00:47:30Z"
+    remediation_requested_at: "2026-02-22T01:18:01Z"
+    stuck_at: "2026-02-22T01:18:01Z"
     terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:48.845059967Z
-updatedat: 2026-02-22T01:15:22.084119773Z
+updatedat: 2026-02-22T01:18:01.377060247Z
 closedat: null
