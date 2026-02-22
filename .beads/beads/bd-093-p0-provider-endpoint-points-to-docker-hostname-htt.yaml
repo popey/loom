@@ -35,7 +35,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771727093
     conversation_session_id: 7621df64-4099-4bfa-a39c-ce983053fb7b
     correlation_id: dispatch-bd-093-1771776316400638199
-    dispatch_count: "1"
+    dispatch_count: "2"
     dispatch_history: ""
     error_history: ""
     failed_at: "2026-02-22T16:05:19Z"
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:36.866423493Z
-updatedat: 2026-02-22T16:05:19.592406781Z
+updatedat: 2026-02-22T21:48:22.216866628Z
 closedat: null
