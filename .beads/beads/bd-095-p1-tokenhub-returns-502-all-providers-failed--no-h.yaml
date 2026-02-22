@@ -7,10 +7,10 @@ id: bd-095
 type: task
 title: 'P1: TokenHub returns 502 ''all providers failed'' — no healthy backends configured'
 description: '7 beads show 502 errors: {"error":{"message":"all providers failed","type":"server_error"}}. This means TokenHub itself has no healthy backend providers (Anthropic, OpenAI, local vLLM, etc.) configured or they are all failing. Investigation needed: 1) Check TokenHub provider list (tokenhubctl provider list), 2) Check if vault is unlocked (tokenhubctl vault status), 3) Check if backend provider API keys are configured and valid, 4) Ensure at least one backend model is enabled and healthy.'
-status: in_progress
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Project Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,7 +18,7 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-QA Engineer (Default)
+    agent_id: agent-1771534515-Project Manager (Default)
     agent_output: |-
         {
           "actions": [
@@ -30,14 +30,14 @@ context:
           ],
           "notes": "Searching the entire filesystem for the tokenhubctl binary to determine its location."
         }
-    agent_task_id: task-bd-095-1771723252895803541
-    agent_tokens: "173200"
-    agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
+    agent_task_id: task-bd-095-1771723498806718892
+    agent_tokens: "203354"
+    agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771718701
     conversation_session_id: ca81e1c4-5e6f-48f1-aadf-344249ef3a9a
     dispatch_count: "12"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-QA Engineer (Default)"]'
-    last_failed_at: "2026-02-22T01:22:54Z"
-    last_run_at: "2026-02-22T01:22:54Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Project Manager (Default)"]'
+    last_failed_at: "2026-02-22T01:26:35Z"
+    last_run_at: "2026-02-22T01:26:35Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 8: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
     loop_detected: "false"
@@ -45,14 +45,14 @@ context:
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
     redispatch_requested: "true"
-    redispatch_requested_at: "2026-02-22T01:24:56Z"
+    redispatch_requested_at: "2026-02-22T01:28:41Z"
     remediation_needed: "true"
-    remediation_requested_at: "2026-02-22T01:22:54Z"
-    stuck_at: "2026-02-22T01:22:54Z"
+    remediation_requested_at: "2026-02-22T01:26:35Z"
+    stuck_at: "2026-02-22T01:26:35Z"
     terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:43.784784292Z
-updatedat: 2026-02-22T01:24:57.861062741Z
+updatedat: 2026-02-22T01:28:41.943730501Z
 closedat: null
