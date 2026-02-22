@@ -7,10 +7,10 @@ id: bd-108
 type: task
 title: 'P2: Remediation system doesn''t distinguish provider errors from agent logic errors'
 description: 'The createRemediationBead() function (dispatcher.go line 1094) creates P0 remediation beads when agents get stuck, but it doesn''t check WHY the agent is stuck. If the error is ''connection refused'', ''502 all providers failed'', or ''429 budget exceeded'', creating a remediation bead is pointless — no agent can fix a provider infrastructure problem by modifying code. Fix: In processTaskError() and applyLoopMetadata(), classify the error: if it''s a provider error (network, auth, budget, 5xx), set the bead to a ''provider_error'' state and skip remediation. Only create remediation beads for agent logic errors (parse failures, stagnation, inner loops with actual tool use).'
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-QA Engineer (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -25,34 +25,34 @@ context:
             {
               "type": "search_text",
               "query": "createRemediationBead",
-              "path": "internal/worker/"
+              "path": "internal/agent/dispatcher/"
             }
           ],
-          "notes": "Searching for the createRemediationBead function within the internal/worker/ directory to locate its implementation."
+          "notes": "Searching for the createRemediationBead function within the internal/agent/dispatcher/ directory to locate its implementation."
         }
-    agent_task_id: task-bd-108-1771721160529525876
-    agent_tokens: "220800"
-    agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771718701
+    agent_task_id: task-bd-108-1771724921359362367
+    agent_tokens: "230407"
+    agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
     conversation_session_id: d7281249-d21d-4055-ad26-cb6712f68087
     dispatch_count: "6"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
-    last_failed_at: "2026-02-22T00:47:55Z"
-    last_run_at: "2026-02-22T01:48:35Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
+    last_failed_at: "2026-02-22T01:51:01Z"
+    last_run_at: "2026-02-22T01:51:01Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"no eligible models registered","type":"server_error","code":null}}
     loop_detected: "false"
-    loop_iterations: "20"
+    loop_iterations: "16"
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    redispatch_requested: "true"
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-22T00:50:02Z"
     remediation_needed: "true"
-    remediation_requested_at: "2026-02-22T00:47:55Z"
-    stuck_at: "2026-02-22T00:47:55Z"
+    remediation_requested_at: "2026-02-22T01:51:01Z"
+    stuck_at: "2026-02-22T01:51:01Z"
     terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:40.355081229Z
-updatedat: 2026-02-22T01:48:40.452322929Z
+updatedat: 2026-02-22T01:51:01.773391291Z
 closedat: null
