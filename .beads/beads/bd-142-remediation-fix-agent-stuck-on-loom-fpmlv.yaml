@@ -36,9 +36,9 @@ context:
     agent_worker_id: worker-agent-1771534515-Devops Engineer (Default)-1771718701
     conversation_session_id: 821fa616-0f5f-42e8-b4d5-b966fe6157d0
     created_by: dispatcher_auto_remediation
-    dispatch_count: "21"
+    dispatch_count: "22"
     dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-22T07:14:06.147348655Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: invalid api key\n","dispatch":20}]'
+    error_history: '[{"timestamp":"2026-02-22T07:14:06.147348655Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: invalid api key\n","dispatch":20},{"timestamp":"2026-02-22T07:50:17.844696403Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: invalid api key\n","dispatch":21}]'
     last_failed_at: "2026-02-22T03:08:30Z"
     last_run_at: "2026-02-22T04:43:17Z"
     last_run_error: |
@@ -62,5 +62,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T02:52:53.648693986Z
-updatedat: 2026-02-22T07:14:06.147397824Z
+updatedat: 2026-02-22T07:50:17.844746915Z
 closedat: null
