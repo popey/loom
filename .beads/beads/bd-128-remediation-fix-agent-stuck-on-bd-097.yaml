@@ -22,10 +22,10 @@ context:
     conversation_session_id: 0d729f1a-7d80-4be0-ba8a-ff9a6cb0fd72
     created_by: dispatcher_auto_remediation
     dispatch_count: "9"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    last_run_at: "2026-02-22T01:30:14Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    last_run_at: "2026-02-22T01:30:38Z"
     last_run_error: |
-        action loop failed: LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"no eligible models registered","type":"server_error","code":null}}
+        action loop failed: LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
     loop_detected: "false"
     provider_id: tokenhub
     redispatch_requested: "true"
@@ -39,5 +39,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T01:23:45.732149099Z
-updatedat: 2026-02-22T01:30:18.224568804Z
+updatedat: 2026-02-22T01:30:38.549155385Z
 closedat: null
