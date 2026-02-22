@@ -7,7 +7,7 @@ id: bd-096
 type: task
 title: 'P1: TokenHub monthly budget exhausted — 34 beads blocked with 429 budget errors'
 description: '34 beads show 429 errors: {"budget_usd":100,"error":"monthly budget exceeded"}. The TokenHub instance has a $100 monthly budget limit that has been hit. All subsequent LLM requests are rejected. Fix options: 1) Increase the budget via tokenhubctl (routing set or admin API), 2) Reset the budget counter if this is a development instance, 3) Add budget monitoring/alerting to Loom so operators know before agents are blocked. This is the second-most-common error after connection_refused.'
-status: in_progress
+status: blocked
 priority: 1
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -26,20 +26,26 @@ context:
     conversation_session_id: 006f3cb0-3f14-42d3-9c58-7124356e79d1
     dispatch_count: "20"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    error_history: '[{"timestamp":"2026-02-22T01:49:32.083603493Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:49:32.736036744Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:49:42.08408476Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:49:43.326267527Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:49:52.083762751Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20}]'
     last_failed_at: "2026-02-22T00:45:38Z"
     last_run_at: "2026-02-22T01:49:00Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
     loop_detected: "false"
+    loop_detection_reason: Repeated provider errors (5 attempts) - provider unavailable or unhealthy
     loop_iterations: "5"
+    progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-22T01:49:52Z"
+    ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated provider errors (5 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-21T23:47:50Z"
+    revert_status: not_attempted
     terminal_reason: parse_failures
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:44.695433593Z
-updatedat: 2026-02-22T01:49:00.483932755Z
+updatedat: 2026-02-22T01:49:52.083799487Z
 closedat: null
