@@ -7,10 +7,10 @@ id: bd-105
 type: task
 title: 'P2: Provider marked ''healthy'' at registration time without actual health check'
 description: 'When a provider is registered via the API, its status defaults to ''pending'' in the registry (registry.go line 58), but the API handler or bootstrap sets it to ''healthy'' immediately. The dispatcher then trusts this status (isProviderHealthy checks for ''healthy'' or ''active''). But the heartbeat has never run (last_heartbeat_at is zero-time), so ''healthy'' is an unverified claim. Fix: 1) Default to ''pending'' at registration, 2) Require at least one successful heartbeat before promoting to ''healthy'', 3) Or run an immediate health check at registration time before accepting the provider.'
-status: open
+status: in_progress
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Devops Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,7 +18,7 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-CEO (Default)
+    agent_id: agent-1771534515-Devops Engineer (Default)
     agent_output: |-
         {
           "actions": [
@@ -34,15 +34,16 @@ context:
     agent_tokens: "136705"
     agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
     conversation_session_id: 6831f792-7030-437c-afbd-9ec5290c5992
-    dispatch_count: ""
-    dispatch_history: ""
+    dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)"]'
     error_history: ""
     failed_at: ""
     last_error: ""
     last_failed_at: ""
-    last_run_at: "2026-02-22T01:54:31Z"
-    last_run_error: ""
-    loop_detected: ""
+    last_run_at: "2026-02-22T23:54:01Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
+    loop_detected: "false"
     loop_detection_reason: ""
     loop_iterations: ""
     provider_id: tokenhub
@@ -67,5 +68,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:22.579475954Z
-updatedat: 2026-02-22T23:54:00.640179808Z
+updatedat: 2026-02-22T23:54:01.152240604Z
 closedat: null
