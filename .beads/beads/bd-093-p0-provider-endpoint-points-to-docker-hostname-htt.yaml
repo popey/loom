@@ -33,7 +33,7 @@ context:
     agent_task_id: task-bd-093-1771727093043348777
     agent_tokens: "173540"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771727093
-    conversation_session_id: 7621df64-4099-4bfa-a39c-ce983053fb7b
+    conversation_session_id: 2ecdecac-088c-40bf-b760-c6c557b117a9
     correlation_id: dispatch-bd-093-1771799078121028905
     dispatch_count: "10"
     dispatch_history: ""
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:36.866423493Z
-updatedat: 2026-02-22T22:29:43.337757037Z
+updatedat: 2026-02-22T22:29:45.148771555Z
 closedat: null
