@@ -7,10 +7,10 @@ id: bd-104
 type: task
 title: 'P1: Bead loom-fpmlv dispatched 11,329 times — max_hops guard failed'
 description: 'Bead loom-fpmlv (auto-filed P0 Project readiness failed) has been dispatched 11,329 times despite max_hops defaulting to 20. The ralph auto-block should have stopped it at dispatch 20, but it somehow reached 11,329. Investigation needed: 1) Was max_hops not set when this bead was running? 2) Did the bead get unblocked by something and re-enter the dispatch loop? 3) Is there a race condition in the dispatch count check? This bead consumed enormous resources for nothing. Fix: Audit the dispatch count check in selectCandidate() and the ralph auto-block logic. Consider adding a hard ceiling (e.g., 100 dispatches) that blocks regardless of progress detection.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Code Reviewer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -33,8 +33,8 @@ context:
     agent_task_id: task-bd-104-1771721424823657814
     agent_tokens: "195203"
     agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
-    conversation_session_id: b5ec00ec-ec7d-48ef-a568-90de03b1f587
-    dispatch_count: ""
+    conversation_session_id: 7640c861-323a-4a7c-b8c6-9ebdf329b763
+    dispatch_count: "1"
     dispatch_history: ""
     error_history: ""
     failed_at: ""
@@ -68,5 +68,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:21.212258372Z
-updatedat: 2026-02-22T23:52:04.010831716Z
+updatedat: 2026-02-22T23:53:23.696257822Z
 closedat: null
