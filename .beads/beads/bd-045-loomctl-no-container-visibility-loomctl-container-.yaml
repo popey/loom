@@ -26,12 +26,12 @@ context:
     conversation_session_id: bcc5f8f4-90e4-4083-a5d0-1bb01cf19e80
     correlation_id: dispatch-bd-045-1771804441096626124
     dispatch_count: "8"
-    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: ""
     failed_at: "2026-02-22T23:54:01Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-22T23:53:26Z"
+    last_run_at: "2026-02-22T23:54:01Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:30.483868481Z
-updatedat: 2026-02-22T23:54:01.099111184Z
+updatedat: 2026-02-22T23:54:01.113358019Z
 closedat: null
