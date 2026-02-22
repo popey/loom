@@ -34,25 +34,38 @@ context:
     agent_tokens: "230407"
     agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
     conversation_session_id: d7281249-d21d-4055-ad26-cb6712f68087
-    dispatch_count: "0"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
-    last_failed_at: "2026-02-22T01:51:01Z"
+    dispatch_count: ""
+    dispatch_history: ""
+    error_history: ""
+    failed_at: ""
+    last_error: ""
+    last_failed_at: ""
     last_run_at: "2026-02-22T01:51:01Z"
-    last_run_error: |
-        action loop failed: LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"no eligible models registered","type":"server_error","code":null}}
-    loop_detected: "false"
-    loop_iterations: "16"
+    last_run_error: ""
+    loop_detected: ""
+    loop_detection_reason: ""
+    loop_iterations: ""
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    redispatch_requested: "true"
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
+    redispatch_requested: ""
     redispatch_requested_at: "2026-02-22T01:53:02Z"
-    remediation_needed: "true"
-    remediation_requested_at: "2026-02-22T01:51:01Z"
-    stuck_at: "2026-02-22T01:51:01Z"
-    terminal_reason: progress_stagnant
+    remediation_for: ""
+    remediation_needed: ""
+    remediation_requested_at: ""
+    requires_persona: ""
+    reset_at: "2026-02-22T16:05:10Z"
+    reset_reason: mass_reset_provider_healthy
+    revert_status: ""
+    stuck_agent_id: ""
+    stuck_at: ""
+    stuck_iterations: ""
+    stuck_terminal_reason: ""
+    terminal_reason: ""
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:40.355081229Z
-updatedat: 2026-02-22T02:12:10.434108309Z
+updatedat: 2026-02-22T16:05:27.349311297Z
 closedat: null
