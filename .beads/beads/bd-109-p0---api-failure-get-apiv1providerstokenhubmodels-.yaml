@@ -7,10 +7,10 @@ id: bd-109
 type: task
 title: P0 - API failure GET /api/v1/providers/tokenhub/models 502
 description: "API request failed\n\nMethod: GET\nPath: /api/v1/providers/tokenhub/models\nStatus: 502\nQuery: \nRemote: 172.19.0.1:45514\nUser: admin\nTimestamp: 2026-02-21T23:03:34Z\n"
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Code Reviewer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -34,7 +34,7 @@ context:
     agent_tokens: "252173"
     agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
     conversation_session_id: e9e8d430-cb38-4a77-9a15-96bf88b0b660
-    dispatch_count: "12"
+    dispatch_count: "13"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-CEO (Default)"]'
     last_failed_at: "2026-02-22T00:14:34Z"
     last_run_at: "2026-02-22T00:14:34Z"
@@ -53,5 +53,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T23:03:34.974117737Z
-updatedat: 2026-02-22T00:16:42.084089928Z
+updatedat: 2026-02-22T00:16:43.023143307Z
 closedat: null
