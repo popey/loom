@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-145
+type: task
+title: 'Smoke test: verify TaskExecutor is live'
+description: Write a file /tmp/executor-test.txt with content `executor works` using the write action, then use the done action.
+status: open
+priority: 1
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-22T23:40:51.187974927Z
+updatedat: 2026-02-22T23:40:51.188104399Z
+closedat: null
