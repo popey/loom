@@ -17,10 +17,13 @@ relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    dispatch_count: "1"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-22T21:48:22Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T21:00:02.763486157Z
-updatedat: 2026-02-22T21:00:02.763707951Z
+updatedat: 2026-02-22T23:41:32.949603577Z
 closedat: null
