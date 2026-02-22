@@ -1,0 +1,32 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-115
+type: task
+title: 'E2E dispatch test: verify TokenHub integration'
+description: |-
+    This is a test bead to verify the end-to-end dispatch pipeline through TokenHub. The agent should:
+    1. Read this bead description
+    2. Acknowledge the test is successful
+    3. Close this bead
+
+    If you are an agent reading this: the test is successful. Please close this bead with a note confirming you received and processed it through TokenHub.
+status: open
+priority: 2
+projectid: loom
+assignedto: agent-1771534515-Engineering Manager (Default)
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-22T00:42:49.618984844Z
+updatedat: 2026-02-22T00:42:49.619186446Z
+closedat: null
