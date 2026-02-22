@@ -7,7 +7,7 @@ id: bd-105
 type: task
 title: 'P2: Provider marked ''healthy'' at registration time without actual health check'
 description: 'When a provider is registered via the API, its status defaults to ''pending'' in the registry (registry.go line 58), but the API handler or bootstrap sets it to ''healthy'' immediately. The dispatcher then trusts this status (isProviderHealthy checks for ''healthy'' or ''active''). But the heartbeat has never run (last_heartbeat_at is zero-time), so ''healthy'' is an unverified claim. Fix: 1) Default to ''pending'' at registration, 2) Require at least one successful heartbeat before promoting to ''healthy'', 3) Or run an immediate health check at registration time before accepting the provider.'
-status: in_progress
+status: open
 priority: 2
 projectid: loom
 assignedto: agent-1771534515-Devops Engineer (Default)
@@ -34,11 +34,12 @@ context:
     agent_tokens: "136705"
     agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
     conversation_session_id: 6831f792-7030-437c-afbd-9ec5290c5992
+    correlation_id: dispatch-bd-105-1771804441132220091
     dispatch_count: "1"
     dispatch_history: '["agent-1771534515-Devops Engineer (Default)"]'
     error_history: ""
-    failed_at: ""
-    last_error: ""
+    failed_at: "2026-02-22T23:54:08Z"
+    last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-22T23:54:01Z"
     last_run_error: |
@@ -68,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:22.579475954Z
-updatedat: 2026-02-22T23:54:01.152240604Z
+updatedat: 2026-02-22T23:54:08.443397058Z
 closedat: null
