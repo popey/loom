@@ -7,10 +7,10 @@ id: bd-098
 type: task
 title: 'P1: 68 blocked beads need mass triage — most are stuck due to provider failures, not real bugs'
 description: '68 beads are in ''blocked'' status, almost all due to provider connectivity failures (connection refused, 502, 429 budget). These are not genuine code bugs — they are infrastructure failures from wrong endpoints and budget limits. Once the provider endpoint and API key are fixed, these beads should be re-triaged: 1) Close duplicate remediation beads (many are chains of ''Remediation: Fix agent stuck on X''), 2) Reset dispatch_count on legitimate work beads, 3) Move genuine work beads back to ''open'' status, 4) Close beads for deleted providers (P0 API failure DELETE /api/v1/providers/* — the delete endpoint was removed in the refactoring).'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Devops Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,11 +18,12 @@ parent: ""
 children: []
 tags: []
 context:
+    dispatch_count: "1"
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T22:28:09Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:07.70624037Z
-updatedat: 2026-02-22T00:42:04.766606966Z
+updatedat: 2026-02-22T00:45:17.702933938Z
 closedat: null
