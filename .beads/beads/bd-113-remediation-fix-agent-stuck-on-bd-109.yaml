@@ -29,8 +29,9 @@ context:
     agent_worker_id: worker-agent-1771534515-Code Reviewer (Default)-1771718701
     conversation_session_id: c3976126-f4c2-44b8-99fb-2c3b8fd6dee7
     created_by: dispatcher_auto_remediation
-    dispatch_count: "20"
+    dispatch_count: "21"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
+    error_history: '[{"timestamp":"2026-02-22T00:40:52.954782436Z","error":"action loop failed: LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20}]'
     last_failed_at: "2026-02-22T00:15:35Z"
     last_run_at: "2026-02-22T00:40:51Z"
     last_run_error: |
@@ -51,5 +52,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T00:14:34.219436204Z
-updatedat: 2026-02-22T00:40:51.340279865Z
+updatedat: 2026-02-22T00:40:52.954809605Z
 closedat: null
