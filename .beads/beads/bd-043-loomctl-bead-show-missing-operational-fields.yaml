@@ -7,10 +7,10 @@ id: bd-043
 type: task
 title: 'loomctl bead show: missing operational fields'
 description: loomctl bead show does not display ralph_blocked_reason, error_history, dispatch_count, or close_reason fields from the bead YAML context. These are critical for debugging stuck/blocked beads without resorting to docker exec or raw file reads. The bead show command should render these fields in its output table/JSON. The API response from GET /api/v1/beads/{id} must also include the full context map, not just a subset.
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: agent-1771534515-QA Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -24,7 +24,7 @@ context:
     agent_tokens: "71915"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771727143
     conversation_session_id: 07b4edb1-c6f3-4240-98f6-0a623dd03d4c
-    dispatch_count: "2"
+    dispatch_count: "3"
     dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-21T06:42:04.857938834Z","error":"action loop failed: LLM call failed on iteration 6: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-21T06:44:04.857003191Z","error":"action loop failed: LLM call failed on iteration 5: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":21},{"timestamp":"2026-02-21T06:45:33.03690058Z","error":"action loop failed: LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":22},{"timestamp":"2026-02-21T06:46:15.976097262Z","error":"action loop failed: LLM call failed on iteration 4: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":23},{"timestamp":"2026-02-21T06:48:04.856914127Z","error":"action loop failed: LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":24}]'
     last_failed_at: "2026-02-22T02:26:00Z"
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:08.896950889Z
-updatedat: 2026-02-22T02:26:00.466410537Z
+updatedat: 2026-02-22T10:04:32.056686479Z
 closedat: null
