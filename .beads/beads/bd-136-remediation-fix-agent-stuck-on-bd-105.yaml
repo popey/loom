@@ -35,7 +35,7 @@ context:
     agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
     conversation_session_id: b551d460-b049-4388-922b-7d1902ec0063
     created_by: dispatcher_auto_remediation
-    dispatch_count: "2"
+    dispatch_count: "3"
     dispatch_history: '["agent-1771534515-CEO (Default)"]'
     last_failed_at: "2026-02-22T01:57:50Z"
     last_run_at: "2026-02-22T01:57:50Z"
@@ -58,5 +58,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T01:54:31.731399847Z
-updatedat: 2026-02-22T01:59:52.083646245Z
+updatedat: 2026-02-22T01:59:52.410934875Z
 closedat: null
