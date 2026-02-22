@@ -18,9 +18,16 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: ab979a21-e073-4c5d-a9d9-7509d1eedf5b
     created_by: dispatcher_auto_remediation
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
+    last_run_at: "2026-02-22T00:50:41Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 21: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
+    loop_detected: "false"
+    provider_id: tokenhub
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-22T00:47:58Z"
     remediation_for: bd-108
@@ -32,5 +39,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T00:47:55.462548496Z
-updatedat: 2026-02-22T00:48:00.202064189Z
+updatedat: 2026-02-22T00:50:41.340145032Z
 closedat: null
