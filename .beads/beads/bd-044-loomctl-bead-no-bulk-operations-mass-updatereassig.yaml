@@ -24,7 +24,7 @@ context:
     agent_tokens: "87074"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771724872
     conversation_session_id: b8e1c666-8272-44b6-8502-11015ed0f246
-    dispatch_count: "1"
+    dispatch_count: "0"
     dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-21T06:35:24.857697972Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-21T06:35:44.857654051Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":21},{"timestamp":"2026-02-21T06:36:04.860638859Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":23},{"timestamp":"2026-02-21T06:36:56.004925574Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":24},{"timestamp":"2026-02-21T06:37:04.861216615Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":24}]'
     last_failed_at: "2026-02-22T02:10:00Z"
@@ -47,5 +47,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:20.562112956Z
-updatedat: 2026-02-22T02:10:00.263349458Z
+updatedat: 2026-02-22T02:10:13.124586553Z
 closedat: null
