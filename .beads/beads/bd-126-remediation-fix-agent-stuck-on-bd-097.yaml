@@ -36,9 +36,9 @@ context:
     agent_worker_id: worker-agent-1771534515-Devops Engineer (Default)-1771718701
     conversation_session_id: eb5a820f-be3e-41dd-a916-1f399ac21ebb
     created_by: dispatcher_auto_remediation
-    dispatch_count: "22"
+    dispatch_count: "23"
     dispatch_history: '["agent-1771534515-Project Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-22T01:47:17.567092779Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:48:22.083455854Z","error":"action loop failed: LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":21}]'
+    error_history: '[{"timestamp":"2026-02-22T01:47:17.567092779Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:48:22.083455854Z","error":"action loop failed: LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":21},{"timestamp":"2026-02-22T01:49:12.083202521Z","error":"action loop failed: LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":22}]'
     last_failed_at: "2026-02-22T01:42:27Z"
     last_run_at: "2026-02-22T01:49:09Z"
     last_run_error: |
@@ -62,5 +62,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T01:18:01.50429237Z
-updatedat: 2026-02-22T01:49:09.313812417Z
+updatedat: 2026-02-22T01:49:12.083228089Z
 closedat: null
