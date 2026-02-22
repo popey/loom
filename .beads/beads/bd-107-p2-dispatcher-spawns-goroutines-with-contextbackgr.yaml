@@ -7,10 +7,10 @@ id: bd-107
 type: task
 title: 'P2: Dispatcher spawns goroutines with context.Background() — no cancellation propagation'
 description: 'In dispatcher.go line 621, the in-process task execution goroutine uses context.Background() instead of the parent request context. This means: 1) If Loom is shutting down, running tasks can''t be cancelled gracefully, 2) No timeout propagation from the dispatch loop, 3) Goroutines can leak if the provider is unresponsive (only saved by the 5-minute HTTP client timeout). Note: bd-059 already exists for this issue but is blocked. Fix: Use a derived context from the dispatcher''s lifecycle context (not the request context, which has different semantics), with a configurable task timeout.'
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-Project Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,13 +18,39 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Project Manager (Default)
+    agent_output: |-
+        {
+          "actions": [
+            {
+              "type": "search_text",
+              "query": "StartDispatchLoop",
+              "path": "internal/"
+            }
+          ],
+          "notes": "Re-expanding the search to the internal/ directory once more to ensure no files were missed and to locate the StartDispatchLoop function."
+        }
+    agent_task_id: task-bd-107-1771721198371715690
+    agent_tokens: "166377"
+    agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771718701
     conversation_session_id: 7f64d5c0-a9e5-4bb0-b3c1-6c050e1a1ca0
     dispatch_count: "2"
-    redispatch_requested: "true"
+    dispatch_history: '["agent-1771534515-Project Manager (Default)"]'
+    last_failed_at: "2026-02-22T00:48:12Z"
+    last_run_at: "2026-02-22T00:48:12Z"
+    loop_detected: "false"
+    loop_iterations: "16"
+    provider_id: tokenhub
+    provider_model: aws/anthropic/claude-opus-4-5
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-21T23:47:53Z"
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-22T00:48:12Z"
+    stuck_at: "2026-02-22T00:48:12Z"
+    terminal_reason: inner_loop
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:25.63879145Z
-updatedat: 2026-02-22T00:46:35.537970754Z
+updatedat: 2026-02-22T00:48:12.128901303Z
 closedat: null
