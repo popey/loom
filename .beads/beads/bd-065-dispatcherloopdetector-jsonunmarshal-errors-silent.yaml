@@ -20,11 +20,11 @@ tags: []
 context:
     agent_id: agent-1771534515-Product Manager (Default)
     conversation_session_id: 12505c98-551e-4637-ab9e-6a5818629f84
-    correlation_id: dispatch-bd-065-1771773392832701692
+    correlation_id: dispatch-bd-065-1771773696815763989
     dispatch_count: "20"
     dispatch_history: '["agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-21T07:39:35.827815728Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:39:41.19324922Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21},{"timestamp":"2026-02-21T07:39:46.721559544Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":22},{"timestamp":"2026-02-21T07:39:52.482706082Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":23}]'
-    failed_at: "2026-02-22T15:16:32Z"
+    error_history: '[{"timestamp":"2026-02-21T07:39:35.827815728Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:39:41.19324922Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21},{"timestamp":"2026-02-21T07:39:46.721559544Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":22},{"timestamp":"2026-02-21T07:39:52.482706082Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":23},{"timestamp":"2026-02-22T15:21:36.81782984Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20}]'
+    failed_at: "2026-02-22T15:21:36Z"
     last_error: command parameter required
     last_run_at: "2026-02-21T07:39:53Z"
     last_run_error: |
@@ -33,8 +33,8 @@ context:
     loop_detection_reason: Repeated rate limit errors (5 attempts) - exhausted provider quota
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
+    ralph_blocked_at: "2026-02-22T15:21:36Z"
+    ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated rate limit errors (5 attempts) - exhausted provider quota'
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T00:38:21Z"
     revert_status: not_attempted
@@ -42,5 +42,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:29.960739994Z
-updatedat: 2026-02-22T15:21:35.893629784Z
+updatedat: 2026-02-22T15:21:36.820982081Z
 closedat: null
