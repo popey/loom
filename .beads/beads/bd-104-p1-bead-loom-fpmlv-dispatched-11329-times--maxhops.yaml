@@ -35,7 +35,7 @@ context:
     agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
     conversation_session_id: 7640c861-323a-4a7c-b8c6-9ebdf329b763
     correlation_id: dispatch-bd-104-1771804519835960608
-    dispatch_count: "3"
+    dispatch_count: "4"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: ""
     failed_at: "2026-02-22T23:55:33Z"
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:21.212258372Z
-updatedat: 2026-02-22T23:55:33.000066063Z
+updatedat: 2026-02-22T23:58:10.180264122Z
 closedat: null
