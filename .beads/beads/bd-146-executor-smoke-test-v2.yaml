@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-146
+type: task
+title: Executor smoke test v2
+description: List the files in /tmp using the scope action, then use done.
+status: open
+priority: 1
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-22T23:43:52.835295515Z
+updatedat: 2026-02-22T23:44:16.812737446Z
+closedat: null
