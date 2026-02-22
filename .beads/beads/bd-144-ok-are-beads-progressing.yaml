@@ -18,16 +18,23 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 79971f97-c2ae-4365-a7ea-24178c389410
     correlation_id: dispatch-bd-144-1771803695736844009
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-22T23:41:46Z"
     last_error: command parameter required
+    last_run_at: "2026-02-22T23:41:47Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
+    loop_detected: "false"
+    provider_id: tokenhub
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-22T21:48:22Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T21:00:02.763486157Z
-updatedat: 2026-02-22T23:41:46.989261964Z
+updatedat: 2026-02-22T23:41:47.108734577Z
 closedat: null
