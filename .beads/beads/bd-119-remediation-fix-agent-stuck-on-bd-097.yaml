@@ -36,8 +36,9 @@ context:
     agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
     conversation_session_id: 19ee5eb2-c0a0-490a-86ba-a4cab973d864
     created_by: dispatcher_auto_remediation
-    dispatch_count: "20"
+    dispatch_count: "21"
     dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)"]'
+    error_history: '[{"timestamp":"2026-02-22T01:09:33.678284526Z","error":"action loop failed: LLM call failed on iteration 7: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20}]'
     last_failed_at: "2026-02-22T00:57:43Z"
     last_run_at: "2026-02-22T01:09:32Z"
     last_run_error: |
@@ -61,5 +62,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T00:47:30.277206316Z
-updatedat: 2026-02-22T01:09:32.148901155Z
+updatedat: 2026-02-22T01:09:33.678307886Z
 closedat: null
