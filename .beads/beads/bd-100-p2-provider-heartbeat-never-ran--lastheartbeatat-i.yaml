@@ -7,10 +7,10 @@ id: bd-100
 type: task
 title: 'P2: Provider heartbeat never ran — last_heartbeat_at is zero-time'
 description: 'The provider shows last_heartbeat_at=''0001-01-01T00:00:00Z'' (Go zero time), meaning the heartbeat activity never executed against this provider. The provider is marked ''healthy'' but that status was set at registration time, not from an actual health check. Without heartbeats, Loom can''t detect when TokenHub goes down, and the ''healthy'' status is a lie. Fix: 1) Verify the Temporal heartbeat workflow is running, 2) Check that the heartbeat activity can reach the provider endpoint, 3) The heartbeat should flip status to ''unhealthy'' if TokenHub is unreachable.'
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-Product Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,13 +18,38 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Product Manager (Default)
+    agent_output: |-
+        {
+          "actions": [
+            {
+              "type": "read_file",
+              "path": "internal/provider/registry.go"
+            }
+          ],
+          "notes": "It seems the file is still being truncated. I'll attempt to read the full file again to ensure I capture all relevant information about provider heartbeats."
+        }
+    agent_task_id: task-bd-100-1771725159709904611
+    agent_tokens: "151159"
+    agent_worker_id: worker-agent-1771534515-Product Manager (Default)-1771718701
     conversation_session_id: c97ffbce-4455-4f9b-8a41-3739fc8d18f7
     dispatch_count: "1"
-    redispatch_requested: "true"
+    dispatch_history: '["agent-1771534515-Product Manager (Default)"]'
+    last_failed_at: "2026-02-22T01:54:09Z"
+    last_run_at: "2026-02-22T01:54:09Z"
+    loop_detected: "false"
+    loop_iterations: "13"
+    provider_id: tokenhub
+    provider_model: aws/anthropic/claude-opus-4-5
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-21T23:47:58Z"
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-22T01:54:09Z"
+    stuck_at: "2026-02-22T01:54:09Z"
+    terminal_reason: inner_loop
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:10.561634102Z
-updatedat: 2026-02-22T01:52:38.78185945Z
+updatedat: 2026-02-22T01:54:09.29976085Z
 closedat: null
