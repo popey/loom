@@ -20,10 +20,10 @@ tags: []
 context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 1536b21c-d2ed-4a41-b2c0-931be5814903
-    correlation_id: dispatch-bd-146-1771804519823478079
+    correlation_id: dispatch-bd-146-1771804583148507433
     dispatch_count: "5"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    failed_at: "2026-02-22T23:55:31Z"
+    failed_at: "2026-02-22T23:56:49Z"
     last_error: command parameter required
     last_run_at: "2026-02-22T23:56:23Z"
     last_run_error: |
@@ -36,5 +36,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T23:43:52.835295515Z
-updatedat: 2026-02-22T23:56:23.162230881Z
+updatedat: 2026-02-22T23:56:49.623580968Z
 closedat: null
