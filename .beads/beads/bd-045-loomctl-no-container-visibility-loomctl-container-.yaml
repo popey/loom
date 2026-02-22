@@ -24,14 +24,14 @@ context:
     agent_tokens: "88670"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771727178
     conversation_session_id: bcc5f8f4-90e4-4083-a5d0-1bb01cf19e80
-    correlation_id: dispatch-bd-045-1771803689859368314
+    correlation_id: dispatch-bd-045-1771803719881369137
     dispatch_count: "3"
-    dispatch_history: '["agent-1771534515-Code Reviewer (Default)"]'
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: ""
-    failed_at: "2026-02-22T23:41:35Z"
+    failed_at: "2026-02-22T23:42:15Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-22T23:41:29Z"
+    last_run_at: "2026-02-22T23:41:59Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:30.483868481Z
-updatedat: 2026-02-22T23:41:59.414543286Z
+updatedat: 2026-02-22T23:42:15.933405896Z
 closedat: null
