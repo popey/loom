@@ -24,7 +24,7 @@ context:
     agent_tokens: "87074"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771724872
     conversation_session_id: 3efa76c9-de9e-4da4-9ddd-e7b07a816c2a
-    dispatch_count: "1"
+    dispatch_count: "2"
     dispatch_history: ""
     error_history: ""
     failed_at: ""
@@ -58,5 +58,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:20.562112956Z
-updatedat: 2026-02-22T16:08:19.854879815Z
+updatedat: 2026-02-22T21:48:13.987298289Z
 closedat: null
