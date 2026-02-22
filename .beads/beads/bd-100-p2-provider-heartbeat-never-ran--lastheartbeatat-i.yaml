@@ -33,23 +33,38 @@ context:
     agent_tokens: "151159"
     agent_worker_id: worker-agent-1771534515-Product Manager (Default)-1771718701
     conversation_session_id: c97ffbce-4455-4f9b-8a41-3739fc8d18f7
-    dispatch_count: "0"
-    dispatch_history: '["agent-1771534515-Product Manager (Default)"]'
-    last_failed_at: "2026-02-22T01:54:09Z"
+    dispatch_count: ""
+    dispatch_history: ""
+    error_history: ""
+    failed_at: ""
+    last_error: ""
+    last_failed_at: ""
     last_run_at: "2026-02-22T01:54:09Z"
-    loop_detected: "false"
-    loop_iterations: "13"
+    last_run_error: ""
+    loop_detected: ""
+    loop_detection_reason: ""
+    loop_iterations: ""
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    redispatch_requested: "true"
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
+    redispatch_requested: ""
     redispatch_requested_at: "2026-02-22T01:56:13Z"
-    remediation_needed: "true"
-    remediation_requested_at: "2026-02-22T01:54:09Z"
-    stuck_at: "2026-02-22T01:54:09Z"
-    terminal_reason: inner_loop
+    remediation_for: ""
+    remediation_needed: ""
+    remediation_requested_at: ""
+    requires_persona: ""
+    reset_at: "2026-02-22T16:05:10Z"
+    reset_reason: mass_reset_provider_healthy
+    revert_status: ""
+    stuck_agent_id: ""
+    stuck_at: ""
+    stuck_iterations: ""
+    stuck_terminal_reason: ""
+    terminal_reason: ""
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:10.561634102Z
-updatedat: 2026-02-22T02:12:09.446126803Z
+updatedat: 2026-02-22T16:05:29.311180723Z
 closedat: null
