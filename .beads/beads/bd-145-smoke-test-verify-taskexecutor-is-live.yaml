@@ -21,11 +21,11 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 73c679e7-90ee-4ed2-a191-f1ca2326fef4
     correlation_id: dispatch-bd-145-1771803689551148428
-    dispatch_count: "1"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_count: "2"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-22T23:41:29Z"
     last_error: command parameter required
-    last_run_at: "2026-02-22T23:41:29Z"
+    last_run_at: "2026-02-22T23:54:01Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
@@ -36,5 +36,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T23:40:51.187974927Z
-updatedat: 2026-02-22T23:41:29.85219498Z
+updatedat: 2026-02-22T23:54:01.164245261Z
 closedat: null
