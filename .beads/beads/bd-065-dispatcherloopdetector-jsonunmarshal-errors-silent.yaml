@@ -36,8 +36,8 @@ context:
     provider_id: tokenhub
     ralph_blocked_at: ""
     ralph_blocked_reason: ""
-    redispatch_requested: ""
-    redispatch_requested_at: "2026-02-21T00:38:21Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-22T16:05:41Z"
     remediation_for: ""
     remediation_needed: ""
     remediation_requested_at: ""
@@ -54,5 +54,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:29.960739994Z
-updatedat: 2026-02-22T16:05:31.178746854Z
+updatedat: 2026-02-22T16:05:41.373399257Z
 closedat: null
