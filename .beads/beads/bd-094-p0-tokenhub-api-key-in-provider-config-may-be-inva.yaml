@@ -7,10 +7,10 @@ id: bd-094
 type: task
 title: 'P0: TokenHub API key in provider config may be invalid for local instance'
 description: 'The API key stored in Loom''s provider config (tokenhub_1579cc67...) was created during a previous Docker-based deployment. The local TokenHub on port 8090 requires authentication (returns ''authorization required'' without a key). This key may not exist in the local instance''s vault. Fix: Use ''tokenhubctl apikey create'' to create a fresh API key in the local TokenHub, then update the Loom provider registration. Test with: curl -H ''Authorization: Bearer <key>'' http://localhost:8090/v1/models'
-status: blocked
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,25 +21,38 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 6ec66ea2-b7ab-4a01-8dec-6149ea273cae
     correlation_id: dispatch-bd-094-1771766663194133294
-    dispatch_count: "20"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-21T22:59:24.85679589Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":20},{"timestamp":"2026-02-21T22:59:34.857920262Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":20},{"timestamp":"2026-02-21T22:59:44.859595606Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":20},{"timestamp":"2026-02-21T23:12:38.110505651Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":21},{"timestamp":"2026-02-21T23:12:44.858243846Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":21},{"timestamp":"2026-02-22T13:24:23.19605282Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":20},{"timestamp":"2026-02-22T13:24:23.557280637Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":20}]'
-    failed_at: "2026-02-22T13:24:23Z"
-    last_error: command parameter required
+    dispatch_count: ""
+    dispatch_history: ""
+    error_history: ""
+    failed_at: ""
+    last_error: ""
+    last_failed_at: ""
     last_run_at: "2026-02-21T22:59:59Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://tokenhub:8080/v1/chat/completions": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving'
-    loop_detected: "false"
-    loop_detection_reason: 'Identical error repeated 7 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://tokenhub:80'
+    last_run_error: ""
+    loop_detected: ""
+    loop_detection_reason: ""
+    loop_iterations: ""
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: "2026-02-22T13:24:23Z"
-    ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Identical error repeated 7 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://tokenhub:80'
-    redispatch_requested: "false"
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
+    redispatch_requested: ""
     redispatch_requested_at: "2026-02-21T22:27:45Z"
-    revert_status: not_attempted
+    remediation_for: ""
+    remediation_needed: ""
+    remediation_requested_at: ""
+    requires_persona: ""
+    reset_at: "2026-02-22T16:05:10Z"
+    reset_reason: mass_reset_provider_healthy
+    revert_status: ""
+    stuck_agent_id: ""
+    stuck_at: ""
+    stuck_iterations: ""
+    stuck_terminal_reason: ""
+    terminal_reason: ""
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:41.05280326Z
-updatedat: 2026-02-22T13:24:23.557338093Z
+updatedat: 2026-02-22T16:05:41.862385026Z
 closedat: null
