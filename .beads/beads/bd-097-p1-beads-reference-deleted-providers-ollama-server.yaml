@@ -7,10 +7,10 @@ id: bd-097
 type: task
 title: 'P1: Beads reference deleted providers (ollama-server, sparky-local, vllm-local, nvidia-cloud-*)'
 description: '35 beads reference ''ollama-server'', 18 reference ''sparky-local'', 15 reference ''vllm-local'', 5 reference ''nvidia-cloud-*'' — all providers that no longer exist after the TokenHub-only refactoring. These ghost provider references in bead context cause confusion in diagnostics and may prevent proper re-dispatch if the dispatcher checks provider_id validity. Fix: 1) Batch-update all blocked beads to set provider_id=tokenhub in context, 2) Add a migration/cleanup step to the bootstrap that clears stale provider references, 3) Consider whether the dispatcher should ignore context.provider_id and always use the live provider selection.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-CEO (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -20,7 +20,7 @@ tags: []
 context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 919d0f25-da95-42dd-adab-b4cfd531c174
-    dispatch_count: "4"
+    dispatch_count: "5"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     last_run_at: "2026-02-22T00:00:58Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://localhost:8090/v1/chat/completions": dial tcp [::1]:8090: connect: connection refused'
@@ -32,5 +32,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:48.845059967Z
-updatedat: 2026-02-22T00:42:03.431754211Z
+updatedat: 2026-02-22T00:45:20.526188688Z
 closedat: null
