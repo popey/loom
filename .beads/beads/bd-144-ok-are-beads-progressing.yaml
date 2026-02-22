@@ -23,7 +23,7 @@ context:
     correlation_id: dispatch-bd-144-1771804638494280186
     dispatch_count: "8"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    failed_at: "2026-02-22T23:57:51Z"
+    failed_at: "2026-02-22T23:58:05Z"
     last_error: command parameter required
     last_run_at: "2026-02-22T23:58:04Z"
     last_run_error: |
@@ -36,5 +36,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T21:00:02.763486157Z
-updatedat: 2026-02-22T23:58:04.550567994Z
+updatedat: 2026-02-22T23:58:05.38652776Z
 closedat: null
