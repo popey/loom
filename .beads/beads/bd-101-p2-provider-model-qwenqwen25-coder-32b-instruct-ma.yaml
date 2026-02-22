@@ -7,10 +7,10 @@ id: bd-101
 type: task
 title: 'P2: Provider model ''Qwen/Qwen2.5-Coder-32B-Instruct'' may not be available in TokenHub'
 description: 'The Loom provider is configured with model ''Qwen/Qwen2.5-Coder-32B-Instruct'' but this model may not be registered or enabled in the local TokenHub instance. One bead shows a 404 ''model not found'' error. The registry has model auto-rediscovery (registry.go lines 209-224) that retries with the first available model, but this only works if the HTTP connection succeeds at all. Fix: 1) After fixing the endpoint, verify model availability with ''curl http://localhost:8090/v1/models'', 2) Update the Loom provider config to use a model that TokenHub actually has, 3) Consider making the bootstrap script query TokenHub''s model list and auto-configure.'
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-CEO (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -19,19 +19,40 @@ children: []
 tags: []
 context:
     agent_id: agent-1771534515-CEO (Default)
+    agent_output: |-
+        {
+          "actions": [
+            {
+              "type": "search_text",
+              "query": "Qwen/Qwen2.5-Coder-32B-Instruct",
+              "path": "cmd/loom-project-agent/"
+            }
+          ],
+          "notes": "Searching for the model 'Qwen/Qwen2.5-Coder-32B-Instruct' in the cmd/loom-project-agent directory to locate the correct configuration file."
+        }
+    agent_task_id: task-bd-101-1771724993377510219
+    agent_tokens: "157879"
+    agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
     conversation_session_id: 471c5bfd-3644-4969-8cb5-96f144c1d9dc
     dispatch_count: "3"
-    dispatch_history: '["agent-1771534515-CEO (Default)"]'
-    last_run_at: "2026-02-22T01:49:13Z"
+    dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)"]'
+    last_failed_at: "2026-02-22T01:52:19Z"
+    last_run_at: "2026-02-22T01:52:19Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 3: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
     loop_detected: "false"
+    loop_iterations: "20"
     provider_id: tokenhub
-    redispatch_requested: "true"
+    provider_model: aws/anthropic/claude-opus-4-5
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-21T23:47:56Z"
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-22T01:52:19Z"
+    stuck_at: "2026-02-22T01:52:19Z"
+    terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:15.816454061Z
-updatedat: 2026-02-22T01:49:53.369271408Z
+updatedat: 2026-02-22T01:52:19.8012155Z
 closedat: null
