@@ -21,8 +21,9 @@ context:
     agent_id: agent-1771534515-QA Engineer (Default)
     conversation_session_id: dcd64f14-f93d-4896-9029-4ba83e0fccfb
     created_by: dispatcher_auto_remediation
-    dispatch_count: "20"
+    dispatch_count: "21"
     dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
+    error_history: '[{"timestamp":"2026-02-22T01:41:31.312018154Z","error":"action loop failed: LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20}]'
     last_run_at: "2026-02-22T01:41:25Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 2: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
@@ -39,5 +40,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T01:26:35.563471018Z
-updatedat: 2026-02-22T01:41:25.367397326Z
+updatedat: 2026-02-22T01:41:31.312037546Z
 closedat: null
