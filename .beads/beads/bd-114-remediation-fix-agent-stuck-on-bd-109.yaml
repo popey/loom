@@ -22,10 +22,10 @@ context:
     conversation_session_id: bf955834-f52f-4781-85cf-535b3eed1c32
     created_by: dispatcher_auto_remediation
     dispatch_count: "3"
-    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
-    last_run_at: "2026-02-22T00:20:04Z"
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
+    last_run_at: "2026-02-22T00:21:12Z"
     last_run_error: |
-        action loop failed: LLM call failed on iteration 6: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
+        action loop failed: LLM call failed on iteration 4: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
     loop_detected: "false"
     provider_id: tokenhub
     redispatch_requested: "true"
@@ -39,5 +39,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T00:18:51.086538016Z
-updatedat: 2026-02-22T00:20:07.861806461Z
+updatedat: 2026-02-22T00:21:12.067260303Z
 closedat: null
