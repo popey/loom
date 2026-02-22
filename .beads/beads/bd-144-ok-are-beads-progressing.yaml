@@ -19,12 +19,15 @@ children: []
 tags: []
 context:
     conversation_session_id: 79971f97-c2ae-4365-a7ea-24178c389410
+    correlation_id: dispatch-bd-144-1771803695736844009
     dispatch_count: "1"
+    failed_at: "2026-02-22T23:41:46Z"
+    last_error: command parameter required
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-22T21:48:22Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T21:00:02.763486157Z
-updatedat: 2026-02-22T23:41:35.996250976Z
+updatedat: 2026-02-22T23:41:46.989261964Z
 closedat: null
