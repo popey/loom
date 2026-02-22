@@ -36,14 +36,13 @@ context:
     conversation_session_id: a02ae187-0cc0-49b2-ba2f-55c66e513ecf
     correlation_id: dispatch-bd-051-1771804627211252862
     dispatch_count: "17"
-    dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)"]'
+    dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)"]'
     error_history: ""
     failed_at: "2026-02-22T23:57:37Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-22T23:57:07Z"
-    last_run_error: |
-        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
+    last_run_at: "2026-02-22T23:57:47Z"
+    last_run_error: 'action loop failed: context canceled'
     loop_detected: "false"
     loop_detection_reason: ""
     loop_iterations: ""
@@ -70,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:32.015434352Z
-updatedat: 2026-02-22T23:57:37.873704245Z
+updatedat: 2026-02-22T23:57:47.314292703Z
 closedat: null
