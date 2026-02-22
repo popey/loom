@@ -24,14 +24,36 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_output: |-
+        {
+          "actions": [
+            {
+              "type": "close_bead",
+              "bead_id": "bd-115",
+              "reason": "Test is successful, verified TokenHub integration"
+            }
+          ],
+          "notes": "Acknowledged the test success and closing the bead"
+        }
+    agent_task_id: task-bd-115-1771721145545308668
+    agent_tokens: "4002"
+    agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771718701
     close_reason: Test is successful, verified TokenHub integration
     conversation_session_id: 379bfc1e-046f-47c0-b9ed-2c7c006633cc
     dispatch_count: "1"
-    redispatch_requested: "true"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
+    last_run_at: "2026-02-22T00:45:53Z"
+    loop_detected: "false"
+    loop_iterations: "1"
+    provider_id: tokenhub
+    provider_model: aws/anthropic/claude-opus-4-5
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-22T00:45:21Z"
+    terminal_reason: completed
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T00:42:49.618984844Z
-updatedat: 2026-02-22T00:45:51.520219132Z
+updatedat: 2026-02-22T00:45:53.059121934Z
 closedat: 2026-02-22T00:45:51.520216652Z
