@@ -36,11 +36,11 @@ context:
     conversation_session_id: a80cf230-c28f-4b0d-80d2-f1fad098a4eb
     created_by: dispatcher_auto_remediation
     dispatch_count: "14"
-    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     last_failed_at: "2026-02-22T01:20:43Z"
-    last_run_at: "2026-02-22T01:29:44Z"
+    last_run_at: "2026-02-22T01:30:12Z"
     last_run_error: |
-        action loop failed: LLM call failed on iteration 2: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
+        action loop failed: LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
     loop_detected: "false"
     loop_iterations: "17"
     provider_id: tokenhub
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T00:52:14.820912752Z
-updatedat: 2026-02-22T01:29:52.083933838Z
+updatedat: 2026-02-22T01:30:12.667599411Z
 closedat: null
