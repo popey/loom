@@ -36,7 +36,7 @@ context:
     agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
     conversation_session_id: 6decb415-d487-4c2e-bcde-68e36c3d9b90
     created_by: dispatcher_auto_remediation
-    dispatch_count: "4"
+    dispatch_count: "5"
     dispatch_history: '["agent-1771534515-Project Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     last_failed_at: "2026-02-22T01:46:43Z"
     last_run_at: "2026-02-22T01:51:22Z"
@@ -61,5 +61,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T01:42:12.318102745Z
-updatedat: 2026-02-22T01:51:22.093419533Z
+updatedat: 2026-02-22T01:51:25.034690491Z
 closedat: null
