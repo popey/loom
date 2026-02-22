@@ -10,7 +10,7 @@ description: 'The bootstrap.local script registers the TokenHub provider with Lo
 status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -33,5 +33,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:23.94070884Z
-updatedat: 2026-02-22T00:41:33.415049002Z
+updatedat: 2026-02-22T00:42:21.420447389Z
 closedat: null
