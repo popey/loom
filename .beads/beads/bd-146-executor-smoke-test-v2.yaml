@@ -7,10 +7,10 @@ id: bd-146
 type: task
 title: Executor smoke test v2
 description: List the files in /tmp using the scope action, then use done.
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,11 +18,12 @@ parent: ""
 children: []
 tags: []
 context:
+    dispatch_count: "1"
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-22T23:53:10Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T23:43:52.835295515Z
-updatedat: 2026-02-22T23:53:10.321193473Z
+updatedat: 2026-02-22T23:53:13.336958607Z
 closedat: null
