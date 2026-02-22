@@ -35,7 +35,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771718701
     conversation_session_id: 7b9f123b-a5af-4704-aaaf-19b178b3eaef
     created_by: dispatcher_auto_remediation
-    dispatch_count: "6"
+    dispatch_count: "7"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)"]'
     last_failed_at: "2026-02-22T01:58:32Z"
     last_run_at: "2026-02-22T02:02:31Z"
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T01:51:01.875106463Z
-updatedat: 2026-02-22T02:02:31.686405365Z
+updatedat: 2026-02-22T02:02:35.681323378Z
 closedat: null
