@@ -24,11 +24,11 @@ context:
     agent_tokens: "87074"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771724872
     conversation_session_id: 3efa76c9-de9e-4da4-9ddd-e7b07a816c2a
-    correlation_id: dispatch-bd-044-1771796896538355479
-    dispatch_count: "3"
+    correlation_id: dispatch-bd-044-1771797202955764496
+    dispatch_count: "4"
     dispatch_history: ""
     error_history: ""
-    failed_at: "2026-02-22T21:48:16Z"
+    failed_at: "2026-02-22T21:53:22Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-22T02:10:00Z"
@@ -59,5 +59,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:20.562112956Z
-updatedat: 2026-02-22T21:53:21.743491244Z
+updatedat: 2026-02-22T21:58:32.945523523Z
 closedat: null
