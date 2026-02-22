@@ -18,9 +18,25 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Code Reviewer (Default)
+    agent_output: |-
+        {
+          "action": "read",
+          "path": "cmd/loomctl/main.go"
+        }
+    agent_task_id: task-bd-113-1771719280232995432
+    agent_tokens: "106183"
+    agent_worker_id: worker-agent-1771534515-Code Reviewer (Default)-1771718701
     conversation_session_id: c3976126-f4c2-44b8-99fb-2c3b8fd6dee7
     created_by: dispatcher_auto_remediation
     dispatch_count: "1"
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)"]'
+    last_failed_at: "2026-02-22T00:15:35Z"
+    last_run_at: "2026-02-22T00:15:35Z"
+    loop_detected: "false"
+    loop_iterations: "9"
+    provider_id: tokenhub
+    provider_model: aws/anthropic/claude-opus-4-5
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-22T00:14:35Z"
     remediation_for: bd-109
@@ -28,9 +44,10 @@ context:
     stuck_agent_id: agent-1771534515-CEO (Default)
     stuck_iterations: "16"
     stuck_terminal_reason: progress_stagnant
+    terminal_reason: parse_failures
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T00:14:34.219436204Z
-updatedat: 2026-02-22T00:14:38.40091947Z
+updatedat: 2026-02-22T00:15:35.668739378Z
 closedat: null
