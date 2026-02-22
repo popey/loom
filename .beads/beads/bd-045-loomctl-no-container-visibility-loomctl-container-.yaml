@@ -7,7 +7,7 @@ id: bd-045
 type: task
 title: 'loomctl: no container visibility (loomctl container list/status)'
 description: 'loomctl has no container subcommand. Operators cannot see which project containers are running, their health, startup logs, or resource usage without ''docker ps'' or ''docker logs''. Required commands: ''loomctl container list'' (show all project containers, status, uptime), ''loomctl container logs <project>'' (tail container logs), ''loomctl container restart <project>'' (restart project container), ''loomctl container status <project>'' (health + registered agents). The backend Orchestrator already tracks container state — this needs CLI exposure.'
-status: in_progress
+status: open
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Code Reviewer (Default)
@@ -24,12 +24,12 @@ context:
     agent_tokens: "88670"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771727178
     conversation_session_id: bcc5f8f4-90e4-4083-a5d0-1bb01cf19e80
-    correlation_id: dispatch-bd-045-1771754668169550091
-    dispatch_count: "2"
+    correlation_id: dispatch-bd-045-1771803689859368314
+    dispatch_count: "3"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)"]'
     error_history: ""
-    failed_at: ""
-    last_error: ""
+    failed_at: "2026-02-22T23:41:35Z"
+    last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-22T23:41:29Z"
     last_run_error: |
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:30.483868481Z
-updatedat: 2026-02-22T23:41:29.874341579Z
+updatedat: 2026-02-22T23:41:59.414543286Z
 closedat: null
