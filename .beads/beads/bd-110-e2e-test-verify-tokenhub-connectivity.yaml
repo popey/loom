@@ -19,18 +19,30 @@ children: []
 tags: []
 context:
     agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_output: |-
+        {
+          "action": "done",
+          "reason": "LLM call succeeded. Acknowledging bead bd-110."
+        }
+    agent_task_id: task-bd-110-1771719607861432025
+    agent_tokens: "87785"
+    agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771718701
     conversation_session_id: efc428fa-4c5d-46a5-ace8-84fccbcb942e
     dispatch_count: "12"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    last_run_at: "2026-02-22T00:19:34Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    last_failed_at: "2026-02-22T00:20:45Z"
+    last_run_at: "2026-02-22T00:20:45Z"
     last_run_error: 'action loop failed: context canceled'
     loop_detected: "false"
+    loop_iterations: "5"
     provider_id: tokenhub
+    provider_model: aws/anthropic/claude-opus-4-5
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-21T23:12:05Z"
+    terminal_reason: parse_failures
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T23:07:59.061649105Z
-updatedat: 2026-02-22T00:20:05.369225735Z
+updatedat: 2026-02-22T00:20:45.126304632Z
 closedat: null
