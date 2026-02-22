@@ -7,10 +7,10 @@ id: bd-104
 type: task
 title: 'P1: Bead loom-fpmlv dispatched 11,329 times — max_hops guard failed'
 description: 'Bead loom-fpmlv (auto-filed P0 Project readiness failed) has been dispatched 11,329 times despite max_hops defaulting to 20. The ralph auto-block should have stopped it at dispatch 20, but it somehow reached 11,329. Investigation needed: 1) Was max_hops not set when this bead was running? 2) Did the bead get unblocked by something and re-enter the dispatch loop? 3) Is there a race condition in the dispatch count check? This bead consumed enormous resources for nothing. Fix: Audit the dispatch count check in selectCandidate() and the ralph auto-block logic. Consider adding a hard ceiling (e.g., 100 dispatches) that blocks regardless of progress detection.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Product Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -20,8 +20,9 @@ tags: []
 context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: b5ec00ec-ec7d-48ef-a568-90de03b1f587
-    dispatch_count: "20"
+    dispatch_count: "21"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    error_history: '[{"timestamp":"2026-02-22T00:45:16.766824626Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://localhost:8090/v1/chat/completions\": dial tcp [::1]:8090: connect: connection refused","dispatch":20}]'
     last_run_at: "2026-02-22T00:01:06Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://localhost:8090/v1/chat/completions": dial tcp [::1]:8090: connect: connection refused'
     loop_detected: "false"
@@ -32,5 +33,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:21.212258372Z
-updatedat: 2026-02-22T00:42:15.298350407Z
+updatedat: 2026-02-22T00:45:16.767200134Z
 closedat: null
