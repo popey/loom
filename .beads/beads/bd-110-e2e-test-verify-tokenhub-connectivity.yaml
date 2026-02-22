@@ -7,7 +7,7 @@ id: bd-110
 type: task
 title: 'E2E test: verify TokenHub connectivity'
 description: Simple test bead to verify that Loom can send requests through TokenHub. Just acknowledge this bead with a brief message confirming that the LLM call succeeded.
-status: open
+status: closed
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -21,28 +21,33 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     agent_output: |-
         {
-          "action": "done",
-          "reason": "LLM call succeeded. Acknowledging bead bd-110."
+          "actions": [
+            {
+              "type": "done",
+              "reason": "LLM call succeeded. Acknowledging bead bd-110."
+            }
+          ],
+          "notes": "Acknowledging bead bd-110 as instructed."
         }
-    agent_task_id: task-bd-110-1771719607861432025
-    agent_tokens: "87785"
+    agent_task_id: task-bd-110-1771720158655476351
+    agent_tokens: "17416"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771718701
     conversation_session_id: efc428fa-4c5d-46a5-ace8-84fccbcb942e
     dispatch_count: "13"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     last_failed_at: "2026-02-22T00:20:45Z"
-    last_run_at: "2026-02-22T00:20:45Z"
+    last_run_at: "2026-02-22T00:29:33Z"
     last_run_error: 'action loop failed: context canceled'
     loop_detected: "false"
-    loop_iterations: "5"
+    loop_iterations: "1"
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    redispatch_requested: "true"
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-21T23:12:05Z"
-    terminal_reason: parse_failures
+    terminal_reason: completed
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T23:07:59.061649105Z
-updatedat: 2026-02-22T00:29:16.710094632Z
-closedat: null
+updatedat: 2026-02-22T00:29:33.811667901Z
+closedat: 2026-02-22T00:29:33.811664189Z
