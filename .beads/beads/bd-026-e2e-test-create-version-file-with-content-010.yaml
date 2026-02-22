@@ -7,7 +7,7 @@ id: bd-026
 type: task
 title: '[E2E Test] Create VERSION file with content 0.1.0'
 description: ""
-status: open
+status: closed
 priority: 2
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -51,5 +51,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:46:01.972818803Z
-updatedat: 2026-02-22T02:05:57.818983376Z
-closedat: null
+updatedat: 2026-02-22T11:49:29.70602229Z
+closedat: 2026-02-22T11:49:29.706021698Z
