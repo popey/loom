@@ -43,8 +43,8 @@ context:
     loop_iterations: "16"
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-22T00:12:39Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-22T00:16:42Z"
     remediation_needed: "true"
     remediation_requested_at: "2026-02-22T00:14:34Z"
     stuck_at: "2026-02-22T00:14:34Z"
@@ -53,5 +53,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T23:03:34.974117737Z
-updatedat: 2026-02-22T00:14:34.099205568Z
+updatedat: 2026-02-22T00:16:42.084089928Z
 closedat: null
