@@ -7,10 +7,10 @@ id: bd-095
 type: task
 title: 'P1: TokenHub returns 502 ''all providers failed'' — no healthy backends configured'
 description: '7 beads show 502 errors: {"error":{"message":"all providers failed","type":"server_error"}}. This means TokenHub itself has no healthy backend providers (Anthropic, OpenAI, local vLLM, etc.) configured or they are all failing. Investigation needed: 1) Check TokenHub provider list (tokenhubctl provider list), 2) Check if vault is unlocked (tokenhubctl vault status), 3) Check if backend provider API keys are configured and valid, 4) Ensure at least one backend model is enabled and healthy.'
-status: in_progress
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-QA Engineer (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,19 +18,40 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_id: agent-1771534515-QA Engineer (Default)
+    agent_output: |-
+        {
+          "actions": [
+            {
+              "type": "run_command",
+              "command": "find / -name tokenhubctl 2>/dev/null",
+              "working_dir": "."
+            }
+          ],
+          "notes": "Searching the entire filesystem for the tokenhubctl binary to determine its location."
+        }
+    agent_task_id: task-bd-095-1771721115402456406
+    agent_tokens: "79429"
+    agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
     conversation_session_id: ca81e1c4-5e6f-48f1-aadf-344249ef3a9a
     dispatch_count: "5"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    last_run_at: "2026-02-22T00:01:10Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)"]'
+    last_failed_at: "2026-02-22T00:46:40Z"
+    last_run_at: "2026-02-22T00:46:40Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://localhost:8090/v1/chat/completions": dial tcp [::1]:8090: connect: connection refused'
     loop_detected: "false"
+    loop_iterations: "15"
     provider_id: tokenhub
-    redispatch_requested: "true"
+    provider_model: aws/anthropic/claude-opus-4-5
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-21T23:47:51Z"
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-22T00:46:40Z"
+    stuck_at: "2026-02-22T00:46:40Z"
+    terminal_reason: inner_loop
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:43.784784292Z
-updatedat: 2026-02-22T00:45:14.055128544Z
+updatedat: 2026-02-22T00:46:40.250026643Z
 closedat: null
