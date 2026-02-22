@@ -7,10 +7,10 @@ id: bd-105
 type: task
 title: 'P2: Provider marked ''healthy'' at registration time without actual health check'
 description: 'When a provider is registered via the API, its status defaults to ''pending'' in the registry (registry.go line 58), but the API handler or bootstrap sets it to ''healthy'' immediately. The dispatcher then trusts this status (isProviderHealthy checks for ''healthy'' or ''active''). But the heartbeat has never run (last_heartbeat_at is zero-time), so ''healthy'' is an unverified claim. Fix: 1) Default to ''pending'' at registration, 2) Require at least one successful heartbeat before promoting to ''healthy'', 3) Or run an immediate health check at registration time before accepting the provider.'
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-CEO (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -19,19 +19,40 @@ children: []
 tags: []
 context:
     agent_id: agent-1771534515-CEO (Default)
+    agent_output: |-
+        {
+          "actions": [
+            {
+              "type": "search_text",
+              "query": "provider registration",
+              "path": "api/"
+            }
+          ],
+          "notes": "Re-searching for 'provider registration' in the api/ directory to ensure no matches were missed."
+        }
+    agent_task_id: task-bd-105-1771725157254290967
+    agent_tokens: "136705"
+    agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
     conversation_session_id: 6831f792-7030-437c-afbd-9ec5290c5992
     dispatch_count: "3"
-    dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)"]'
-    last_run_at: "2026-02-22T01:48:14Z"
+    dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)"]'
+    last_failed_at: "2026-02-22T01:54:31Z"
+    last_run_at: "2026-02-22T01:54:31Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
     loop_detected: "false"
+    loop_iterations: "18"
     provider_id: tokenhub
+    provider_model: aws/anthropic/claude-opus-4-5
     redispatch_requested: "true"
-    redispatch_requested_at: "2026-02-21T23:47:54Z"
+    redispatch_requested_at: "2026-02-22T01:56:32Z"
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-22T01:54:31Z"
+    stuck_at: "2026-02-22T01:54:31Z"
+    terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:22.579475954Z
-updatedat: 2026-02-22T01:52:36.348546588Z
+updatedat: 2026-02-22T01:56:32.084069471Z
 closedat: null
