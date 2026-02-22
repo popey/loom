@@ -7,10 +7,10 @@ id: bd-098
 type: task
 title: 'P1: 68 blocked beads need mass triage — most are stuck due to provider failures, not real bugs'
 description: '68 beads are in ''blocked'' status, almost all due to provider connectivity failures (connection refused, 502, 429 budget). These are not genuine code bugs — they are infrastructure failures from wrong endpoints and budget limits. Once the provider endpoint and API key are fixed, these beads should be re-triaged: 1) Close duplicate remediation beads (many are chains of ''Remediation: Fix agent stuck on X''), 2) Reset dispatch_count on legitimate work beads, 3) Move genuine work beads back to ''open'' status, 4) Close beads for deleted providers (P0 API failure DELETE /api/v1/providers/* — the delete endpoint was removed in the refactoring).'
-status: in_progress
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Devops Engineer (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,13 +18,39 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Devops Engineer (Default)
+    agent_output: |-
+        {
+          "actions": [
+            {
+              "type": "search_text",
+              "query": "\"status\": \"blocked\"",
+              "path": ".beads/beads/"
+            }
+          ],
+          "notes": "Re-searching for beads with 'status': 'blocked' in .beads/beads/ to ensure no matches are missed."
+        }
+    agent_task_id: task-bd-098-1771721120525776908
+    agent_tokens: "198118"
+    agent_worker_id: worker-agent-1771534515-Devops Engineer (Default)-1771718701
     conversation_session_id: e6f16d35-430c-47eb-8961-60274121a4a7
     dispatch_count: "1"
-    redispatch_requested: "true"
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)"]'
+    last_failed_at: "2026-02-22T00:47:23Z"
+    last_run_at: "2026-02-22T00:47:23Z"
+    loop_detected: "false"
+    loop_iterations: "20"
+    provider_id: tokenhub
+    provider_model: aws/anthropic/claude-opus-4-5
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-21T22:28:09Z"
+    remediation_needed: "true"
+    remediation_requested_at: "2026-02-22T00:47:23Z"
+    stuck_at: "2026-02-22T00:47:23Z"
+    terminal_reason: progress_stagnant
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:07.70624037Z
-updatedat: 2026-02-22T00:45:19.275635232Z
+updatedat: 2026-02-22T00:47:23.685541642Z
 closedat: null
