@@ -10,7 +10,7 @@ description: ""
 status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -59,5 +59,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T23:19:54.372653066Z
-updatedat: 2026-02-23T02:30:14.745148532Z
+updatedat: 2026-02-23T07:43:42.141210678Z
 closedat: null
