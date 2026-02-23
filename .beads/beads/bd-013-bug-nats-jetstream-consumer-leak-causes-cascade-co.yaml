@@ -10,7 +10,7 @@ description: 'At startup, loom logs: consumer is already bound to a subscription
 status: in_progress
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: agent-1771534515-Devops Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,14 +18,14 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-CEO (Default)
+    agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 99f15d10-a68f-48d3-a3c3-069a582e8aa7
-    correlation_id: dispatch-bd-013-1771869160760155317
-    dispatch_count: "7"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)"]'
-    failed_at: "2026-02-23T17:52:40Z"
+    correlation_id: dispatch-bd-013-1771869199256203640
+    dispatch_count: "8"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    failed_at: "2026-02-23T17:53:19Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T17:52:47Z"
+    last_run_at: "2026-02-23T17:53:27Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     provider_id: tokenhub
@@ -35,5 +35,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:48:37.361209442Z
-updatedat: 2026-02-23T17:53:17.948809815Z
+updatedat: 2026-02-23T17:54:07.653235227Z
 closedat: null
