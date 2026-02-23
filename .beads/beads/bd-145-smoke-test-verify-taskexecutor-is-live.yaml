@@ -35,12 +35,12 @@ context:
     provider_id: tokenhub
     ralph_blocked_at: "2026-02-23T00:19:46Z"
     ralph_blocked_reason: 'dispatch_count=23 exceeded max_hops=20, stuck in loop: Repeated authentication errors (5 attempts) - provider credentials invalid or missing'
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-22T23:41:29Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T01:35:57Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T23:40:51.187974927Z
-updatedat: 2026-02-23T01:35:43.32476252Z
+updatedat: 2026-02-23T01:35:57.451569789Z
 closedat: null
