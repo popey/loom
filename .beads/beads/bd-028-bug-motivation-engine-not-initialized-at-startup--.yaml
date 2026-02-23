@@ -7,10 +7,10 @@ id: bd-028
 type: task
 title: 'Bug: Motivation engine not initialized at startup - agents lack self-direction'
 description: 'Startup logs: Warning: Motivation engine not initialized. The motivation engine is responsible for agents proactively generating their own beads and directions rather than passively waiting for assigned work. Without it, agents have no intrinsic goals and can only process externally-created beads. This contributes to the idle state when bead queues drain. Fix: investigate why the motivation engine fails to initialize (missing config? dependency not ready?). Ensure it starts before agents become idle. The motivation engine should be creating beads for each project based on project health signals: failing tests, unreviewed PRs, low code coverage, stale documentation, performance regressions. Once working, validate that agents are creating their own improvement beads rather than waiting to be told what to do.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-CEO (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,7 +21,7 @@ context:
     agent_id: agent-1771534515-CEO (Default)
     conversation_session_id: ff5f7673-eec3-4dc8-b012-56a65b6330a9
     correlation_id: dispatch-bd-028-1771869861964657861
-    dispatch_count: "16"
+    dispatch_count: "17"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771844268-Web Designer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-CEO (Default)"]'
     failed_at: "2026-02-23T18:04:29Z"
     last_error: command parameter required
@@ -35,5 +35,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:14.040426967Z
-updatedat: 2026-02-23T18:04:29.003725738Z
+updatedat: 2026-02-23T18:05:14.413320568Z
 closedat: null
