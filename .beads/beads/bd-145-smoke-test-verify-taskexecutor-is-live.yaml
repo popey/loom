@@ -20,14 +20,14 @@ tags: []
 context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 73c679e7-90ee-4ed2-a191-f1ca2326fef4
-    correlation_id: dispatch-bd-145-1771805374622825531
+    correlation_id: dispatch-bd-145-1771805411800155071
     dispatch_count: "10"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    failed_at: "2026-02-23T00:09:34Z"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    failed_at: "2026-02-23T00:10:12Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T00:09:34Z"
+    last_run_at: "2026-02-23T00:10:11Z"
     last_run_error: |
-        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
+        action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded
     loop_detected: "false"
     provider_id: tokenhub
     redispatch_requested: "true"
@@ -36,5 +36,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T23:40:51.187974927Z
-updatedat: 2026-02-23T00:10:11.011253521Z
+updatedat: 2026-02-23T00:10:12.57285522Z
 closedat: null
