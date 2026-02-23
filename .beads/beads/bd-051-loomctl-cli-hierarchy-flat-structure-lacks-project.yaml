@@ -34,11 +34,11 @@ context:
     agent_tokens: "351802"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771724872
     conversation_session_id: a02ae187-0cc0-49b2-ba2f-55c66e513ecf
-    correlation_id: dispatch-bd-051-1771811256992546654
+    correlation_id: dispatch-bd-051-1771811298539236657
     dispatch_count: "4"
     dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T00:08:35.993137995Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:09:09.58796812Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:09:44.718041556Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:10:17.474999269Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":23},{"timestamp":"2026-02-23T00:10:49.272361644Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":24},{"timestamp":"2026-02-23T00:11:30.56740368Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":25},{"timestamp":"2026-02-23T00:12:03.64578392Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":26},{"timestamp":"2026-02-23T01:35:29.504409642Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":26}]'
-    failed_at: "2026-02-23T01:48:22Z"
+    failed_at: "2026-02-23T01:48:27Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T01:48:18Z"
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:32.015434352Z
-updatedat: 2026-02-23T01:48:22.736645423Z
+updatedat: 2026-02-23T01:48:27.453274118Z
 closedat: null
