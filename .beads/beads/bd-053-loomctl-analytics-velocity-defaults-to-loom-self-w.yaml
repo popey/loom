@@ -23,10 +23,10 @@ context:
     conversation_session_id: 8378e2dd-61d6-42b1-9247-019fa04a82fb
     correlation_id: dispatch-bd-053-1771830581050334213
     dispatch_count: "8"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-23T07:09:41Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T07:08:59Z"
+    last_run_at: "2026-02-23T07:09:41Z"
     last_run_error: 'action loop failed: context canceled'
     loop_detected: "false"
     provider_id: tokenhub
@@ -36,5 +36,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:42.778985299Z
-updatedat: 2026-02-23T07:09:41.055209097Z
+updatedat: 2026-02-23T07:09:41.065577924Z
 closedat: null
