@@ -53,15 +53,15 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Code Reviewer (Default)
+    agent_id: agent-1771534515-CEO (Default)
     conversation_session_id: 506d2e0d-7d57-4918-a8a3-935e3ba836b0
     correlation_id: dispatch-bd-012-1771868962213951552
     dispatch_count: "3"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-CEO (Default)"]'
     failed_at: "2026-02-23T17:49:22Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T17:48:50Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
+    last_run_at: "2026-02-23T17:49:39Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 4: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     provider_id: tokenhub
     redispatch_requested: "true"
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:48:09.647874113Z
-updatedat: 2026-02-23T17:49:22.216977542Z
+updatedat: 2026-02-23T17:49:39.819948312Z
 closedat: null
