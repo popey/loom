@@ -34,11 +34,11 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771623658
     close_reason: ""
     conversation_session_id: 8e88ab8c-48ea-4e9b-b902-6f9651a76dc6
-    correlation_id: dispatch-bd-035-1771815057599325827
+    correlation_id: dispatch-bd-035-1771815102839864641
     dispatch_count: "2"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[]'
-    failed_at: "2026-02-23T02:50:57Z"
+    failed_at: "2026-02-23T02:51:43Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T02:51:42Z"
     last_run_error: 'action loop failed: context canceled'
@@ -58,5 +58,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T20:14:28.23873663Z
-updatedat: 2026-02-23T02:51:42.888933026Z
+updatedat: 2026-02-23T02:51:43.665539657Z
 closedat: null
