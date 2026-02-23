@@ -7,10 +7,10 @@ id: bd-025
 type: task
 title: '[Test] Add CONTRIBUTING.md placeholder'
 description: ""
-status: closed
+status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -23,6 +23,7 @@ context:
     agent_task_id: task-bd-025-1771544075872628702
     agent_tokens: "196220"
     agent_worker_id: worker-agent-1771534515-Code Reviewer (Default)-1771544075
+    close_reason: ""
     conversation_session_id: f437b4c9-9b2c-4018-87d2-cb83e2c0d726
     correlation_id: dispatch-bd-025-1771549743908786288
     dispatch_count: "0"
@@ -31,9 +32,9 @@ context:
     failed_at: "2026-02-20T01:09:05Z"
     last_error: command parameter required
     last_run_at: "2026-02-20T01:09:03Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://sparky.local:8000/v1/chat/completions": dial tcp 10.11.100.116:8000: connect: connection refused'
+    last_run_error: ""
     loop_detected: "false"
-    loop_detection_reason: 'Identical error repeated 5 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://sparky.loca'
+    loop_detection_reason: ""
     loop_iterations: "23"
     progress_summary: No progress data
     provider_id: ollama-server
@@ -43,10 +44,10 @@ context:
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-19T23:39:04Z"
     revert_status: not_attempted
-    terminal_reason: completed
+    terminal_reason: ""
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:28:56.236352795Z
-updatedat: 2026-02-22T11:49:30.632264919Z
-closedat: 2026-02-22T11:49:30.632264311Z
+updatedat: 2026-02-23T02:50:38.587775908Z
+closedat: null
