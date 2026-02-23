@@ -7,10 +7,10 @@ id: bd-044
 type: task
 title: 'loomctl bead: no bulk operations (mass update/reassign)'
 description: 'loomctl has no bulk bead operations. Required operations: (1) mass status update: ''loomctl bead bulk-update --project X --filter status=open --set status=closed'', (2) project reassignment: ''loomctl bead bulk-update --filter projectid=loom-self --set projectid=loom'', (3) filter by dispatch_count, blocked_reason, priority. Absence of these forced manual sed/awk on YAML files inside containers. The API needs a bulk PATCH endpoint: PATCH /api/v1/beads with filter and updates fields.'
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -25,7 +25,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771724872
     conversation_session_id: 3efa76c9-de9e-4da4-9ddd-e7b07a816c2a
     correlation_id: dispatch-bd-044-1771804390285995631
-    dispatch_count: "0"
+    dispatch_count: "1"
     dispatch_history: ""
     error_history: '[{"timestamp":"2026-02-22T23:41:09.0286876Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-22T23:41:56.59908295Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":25},{"timestamp":"2026-02-22T23:42:39.013674151Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":26},{"timestamp":"2026-02-22T23:53:10.278953172Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":27},{"timestamp":"2026-02-22T23:53:41.877377954Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":28}]'
     failed_at: "2026-02-22T23:53:22Z"
@@ -59,5 +59,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:20.562112956Z
-updatedat: 2026-02-23T01:47:54.328805727Z
+updatedat: 2026-02-23T01:48:15.725929094Z
 closedat: null
