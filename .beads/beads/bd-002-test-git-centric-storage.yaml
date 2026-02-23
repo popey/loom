@@ -7,10 +7,10 @@ id: bd-002
 type: task
 title: Test git-centric storage
 description: This bead tests that beads are properly saved to the beads-sync git branch
-status: open
+status: blocked
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -38,9 +38,9 @@ context:
     loop_iterations: "0"
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-23T22:50:54Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T19:34:26Z"
     revert_status: not_attempted
     stuck_at: ""
@@ -49,5 +49,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T16:47:52.288595891Z
-updatedat: 2026-02-23T22:50:45.765880779Z
+updatedat: 2026-02-23T22:50:54.34155106Z
 closedat: null
