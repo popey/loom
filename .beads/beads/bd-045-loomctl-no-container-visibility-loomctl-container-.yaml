@@ -10,7 +10,7 @@ description: 'loomctl has no container subcommand. Operators cannot see which pr
 status: in_progress
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-QA Engineer (Default)
+assignedto: agent-1771534515-Code Reviewer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -25,9 +25,9 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771727178
     conversation_session_id: 5d73b244-087b-4829-a3a6-551fd3ff5b0f
     correlation_id: dispatch-bd-045-1771813410700749911
-    dispatch_count: "21"
+    dispatch_count: "22"
     dispatch_history: '["agent-1771397315-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T20:38:40.346919439Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20}]'
+    error_history: '[{"timestamp":"2026-02-23T20:38:40.346919439Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T20:39:10.520608322Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":21}]'
     failed_at: "2026-02-23T02:23:30Z"
     last_error: command parameter required
     last_failed_at: ""
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:30.483868481Z
-updatedat: 2026-02-23T20:38:40.347172737Z
+updatedat: 2026-02-23T20:39:10.521026534Z
 closedat: null
