@@ -36,12 +36,12 @@ context:
     provider_id: tokenhub
     ralph_blocked_at: "2026-02-23T18:23:58Z"
     ralph_blocked_reason: 'dispatch_count=30 exceeded max_hops=20, stuck in loop: Identical error repeated 6 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:'
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T18:23:57Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T18:24:48Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:51:00.646239935Z
-updatedat: 2026-02-23T18:24:47.024720412Z
+updatedat: 2026-02-23T18:24:48.984259302Z
 closedat: null
