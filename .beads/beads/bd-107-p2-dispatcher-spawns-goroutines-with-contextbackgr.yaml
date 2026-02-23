@@ -35,15 +35,15 @@ context:
     agent_worker_id: worker-agent-1771534515-Devops Engineer (Default)-1771718701
     conversation_session_id: 7f64d5c0-a9e5-4bb0-b3c1-6c050e1a1ca0
     correlation_id: dispatch-bd-107-1771805339301010236
-    dispatch_count: "2"
-    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
+    dispatch_count: "3"
+    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
     error_history: ""
     failed_at: "2026-02-23T00:09:13Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T00:08:59Z"
+    last_run_at: "2026-02-23T00:09:51Z"
     last_run_error: |
-        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
+        action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded
     loop_detected: "false"
     loop_detection_reason: ""
     loop_iterations: ""
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:25.63879145Z
-updatedat: 2026-02-23T00:09:13.547461403Z
+updatedat: 2026-02-23T00:09:51.465452678Z
 closedat: null
