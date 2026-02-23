@@ -7,10 +7,10 @@ id: bd-095
 type: task
 title: 'P1: TokenHub returns 502 ''all providers failed'' — no healthy backends configured'
 description: '7 beads show 502 errors: {"error":{"message":"all providers failed","type":"server_error"}}. This means TokenHub itself has no healthy backend providers (Anthropic, OpenAI, local vLLM, etc.) configured or they are all failing. Investigation needed: 1) Check TokenHub provider list (tokenhubctl provider list), 2) Check if vault is unlocked (tokenhubctl vault status), 3) Check if backend provider API keys are configured and valid, 4) Ensure at least one backend model is enabled and healthy.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Devops Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,7 +35,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771718701
     conversation_session_id: c358b413-521c-4ae9-8e0f-665193ad5914
     correlation_id: dispatch-bd-095-1771805804026897375
-    dispatch_count: "0"
+    dispatch_count: "1"
     dispatch_history: ""
     error_history: '[{"timestamp":"2026-02-23T00:14:13.334760658Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:15:24.070138271Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:16:00.343553644Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:16:42.671465319Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T00:17:16.505346552Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24}]'
     failed_at: "2026-02-23T00:16:46Z"
@@ -51,8 +51,8 @@ context:
     provider_model: aws/anthropic/claude-opus-4-5
     ralph_blocked_at: ""
     ralph_blocked_reason: ""
-    redispatch_requested: "false"
-    redispatch_requested_at: ""
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T01:46:36Z"
     remediation_for: ""
     remediation_needed: ""
     remediation_requested_at: ""
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:43.784784292Z
-updatedat: 2026-02-23T01:46:34.229542893Z
+updatedat: 2026-02-23T01:46:36.517632248Z
 closedat: null
