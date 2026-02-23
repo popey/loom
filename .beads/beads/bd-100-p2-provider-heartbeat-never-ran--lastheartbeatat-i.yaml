@@ -35,12 +35,12 @@ context:
     conversation_session_id: 44949303-a6c5-4e2a-acbd-c79ff1a17032
     correlation_id: dispatch-bd-100-1771805539887342636
     dispatch_count: "6"
-    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
     error_history: ""
     failed_at: "2026-02-23T00:12:36Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T00:12:19Z"
+    last_run_at: "2026-02-23T00:12:59Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
@@ -68,5 +68,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:10.561634102Z
-updatedat: 2026-02-23T00:12:58.008137723Z
+updatedat: 2026-02-23T00:12:59.696131887Z
 closedat: null
