@@ -10,7 +10,7 @@ description: 'The entire codebase uses log.Printf with ad-hoc string prefixes li
 status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:36.228270625Z
-updatedat: 2026-02-23T02:17:00.328538695Z
+updatedat: 2026-02-23T07:43:47.523958673Z
 closedat: null
