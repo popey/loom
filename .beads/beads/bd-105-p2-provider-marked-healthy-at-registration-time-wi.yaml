@@ -7,10 +7,10 @@ id: bd-105
 type: task
 title: 'P2: Provider marked ''healthy'' at registration time without actual health check'
 description: 'When a provider is registered via the API, its status defaults to ''pending'' in the registry (registry.go line 58), but the API handler or bootstrap sets it to ''healthy'' immediately. The dispatcher then trusts this status (isProviderHealthy checks for ''healthy'' or ''active''). But the heartbeat has never run (last_heartbeat_at is zero-time), so ''healthy'' is an unverified claim. Fix: 1) Default to ''pending'' at registration, 2) Require at least one successful heartbeat before promoting to ''healthy'', 3) Or run an immediate health check at registration time before accepting the provider.'
-status: open
+status: in_progress
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-QA Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,7 +35,7 @@ context:
     agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
     conversation_session_id: 7d49c807-7f99-49d9-ba35-b1e4045400ff
     correlation_id: dispatch-bd-105-1771806571529206892
-    dispatch_count: "4"
+    dispatch_count: "5"
     dispatch_history: '["agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T00:27:44.610899201Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:28:21.147872679Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:28:55.821924049Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:29:30.695050959Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T00:30:06.019567578Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24}]'
     failed_at: "2026-02-23T00:29:31Z"
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:22.579475954Z
-updatedat: 2026-02-23T02:08:08.401892226Z
+updatedat: 2026-02-23T02:08:14.313995929Z
 closedat: null
