@@ -7,10 +7,10 @@ id: bd-002
 type: task
 title: Test git-centric storage
 description: This bead tests that beads are properly saved to the beads-sync git branch
-status: open
+status: in_progress
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-a467e500
 blockedby: []
 blocks: []
 relatedto: []
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T16:47:52.288595891Z
-updatedat: 2026-02-23T02:07:35.691723367Z
+updatedat: 2026-02-23T02:09:10.539100798Z
 closedat: null
