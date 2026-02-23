@@ -34,11 +34,11 @@ context:
     agent_tokens: "195203"
     agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
     conversation_session_id: 9a7382e8-fdbc-4946-83dd-3f8b680cf571
-    correlation_id: dispatch-bd-104-1771814186859243357
+    correlation_id: dispatch-bd-104-1771814219125677279
     dispatch_count: "10"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T00:18:48.437630972Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:18:48.453065484Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:18:49.366963297Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:19:27.118775246Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:20:09.854878543Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22}]'
-    failed_at: "2026-02-23T02:36:26Z"
+    failed_at: "2026-02-23T02:36:59Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T02:36:26Z"
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:21.212258372Z
-updatedat: 2026-02-23T02:36:58.317117583Z
+updatedat: 2026-02-23T02:36:59.131481251Z
 closedat: null
