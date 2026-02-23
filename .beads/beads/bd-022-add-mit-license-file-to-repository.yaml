@@ -7,10 +7,10 @@ id: bd-022
 type: task
 title: Add MIT license file to repository
 description: Create a LICENSE file at the root of the repository containing the standard MIT License text with copyright holder set to the Loom project. This is a simple file creation task to validate the autonomous pipeline.
-status: in_progress
+status: closed
 priority: 1
 projectid: loom
-assignedto: exec-loom-43a70c83
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -52,5 +52,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T21:25:24.277298603Z
-updatedat: 2026-02-23T03:38:38.443792507Z
-closedat: null
+updatedat: 2026-02-23T03:38:48.343813023Z
+closedat: 2026-02-23T03:38:48.342142107Z
