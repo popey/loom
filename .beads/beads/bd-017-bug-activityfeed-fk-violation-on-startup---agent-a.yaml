@@ -20,10 +20,10 @@ tags: []
 context:
     agent_id: agent-1771844268-Web Designer (Default)
     conversation_session_id: 24b346d1-88e9-4fdf-b54a-74f8a65c878d
-    correlation_id: dispatch-bd-017-1771869246708193182
+    correlation_id: dispatch-bd-017-1771869316387097569
     dispatch_count: "7"
     dispatch_history: '["agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771844268-Web Designer (Default)"]'
-    failed_at: "2026-02-23T17:54:06Z"
+    failed_at: "2026-02-23T17:55:16Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T17:54:24Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
@@ -35,5 +35,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:22.715268753Z
-updatedat: 2026-02-23T17:55:14.902427945Z
+updatedat: 2026-02-23T17:55:16.390329368Z
 closedat: null
