@@ -51,8 +51,8 @@ context:
     provider_model: aws/anthropic/claude-opus-4-5
     ralph_blocked_at: "2026-02-23T07:44:35Z"
     ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated authentication errors (5 attempts) - provider credentials invalid or missing'
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T07:44:34Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T07:47:28Z"
     remediation_for: ""
     remediation_needed: ""
     remediation_requested_at: ""
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:25.63879145Z
-updatedat: 2026-02-23T07:44:35.725783873Z
+updatedat: 2026-02-23T07:47:28.142813629Z
 closedat: null
