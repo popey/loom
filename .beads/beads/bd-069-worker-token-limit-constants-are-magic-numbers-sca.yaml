@@ -7,10 +7,10 @@ id: bd-069
 type: task
 title: 'worker: token limit constants are magic numbers scattered inline'
 description: 'internal/worker/worker.go lines 288-341: token limit calculations use unnamed magic values (/4 char-to-token ratio, 0.8 headroom, 32768 default, 0.5/0.25/0.0 truncation fractions). Fix: define named package-level constants with documentation explaining the rationale for each value.'
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -33,14 +33,14 @@ context:
     loop_detection_reason: Repeated rate limit errors (5 attempts) - exhausted provider quota
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: "2026-02-23T00:19:28Z"
+    ralph_blocked_at: "2026-02-23T01:35:43Z"
     ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated rate limit errors (5 attempts) - exhausted provider quota'
-    redispatch_requested: "true"
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T01:35:40Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:33.935773466Z
-updatedat: 2026-02-23T01:35:40.516364171Z
+updatedat: 2026-02-23T01:35:43.428342687Z
 closedat: null
