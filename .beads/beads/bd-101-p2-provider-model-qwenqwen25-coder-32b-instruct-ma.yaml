@@ -35,14 +35,15 @@ context:
     agent_worker_id: worker-agent-1771534515-CEO (Default)-1771718701
     conversation_session_id: 471c5bfd-3644-4969-8cb5-96f144c1d9dc
     correlation_id: dispatch-bd-101-1771805339523483975
-    dispatch_count: "4"
-    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    dispatch_count: "5"
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
     error_history: ""
     failed_at: "2026-02-23T00:09:17Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T00:08:59Z"
-    last_run_error: 'action loop failed: context canceled'
+    last_run_at: "2026-02-23T00:09:46Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
     loop_detection_reason: ""
     loop_iterations: ""
@@ -68,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:15.816454061Z
-updatedat: 2026-02-23T00:09:17.702387022Z
+updatedat: 2026-02-23T00:09:46.899575739Z
 closedat: null
