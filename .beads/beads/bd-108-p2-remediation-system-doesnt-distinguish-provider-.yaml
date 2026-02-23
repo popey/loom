@@ -10,7 +10,7 @@ description: 'The createRemediationBead() function (dispatcher.go line 1094) cre
 status: in_progress
 priority: 2
 projectid: loom
-assignedto: exec-loom-6de5edc3
+assignedto: exec-loom-2c39815c
 blockedby: []
 blocks: []
 relatedto: []
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:40.355081229Z
-updatedat: 2026-02-23T01:54:47.798417349Z
+updatedat: 2026-02-23T01:55:07.726118717Z
 closedat: null
