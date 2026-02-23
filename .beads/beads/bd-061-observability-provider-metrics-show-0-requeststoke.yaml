@@ -10,7 +10,7 @@ description: 'The providers API returns total_requests=0, success_requests=0, to
 status: in_progress
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Devops Engineer (Default)
+assignedto: agent-1771534515-QA Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,14 +18,14 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_id: agent-1771534515-Devops Engineer (Default)
     conversation_session_id: e79b0139-b17b-4c47-9d30-89a2e449e9e7
-    correlation_id: dispatch-bd-061-1771869084569488194
-    dispatch_count: "2"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
-    failed_at: "2026-02-23T17:51:24Z"
+    correlation_id: dispatch-bd-061-1771869135069422550
+    dispatch_count: "3"
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    failed_at: "2026-02-23T17:52:15Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T17:51:35Z"
+    last_run_at: "2026-02-23T17:52:18Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     provider_id: tokenhub
@@ -35,5 +35,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:37.272606874Z
-updatedat: 2026-02-23T17:52:13.524503799Z
+updatedat: 2026-02-23T17:53:04.633704257Z
 closedat: null
