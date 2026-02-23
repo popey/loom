@@ -7,10 +7,10 @@ id: bd-095
 type: task
 title: 'P1: TokenHub returns 502 ''all providers failed'' — no healthy backends configured'
 description: '7 beads show 502 errors: {"error":{"message":"all providers failed","type":"server_error"}}. This means TokenHub itself has no healthy backend providers (Anthropic, OpenAI, local vLLM, etc.) configured or they are all failing. Investigation needed: 1) Check TokenHub provider list (tokenhubctl provider list), 2) Check if vault is unlocked (tokenhubctl vault status), 3) Check if backend provider API keys are configured and valid, 4) Ensure at least one backend model is enabled and healthy.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:43.784784292Z
-updatedat: 2026-02-23T00:17:16.505372792Z
+updatedat: 2026-02-23T01:35:38.554199406Z
 closedat: null
