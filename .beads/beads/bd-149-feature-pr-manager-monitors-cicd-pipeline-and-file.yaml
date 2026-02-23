@@ -17,10 +17,10 @@ description: |-
     - Files bead via internal API when a workflow is red
     - Deduplicates: check for existing open bead with same title prefix before filing
     - 24h escalation path to Engineering Manager
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Devops Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -29,12 +29,12 @@ children: []
 tags: []
 context:
     conversation_session_id: 20085225-c82d-49eb-ade3-228a9dc00ca4
-    dispatch_count: "5"
+    dispatch_count: "6"
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-23T20:09:30Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T20:00:22.120615395Z
-updatedat: 2026-02-23T20:20:09.073010375Z
+updatedat: 2026-02-23T20:20:26.47404044Z
 closedat: null
