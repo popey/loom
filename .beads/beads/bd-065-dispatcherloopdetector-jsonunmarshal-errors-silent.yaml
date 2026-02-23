@@ -22,7 +22,7 @@ context:
     close_reason: ""
     conversation_session_id: 12505c98-551e-4637-ab9e-6a5818629f84
     correlation_id: dispatch-bd-065-1771815280538936236
-    dispatch_count: "4"
+    dispatch_count: "5"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: ""
     failed_at: "2026-02-23T02:54:42Z"
@@ -55,5 +55,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:29.960739994Z
-updatedat: 2026-02-23T02:54:54.085161972Z
+updatedat: 2026-02-23T02:55:37.936055526Z
 closedat: null
