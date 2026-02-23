@@ -37,12 +37,12 @@ context:
     conversation_session_id: 4aea7594-31b7-41ce-8aaa-1995cf7fcb88
     correlation_id: dispatch-bd-102-1771805665625729316
     dispatch_count: "18"
-    dispatch_history: '["agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T00:17:20.329652228Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:17:22.462917461Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:17:27.451215211Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:17:35.290826308Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T00:17:38.759154323Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24}]'
     failed_at: "2026-02-23T00:14:25Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T02:22:51Z"
+    last_run_at: "2026-02-23T02:23:06Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     loop_detection_reason: ""
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:17.017190243Z
-updatedat: 2026-02-23T02:23:03.542936479Z
+updatedat: 2026-02-23T02:23:06.335575827Z
 closedat: null
