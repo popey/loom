@@ -7,10 +7,10 @@ id: bd-095
 type: task
 title: 'P1: TokenHub returns 502 ''all providers failed'' — no healthy backends configured'
 description: '7 beads show 502 errors: {"error":{"message":"all providers failed","type":"server_error"}}. This means TokenHub itself has no healthy backend providers (Anthropic, OpenAI, local vLLM, etc.) configured or they are all failing. Investigation needed: 1) Check TokenHub provider list (tokenhubctl provider list), 2) Check if vault is unlocked (tokenhubctl vault status), 3) Check if backend provider API keys are configured and valid, 4) Ensure at least one backend model is enabled and healthy.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,7 +35,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771718701
     conversation_session_id: c358b413-521c-4ae9-8e0f-665193ad5914
     correlation_id: dispatch-bd-095-1771813064703464700
-    dispatch_count: "20"
+    dispatch_count: "0"
     dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T00:14:13.334760658Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:15:24.070138271Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:16:00.343553644Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:16:42.671465319Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T00:17:16.505346552Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-23T02:18:20.022719863Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20}]'
     failed_at: "2026-02-23T02:17:45Z"
@@ -43,14 +43,15 @@ context:
     last_failed_at: ""
     last_run_at: "2026-02-23T02:17:50Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
-    loop_detected: "false"
+    loop_detected: ""
+    loop_detected_reason: ""
     loop_detection_reason: Repeated authentication errors (5 attempts) - provider credentials invalid or missing
     loop_iterations: "0"
     progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    ralph_blocked_at: "2026-02-23T07:46:46Z"
-    ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated authentication errors (5 attempts) - provider credentials invalid or missing'
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
     redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T07:46:45Z"
     remediation_for: ""
@@ -69,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:43.784784292Z
-updatedat: 2026-02-23T07:46:46.274887366Z
+updatedat: 2026-02-23T19:33:27.721151576Z
 closedat: null
