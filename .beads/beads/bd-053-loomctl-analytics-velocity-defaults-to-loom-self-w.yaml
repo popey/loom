@@ -7,10 +7,10 @@ id: bd-053
 type: task
 title: 'loomctl analytics: velocity defaults to loom-self (wrong default project)'
 description: 'loomctl analytics velocity defaults to project_id ''loom-self'' which does not exist (phantom project from early development). This causes all velocity queries to return empty results unless --project is explicitly specified. Fix: either require --project flag (error if not specified), or default to ''loom'' as a sensible fallback, or list all projects'' velocity if --project is omitted. The phantom ''loom-self'' project should also be purged from any hardcoded defaults in the codebase.'
-status: in_progress
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,11 +21,11 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     close_reason: Fixed in commit 91e26d5
     conversation_session_id: 8378e2dd-61d6-42b1-9247-019fa04a82fb
-    correlation_id: dispatch-bd-053-1771831019310726616
+    correlation_id: dispatch-bd-053-1771831047408452642
     dispatch_count: "22"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T07:16:52.050782592Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T07:17:19.424049606Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":21}]'
-    failed_at: "2026-02-23T07:16:59Z"
+    failed_at: "2026-02-23T07:17:27Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T07:16:59Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
@@ -37,5 +37,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:42.778985299Z
-updatedat: 2026-02-23T07:17:25.382126853Z
+updatedat: 2026-02-23T07:17:27.413087734Z
 closedat: null
