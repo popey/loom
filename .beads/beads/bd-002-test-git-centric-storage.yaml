@@ -21,11 +21,11 @@ context:
     agent_id: agent-1771534515-QA Engineer (Default)
     close_reason: stale bead from earlier test run - no longer relevant
     conversation_session_id: 13ec2223-d3ca-46e0-bb37-c72c79bd3cbe
-    correlation_id: dispatch-bd-002-1771813148723536989
+    correlation_id: dispatch-bd-002-1771813185174239725
     dispatch_count: "14"
     dispatch_history: '["agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
     error_history: '[{"timestamp":"2026-02-19T03:15:34.423888137Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: {\"error\":{\"message\":\"Authentication Error, No api key passed in.\",\"type\":\"auth_error\",\"param\":\"None\",\"code\":\"401\"}}","dispatch":20},{"timestamp":"2026-02-19T03:15:34.797840329Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: {\"error\":{\"message\":\"Authentication Error, No api key passed in.\",\"type\":\"auth_error\",\"param\":\"None\",\"code\":\"401\"}}","dispatch":20},{"timestamp":"2026-02-19T03:15:43.220528105Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: {\"error\":{\"message\":\"Authentication Error, No api key passed in.\",\"type\":\"auth_error\",\"param\":\"None\",\"code\":\"401\"}}","dispatch":20},{"timestamp":"2026-02-19T03:15:43.62075942Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: {\"error\":{\"message\":\"Authentication Error, No api key passed in.\",\"type\":\"auth_error\",\"param\":\"None\",\"code\":\"401\"}}","dispatch":21},{"timestamp":"2026-02-19T03:15:44.473045818Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: {\"error\":{\"message\":\"Authentication Error, No api key passed in.\",\"type\":\"auth_error\",\"param\":\"None\",\"code\":\"401\"}}","dispatch":21},{"timestamp":"2026-02-23T00:17:55.777664119Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20}]'
-    failed_at: "2026-02-23T02:19:08Z"
+    failed_at: "2026-02-23T02:19:45Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T02:19:08Z"
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T16:47:52.288595891Z
-updatedat: 2026-02-23T02:19:44.240283051Z
+updatedat: 2026-02-23T02:19:45.24002473Z
 closedat: null
