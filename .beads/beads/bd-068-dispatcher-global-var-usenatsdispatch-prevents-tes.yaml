@@ -7,10 +7,10 @@ id: bd-068
 type: task
 title: 'dispatcher: global var UseNATSDispatch prevents test isolation'
 description: 'internal/dispatch/dispatcher.go line ~112: ''var UseNATSDispatch bool'' is a package-level mutable global. Concurrent tests cannot safely change this setting. Fix: move to a config struct field or dependency-injected interface so tests can set it per-instance.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Code Reviewer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,7 +21,7 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     close_reason: ""
     conversation_session_id: 1d56f8fc-bfdd-4f26-9593-d9936de162dd
-    dispatch_count: "0"
+    dispatch_count: "1"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-21T07:39:24.85889353Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":20},{"timestamp":"2026-02-21T07:39:33.651485588Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21},{"timestamp":"2026-02-21T07:40:32.794515656Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":22},{"timestamp":"2026-02-21T07:40:42.238566365Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":23},{"timestamp":"2026-02-21T07:40:45.859673281Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":24}]'
     last_run_at: "2026-02-21T07:40:43Z"
@@ -40,5 +40,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:32.585011819Z
-updatedat: 2026-02-23T02:50:28.829505947Z
+updatedat: 2026-02-23T02:51:00.73694308Z
 closedat: null
