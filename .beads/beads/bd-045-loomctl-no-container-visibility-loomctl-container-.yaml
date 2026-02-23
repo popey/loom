@@ -25,9 +25,9 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771727178
     conversation_session_id: bcc5f8f4-90e4-4083-a5d0-1bb01cf19e80
     correlation_id: dispatch-bd-045-1771805389366080437
-    dispatch_count: "20"
+    dispatch_count: "21"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
-    error_history: ""
+    error_history: '[{"timestamp":"2026-02-23T00:10:19.399769463Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20}]'
     failed_at: "2026-02-23T00:09:54Z"
     last_error: command parameter required
     last_failed_at: ""
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:30.483868481Z
-updatedat: 2026-02-23T00:09:54.781121521Z
+updatedat: 2026-02-23T00:10:19.399797111Z
 closedat: null
