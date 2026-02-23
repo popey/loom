@@ -42,8 +42,8 @@ context:
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     ralph_blocked_at: ""
     ralph_blocked_reason: ""
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T01:52:56Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T02:50:30Z"
     revert_status: not_attempted
     stuck_at: ""
     terminal_reason: ""
@@ -51,5 +51,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:42.859064421Z
-updatedat: 2026-02-23T02:50:29.73333165Z
+updatedat: 2026-02-23T02:50:30.905410615Z
 closedat: null
