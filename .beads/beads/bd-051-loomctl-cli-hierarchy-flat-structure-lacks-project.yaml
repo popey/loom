@@ -7,10 +7,10 @@ id: bd-051
 type: task
 title: 'loomctl CLI hierarchy: flat structure lacks project-first nesting'
 description: 'loomctl has a flat command hierarchy. Context should flow from project downward: ''loomctl project loom bead list'' should be equivalent to ''loomctl bead list --project loom''. The CLI should support: ''loomctl project <id> <resource> <action>'' as the primary interface, with --project flags as secondary. Additionally, ''loomctl project <id>'' alone should show a dashboard of that project''s agents, open beads, recent activity, and container status. This mirrors kubectl''s namespace model (kubectl -n <ns> get pods) and makes context explicit.'
-status: open
+status: blocked
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -37,7 +37,7 @@ context:
     correlation_id: dispatch-bd-051-1771805492510714670
     dispatch_count: "26"
     dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T00:08:35.993137995Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:09:09.58796812Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:09:44.718041556Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:10:17.474999269Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":23},{"timestamp":"2026-02-23T00:10:49.272361644Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":24},{"timestamp":"2026-02-23T00:11:30.56740368Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":25},{"timestamp":"2026-02-23T00:12:03.64578392Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":26}]'
+    error_history: '[{"timestamp":"2026-02-23T00:08:35.993137995Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:09:09.58796812Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:09:44.718041556Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:10:17.474999269Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":23},{"timestamp":"2026-02-23T00:10:49.272361644Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":24},{"timestamp":"2026-02-23T00:11:30.56740368Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":25},{"timestamp":"2026-02-23T00:12:03.64578392Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":26},{"timestamp":"2026-02-23T01:35:29.504409642Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":26}]'
     failed_at: "2026-02-23T00:11:33Z"
     last_error: command parameter required
     last_failed_at: ""
@@ -45,14 +45,14 @@ context:
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
-    loop_detection_reason: Repeated authentication errors (5 attempts) - provider credentials invalid or missing
+    loop_detection_reason: Repeated authentication errors (6 attempts) - provider credentials invalid or missing
     loop_iterations: ""
     progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    ralph_blocked_at: "2026-02-23T00:12:03Z"
-    ralph_blocked_reason: 'dispatch_count=26 exceeded max_hops=20, stuck in loop: Repeated authentication errors (5 attempts) - provider credentials invalid or missing'
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-23T01:35:29Z"
+    ralph_blocked_reason: 'dispatch_count=26 exceeded max_hops=20, stuck in loop: Repeated authentication errors (6 attempts) - provider credentials invalid or missing'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T01:35:28Z"
     remediation_for: ""
     remediation_needed: ""
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:32.015434352Z
-updatedat: 2026-02-23T01:35:28.691505642Z
+updatedat: 2026-02-23T01:35:29.504468201Z
 closedat: null
