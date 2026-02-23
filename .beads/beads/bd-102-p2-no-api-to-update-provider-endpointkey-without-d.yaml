@@ -7,10 +7,10 @@ id: bd-102
 type: task
 title: 'P2: No API to update provider endpoint/key without delete+re-register'
 description: 'The provider CRUD was simplified in the TokenHub-only refactoring, but there''s no PATCH/PUT endpoint to update a provider''s endpoint URL or API key. The only way to change the endpoint is to delete and re-register (or use the Upsert method in the registry, but that''s not exposed via API). The handlers_providers.go has POST (create) and DELETE, but no PATCH. Fix: Add a PATCH /api/v1/providers/{id} endpoint that calls registry.Upsert() so operators can update endpoint/key without downtime. This is especially important for the bootstrap workflow where the provider needs reconfiguration.'
-status: blocked
+status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -71,5 +71,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:17.017190243Z
-updatedat: 2026-02-23T00:17:38.759183395Z
+updatedat: 2026-02-23T01:35:23.270085149Z
 closedat: null
