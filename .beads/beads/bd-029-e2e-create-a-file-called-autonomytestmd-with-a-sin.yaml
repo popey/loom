@@ -25,13 +25,13 @@ context:
     agent_worker_id: worker-agent-1771534515-Devops Engineer (Default)-1771545105
     conversation_session_id: 09cafc76-23e0-4193-b1dc-428730dfe4e7
     correlation_id: dispatch-bd-029-1771806122421284287
-    dispatch_count: "12"
-    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    dispatch_count: "13"
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
     error_history: ""
     failed_at: "2026-02-23T00:22:02Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T00:22:02Z"
+    last_run_at: "2026-02-23T00:22:40Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T23:19:54.372653066Z
-updatedat: 2026-02-23T00:22:02.437614015Z
+updatedat: 2026-02-23T00:22:40.554398282Z
 closedat: null
