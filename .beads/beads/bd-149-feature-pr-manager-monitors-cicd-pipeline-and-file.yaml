@@ -20,7 +20,7 @@ description: |-
 status: in_progress
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Code Reviewer (Default)
+assignedto: agent-1771876780-Remediation Specialist (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -29,12 +29,12 @@ children: []
 tags: []
 context:
     conversation_session_id: 20085225-c82d-49eb-ade3-228a9dc00ca4
-    dispatch_count: "21"
+    dispatch_count: "22"
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-23T20:09:30Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T20:00:22.120615395Z
-updatedat: 2026-02-23T20:26:53.280976116Z
+updatedat: 2026-02-23T20:27:16.747758431Z
 closedat: null
