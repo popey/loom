@@ -26,7 +26,7 @@ context:
     error_history: '[{"timestamp":"2026-02-23T00:15:24.070108703Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20},{"timestamp":"2026-02-23T00:15:27.835391552Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20},{"timestamp":"2026-02-23T00:15:27.847183386Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20},{"timestamp":"2026-02-23T00:15:34.900415662Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20},{"timestamp":"2026-02-23T00:16:09.591502135Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:16:41.161437064Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:16:42.657859922Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22}]'
     failed_at: "2026-02-23T00:16:12Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T00:16:11Z"
+    last_run_at: "2026-02-23T00:16:42Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
@@ -37,5 +37,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T21:00:02.763486157Z
-updatedat: 2026-02-23T00:16:42.657898322Z
+updatedat: 2026-02-23T00:16:42.684207047Z
 closedat: null
