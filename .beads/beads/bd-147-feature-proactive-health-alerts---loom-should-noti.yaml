@@ -10,7 +10,7 @@ description: 'After 12 hours of operation, 100% of agents were idle with 0 token
 status: open
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,18 +18,18 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Code Reviewer (Default)
+    agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 8b68f6d9-703a-4494-bab3-78c6c9972ee3
     correlation_id: dispatch-bd-147-1771870747972587867
     dispatch_count: "25"
-    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771844268-Web Designer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)"]'
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771844268-Web Designer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T18:17:10.082076282Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":21},{"timestamp":"2026-02-23T18:17:48.220084991Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":22},{"timestamp":"2026-02-23T18:18:24.073145021Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":23},{"timestamp":"2026-02-23T18:19:05.9535387Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24}]'
     failed_at: "2026-02-23T18:19:07Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T18:18:37Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
+    last_run_at: "2026-02-23T18:19:18Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "true"
-    loop_detected_at: "2026-02-23T18:18:37Z"
+    loop_detected_at: "2026-02-23T18:19:18Z"
     loop_detected_reason: dispatch alternated between two agents for 6 runs
     provider_id: tokenhub
     ralph_blocked_at: "2026-02-23T18:18:47Z"
@@ -40,5 +40,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:51:00.646239935Z
-updatedat: 2026-02-23T18:19:13.474742371Z
+updatedat: 2026-02-23T18:19:18.751123329Z
 closedat: null
