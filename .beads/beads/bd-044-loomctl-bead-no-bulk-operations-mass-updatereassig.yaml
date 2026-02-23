@@ -28,7 +28,7 @@ context:
     dispatch_count: "5"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-22T23:41:09.0286876Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-22T23:41:56.59908295Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":25},{"timestamp":"2026-02-22T23:42:39.013674151Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":26},{"timestamp":"2026-02-22T23:53:10.278953172Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":27},{"timestamp":"2026-02-22T23:53:41.877377954Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":28}]'
-    failed_at: "2026-02-23T01:54:24Z"
+    failed_at: "2026-02-23T01:54:28Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T01:53:53Z"
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:20.562112956Z
-updatedat: 2026-02-23T01:54:24.239457994Z
+updatedat: 2026-02-23T01:54:28.106103466Z
 closedat: null
