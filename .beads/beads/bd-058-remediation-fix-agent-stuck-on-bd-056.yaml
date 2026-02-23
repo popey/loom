@@ -10,7 +10,7 @@ description: "## Remediation Request: Agent Stuck on Bead bd-056\n\n**Stuck Patt
 status: closed
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -48,5 +48,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:25:01.784800241Z
-updatedat: 2026-02-23T07:04:30.294108287Z
+updatedat: 2026-02-23T07:04:31.742784095Z
 closedat: 2026-02-20T23:42:47.517867528Z
