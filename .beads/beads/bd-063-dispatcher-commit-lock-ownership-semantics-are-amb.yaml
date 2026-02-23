@@ -7,10 +7,10 @@ id: bd-063
 type: task
 title: 'dispatcher: commit lock ownership semantics are ambiguous and racy'
 description: 'internal/dispatch/dispatcher.go lines 87-92, 344-420: commitLock/commitStateMutex/commitQueue interact with unclear ownership. The queue processor goroutine sends on ResultCh without owning the lock, and lock release is the caller''s responsibility. This violates lock ownership patterns and risks deadlock/race. Fix: refactor so queue processor owns the full lock lifecycle.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -22,23 +22,23 @@ context:
     close_reason: ""
     conversation_session_id: 4d2b3841-3ed5-4364-bc2b-77b55ac5f0ec
     correlation_id: dispatch-bd-063-1771816236501643077
-    dispatch_count: "10"
+    dispatch_count: "0"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T21:07:11.1736514Z","error":"LLM call failed on iteration 6: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-02-23T21:24:24.139295122Z","error":"LLM call failed on iteration 4: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":2},{"timestamp":"2026-02-23T21:25:36.39756812Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":3},{"timestamp":"2026-02-23T21:25:42.472026578Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":4},{"timestamp":"2026-02-23T21:26:25.006672954Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5},{"timestamp":"2026-02-23T21:26:25.006703706Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5},{"timestamp":"2026-02-23T21:26:30.946316976Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":6},{"timestamp":"2026-02-23T21:26:30.946346928Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":6},{"timestamp":"2026-02-23T21:26:40.55310378Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":7},{"timestamp":"2026-02-23T21:26:40.553120708Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":7},{"timestamp":"2026-02-23T21:26:51.036381902Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":8},{"timestamp":"2026-02-23T21:26:51.036418446Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":8},{"timestamp":"2026-02-23T21:27:01.603839818Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":9},{"timestamp":"2026-02-23T21:27:01.603861178Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":9},{"timestamp":"2026-02-23T21:27:05.918419191Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":10},{"timestamp":"2026-02-23T21:27:05.918446295Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":10}]'
+    error_history: ""
     failed_at: "2026-02-23T03:10:36Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T21:27:05Z"
     last_run_error: |
         LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded
-    loop_detected: "true"
+    loop_detected: ""
     loop_detected_at: "2026-02-23T21:27:05Z"
-    loop_detected_reason: Repeated rate limit errors (8 attempts) - exhausted provider quota
+    loop_detected_reason: ""
     loop_detection_reason: 'Identical error repeated 7 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:'
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: "2026-02-23T21:27:10Z"
-    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated rate limit errors (8 attempts) - exhausted provider quota'
-    redispatch_requested: "false"
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
+    redispatch_requested: "true"
     redispatch_requested_at: "2026-02-23T20:29:47Z"
     revert_status: not_attempted
     terminal_reason: ""
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:26.294403941Z
-updatedat: 2026-02-23T21:27:10.557801334Z
+updatedat: 2026-02-23T21:57:23.338821387Z
 closedat: null
