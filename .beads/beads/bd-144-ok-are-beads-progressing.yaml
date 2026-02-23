@@ -21,9 +21,9 @@ context:
     agent_id: agent-1771534515-Code Reviewer (Default)
     conversation_session_id: 79971f97-c2ae-4365-a7ea-24178c389410
     correlation_id: dispatch-bd-144-1771813871622911221
-    dispatch_count: "12"
+    dispatch_count: "13"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T21:01:06.031590724Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":12},{"timestamp":"2026-02-23T21:01:06.031616181Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":12}]'
+    error_history: '[{"timestamp":"2026-02-23T21:01:06.031590724Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":12},{"timestamp":"2026-02-23T21:01:06.031616181Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":12},{"timestamp":"2026-02-23T21:01:06.458697212Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":13},{"timestamp":"2026-02-23T21:01:06.4587123Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":13}]'
     failed_at: "2026-02-23T02:31:11Z"
     last_error: command parameter required
     last_failed_at: ""
@@ -47,5 +47,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T21:00:02.763486157Z
-updatedat: 2026-02-23T21:01:06.031641685Z
+updatedat: 2026-02-23T21:01:06.458721516Z
 closedat: null
