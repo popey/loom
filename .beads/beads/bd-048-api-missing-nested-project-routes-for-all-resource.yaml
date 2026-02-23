@@ -7,10 +7,10 @@ id: bd-048
 type: task
 title: 'API: missing nested project routes for all resources'
 description: 'The API has no nested project routes for most resources, making project-scoped queries impossible without client-side filtering. Missing routes: GET /api/v1/projects/{id}/agents, GET /api/v1/projects/{id}/beads, GET /api/v1/projects/{id}/workflows, GET /api/v1/projects/{id}/logs, GET /api/v1/projects/{id}/events, GET /api/v1/projects/{id}/conversations. These nested routes are fundamental for multi-project installations where an operator wants to see all resources belonging to a specific project without fetching the entire global list.'
-status: open
+status: blocked
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,14 +35,14 @@ context:
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
-    loop_detection_reason: Repeated authentication errors (6 attempts) - provider credentials invalid or missing
+    loop_detection_reason: Repeated authentication errors (7 attempts) - provider credentials invalid or missing
     loop_iterations: ""
     progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    ralph_blocked_at: "2026-02-23T01:35:25Z"
-    ralph_blocked_reason: 'dispatch_count=38 exceeded max_hops=20, stuck in loop: Repeated authentication errors (6 attempts) - provider credentials invalid or missing'
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-23T01:36:16Z"
+    ralph_blocked_reason: 'dispatch_count=38 exceeded max_hops=20, stuck in loop: Repeated authentication errors (7 attempts) - provider credentials invalid or missing'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T01:36:09Z"
     remediation_for: ""
     remediation_needed: ""
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:00.406249991Z
-updatedat: 2026-02-23T01:36:13.355381928Z
+updatedat: 2026-02-23T01:36:16.062611187Z
 closedat: null
