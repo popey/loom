@@ -42,10 +42,10 @@ description: |-
     ## Additionally
 
     The `context canceled` root cause itself needs investigation. The 5-20ms failure time suggests the context is pre-cancelled, possibly because the NATS consumer is `already bound to a subscription` at startup, causing the worker goroutine context to be immediately cancelled when it can't subscribe. See related bead for NATS consumer leak fix.
-status: in_progress
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Code Reviewer (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -55,10 +55,10 @@ tags: []
 context:
     agent_id: agent-1771534515-Code Reviewer (Default)
     conversation_session_id: 506d2e0d-7d57-4918-a8a3-935e3ba836b0
-    correlation_id: dispatch-bd-012-1771869611755165633
+    correlation_id: dispatch-bd-012-1771869659202887184
     dispatch_count: "17"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-CEO (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)"]'
-    failed_at: "2026-02-23T18:00:11Z"
+    failed_at: "2026-02-23T18:01:03Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T18:00:59Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:48:09.647874113Z
-updatedat: 2026-02-23T18:00:59.354810202Z
+updatedat: 2026-02-23T18:01:03.333758837Z
 closedat: null
