@@ -7,10 +7,10 @@ id: bd-146
 type: task
 title: Executor smoke test v2
 description: List the files in /tmp using the scope action, then use done.
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,7 +21,7 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 3b38b039-fd82-48cf-887c-42a9dbe7f2c1
     correlation_id: dispatch-bd-146-1771805839523790591
-    dispatch_count: "0"
+    dispatch_count: "1"
     dispatch_history: ""
     error_history: '[{"timestamp":"2026-02-23T00:15:57.48540352Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:16:44.028437433Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:17:18.702794923Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:17:53.302642821Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T00:17:53.316313338Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T01:35:35.26426705Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T01:38:07.575112495Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23}]'
     failed_at: "2026-02-23T00:17:19Z"
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T23:43:52.835295515Z
-updatedat: 2026-02-23T01:46:34.020594588Z
+updatedat: 2026-02-23T01:46:35.632306748Z
 closedat: null
