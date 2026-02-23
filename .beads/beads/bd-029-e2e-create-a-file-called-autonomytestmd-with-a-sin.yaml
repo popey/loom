@@ -31,8 +31,9 @@ context:
     failed_at: "2026-02-23T00:29:09Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T00:28:33Z"
-    last_run_error: 'action loop failed: context canceled'
+    last_run_at: "2026-02-23T00:29:09Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
     loop_detection_reason: ""
     loop_iterations: ""
@@ -59,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T23:19:54.372653066Z
-updatedat: 2026-02-23T00:29:09.195519304Z
+updatedat: 2026-02-23T00:29:09.206630803Z
 closedat: null
