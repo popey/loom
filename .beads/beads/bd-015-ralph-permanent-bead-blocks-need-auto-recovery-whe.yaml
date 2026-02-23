@@ -7,7 +7,7 @@ id: bd-015
 type: task
 title: 'Ralph: permanent bead blocks need auto-recovery when underlying cause resolves'
 description: 'When ralph blocks a bead (dispatch_count > max_hops, or repeated provider errors), it stays blocked forever with no recovery. This required manual intervention to unblock 97 aviation beads 12 hours after the context-canceled cascade. Required behaviors: (1) If a bead was blocked due to provider errors and providers recover (all_providers_failed, 502 errors), ralph should auto-unblock after a configurable cooling period (default 1h). (2) If a bead was blocked due to context_canceled and the NATS consumer issue is fixed, beads should be unblocked. (3) dispatch_count should decay over time (e.g., halve every 24h) so persistent beads can be retried. (4) Add an admin API endpoint POST /api/v1/projects/:id/unblock-all that resets all ralph-blocked beads in a project, with reason logged. The current situation where 97 of 165 aviation beads (59%) are permanently blocked requires human intervention every time a transient infrastructure issue occurs.'
-status: blocked
+status: closed
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -19,6 +19,8 @@ children: []
 tags: []
 context:
     agent_id: agent-1771534515-Devops Engineer (Default)
+    assigned_to: ""
+    closure_reason: implemented in code by human operator - see commit history
     conversation_session_id: 566bdcd3-acf5-4204-a897-827356ea1e04
     dispatch_count: "20"
     dispatch_history: '["agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
@@ -39,5 +41,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:01.657399394Z
-updatedat: 2026-02-23T19:53:59.935668918Z
-closedat: null
+updatedat: 2026-02-23T20:03:49.068022743Z
+closedat: 2026-02-23T20:03:49.068019783Z
