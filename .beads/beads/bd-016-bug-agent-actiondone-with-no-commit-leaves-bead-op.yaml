@@ -7,10 +7,10 @@ id: bd-016
 type: task
 title: 'Bug: agent action=done with no commit leaves bead open instead of closing it'
 description: 'bd-055 had context.terminal_reason=completed and context.agent_output containing {"action": "done", "reason": "changes already applied and verified. No further changes were needed."} but remained in_progress indefinitely. The agent correctly determined the work was already done and issued a done action, but the system did not close the bead. Root cause: the dispatch_phases.go completed case or taskexecutor closeout logic may require a git commit SHA to be present before closing, or the done action is not being detected when terminal_reason=completed is set but the executor context was already stale. Fix: if agent emits action=done OR action=skip AND provides a reason, close the bead as closed with the agent reason as close_reason, regardless of whether a git commit was made. Work that was already done upstream should be validatable.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,28 +21,28 @@ context:
     agent_id: agent-1771844268-Web Designer (Default)
     conversation_session_id: 83ba3118-c2d4-4e19-a97b-84466e4e0b35
     correlation_id: dispatch-bd-016-1771871107190004543
-    dispatch_count: "15"
+    dispatch_count: "0"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T18:27:17.521022823Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T18:27:41.703666526Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T18:29:01.040503441Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T18:29:44.642411481Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T18:30:31.134102202Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T18:31:24.376207622Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T18:33:24.942998537Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T18:34:25.375573238Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T18:36:12.688323496Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T18:38:59.931085082Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T20:53:21.884649799Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":11},{"timestamp":"2026-02-23T20:53:21.884717513Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":11},{"timestamp":"2026-02-23T21:25:16.944485387Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":12},{"timestamp":"2026-02-23T21:25:16.944543083Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":12},{"timestamp":"2026-02-23T21:25:24.27644187Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":13},{"timestamp":"2026-02-23T21:25:24.27650251Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":13},{"timestamp":"2026-02-23T21:25:28.729930082Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":14},{"timestamp":"2026-02-23T21:25:28.729962242Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":14},{"timestamp":"2026-02-23T21:25:37.46223917Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":15},{"timestamp":"2026-02-23T21:25:37.462270114Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":15}]'
+    error_history: ""
     failed_at: "2026-02-23T18:25:07Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T21:25:37Z"
     last_run_error: |
         LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded
-    loop_detected: "true"
+    loop_detected: ""
     loop_detected_at: "2026-02-23T21:25:37Z"
-    loop_detected_reason: Repeated provider errors (6 attempts) - provider unavailable or unhealthy
+    loop_detected_reason: ""
     loop_detection_reason: 'Identical error repeated 10 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:'
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: "2026-02-23T21:25:42Z"
-    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
-    redispatch_requested: "false"
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
+    redispatch_requested: "true"
     redispatch_requested_at: "2026-02-23T19:33:57Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:09.957448896Z
-updatedat: 2026-02-23T21:25:42.407268847Z
+updatedat: 2026-02-23T21:57:26.539492211Z
 closedat: null
