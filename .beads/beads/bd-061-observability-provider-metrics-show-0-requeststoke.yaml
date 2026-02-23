@@ -7,10 +7,10 @@ id: bd-061
 type: task
 title: 'Observability: provider metrics show 0 requests/tokens despite active LLM usage'
 description: 'The providers API returns total_requests=0, success_requests=0, total_tokens=0 for the tokenhub provider even though agents have been making LLM calls for 12 hours. The provider metrics counter is only incremented on the old dispatch path and not by the taskexecutor path. This means: (1) Per-project token budgets cannot be enforced. (2) Operator cannot see which projects are consuming the most tokens. (3) Cost tracking is broken. Fix: in taskexecutor actionloop, after each successful LLM completion, increment the provider metrics via the existing metrics recording path. Also add per-project and per-agent token usage tracking to the analytics schema. The CEO dashboard should show a token usage breakdown by project and agent as a first-class metric.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-CEO (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,9 +21,9 @@ context:
     agent_id: agent-1771844268-Web Designer (Default)
     conversation_session_id: e79b0139-b17b-4c47-9d30-89a2e449e9e7
     correlation_id: dispatch-bd-061-1771870799980063223
-    dispatch_count: "21"
+    dispatch_count: "22"
     dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)","agent-1771844268-Web Designer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T18:19:59.972131277Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20}]'
+    error_history: '[{"timestamp":"2026-02-23T18:19:59.972131277Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T18:20:40.123550666Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":21}]'
     failed_at: "2026-02-23T18:20:01Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T18:20:08Z"
@@ -36,5 +36,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:37.272606874Z
-updatedat: 2026-02-23T18:20:10.632142701Z
+updatedat: 2026-02-23T18:20:40.12381446Z
 closedat: null
