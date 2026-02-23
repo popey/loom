@@ -21,11 +21,11 @@ context:
     agent_id: agent-1771534515-Code Reviewer (Default)
     close_reason: ""
     conversation_session_id: 12505c98-551e-4637-ab9e-6a5818629f84
-    correlation_id: dispatch-bd-065-1771815904666402097
+    correlation_id: dispatch-bd-065-1771815935085507149
     dispatch_count: "21"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T03:06:49.396793197Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20}]'
-    failed_at: "2026-02-23T03:07:10Z"
+    failed_at: "2026-02-23T03:07:11Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T03:06:57Z"
@@ -55,5 +55,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:29.960739994Z
-updatedat: 2026-02-23T03:07:10.506831294Z
+updatedat: 2026-02-23T03:07:11.357029741Z
 closedat: null
