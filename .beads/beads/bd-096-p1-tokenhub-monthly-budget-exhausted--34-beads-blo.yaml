@@ -24,11 +24,11 @@ context:
     agent_tokens: "23980"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771718701
     conversation_session_id: e951763d-616b-448f-beab-7fbda444f5c2
-    correlation_id: dispatch-bd-096-1771812237134152333
+    correlation_id: dispatch-bd-096-1771812273760887525
     dispatch_count: "4"
     dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
     error_history: '[{"timestamp":"2026-02-22T23:58:03.201947113Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-22T23:58:04.538090367Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-22T23:58:10.221761513Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-22T23:58:16.084421378Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-22T23:58:29.804615552Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-23T01:35:37.694463262Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24}]'
-    failed_at: "2026-02-23T02:03:59Z"
+    failed_at: "2026-02-23T02:04:34Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T02:04:01Z"
@@ -59,5 +59,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:44.695433593Z
-updatedat: 2026-02-23T02:04:31.77661893Z
+updatedat: 2026-02-23T02:04:34.304485263Z
 closedat: null
