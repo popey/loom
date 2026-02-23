@@ -7,7 +7,7 @@ id: bd-044
 type: task
 title: 'loomctl bead: no bulk operations (mass update/reassign)'
 description: 'loomctl has no bulk bead operations. Required operations: (1) mass status update: ''loomctl bead bulk-update --project X --filter status=open --set status=closed'', (2) project reassignment: ''loomctl bead bulk-update --filter projectid=loom-self --set projectid=loom'', (3) filter by dispatch_count, blocked_reason, priority. Absence of these forced manual sed/awk on YAML files inside containers. The API needs a bulk PATCH endpoint: PATCH /api/v1/beads with filter and updates fields.'
-status: blocked
+status: open
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)

@@ -7,7 +7,7 @@ id: bd-144
 type: task
 title: OK, are beads progressing?
 description: 'System health check: after deploying the P1 dispatcher fixes (remediation cooldown, NATS routing, context leak fix), verify that the dispatch pipeline is healthy. Specifically: (1) Are open beads being picked up and worked on? (2) Has the remediation cascade stopped? (3) Are NATS-routed tasks reaching the project agent containers? Report current bead progress status.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)

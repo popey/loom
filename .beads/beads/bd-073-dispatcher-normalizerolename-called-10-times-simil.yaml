@@ -7,7 +7,7 @@ id: bd-073
 type: task
 title: 'dispatcher: normalizeRoleName() called 10+ times, similar pattern in dispatch_phases'
 description: 'internal/dispatch/dispatcher.go lines 1038-1060 and dispatch_phases.go lines 413-415: role name normalization logic is repeated. normalizeRoleName() is called everywhere but similar inline normalization exists in dispatch_phases. Fix: consolidate into one role-matching helper and use it consistently.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)

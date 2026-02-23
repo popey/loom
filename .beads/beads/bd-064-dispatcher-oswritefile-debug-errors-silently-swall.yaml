@@ -7,7 +7,7 @@ id: bd-064
 type: task
 title: 'dispatcher: os.WriteFile debug errors silently swallowed'
 description: 'internal/dispatch/dispatcher.go lines ~465, 470, 484: os.WriteFile() errors are ignored when writing debug output. Silent failure loses diagnostic data when /tmp is unavailable or disk is full. Fix: if err := os.WriteFile(...); err != nil { log.Printf("[Dispatcher] debug write failed: %v", err) }'
-status: blocked
+status: open
 priority: 1
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)

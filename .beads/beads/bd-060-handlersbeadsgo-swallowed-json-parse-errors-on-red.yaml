@@ -7,7 +7,7 @@ id: bd-060
 type: task
 title: 'handlers_beads.go: swallowed JSON parse errors on redispatch/escalate endpoints'
 description: 'internal/api/handlers_beads.go lines ~167, 202: ''_ = s.parseJSON(r, &req)'' silently ignores parse errors on redispatch and escalate endpoints. Malformed JSON causes zero-value processing instead of returning 400 Bad Request. Fix: check error and return StatusBadRequest.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
