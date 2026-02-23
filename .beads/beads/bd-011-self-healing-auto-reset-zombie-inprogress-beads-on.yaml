@@ -58,12 +58,12 @@ context:
     provider_id: tokenhub
     ralph_blocked_at: ""
     ralph_blocked_reason: ""
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T17:48:00Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T19:33:18Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:47:50.27736607Z
-updatedat: 2026-02-23T19:33:15.21220251Z
+updatedat: 2026-02-23T19:33:18.106832921Z
 closedat: null
