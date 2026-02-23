@@ -35,7 +35,7 @@ context:
     close_reason: ""
     conversation_session_id: 8e88ab8c-48ea-4e9b-b902-6f9651a76dc6
     correlation_id: dispatch-bd-035-1771815479232588014
-    dispatch_count: "8"
+    dispatch_count: "9"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[]'
     failed_at: "2026-02-23T02:58:00Z"
@@ -59,5 +59,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T20:14:28.23873663Z
-updatedat: 2026-02-23T02:58:00.08179152Z
+updatedat: 2026-02-23T02:58:31.583762777Z
 closedat: null
