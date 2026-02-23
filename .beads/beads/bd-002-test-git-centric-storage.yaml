@@ -20,6 +20,7 @@ tags: []
 context:
     agent_id: agent-1771470826-Engineering Manager (Loom)
     close_reason: stale bead from earlier test run - no longer relevant
+    conversation_session_id: 13ec2223-d3ca-46e0-bb37-c72c79bd3cbe
     correlation_id: a13022e2-836e-4403-a750-26fe610d4f97
     dispatch_count: "1"
     dispatch_history: '["agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)","agent-1771470826-Engineering Manager (Loom)"]'
@@ -41,5 +42,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T16:47:52.288595891Z
-updatedat: 2026-02-23T00:10:11.864380762Z
+updatedat: 2026-02-23T00:10:13.888117708Z
 closedat: null
