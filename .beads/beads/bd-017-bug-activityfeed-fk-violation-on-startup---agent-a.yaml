@@ -7,10 +7,10 @@ id: bd-017
 type: task
 title: 'Bug: activity_feed FK violation on startup - agent activity recorded before agent row exists'
 description: 'At every startup, multiple errors appear: Failed to record activity: pq: insert or update on table activity_feed violates foreign key constraint activity_feed_agent_id_fkey. This happens during workermanager restore of paused agents - the agent activity is being written before the agent row is committed to the agents table, or the FK references an agent ID format that does not match the agents table primary key. Impact: activity feed is missing data, startup logs noisy. Fix: ensure agent row is committed before recording activity, or use INSERT ... ON CONFLICT DO NOTHING for the activity record, or defer activity recording until after agent initialization completes.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Devops Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,7 +21,7 @@ context:
     agent_id: agent-1771534515-Code Reviewer (Default)
     conversation_session_id: 24b346d1-88e9-4fdf-b54a-74f8a65c878d
     correlation_id: dispatch-bd-017-1771870878412458829
-    dispatch_count: "0"
+    dispatch_count: "1"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T18:19:11.456911999Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T18:20:00.900846634Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":21},{"timestamp":"2026-02-23T18:20:39.03259664Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":22},{"timestamp":"2026-02-23T18:21:18.404289076Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":23},{"timestamp":"2026-02-23T18:21:33.279015503Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24},{"timestamp":"2026-02-23T18:22:47.891977397Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24}]'
     failed_at: "2026-02-23T18:21:19Z"
@@ -42,5 +42,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:22.715268753Z
-updatedat: 2026-02-23T19:59:10.709767973Z
+updatedat: 2026-02-23T19:59:11.946204222Z
 closedat: null
