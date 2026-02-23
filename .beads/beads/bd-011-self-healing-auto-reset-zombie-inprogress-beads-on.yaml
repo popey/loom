@@ -1,0 +1,51 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-011
+type: task
+title: 'Self-healing: auto-reset zombie in_progress beads on startup and via watchdog'
+description: |-
+    ## Root Cause (backtrace from time-series logs)
+
+    When loom restarts, the startup code calls `Reset N agent(s) left in working state from previous run` which resets **agent.status** from working→idle. However, **bead.status** is NOT reset. Beads left as `in_progress` with ephemeral executor IDs (e.g. `exec-loom-7b930704`, `exec-aviation-dc409288`) remain zombie indefinitely because:
+
+    1. The executor ID is a random UUID generated per goroutine — it does not survive a restart
+    2. `claimNextBead` only resets beads that are `open` with stale `assigned_to` — it does NOT touch `in_progress` beads
+    3. There is no heartbeat between executor workers and the bead record — no way to detect the executor is gone
+
+    **Observed in production:** bd-055, bd-078 were in_progress for 12+ hours with dead exec IDs (05:53/05:56 UTC). Required manual `PATCH status=open,assigned_to=` to recover.
+
+    ## Required Fix
+
+    ### At Startup (loom.go)
+    Add to the agent reset phase: for each project, query beads with `status=in_progress` AND `assigned_to` matching pattern `exec-{projectID}-*`. Reset them to `status=open, assigned_to=`.
+
+    ### Ongoing Watchdog (taskexecutor or ralph)
+    In `claimNextBead` or ralph beat: if a bead has been `in_progress` for > N minutes (configurable, default 30min) AND the `assigned_to` is an ephemeral exec ID (not in agents table), reset it to open. Log the recovery.
+
+    ### Named Agent Zombies
+    For named agents (e.g. `agent-1771534515-Product Manager`): if bead is `in_progress` for > N minutes AND the assigned agent is currently `idle` (not `working`), reset the bead to open. This catches the `context canceled` case where dispatch fails but bead is not reset.
+
+    ## Test
+    Verify no manual intervention is needed after loom restart with active in_progress beads.
+status: in_progress
+priority: 0
+projectid: loom
+assignedto: exec-loom-b680de0e
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context:
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T17:48:00Z"
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-23T17:47:50.27736607Z
+updatedat: 2026-02-23T17:48:00.016215738Z
+closedat: null
