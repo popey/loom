@@ -7,10 +7,10 @@ id: bd-108
 type: task
 title: 'P2: Remediation system doesn''t distinguish provider errors from agent logic errors'
 description: 'The createRemediationBead() function (dispatcher.go line 1094) creates P0 remediation beads when agents get stuck, but it doesn''t check WHY the agent is stuck. If the error is ''connection refused'', ''502 all providers failed'', or ''429 budget exceeded'', creating a remediation bead is pointless — no agent can fix a provider infrastructure problem by modifying code. Fix: In processTaskError() and applyLoopMetadata(), classify the error: if it''s a provider error (network, auth, budget, 5xx), set the bead to a ''provider_error'' state and skip remediation. Only create remediation beads for agent logic errors (parse failures, stagnation, inner loops with actual tool use).'
-status: blocked
+status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,25 +35,24 @@ context:
     agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
     conversation_session_id: d7281249-d21d-4055-ad26-cb6712f68087
     correlation_id: dispatch-bd-108-1771805595245805204
-    dispatch_count: "25"
-    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)"]'
+    dispatch_count: "0"
+    dispatch_history: ""
     error_history: '[{"timestamp":"2026-02-23T00:22:40.505307789Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:22:50.610107206Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:23:03.041939578Z","error":"action loop failed: context canceled","dispatch":22},{"timestamp":"2026-02-23T00:23:05.226688662Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T00:23:17.522307277Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-23T00:23:23.666705921Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":25}]'
     failed_at: "2026-02-23T00:13:15Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T00:23:23Z"
-    last_run_error: |
-        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
+    last_run_error: ""
     loop_detected: "false"
-    loop_detection_reason: Repeated authentication errors (6 attempts) - provider credentials invalid or missing
-    loop_iterations: ""
+    loop_detection_reason: ""
+    loop_iterations: "0"
     progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    ralph_blocked_at: "2026-02-23T01:37:54Z"
-    ralph_blocked_reason: 'dispatch_count=25 exceeded max_hops=20, stuck in loop: Repeated authentication errors (6 attempts) - provider credentials invalid or missing'
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
     redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T01:37:52Z"
+    redispatch_requested_at: ""
     remediation_for: ""
     remediation_needed: ""
     remediation_requested_at: ""
@@ -70,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:40.355081229Z
-updatedat: 2026-02-23T01:37:54.104429738Z
+updatedat: 2026-02-23T01:45:38.555442034Z
 closedat: null
