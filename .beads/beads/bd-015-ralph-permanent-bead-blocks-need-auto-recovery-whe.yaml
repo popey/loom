@@ -18,13 +18,19 @@ parent: ""
 children: []
 tags: []
 context:
+    agent_id: agent-1771534515-Product Manager (Default)
     conversation_session_id: 566bdcd3-acf5-4204-a897-827356ea1e04
-    dispatch_count: "1"
+    dispatch_count: "2"
+    dispatch_history: '["agent-1771534515-Product Manager (Default)"]'
+    last_run_at: "2026-02-23T17:49:39Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 3: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
+    loop_detected: "false"
+    provider_id: tokenhub
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-23T17:49:12Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:01.657399394Z
-updatedat: 2026-02-23T17:49:15.139001928Z
+updatedat: 2026-02-23T17:49:52.768529914Z
 closedat: null
