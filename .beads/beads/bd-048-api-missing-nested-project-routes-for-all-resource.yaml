@@ -24,11 +24,11 @@ context:
     agent_tokens: "75630"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771724872
     conversation_session_id: 782b7d79-44be-4347-b14b-38076c65df32
-    correlation_id: dispatch-bd-048-1771811619072241668
+    correlation_id: dispatch-bd-048-1771813005626362140
     dispatch_count: "10"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-22T23:40:20.322927703Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":34},{"timestamp":"2026-02-22T23:40:20.808512277Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":35},{"timestamp":"2026-02-22T23:40:23.83742644Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":36},{"timestamp":"2026-02-22T23:40:40.700225154Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":37},{"timestamp":"2026-02-22T23:40:49.155479882Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":38},{"timestamp":"2026-02-23T01:35:25.947399375Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":38}]'
-    failed_at: "2026-02-23T01:54:01Z"
+    failed_at: "2026-02-23T02:16:45Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T01:53:39Z"
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:00.406249991Z
-updatedat: 2026-02-23T02:16:45.167859071Z
+updatedat: 2026-02-23T02:16:45.629912004Z
 closedat: null
