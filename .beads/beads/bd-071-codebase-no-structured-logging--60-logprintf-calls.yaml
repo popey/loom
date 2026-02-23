@@ -7,10 +7,10 @@ id: bd-071
 type: task
 title: 'codebase: no structured logging — 60+ log.Printf calls in dispatcher alone'
 description: 'The entire codebase uses log.Printf with ad-hoc string prefixes like [Dispatcher], [Commit], [Worker]. This makes log aggregation, filtering, and level-based routing impossible. Fix: adopt a structured logger (log/slog from stdlib, or zap) with typed fields. At minimum standardize on slog which is in the standard library since Go 1.21.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-d8a69207
 blockedby: []
 blocks: []
 relatedto: []
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:36.228270625Z
-updatedat: 2026-02-23T07:43:47.523958673Z
+updatedat: 2026-02-23T07:43:51.04304931Z
 closedat: null
