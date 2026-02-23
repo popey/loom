@@ -10,7 +10,7 @@ description: 'The API key stored in Loom''s provider config (tokenhub_1579cc67..
 status: in_progress
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Devops Engineer (Default)
+assignedto: agent-1771844268-Web Designer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,9 +21,9 @@ context:
     agent_id: agent-1771534515-Product Manager (Default)
     conversation_session_id: 92664e29-a455-4597-9454-f53d9b0d0dbc
     correlation_id: dispatch-bd-094-1771812974830823932
-    dispatch_count: "23"
+    dispatch_count: "24"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Product Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T20:37:55.34655476Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-23T20:38:41.327360149Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":21},{"timestamp":"2026-02-23T20:39:12.218160578Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":22}]'
+    error_history: '[{"timestamp":"2026-02-23T20:37:55.34655476Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-23T20:38:41.327360149Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":21},{"timestamp":"2026-02-23T20:39:12.218160578Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":22},{"timestamp":"2026-02-23T20:39:41.116508345Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":23}]'
     failed_at: "2026-02-23T02:16:14Z"
     last_error: command parameter required
     last_failed_at: ""
@@ -58,5 +58,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:41.05280326Z
-updatedat: 2026-02-23T20:39:12.218558357Z
+updatedat: 2026-02-23T20:39:41.116756683Z
 closedat: null
