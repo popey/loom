@@ -10,7 +10,7 @@ description: 'loomctl has no container subcommand. Operators cannot see which pr
 status: blocked
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:30.483868481Z
-updatedat: 2026-02-23T00:13:12.593822783Z
+updatedat: 2026-02-23T00:14:48.601044251Z
 closedat: null
