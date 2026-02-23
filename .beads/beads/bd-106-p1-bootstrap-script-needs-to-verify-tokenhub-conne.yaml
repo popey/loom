@@ -20,15 +20,15 @@ tags: []
 context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 88b12d42-0cd5-4b70-aabf-adccee4c59f4
-    correlation_id: dispatch-bd-106-1771813790961708149
+    correlation_id: dispatch-bd-106-1771813839838333155
     dispatch_count: "6"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-22T01:21:42.083486455Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-22T01:22:05.576230906Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":21},{"timestamp":"2026-02-22T01:22:32.084071609Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":22},{"timestamp":"2026-02-22T01:23:13.524608337Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":23},{"timestamp":"2026-02-22T01:23:42.082858204Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":24},{"timestamp":"2026-02-23T00:14:33.125796496Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20}]'
-    failed_at: "2026-02-23T02:29:50Z"
+    failed_at: "2026-02-23T02:30:39Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T02:29:51Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
+    last_run_at: "2026-02-23T02:30:42Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     loop_detection_reason: ""
     loop_iterations: "0"
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:23.94070884Z
-updatedat: 2026-02-23T02:30:38.749649701Z
+updatedat: 2026-02-23T02:30:42.714250041Z
 closedat: null
