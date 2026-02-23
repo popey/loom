@@ -30,10 +30,10 @@ description: |-
 
     ## Test
     Verify no manual intervention is needed after loom restart with active in_progress beads.
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Devops Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -44,7 +44,7 @@ context:
     agent_id: agent-1771534515-Devops Engineer (Default)
     conversation_session_id: 99ad9838-21a1-4d88-973b-1caef1fd29b8
     correlation_id: dispatch-bd-011-1771869059576049226
-    dispatch_count: "5"
+    dispatch_count: "6"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)"]'
     failed_at: "2026-02-23T17:50:59Z"
     last_error: command parameter required
@@ -58,5 +58,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:47:50.27736607Z
-updatedat: 2026-02-23T17:51:10.692384168Z
+updatedat: 2026-02-23T17:51:50.813956971Z
 closedat: null
