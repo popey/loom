@@ -7,10 +7,10 @@ id: bd-069
 type: task
 title: 'worker: token limit constants are magic numbers scattered inline'
 description: 'internal/worker/worker.go lines 288-341: token limit calculations use unnamed magic values (/4 char-to-token ratio, 0.8 headroom, 32768 default, 0.5/0.25/0.0 truncation fractions). Fix: define named package-level constants with documentation explaining the rationale for each value.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:33.935773466Z
-updatedat: 2026-02-23T06:01:04.535187385Z
+updatedat: 2026-02-23T06:01:09.668632764Z
 closedat: null
