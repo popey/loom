@@ -10,7 +10,7 @@ description: what do you think of the current uI - is it professional looking an
 status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771844268-Web Designer (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,12 +18,15 @@ parent: ""
 children: []
 tags: []
 context:
+    correlation_id: dispatch-bd-010-1771844415314522886
     dispatch_count: "1"
+    failed_at: "2026-02-23T11:00:15Z"
+    last_error: command parameter required
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-23T11:00:13Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T11:00:11.639663663Z
-updatedat: 2026-02-23T11:00:14.312192436Z
+updatedat: 2026-02-23T11:00:15.573287452Z
 closedat: null
