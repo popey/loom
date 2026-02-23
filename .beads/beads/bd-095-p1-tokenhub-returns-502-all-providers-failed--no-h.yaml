@@ -36,12 +36,12 @@ context:
     conversation_session_id: c358b413-521c-4ae9-8e0f-665193ad5914
     correlation_id: dispatch-bd-095-1771812416847197921
     dispatch_count: "6"
-    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T00:14:13.334760658Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:15:24.070138271Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:16:00.343553644Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:16:42.671465319Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T00:17:16.505346552Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24}]'
     failed_at: "2026-02-23T02:06:56Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T02:06:17Z"
+    last_run_at: "2026-02-23T02:07:02Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     loop_detection_reason: ""
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:43.784784292Z
-updatedat: 2026-02-23T02:06:56.849091824Z
+updatedat: 2026-02-23T02:07:02.130412522Z
 closedat: null
