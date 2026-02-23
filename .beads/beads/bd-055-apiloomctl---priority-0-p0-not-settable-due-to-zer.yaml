@@ -7,10 +7,10 @@ id: bd-055
 type: task
 title: 'API/loomctl: --priority 0 (P0) not settable due to zero-value bug'
 description: 'The POST /api/v1/beads handler treated priority=0 as ''not set'' and silently overrode it to priority=2 (medium). This made P0 (highest priority) impossible to assign via the API or loomctl. Root cause: handler checked ''if req.Priority == 0 { req.Priority = 2 }'' using a non-pointer int. Fix applied: changed Priority field to *int in request struct so nil vs 0 are distinguishable. This was fixed in the handler but should be audited across all API handlers that use the same anti-pattern for other int fields (e.g., max_hops, timeout values).'
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -25,7 +25,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771652034
     close_reason: ""
     conversation_session_id: b6fb2bc7-f7aa-4960-8bc7-7aff64d5626b
-    dispatch_count: "0"
+    dispatch_count: "1"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)"]'
     last_run_at: "2026-02-21T07:03:29Z"
     last_run_error: ""
@@ -43,5 +43,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:54.631493418Z
-updatedat: 2026-02-23T02:50:27.482436912Z
+updatedat: 2026-02-23T02:50:27.999448601Z
 closedat: null
