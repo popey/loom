@@ -26,7 +26,7 @@ context:
     error_history: '[{"timestamp":"2026-02-23T00:15:57.48540352Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:16:44.028437433Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21}]'
     failed_at: "2026-02-23T00:16:00Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T00:16:00Z"
+    last_run_at: "2026-02-23T00:16:47Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
@@ -37,5 +37,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T23:43:52.835295515Z
-updatedat: 2026-02-23T00:16:44.028460793Z
+updatedat: 2026-02-23T00:16:47.330656742Z
 closedat: null
