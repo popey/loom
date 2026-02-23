@@ -7,10 +7,10 @@ id: bd-066
 type: task
 title: 'api: error classification via string.Contains is brittle'
 description: 'internal/api/handlers.go lines 122-127, handlers_beads.go lines 145, 180, 206: HTTP error codes are determined by checking error message strings (e.g. strings.Contains(err.Error(), "not found")). This breaks silently when error messages change. Fix: define sentinel error types (var ErrNotFound = errors.New("not found")) and use errors.Is() for classification.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-cbef9735
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,13 +35,13 @@ context:
     provider_id: tokenhub
     ralph_blocked_at: "2026-02-23T03:04:21Z"
     ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated rate limit errors (5 attempts) - exhausted provider quota'
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-21T00:38:18Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T05:47:59Z"
     revert_status: not_attempted
     terminal_reason: ""
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:31.302922205Z
-updatedat: 2026-02-23T05:47:58.010850357Z
+updatedat: 2026-02-23T05:47:59.608091248Z
 closedat: null
