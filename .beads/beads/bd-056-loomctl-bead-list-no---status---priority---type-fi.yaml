@@ -7,10 +7,10 @@ id: bd-056
 type: task
 title: 'loomctl bead list: no --status, --priority, --type filters'
 description: 'loomctl bead list only supports --project filter. Missing filters needed for operational work: --status (open/closed/blocked/in_progress), --priority (0-4), --type (bug/task/feature), --assigned-to (agent ID), --since (created_after date), --dispatch-count-gte (find stuck/over-dispatched beads). The backend GET /api/v1/beads already supports status and priority query params but loomctl does not expose them. Without these filters, operators must fetch all beads and grep/filter manually.'
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-c3485f89
 blockedby: []
 blocks: []
 relatedto: []
@@ -42,5 +42,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:14:05.357872061Z
-updatedat: 2026-02-23T05:56:08.034910121Z
+updatedat: 2026-02-23T05:56:23.231483219Z
 closedat: null
