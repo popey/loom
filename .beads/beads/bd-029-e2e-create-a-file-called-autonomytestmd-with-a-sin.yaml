@@ -7,10 +7,10 @@ id: bd-029
 type: task
 title: '[E2E] Create a file called AUTONOMY_TEST.md with a single line: Loom is autonomous'
 description: ""
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-973ae2f0
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -59,5 +59,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T23:19:54.372653066Z
-updatedat: 2026-02-23T01:54:46.955713171Z
+updatedat: 2026-02-23T01:56:14.474058598Z
 closedat: null
