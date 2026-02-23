@@ -10,7 +10,7 @@ description: 'loomctl has a flat command hierarchy. Context should flow from pro
 status: blocked
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:32.015434352Z
-updatedat: 2026-02-23T00:12:03.645838448Z
+updatedat: 2026-02-23T00:14:37.56773579Z
 closedat: null
