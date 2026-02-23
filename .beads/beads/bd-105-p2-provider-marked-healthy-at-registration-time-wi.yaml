@@ -10,7 +10,7 @@ description: 'When a provider is registered via the API, its status defaults to 
 status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-QA Engineer (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:22.579475954Z
-updatedat: 2026-02-23T02:12:33.950925636Z
+updatedat: 2026-02-23T02:12:34.069506935Z
 closedat: null
