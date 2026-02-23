@@ -30,10 +30,10 @@ description: |-
 
     ## Test
     Verify no manual intervention is needed after loom restart with active in_progress beads.
-status: in_progress
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -43,10 +43,10 @@ tags: []
 context:
     agent_id: agent-1771844268-Web Designer (Default)
     conversation_session_id: 99ad9838-21a1-4d88-973b-1caef1fd29b8
-    correlation_id: dispatch-bd-011-1771868926913518817
+    correlation_id: dispatch-bd-011-1771868952474355538
     dispatch_count: "3"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)"]'
-    failed_at: "2026-02-23T17:48:46Z"
+    failed_at: "2026-02-23T17:49:12Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T17:48:50Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
@@ -58,5 +58,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:47:50.27736607Z
-updatedat: 2026-02-23T17:49:11.397216185Z
+updatedat: 2026-02-23T17:49:12.481318048Z
 closedat: null
