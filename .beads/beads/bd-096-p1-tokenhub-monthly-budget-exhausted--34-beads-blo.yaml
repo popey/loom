@@ -7,10 +7,10 @@ id: bd-096
 type: task
 title: 'P1: TokenHub monthly budget exhausted — 34 beads blocked with 429 budget errors'
 description: '34 beads show 429 errors: {"budget_usd":100,"error":"monthly budget exceeded"}. The TokenHub instance has a $100 monthly budget limit that has been hit. All subsequent LLM requests are rejected. Fix options: 1) Increase the budget via tokenhubctl (routing set or admin API), 2) Reset the budget counter if this is a development instance, 3) Add budget monitoring/alerting to Loom so operators know before agents are blocked. This is the second-most-common error after connection_refused.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-QA Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -24,7 +24,7 @@ context:
     agent_tokens: "23980"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771718701
     conversation_session_id: e951763d-616b-448f-beab-7fbda444f5c2
-    dispatch_count: "0"
+    dispatch_count: "1"
     dispatch_history: ""
     error_history: '[{"timestamp":"2026-02-22T23:58:03.201947113Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-22T23:58:04.538090367Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-22T23:58:10.221761513Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-22T23:58:16.084421378Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-22T23:58:29.804615552Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-23T01:35:37.694463262Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24}]'
     failed_at: ""
@@ -58,5 +58,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:44.695433593Z
-updatedat: 2026-02-23T01:46:18.427241803Z
+updatedat: 2026-02-23T01:46:20.106898907Z
 closedat: null
