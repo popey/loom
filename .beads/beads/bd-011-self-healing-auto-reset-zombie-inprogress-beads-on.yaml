@@ -30,10 +30,10 @@ description: |-
 
     ## Test
     Verify no manual intervention is needed after loom restart with active in_progress beads.
-status: in_progress
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -41,12 +41,15 @@ parent: ""
 children: []
 tags: []
 context:
+    correlation_id: dispatch-bd-011-1771868884624571892
     dispatch_count: "1"
+    failed_at: "2026-02-23T17:48:04Z"
+    last_error: command parameter required
     redispatch_requested: "true"
     redispatch_requested_at: "2026-02-23T17:48:00Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:47:50.27736607Z
-updatedat: 2026-02-23T17:48:01.994961066Z
+updatedat: 2026-02-23T17:48:04.862057234Z
 closedat: null
