@@ -7,10 +7,10 @@ id: bd-066
 type: task
 title: 'api: error classification via string.Contains is brittle'
 description: 'internal/api/handlers.go lines 122-127, handlers_beads.go lines 145, 180, 206: HTTP error codes are determined by checking error message strings (e.g. strings.Contains(err.Error(), "not found")). This breaks silently when error messages change. Fix: define sentinel error types (var ErrNotFound = errors.New("not found")) and use errors.Is() for classification.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-30dc4c7a
 blockedby: []
 blocks: []
 relatedto: []
@@ -43,5 +43,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:31.302922205Z
-updatedat: 2026-02-23T05:49:48.021268217Z
+updatedat: 2026-02-23T05:49:53.195265931Z
 closedat: null
