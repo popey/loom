@@ -27,8 +27,8 @@ context:
     error_history: '[{"timestamp":"2026-02-23T07:16:52.050782592Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T07:17:19.424049606Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":21}]'
     failed_at: "2026-02-23T07:17:27Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T07:16:59Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
+    last_run_at: "2026-02-23T07:17:29Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     provider_id: tokenhub
     redispatch_requested: "true"
@@ -37,5 +37,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:42.778985299Z
-updatedat: 2026-02-23T07:17:29.585699592Z
+updatedat: 2026-02-23T07:17:29.595142528Z
 closedat: null
