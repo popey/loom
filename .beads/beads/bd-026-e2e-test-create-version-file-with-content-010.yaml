@@ -7,10 +7,10 @@ id: bd-026
 type: task
 title: '[E2E Test] Create VERSION file with content 0.1.0'
 description: ""
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-2c39815c
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -52,5 +52,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T22:46:01.972818803Z
-updatedat: 2026-02-23T02:54:39.68898161Z
+updatedat: 2026-02-23T02:54:40.550093271Z
 closedat: null
