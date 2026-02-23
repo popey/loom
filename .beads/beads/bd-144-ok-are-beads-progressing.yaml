@@ -26,9 +26,9 @@ context:
     error_history: '[{"timestamp":"2026-02-23T00:15:24.070108703Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20},{"timestamp":"2026-02-23T00:15:27.835391552Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20},{"timestamp":"2026-02-23T00:15:27.847183386Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20},{"timestamp":"2026-02-23T00:15:34.900415662Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20}]'
     failed_at: "2026-02-23T00:14:37Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T00:14:37Z"
+    last_run_at: "2026-02-23T00:15:36Z"
     last_run_error: |
-        action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded
+        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
     provider_id: tokenhub
     redispatch_requested: "true"
@@ -37,5 +37,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T21:00:02.763486157Z
-updatedat: 2026-02-23T00:15:34.900452606Z
+updatedat: 2026-02-23T00:15:36.186886367Z
 closedat: null
