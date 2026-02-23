@@ -1,0 +1,28 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-014
+type: task
+title: 'Bug: NATS JetStream consumer leak causes cascade context cancellations on restart'
+description: 'At startup, loom logs: consumer is already bound to a subscription. The durable NATS consumer from the previous process was not cleaned up on shutdown. This prevents the PDA orchestrator from subscribing to loom.results.*, causing worker goroutines for named agents to get immediately-cancelled contexts. Result: 9474 context canceled errors since 2026-02-19, ralph blocking beads, compounding gridlock. Fix: drain NATS on SIGTERM with 5s timeout, force-delete stale consumers on startup, and consider ephemeral consumers for the results subscription.'
+status: open
+priority: 0
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context:
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T17:48:47Z"
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-23T17:48:47.059377193Z
+updatedat: 2026-02-23T17:48:47.059559961Z
+closedat: null
