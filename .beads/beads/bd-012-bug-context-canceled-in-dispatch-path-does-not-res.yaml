@@ -42,10 +42,10 @@ description: |-
     ## Additionally
 
     The `context canceled` root cause itself needs investigation. The 5-20ms failure time suggests the context is pre-cancelled, possibly because the NATS consumer is `already bound to a subscription` at startup, causing the worker goroutine context to be immediately cancelled when it can't subscribe. See related bead for NATS consumer leak fix.
-status: in_progress
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771844268-Web Designer (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -77,5 +77,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:48:09.647874113Z
-updatedat: 2026-02-23T19:52:04.888898578Z
+updatedat: 2026-02-23T19:52:15.214646275Z
 closedat: null
