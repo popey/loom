@@ -7,10 +7,10 @@ id: bd-002
 type: task
 title: Test git-centric storage
 description: This bead tests that beads are properly saved to the beads-sync git branch
-status: open
+status: blocked
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -31,13 +31,13 @@ context:
     last_run_at: "2026-02-23T02:24:14Z"
     last_run_error: 'action loop failed: context canceled'
     loop_detected: "false"
-    loop_detection_reason: 'Identical error repeated 9 times - error pattern: action loop failed: context canceled'
+    loop_detection_reason: 'Identical error repeated 10 times - error pattern: action loop failed: context canceled'
     loop_iterations: "0"
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: "2026-02-23T07:44:31Z"
-    ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Identical error repeated 9 times - error pattern: action loop failed: context canceled'
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-23T07:47:05Z"
+    ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Identical error repeated 10 times - error pattern: action loop failed: context canceled'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T07:47:04Z"
     revert_status: not_attempted
     stuck_at: ""
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T16:47:52.288595891Z
-updatedat: 2026-02-23T07:47:04.799415867Z
+updatedat: 2026-02-23T07:47:05.75987697Z
 closedat: null
