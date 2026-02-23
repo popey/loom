@@ -7,10 +7,10 @@ id: bd-069
 type: task
 title: 'worker: token limit constants are magic numbers scattered inline'
 description: 'internal/worker/worker.go lines 288-341: token limit calculations use unnamed magic values (/4 char-to-token ratio, 0.8 headroom, 32768 default, 0.5/0.25/0.0 truncation fractions). Fix: define named package-level constants with documentation explaining the rationale for each value.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,26 +21,29 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 7e7ac2d0-2dc2-427e-bf26-0b7371195b42
     correlation_id: dispatch-bd-069-1771805928435936081
-    dispatch_count: "20"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_count: "0"
+    dispatch_history: ""
     error_history: '[{"timestamp":"2026-02-21T07:35:04.857872143Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21},{"timestamp":"2026-02-21T07:35:14.859007881Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":22},{"timestamp":"2026-02-21T07:35:24.858181826Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":23},{"timestamp":"2026-02-21T07:35:34.85836787Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":24},{"timestamp":"2026-02-21T07:35:44.859101225Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":25},{"timestamp":"2026-02-23T00:19:28.403958832Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20}]'
     failed_at: "2026-02-23T00:18:48Z"
     last_error: command parameter required
+    last_failed_at: ""
     last_run_at: "2026-02-23T00:18:48Z"
-    last_run_error: |
-        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
+    last_run_error: ""
     loop_detected: "false"
-    loop_detection_reason: Repeated rate limit errors (5 attempts) - exhausted provider quota
+    loop_detection_reason: ""
+    loop_iterations: "0"
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: "2026-02-23T01:35:43Z"
-    ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated rate limit errors (5 attempts) - exhausted provider quota'
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
     redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T01:35:40Z"
+    redispatch_requested_at: ""
     revert_status: not_attempted
+    stuck_at: ""
+    terminal_reason: ""
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:33.935773466Z
-updatedat: 2026-02-23T01:35:43.428342687Z
+updatedat: 2026-02-23T01:46:13.206707414Z
 closedat: null
