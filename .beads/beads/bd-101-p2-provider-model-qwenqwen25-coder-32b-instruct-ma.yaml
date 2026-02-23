@@ -7,10 +7,10 @@ id: bd-101
 type: task
 title: 'P2: Provider model ''Qwen/Qwen2.5-Coder-32B-Instruct'' may not be available in TokenHub'
 description: 'The Loom provider is configured with model ''Qwen/Qwen2.5-Coder-32B-Instruct'' but this model may not be registered or enabled in the local TokenHub instance. One bead shows a 404 ''model not found'' error. The registry has model auto-rediscovery (registry.go lines 209-224) that retries with the first available model, but this only works if the HTTP connection succeeds at all. Fix: 1) After fixing the endpoint, verify model availability with ''curl http://localhost:8090/v1/models'', 2) Update the Loom provider config to use a model that TokenHub actually has, 3) Consider making the bootstrap script query TokenHub''s model list and auto-configure.'
-status: open
+status: blocked
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -45,14 +45,14 @@ context:
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
-    loop_detection_reason: Repeated authentication errors (5 attempts) - provider credentials invalid or missing
+    loop_detection_reason: Repeated authentication errors (6 attempts) - provider credentials invalid or missing
     loop_iterations: ""
     progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    ralph_blocked_at: "2026-02-23T00:36:58Z"
-    ralph_blocked_reason: 'dispatch_count=37 exceeded max_hops=20, stuck in loop: Repeated authentication errors (5 attempts) - provider credentials invalid or missing'
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-23T01:37:24Z"
+    ralph_blocked_reason: 'dispatch_count=37 exceeded max_hops=20, stuck in loop: Repeated authentication errors (6 attempts) - provider credentials invalid or missing'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T01:37:21Z"
     remediation_for: ""
     remediation_needed: ""
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:15.816454061Z
-updatedat: 2026-02-23T01:37:21.494155005Z
+updatedat: 2026-02-23T01:37:24.333853076Z
 closedat: null
