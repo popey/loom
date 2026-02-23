@@ -34,11 +34,11 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771623658
     close_reason: ""
     conversation_session_id: 8e88ab8c-48ea-4e9b-b902-6f9651a76dc6
-    correlation_id: dispatch-bd-035-1771815368284989550
+    correlation_id: dispatch-bd-035-1771815437867856843
     dispatch_count: "7"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[]'
-    failed_at: "2026-02-23T02:56:09Z"
+    failed_at: "2026-02-23T02:57:18Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T02:56:11Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
@@ -58,5 +58,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T20:14:28.23873663Z
-updatedat: 2026-02-23T02:57:17.859371851Z
+updatedat: 2026-02-23T02:57:18.745723785Z
 closedat: null
