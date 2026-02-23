@@ -10,7 +10,7 @@ description: 'At every startup, multiple errors appear: Failed to record activit
 status: in_progress
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: agent-1771844268-Web Designer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,15 +18,15 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771844268-Web Designer (Default)
+    agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 24b346d1-88e9-4fdf-b54a-74f8a65c878d
-    correlation_id: dispatch-bd-017-1771869891188026229
-    dispatch_count: "18"
-    dispatch_history: '["agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771844268-Web Designer (Default)"]'
-    failed_at: "2026-02-23T18:05:04Z"
+    correlation_id: dispatch-bd-017-1771870606026742315
+    dispatch_count: "19"
+    dispatch_history: '["agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    failed_at: "2026-02-23T18:16:46Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T18:04:54Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
+    last_run_at: "2026-02-23T18:16:57Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     provider_id: tokenhub
     redispatch_requested: "true"
@@ -35,5 +35,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:22.715268753Z
-updatedat: 2026-02-23T18:16:43.305208592Z
+updatedat: 2026-02-23T18:17:36.286875565Z
 closedat: null
