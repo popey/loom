@@ -1,0 +1,38 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-149
+type: task
+title: 'Feature: PR manager monitors CI/CD pipeline and files devops beads on failure'
+description: |-
+    The public-relations-manager persona should proactively check CI/CD pipeline status on GitHub/GitLab for all projects and file P1 devops beads when workflows are failing.
+
+    See SKILL.md for detailed persona instructions.
+
+    Implementation needed:
+    - Background goroutine or maintenance loop hook that calls GitHub Actions API (GET /repos/{owner}/{repo}/actions/runs?branch=main&status=failure)
+    - Uses GITHUB_TOKEN from connectors config or environment
+    - Files bead via internal API when a workflow is red
+    - Deduplicates: check for existing open bead with same title prefix before filing
+    - 24h escalation path to Engineering Manager
+status: open
+priority: 1
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context:
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T20:09:30Z"
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-23T20:00:22.120615395Z
+updatedat: 2026-02-23T20:09:30.656634083Z
+closedat: null
