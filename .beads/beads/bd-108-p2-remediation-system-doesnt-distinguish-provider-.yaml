@@ -7,10 +7,10 @@ id: bd-108
 type: task
 title: 'P2: Remediation system doesn''t distinguish provider errors from agent logic errors'
 description: 'The createRemediationBead() function (dispatcher.go line 1094) creates P0 remediation beads when agents get stuck, but it doesn''t check WHY the agent is stuck. If the error is ''connection refused'', ''502 all providers failed'', or ''429 budget exceeded'', creating a remediation bead is pointless — no agent can fix a provider infrastructure problem by modifying code. Fix: In processTaskError() and applyLoopMetadata(), classify the error: if it''s a provider error (network, auth, budget, 5xx), set the bead to a ''provider_error'' state and skip remediation. Only create remediation beads for agent logic errors (parse failures, stagnation, inner loops with actual tool use).'
-status: blocked
+status: open
 priority: 2
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:40.355081229Z
-updatedat: 2026-02-23T00:23:23.666796531Z
+updatedat: 2026-02-23T01:35:34.206529716Z
 closedat: null
