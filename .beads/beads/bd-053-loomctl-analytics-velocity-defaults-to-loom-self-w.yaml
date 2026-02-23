@@ -24,7 +24,7 @@ context:
     correlation_id: dispatch-bd-053-1771831140727418140
     dispatch_count: "24"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T07:16:52.050782592Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T07:17:19.424049606Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":21},{"timestamp":"2026-02-23T07:18:19.832848294Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":22},{"timestamp":"2026-02-23T07:18:52.120927437Z","error":"action loop failed: context canceled","dispatch":23}]'
+    error_history: '[{"timestamp":"2026-02-23T07:16:52.050782592Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T07:17:19.424049606Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":21},{"timestamp":"2026-02-23T07:18:19.832848294Z","error":"action loop failed: LLM call failed on iteration 2: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":22},{"timestamp":"2026-02-23T07:18:52.120927437Z","error":"action loop failed: context canceled","dispatch":23},{"timestamp":"2026-02-23T07:19:20.815757952Z","error":"action loop failed: context canceled","dispatch":24}]'
     failed_at: "2026-02-23T07:19:00Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T07:19:00Z"
@@ -37,5 +37,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:42.778985299Z
-updatedat: 2026-02-23T07:19:19.794581818Z
+updatedat: 2026-02-23T07:19:20.815804609Z
 closedat: null
