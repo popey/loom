@@ -31,9 +31,9 @@ context:
     failed_at: "2026-02-23T02:32:20Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T02:32:20Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
-    loop_detected: ""
+    last_run_at: "2026-02-23T19:36:06Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 5: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
+    loop_detected: "false"
     loop_detected_reason: ""
     loop_detection_reason: Repeated authentication errors (6 attempts) - provider credentials invalid or missing
     loop_iterations: "0"
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:12.266569589Z
-updatedat: 2026-02-23T19:35:18.123325999Z
+updatedat: 2026-02-23T19:36:06.024464232Z
 closedat: null
