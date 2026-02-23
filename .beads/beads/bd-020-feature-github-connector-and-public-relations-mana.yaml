@@ -7,10 +7,10 @@ id: bd-020
 type: task
 title: 'Feature: GitHub connector and public-relations-manager agents for all GitHub projects'
 description: 'Three GitHub-backed projects exist (loom, aviation, tokenhub) and none have public relations coverage. The default/public-relations-manager persona exists and is well-defined (monitors GitHub issues, responds to contributors, communicates releases) but no agents are deployed and there is no GitHub connector to receive events. Required: (1) Implement a GitHub connector in the connectors service that polls or receives webhooks for issues and PRs. Should inject new beads when issues/PRs are created or commented on. (2) Spawn a public-relations-manager agent for each of loom, aviation, and tokenhub projects. (3) The PR agent persona should be extended with GitHub-specific action types: post_github_comment, close_github_issue, label_github_issue, approve_github_pr. (4) Add connector config to docker-compose for a GitHub webhook receiver. (5) The PR agent should respond in-persona: professional, project-aware, referencing the agent system where appropriate (i.e. it knows the codebase is developed by AI agents). Priority: loom project first since it is most active on GitHub.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,28 +21,28 @@ context:
     agent_id: agent-1771534515-Code Reviewer (Default)
     conversation_session_id: f365c7a0-93f0-4363-b50b-7384a7847abe
     correlation_id: dispatch-bd-020-1771869725717342083
-    dispatch_count: "22"
+    dispatch_count: "0"
     dispatch_history: '["agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Code Reviewer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T21:26:59.322052283Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":13},{"timestamp":"2026-02-23T21:26:59.3221095Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":13},{"timestamp":"2026-02-23T21:27:01.283801445Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":14},{"timestamp":"2026-02-23T21:27:01.283832917Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":14},{"timestamp":"2026-02-23T21:27:02.543497982Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":15},{"timestamp":"2026-02-23T21:27:02.543532638Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":15},{"timestamp":"2026-02-23T21:27:02.728377333Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":16},{"timestamp":"2026-02-23T21:27:02.728407125Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":16},{"timestamp":"2026-02-23T21:27:03.697706875Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":17},{"timestamp":"2026-02-23T21:27:03.697735403Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":17},{"timestamp":"2026-02-23T21:27:04.610915619Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":18},{"timestamp":"2026-02-23T21:27:04.610947171Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":18},{"timestamp":"2026-02-23T21:27:05.560477786Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":19},{"timestamp":"2026-02-23T21:27:05.560509514Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":19},{"timestamp":"2026-02-23T21:27:06.529745354Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-23T21:27:06.529774682Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":20},{"timestamp":"2026-02-23T21:27:06.551223502Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":21},{"timestamp":"2026-02-23T21:27:06.551254862Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":21},{"timestamp":"2026-02-23T21:27:07.40525464Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":22},{"timestamp":"2026-02-23T21:27:07.405308144Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":22}]'
+    error_history: ""
     failed_at: "2026-02-23T18:02:06Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T21:27:07Z"
     last_run_error: |
         LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded
-    loop_detected: "true"
+    loop_detected: ""
     loop_detected_at: "2026-02-23T21:27:07Z"
-    loop_detected_reason: Repeated rate limit errors (6 attempts) - exhausted provider quota
+    loop_detected_reason: ""
     loop_detection_reason: Repeated provider errors (5 attempts) - provider unavailable or unhealthy
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: "2026-02-23T21:27:07Z"
-    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated rate limit errors (6 attempts) - exhausted provider quota'
-    redispatch_requested: "false"
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
+    redispatch_requested: "true"
     redispatch_requested_at: "2026-02-23T19:35:53Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:07.817930439Z
-updatedat: 2026-02-23T21:27:07.633042472Z
+updatedat: 2026-02-23T21:57:30.97244985Z
 closedat: null
