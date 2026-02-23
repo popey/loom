@@ -18,14 +18,14 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_id: agent-1771534515-Devops Engineer (Default)
     conversation_session_id: 1958d71d-4274-4da6-aabf-4258d8e8c48f
     correlation_id: dispatch-bd-018-1771870615181250544
     dispatch_count: "19"
-    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)"]'
     failed_at: "2026-02-23T18:16:56Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T18:16:22Z"
+    last_run_at: "2026-02-23T18:16:57Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     provider_id: tokenhub
@@ -35,5 +35,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:44.382532351Z
-updatedat: 2026-02-23T18:16:56.505388029Z
+updatedat: 2026-02-23T18:17:07.255996392Z
 closedat: null
