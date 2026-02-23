@@ -10,7 +10,7 @@ description: 'The registered TokenHub provider endpoint is ''http://tokenhub:808
 status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -61,5 +61,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:36.866423493Z
-updatedat: 2026-02-23T03:04:35.204469855Z
+updatedat: 2026-02-23T07:42:16.779215158Z
 closedat: null
