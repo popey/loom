@@ -1,0 +1,63 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-012
+type: task
+title: 'Bug: context canceled in dispatch path does not reset bead to open'
+description: |-
+    ## Root Cause
+
+    When the old dispatcher (non-taskexecutor path) assigns a bead to a named agent and the LLM call fails with `context canceled` in <20ms, the following happens:
+
+    1. `bead.claim` is logged — bead transitions to `in_progress`
+    2. `agent.task_start` is logged — agent is `working`
+    3. `context canceled` — `agent.task_complete` with error is logged
+    4. `dispatch.execute` error is logged
+    5. **Missing: `bead.assignment_updated` is NOT called** — bead stays `in_progress`
+
+    **Observed in production:** ac-026 was claimed by Product Manager at 07:26:18, failed in 20ms, remained `in_progress` for 10+ hours with `assigned_to=agent-1771535013-Product Manager (Default)`.
+
+    This is distinct from the executor zombie issue — this happens on the OLD dispatcher path whenever context is cancelled before the goroutine can do cleanup.
+
+    ## Required Fix
+
+    In the dispatch execution path (`internal/dispatch/` or wherever `ExecuteTaskWithLoop` is called from the NATS worker), add a deferred cleanup:
+
+    ```go
+    defer func() {
+        if err != nil {
+            // Reset bead if it is still in_progress assigned to this agent
+            manager.UpdateBead(ctx, beadID, map[string]interface{}{
+                "status": "open",
+                "assigned_to": "",
+            })
+        }
+    }()
+    ```
+
+    The deferred reset must use a background context (not the cancelled one) to ensure it executes even after context cancellation.
+
+    ## Additionally
+
+    The `context canceled` root cause itself needs investigation. The 5-20ms failure time suggests the context is pre-cancelled, possibly because the NATS consumer is `already bound to a subscription` at startup, causing the worker goroutine context to be immediately cancelled when it can't subscribe. See related bead for NATS consumer leak fix.
+status: open
+priority: 0
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context:
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T17:48:15Z"
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-23T17:48:09.647874113Z
+updatedat: 2026-02-23T17:48:15.988922031Z
+closedat: null
