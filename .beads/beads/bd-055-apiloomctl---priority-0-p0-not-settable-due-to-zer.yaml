@@ -7,7 +7,7 @@ id: bd-055
 type: task
 title: 'API/loomctl: --priority 0 (P0) not settable due to zero-value bug'
 description: 'The POST /api/v1/beads handler treated priority=0 as ''not set'' and silently overrode it to priority=2 (medium). This made P0 (highest priority) impossible to assign via the API or loomctl. Root cause: handler checked ''if req.Priority == 0 { req.Priority = 2 }'' using a non-pointer int. Fix applied: changed Priority field to *int in request struct so nil vs 0 are distinguishable. This was fixed in the handler but should be audited across all API handlers that use the same anti-pattern for other int fields (e.g., max_hops, timeout values).'
-status: open
+status: closed
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -19,33 +19,33 @@ children: []
 tags: []
 context:
     agent_id: agent-1771534515-Engineering Manager (Default)
-    agent_output: '{"action": "done", "reason": "Fixed the zero-value bug in handlers_motivations.go by changing CooldownMinutes and Priority from int to *int in CreateMotivationRequest. This allows users to explicitly set these values to 0 (for immediate re-triggering or P0 priority) while still defaulting to sensible values (5 min cooldown, priority 0) when not specified. The fix mirrors the pattern already applied to the beads handler. All tests pass, changes committed and pushed.", "notes": "Work complete. The audit found that handlers_motivations.go had the same anti-pattern as the beads handler. Other handlers (streaming, repl) either pass int values directly to downstream systems (correct) or use > 0 checks which are appropriate for timeout values."}'
-    agent_task_id: task-bd-055-1771655844914118934
-    agent_tokens: "881507"
-    agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771652034
+    agent_output: '{"action": "done", "reason": "The changes to CooldownMinutes and Priority fields were already applied and verified. No further changes were needed, hence nothing to commit.", "notes": "Work complete. The zero-value bug fix was confirmed and no additional changes were necessary."}'
+    agent_task_id: task-bd-055-1771815421543750642
+    agent_tokens: "60608"
+    agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771811705
     close_reason: ""
     conversation_session_id: 7c59975a-bd30-4d41-9972-46cde9078227
     correlation_id: dispatch-bd-055-1771815421541321103
     dispatch_count: "9"
-    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-23T02:57:01Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T02:56:25Z"
+    last_run_at: "2026-02-23T02:57:11Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 2: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
     loop_detected: "false"
     loop_detection_reason: ""
-    loop_iterations: "28"
+    loop_iterations: "4"
     provider_id: tokenhub
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     ralph_blocked_at: ""
     ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T02:50:26Z"
-    terminal_reason: ""
+    terminal_reason: completed
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:54.631493418Z
-updatedat: 2026-02-23T02:57:01.547175564Z
-closedat: null
+updatedat: 2026-02-23T02:57:11.218913079Z
+closedat: 2026-02-23T02:57:11.218911063Z
