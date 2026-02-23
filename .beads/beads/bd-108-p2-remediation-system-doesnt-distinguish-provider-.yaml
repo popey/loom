@@ -36,13 +36,14 @@ context:
     conversation_session_id: d7281249-d21d-4055-ad26-cb6712f68087
     correlation_id: dispatch-bd-108-1771805595245805204
     dispatch_count: "23"
-    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)"]'
+    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T00:22:40.505307789Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:22:50.610107206Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:23:03.041939578Z","error":"action loop failed: context canceled","dispatch":22}]'
     failed_at: "2026-02-23T00:13:15Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T00:22:52Z"
-    last_run_error: 'action loop failed: context canceled'
+    last_run_at: "2026-02-23T00:23:03Z"
+    last_run_error: |
+        action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
     loop_detection_reason: ""
     loop_iterations: ""
@@ -68,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:40.355081229Z
-updatedat: 2026-02-23T00:23:03.041963963Z
+updatedat: 2026-02-23T00:23:03.926996707Z
 closedat: null
