@@ -17,10 +17,10 @@ description: |-
     - Files bead via internal API when a workflow is red
     - Deduplicates: check for existing open bead with same title prefix before filing
     - 24h escalation path to Engineering Manager
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -30,26 +30,26 @@ tags: []
 context:
     agent_id: agent-1771876780-Remediation Specialist (Default)
     conversation_session_id: 20085225-c82d-49eb-ade3-228a9dc00ca4
-    dispatch_count: "8"
+    dispatch_count: "0"
     dispatch_history: '["agent-1771876780-Remediation Specialist (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T21:05:47.237033003Z","error":"LLM call failed on iteration 6: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-02-23T21:06:32.876995901Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":2},{"timestamp":"2026-02-23T21:14:09.121926927Z","error":"LLM call failed on iteration 14: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":3},{"timestamp":"2026-02-23T21:17:57.004832209Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":4},{"timestamp":"2026-02-23T21:25:19.952490232Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":5},{"timestamp":"2026-02-23T21:25:19.952516552Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":5},{"timestamp":"2026-02-23T21:25:21.053649682Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":6},{"timestamp":"2026-02-23T21:25:21.053666738Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":6},{"timestamp":"2026-02-23T21:25:25.288599643Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":7},{"timestamp":"2026-02-23T21:25:25.288629195Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":7},{"timestamp":"2026-02-23T21:25:38.828205063Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":8},{"timestamp":"2026-02-23T21:25:38.828240471Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":8}]'
+    error_history: ""
     last_run_at: "2026-02-23T21:25:38Z"
     last_run_error: |
         LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded
-    loop_detected: "true"
+    loop_detected: ""
     loop_detected_at: "2026-02-23T21:25:38Z"
-    loop_detected_reason: Repeated rate limit errors (6 attempts) - exhausted provider quota
+    loop_detected_reason: ""
     loop_detection_reason: Repeated provider errors (5 attempts) - provider unavailable or unhealthy
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: "2026-02-23T21:25:39Z"
-    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated rate limit errors (6 attempts) - exhausted provider quota'
-    redispatch_requested: "false"
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
+    redispatch_requested: "true"
     redispatch_requested_at: "2026-02-23T20:09:30Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T20:00:22.120615395Z
-updatedat: 2026-02-23T21:25:39.456884753Z
+updatedat: 2026-02-23T21:57:25.466460025Z
 closedat: null
