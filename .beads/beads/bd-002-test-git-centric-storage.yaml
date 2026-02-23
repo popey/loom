@@ -37,8 +37,8 @@ context:
     provider_id: tokenhub
     ralph_blocked_at: "2026-02-23T05:49:00Z"
     ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Identical error repeated 7 times - error pattern: action loop failed: context canceled'
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T05:48:59Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T05:54:42Z"
     revert_status: not_attempted
     stuck_at: ""
     terminal_reason: ""
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-18T16:47:52.288595891Z
-updatedat: 2026-02-23T05:54:27.343502184Z
+updatedat: 2026-02-23T05:54:42.289169693Z
 closedat: null
