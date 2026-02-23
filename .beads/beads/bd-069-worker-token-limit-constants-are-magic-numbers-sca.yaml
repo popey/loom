@@ -21,13 +21,13 @@ context:
     agent_id: agent-1771534515-Code Reviewer (Default)
     conversation_session_id: 7e7ac2d0-2dc2-427e-bf26-0b7371195b42
     correlation_id: dispatch-bd-069-1771813761817634407
-    dispatch_count: "17"
-    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
+    dispatch_count: "18"
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: '[{"timestamp":"2026-02-21T07:35:04.857872143Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":21},{"timestamp":"2026-02-21T07:35:14.859007881Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":22},{"timestamp":"2026-02-21T07:35:24.858181826Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":23},{"timestamp":"2026-02-21T07:35:34.85836787Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":24},{"timestamp":"2026-02-21T07:35:44.859101225Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.69186499999999}\n","dispatch":25},{"timestamp":"2026-02-23T00:19:28.403958832Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20}]'
     failed_at: "2026-02-23T02:29:21Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T02:28:50Z"
+    last_run_at: "2026-02-23T02:29:25Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     loop_detection_reason: ""
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:33.935773466Z
-updatedat: 2026-02-23T02:29:21.819864478Z
+updatedat: 2026-02-23T02:30:05.443105829Z
 closedat: null
