@@ -7,10 +7,10 @@ id: bd-147
 type: task
 title: 'Feature: proactive health alerts - loom should notify CEO when intervention needed'
 description: 'After 12 hours of operation, 100% of agents were idle with 0 tokens flowing and required external human diagnosis. Loom should self-diagnose and alert. Required: (1) A health watchdog that runs every 5 minutes and checks: (a) Are any projects stuck with 0 in_progress beads and N+ open beads for >30 minutes? (b) Is the context-canceled error rate above a threshold? (c) Are any beads zombie (in_progress, stale executor ID, >30min)? (d) Is ralph blocking >50% of a projects beads? (2) When a health issue is detected, create a P0 bead assigned to the CEO asking them to investigate. (3) Add a health status section to the CEO dashboard that shows: system health score, top blocking issues, beads needing attention. (4) Optionally: send notifications via configured channels (Slack webhook, email). The CEO should never need to ask how the system is doing - it should tell them proactively.'
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,12 +21,12 @@ context:
     agent_id: agent-1771534515-Devops Engineer (Default)
     conversation_session_id: 8b68f6d9-703a-4494-bab3-78c6c9972ee3
     correlation_id: dispatch-bd-147-1771869390783142006
-    dispatch_count: "8"
-    dispatch_history: '["agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    dispatch_count: "9"
+    dispatch_history: '["agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
     failed_at: "2026-02-23T17:56:32Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T17:55:54Z"
-    last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
+    last_run_at: "2026-02-23T17:56:34Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     provider_id: tokenhub
     redispatch_requested: "true"
@@ -35,5 +35,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:51:00.646239935Z
-updatedat: 2026-02-23T17:56:32.186700489Z
+updatedat: 2026-02-23T17:57:14.612069899Z
 closedat: null
