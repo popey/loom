@@ -25,10 +25,10 @@ context:
     agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771652034
     close_reason: ""
     conversation_session_id: 7c59975a-bd30-4d41-9972-46cde9078227
-    correlation_id: dispatch-bd-055-1771815079763626814
+    correlation_id: dispatch-bd-055-1771815135378911255
     dispatch_count: "3"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    failed_at: "2026-02-23T02:51:19Z"
+    failed_at: "2026-02-23T02:52:15Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T02:51:27Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 4: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:54.631493418Z
-updatedat: 2026-02-23T02:52:14.412346667Z
+updatedat: 2026-02-23T02:52:15.384824044Z
 closedat: null
