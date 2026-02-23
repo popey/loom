@@ -35,12 +35,12 @@ context:
     agent_tokens: "437958"
     agent_worker_id: worker-agent-1771534515-Devops Engineer (Default)-1771718701
     conversation_session_id: 821fa616-0f5f-42e8-b4d5-b966fe6157d0
-    correlation_id: dispatch-bd-142-1771812694453710770
+    correlation_id: dispatch-bd-142-1771812737383650786
     created_by: dispatcher_auto_remediation
     dispatch_count: "19"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: '[{"timestamp":"2026-02-22T23:40:13.50720427Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":25},{"timestamp":"2026-02-22T23:40:20.308565002Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":26},{"timestamp":"2026-02-22T23:40:22.179276243Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":27},{"timestamp":"2026-02-22T23:40:30.048905106Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":28},{"timestamp":"2026-02-22T23:40:44.131797954Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":29},{"timestamp":"2026-02-23T01:35:01.672857158Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":29}]'
-    failed_at: "2026-02-23T02:11:34Z"
+    failed_at: "2026-02-23T02:12:17Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T02:11:37Z"
@@ -71,5 +71,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T02:52:53.648693986Z
-updatedat: 2026-02-23T02:12:09.80680048Z
+updatedat: 2026-02-23T02:12:17.389110393Z
 closedat: null
