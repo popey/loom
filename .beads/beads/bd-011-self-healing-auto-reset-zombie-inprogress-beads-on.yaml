@@ -30,10 +30,10 @@ description: |-
 
     ## Test
     Verify no manual intervention is needed after loom restart with active in_progress beads.
-status: in_progress
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -43,10 +43,10 @@ tags: []
 context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 99ad9838-21a1-4d88-973b-1caef1fd29b8
-    correlation_id: dispatch-bd-011-1771869366910748275
+    correlation_id: dispatch-bd-011-1771869408041707344
     dispatch_count: "13"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    failed_at: "2026-02-23T17:56:06Z"
+    failed_at: "2026-02-23T17:56:48Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T17:56:17Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 2: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
@@ -58,5 +58,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:47:50.27736607Z
-updatedat: 2026-02-23T17:56:47.085105003Z
+updatedat: 2026-02-23T17:56:48.046756763Z
 closedat: null
