@@ -36,12 +36,12 @@ context:
     provider_model: Qwen/Qwen2.5-Coder-32B-Instruct
     ralph_blocked_at: ""
     ralph_blocked_reason: ""
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-20T23:13:57Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T02:50:26Z"
     terminal_reason: ""
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:54.631493418Z
-updatedat: 2026-02-23T02:50:24.864913994Z
+updatedat: 2026-02-23T02:50:26.575608428Z
 closedat: null
