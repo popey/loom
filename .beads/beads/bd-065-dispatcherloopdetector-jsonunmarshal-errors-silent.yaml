@@ -23,14 +23,13 @@ context:
     conversation_session_id: 12505c98-551e-4637-ab9e-6a5818629f84
     correlation_id: dispatch-bd-065-1771815826612495312
     dispatch_count: "19"
-    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
+    dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: ""
     failed_at: "2026-02-23T03:03:48Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T03:05:04Z"
-    last_run_error: |
-        action loop failed: LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"no eligible models registered","type":"server_error","code":null}}
+    last_run_at: "2026-02-23T03:05:35Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     loop_detection_reason: ""
     loop_iterations: ""
@@ -56,5 +55,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:29.960739994Z
-updatedat: 2026-02-23T03:05:34.21308275Z
+updatedat: 2026-02-23T03:05:35.946908374Z
 closedat: null
