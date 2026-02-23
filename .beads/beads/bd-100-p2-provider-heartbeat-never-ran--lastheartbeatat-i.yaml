@@ -7,10 +7,10 @@ id: bd-100
 type: task
 title: 'P2: Provider heartbeat never ran — last_heartbeat_at is zero-time'
 description: 'The provider shows last_heartbeat_at=''0001-01-01T00:00:00Z'' (Go zero time), meaning the heartbeat activity never executed against this provider. The provider is marked ''healthy'' but that status was set at registration time, not from an actual health check. Without heartbeats, Loom can''t detect when TokenHub goes down, and the ''healthy'' status is a lie. Fix: 1) Verify the Temporal heartbeat workflow is running, 2) Check that the heartbeat activity can reach the provider endpoint, 3) The heartbeat should flip status to ''unhealthy'' if TokenHub is unreachable.'
-status: open
+status: in_progress
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-be930aeb
 blockedby: []
 blocks: []
 relatedto: []
@@ -68,5 +68,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:10.561634102Z
-updatedat: 2026-02-23T02:06:25.425788565Z
+updatedat: 2026-02-23T02:06:29.958303534Z
 closedat: null
