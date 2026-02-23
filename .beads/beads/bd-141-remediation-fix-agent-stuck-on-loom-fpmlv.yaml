@@ -10,7 +10,7 @@ description: "## Remediation Request: Agent Stuck on Bead loom-fpmlv\n\n**Stuck 
 status: in_progress
 priority: 0
 projectid: loom
-assignedto: agent-1771876780-Remediation Specialist (Default)
+assignedto: exec-loom-b0a35db6
 blockedby: []
 blocks: []
 relatedto: []
@@ -72,5 +72,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T02:49:26.071026274Z
-updatedat: 2026-02-23T20:42:01.188220332Z
+updatedat: 2026-02-23T20:44:25.517906576Z
 closedat: null
