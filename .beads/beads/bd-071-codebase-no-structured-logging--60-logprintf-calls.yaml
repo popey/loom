@@ -7,10 +7,10 @@ id: bd-071
 type: task
 title: 'codebase: no structured logging — 60+ log.Printf calls in dispatcher alone'
 description: 'The entire codebase uses log.Printf with ad-hoc string prefixes like [Dispatcher], [Commit], [Worker]. This makes log aggregation, filtering, and level-based routing impossible. Fix: adopt a structured logger (log/slog from stdlib, or zap) with typed fields. At minimum standardize on slog which is in the standard library since Go 1.21.'
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -33,14 +33,14 @@ context:
     loop_detection_reason: Repeated rate limit errors (5 attempts) - exhausted provider quota
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: "2026-02-23T00:15:32Z"
+    ralph_blocked_at: "2026-02-23T01:36:48Z"
     ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated rate limit errors (5 attempts) - exhausted provider quota'
-    redispatch_requested: "true"
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T01:36:48Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:36.228270625Z
-updatedat: 2026-02-23T01:36:48.025666274Z
+updatedat: 2026-02-23T01:36:48.878630972Z
 closedat: null
