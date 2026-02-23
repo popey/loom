@@ -18,14 +18,14 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-QA Engineer (Default)
+    agent_id: agent-1771844268-Web Designer (Default)
     conversation_session_id: e2098529-d5af-4a31-b8ec-95aa99220ad8
     correlation_id: dispatch-bd-062-1771869117263499730
     dispatch_count: "2"
-    dispatch_history: '["agent-1771534515-QA Engineer (Default)"]'
+    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771844268-Web Designer (Default)"]'
     failed_at: "2026-02-23T17:51:57Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T17:51:10Z"
+    last_run_at: "2026-02-23T17:51:57Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     provider_id: tokenhub
@@ -35,5 +35,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:55.13549753Z
-updatedat: 2026-02-23T17:51:57.266030759Z
+updatedat: 2026-02-23T17:52:11.554176875Z
 closedat: null
