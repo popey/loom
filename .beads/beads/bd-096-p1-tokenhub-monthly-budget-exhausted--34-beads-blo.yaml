@@ -7,10 +7,10 @@ id: bd-096
 type: task
 title: 'P1: TokenHub monthly budget exhausted — 34 beads blocked with 429 budget errors'
 description: '34 beads show 429 errors: {"budget_usd":100,"error":"monthly budget exceeded"}. The TokenHub instance has a $100 monthly budget limit that has been hit. All subsequent LLM requests are rejected. Fix options: 1) Increase the budget via tokenhubctl (routing set or admin API), 2) Reset the budget counter if this is a development instance, 3) Add budget monitoring/alerting to Loom so operators know before agents are blocked. This is the second-most-common error after connection_refused.'
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-QA Engineer (Default)
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -24,24 +24,24 @@ context:
     agent_tokens: "23980"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771718701
     conversation_session_id: e951763d-616b-448f-beab-7fbda444f5c2
-    correlation_id: dispatch-bd-096-1771812903974738313
+    correlation_id: dispatch-bd-096-1771812938773998421
     dispatch_count: "20"
-    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-22T23:58:03.201947113Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-22T23:58:04.538090367Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-22T23:58:10.221761513Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-22T23:58:16.084421378Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-22T23:58:29.804615552Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-23T01:35:37.694463262Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24}]'
-    failed_at: "2026-02-23T02:15:06Z"
+    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
+    error_history: '[{"timestamp":"2026-02-22T23:58:03.201947113Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-22T23:58:04.538090367Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-22T23:58:10.221761513Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-22T23:58:16.084421378Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-22T23:58:29.804615552Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-23T01:35:37.694463262Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-23T02:16:15.705467327Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20}]'
+    failed_at: "2026-02-23T02:15:38Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T02:15:04Z"
-    last_run_error: 'action loop failed: context canceled'
+    last_run_at: "2026-02-23T02:15:41Z"
+    last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
-    loop_detection_reason: ""
+    loop_detection_reason: Repeated authentication errors (6 attempts) - provider credentials invalid or missing
     loop_iterations: "0"
     progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-23T02:16:15Z"
+    ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated authentication errors (6 attempts) - provider credentials invalid or missing'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T01:46:18Z"
     remediation_for: ""
     remediation_needed: ""
@@ -59,5 +59,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:44.695433593Z
-updatedat: 2026-02-23T02:15:37.928145225Z
+updatedat: 2026-02-23T02:16:15.705512623Z
 closedat: null
