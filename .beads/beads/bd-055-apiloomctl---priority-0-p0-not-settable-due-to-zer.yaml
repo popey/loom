@@ -7,7 +7,7 @@ id: bd-055
 type: task
 title: 'API/loomctl: --priority 0 (P0) not settable due to zero-value bug'
 description: 'The POST /api/v1/beads handler treated priority=0 as ''not set'' and silently overrode it to priority=2 (medium). This made P0 (highest priority) impossible to assign via the API or loomctl. Root cause: handler checked ''if req.Priority == 0 { req.Priority = 2 }'' using a non-pointer int. Fix applied: changed Priority field to *int in request struct so nil vs 0 are distinguishable. This was fixed in the handler but should be audited across all API handlers that use the same anti-pattern for other int fields (e.g., max_hops, timeout values).'
-status: in_progress
+status: open
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -25,10 +25,10 @@ context:
     agent_worker_id: worker-agent-1771534515-Project Manager (Default)-1771652034
     close_reason: ""
     conversation_session_id: 7c59975a-bd30-4d41-9972-46cde9078227
-    correlation_id: dispatch-bd-055-1771815030895359382
+    correlation_id: dispatch-bd-055-1771815079763626814
     dispatch_count: "2"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    failed_at: "2026-02-23T02:50:30Z"
+    failed_at: "2026-02-23T02:51:19Z"
     last_error: command parameter required
     last_run_at: "2026-02-23T02:50:46Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 6: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:54.631493418Z
-updatedat: 2026-02-23T02:51:18.507160173Z
+updatedat: 2026-02-23T02:51:19.770224108Z
 closedat: null
