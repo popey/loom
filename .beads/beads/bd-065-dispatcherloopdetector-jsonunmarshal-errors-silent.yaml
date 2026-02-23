@@ -7,10 +7,10 @@ id: bd-065
 type: task
 title: 'dispatcher/loop_detector: json.Unmarshal errors silently ignored'
 description: 'internal/dispatch/dispatcher.go line ~667 and internal/dispatch/loop_detector.go line ~409: ''_ = json.Unmarshal(...)'' suppresses unmarshal errors. Corrupted stored JSON causes silent fallback to zero-values. Fix: capture and log unmarshal errors.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Code Reviewer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -22,7 +22,7 @@ context:
     close_reason: ""
     conversation_session_id: 12505c98-551e-4637-ab9e-6a5818629f84
     correlation_id: dispatch-bd-065-1771773696815763989
-    dispatch_count: "0"
+    dispatch_count: "1"
     dispatch_history: ""
     error_history: ""
     failed_at: ""
@@ -55,5 +55,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:29.960739994Z
-updatedat: 2026-02-23T02:50:27.068434238Z
+updatedat: 2026-02-23T02:51:24.038466393Z
 closedat: null
