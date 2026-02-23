@@ -21,7 +21,7 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 3b38b039-fd82-48cf-887c-42a9dbe7f2c1
     correlation_id: dispatch-bd-146-1771805423660119210
-    dispatch_count: "13"
+    dispatch_count: "14"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-23T00:10:28Z"
     last_error: command parameter required
@@ -36,5 +36,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T23:43:52.835295515Z
-updatedat: 2026-02-23T00:10:28.465669106Z
+updatedat: 2026-02-23T00:10:56.316529632Z
 closedat: null
