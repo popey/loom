@@ -10,7 +10,7 @@ description: 'The CEO needs to see what ALL agents across ALL projects are doing
 status: in_progress
 priority: 1
 projectid: loom
-assignedto: agent-1771743829-CEO (Default)
+assignedto: agent-1771535013-CEO (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,7 +21,7 @@ context:
     agent_id: agent-1771743829-CEO (Default)
     conversation_session_id: f2a52115-e0da-40a8-8b61-97a8e5f59efa
     correlation_id: dispatch-bd-019-1771870656283528162
-    dispatch_count: "15"
+    dispatch_count: "16"
     dispatch_history: '["agent-1771535013-CEO (Default)","agent-1771535013-CEO (Default)","agent-1771535013-CEO (Default)","agent-1771535013-CEO (Default)","agent-1771535013-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771535013-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)","agent-1771743829-CEO (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T18:05:11.112532383Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T18:16:00.796865051Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":21},{"timestamp":"2026-02-23T18:16:51.734927517Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":22},{"timestamp":"2026-02-23T18:17:35.294851206Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":23},{"timestamp":"2026-02-23T18:18:31.456126762Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":24}]'
     failed_at: "2026-02-23T18:17:39Z"
@@ -42,5 +42,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:52.146170446Z
-updatedat: 2026-02-23T19:52:31.068023304Z
+updatedat: 2026-02-23T19:52:51.049307052Z
 closedat: null
