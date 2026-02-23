@@ -18,15 +18,15 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Engineering Manager (Default)
+    agent_id: agent-1771534515-Code Reviewer (Default)
     conversation_session_id: 1958d71d-4274-4da6-aabf-4258d8e8c48f
-    correlation_id: dispatch-bd-018-1771870673017186829
-    dispatch_count: "21"
-    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T18:17:51.032919529Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20}]'
-    failed_at: "2026-02-23T18:17:53Z"
+    correlation_id: dispatch-bd-018-1771870715666854376
+    dispatch_count: "22"
+    dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)"]'
+    error_history: '[{"timestamp":"2026-02-23T18:17:51.032919529Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T18:18:35.658594313Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":21}]'
+    failed_at: "2026-02-23T18:18:36Z"
     last_error: command parameter required
-    last_run_at: "2026-02-23T18:17:12Z"
+    last_run_at: "2026-02-23T18:17:53Z"
     last_run_error: 'action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:8090/v1/chat/completions": context canceled'
     loop_detected: "false"
     provider_id: tokenhub
@@ -36,5 +36,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:44.382532351Z
-updatedat: 2026-02-23T18:17:53.019872467Z
+updatedat: 2026-02-23T18:18:36.562276946Z
 closedat: null
