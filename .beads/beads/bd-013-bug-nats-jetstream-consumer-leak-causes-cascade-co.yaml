@@ -10,7 +10,7 @@ description: 'At startup, loom logs: consumer is already bound to a subscription
 status: in_progress
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Project Manager (Default)
+assignedto: agent-1771534515-Product Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,7 +21,7 @@ context:
     agent_id: agent-1771534515-Project Manager (Default)
     conversation_session_id: 99f15d10-a68f-48d3-a3c3-069a582e8aa7
     correlation_id: dispatch-bd-013-1771869797995759147
-    dispatch_count: "1"
+    dispatch_count: "2"
     dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Product Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Project Manager (Default)"]'
     error_history: ""
     failed_at: "2026-02-23T18:03:17Z"
@@ -42,5 +42,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:48:37.361209442Z
-updatedat: 2026-02-23T20:30:28.381613428Z
+updatedat: 2026-02-23T20:30:56.296628733Z
 closedat: null
