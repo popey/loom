@@ -36,8 +36,8 @@ context:
     provider_id: tokenhub
     ralph_blocked_at: "2026-02-23T06:01:02Z"
     ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated rate limit errors (5 attempts) - exhausted provider quota'
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T06:01:01Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T06:01:13Z"
     revert_status: not_attempted
     stuck_at: ""
     terminal_reason: ""
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:33.935773466Z
-updatedat: 2026-02-23T06:01:13.533781849Z
+updatedat: 2026-02-23T06:01:13.973247598Z
 closedat: null
