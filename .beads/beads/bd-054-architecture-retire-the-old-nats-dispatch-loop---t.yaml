@@ -7,10 +7,10 @@ id: bd-054
 type: task
 title: 'Architecture: retire the old NATS dispatch loop - taskexecutor is the canonical path'
 description: 'Two parallel dispatch systems exist: (1) Old dispatcher (ralph + NATS publish + named agent workers) and (2) New taskexecutor (direct goroutines per project). They fight over beads, create duplicate assignments, and the old path is the source of most bugs: context canceled cascade, NATS consumer leak, command parameter required errors. The taskexecutor was introduced to replace the dispatch loop but both are still running. The old dispatcher skips 86 aviation beads as no_idle_agents_for_project because of persona hint mismatches, while the taskexecutor handles them fine. Action: (1) Audit which code paths are still using the old dispatcher. (2) Route all bead dispatch through taskexecutor exclusively. (3) Preserve NATS for agent container communication (loom-project-agent) but remove the loom-internal dispatch via NATS for in-process agents. (4) Deprecate WorkerPool in favor of taskexecutor workers. (5) This will eliminate the NATS consumer leak, the context canceled cascade, and the persona-hint dispatch failures in one architectural cleanup.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-QA Engineer (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,7 +21,7 @@ context:
     agent_id: agent-1771534515-CEO (Default)
     conversation_session_id: 3e9b2eb1-ee30-4971-9097-0a304aeaec5a
     correlation_id: dispatch-bd-054-1771869782177538817
-    dispatch_count: "11"
+    dispatch_count: "12"
     dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-CEO (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771844268-Web Designer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-CEO (Default)"]'
     failed_at: "2026-02-23T18:03:04Z"
     last_error: command parameter required
@@ -35,5 +35,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:30.925033557Z
-updatedat: 2026-02-23T18:03:04.636449267Z
+updatedat: 2026-02-23T18:03:53.53845028Z
 closedat: null
