@@ -7,10 +7,10 @@ id: bd-069
 type: task
 title: 'worker: token limit constants are magic numbers scattered inline'
 description: 'internal/worker/worker.go lines 288-341: token limit calculations use unnamed magic values (/4 char-to-token ratio, 0.8 headroom, 32768 default, 0.5/0.25/0.0 truncation fractions). Fix: define named package-level constants with documentation explaining the rationale for each value.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-71ec64b7
 blockedby: []
 blocks: []
 relatedto: []
@@ -36,8 +36,8 @@ context:
     provider_id: tokenhub
     ralph_blocked_at: "2026-02-23T06:01:48Z"
     ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Identical error repeated 6 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:'
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T06:01:47Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T06:02:47Z"
     revert_status: not_attempted
     stuck_at: ""
     terminal_reason: ""
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:33.935773466Z
-updatedat: 2026-02-23T06:02:44.648440125Z
+updatedat: 2026-02-23T06:02:47.580585455Z
 closedat: null
