@@ -26,7 +26,7 @@ context:
     close_reason: ""
     conversation_session_id: 7c59975a-bd30-4d41-9972-46cde9078227
     correlation_id: dispatch-bd-055-1771815240358914328
-    dispatch_count: "5"
+    dispatch_count: "6"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     failed_at: "2026-02-23T02:54:02Z"
     last_error: command parameter required
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:54.631493418Z
-updatedat: 2026-02-23T02:54:02.776002799Z
+updatedat: 2026-02-23T02:54:37.940606144Z
 closedat: null
