@@ -7,7 +7,7 @@ id: bd-104
 type: task
 title: 'P1: Bead loom-fpmlv dispatched 11,329 times — max_hops guard failed'
 description: 'Bead loom-fpmlv (auto-filed P0 Project readiness failed) has been dispatched 11,329 times despite max_hops defaulting to 20. The ralph auto-block should have stopped it at dispatch 20, but it somehow reached 11,329. Investigation needed: 1) Was max_hops not set when this bead was running? 2) Did the bead get unblocked by something and re-enter the dispatch loop? 3) Is there a race condition in the dispatch count check? This bead consumed enormous resources for nothing. Fix: Audit the dispatch count check in selectCandidate() and the ralph auto-block logic. Consider adding a hard ceiling (e.g., 100 dispatches) that blocks regardless of progress detection.'
-status: in_progress
+status: open
 priority: 1
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -34,11 +34,11 @@ context:
     agent_tokens: "195203"
     agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
     conversation_session_id: 9a7382e8-fdbc-4946-83dd-3f8b680cf571
-    correlation_id: dispatch-bd-104-1771805609783008913
+    correlation_id: dispatch-bd-104-1771805642944521107
     dispatch_count: "15"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: ""
-    failed_at: "2026-02-23T00:13:29Z"
+    failed_at: "2026-02-23T00:14:03Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T00:14:02Z"
@@ -70,5 +70,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:21.212258372Z
-updatedat: 2026-02-23T00:14:02.957974792Z
+updatedat: 2026-02-23T00:14:03.604692962Z
 closedat: null
