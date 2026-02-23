@@ -35,18 +35,18 @@ context:
     agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
     conversation_session_id: 9a7382e8-fdbc-4946-83dd-3f8b680cf571
     correlation_id: dispatch-bd-104-1771814552054046141
-    dispatch_count: "6"
+    dispatch_count: "7"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T21:32:31.746177742Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-02-23T21:32:33.344506805Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":2},{"timestamp":"2026-02-23T21:32:33.499699206Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":3},{"timestamp":"2026-02-23T21:32:38.647979989Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":4},{"timestamp":"2026-02-23T21:32:39.032501075Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":5},{"timestamp":"2026-02-23T21:32:39.032516627Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":5},{"timestamp":"2026-02-23T21:32:40.170704778Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":6},{"timestamp":"2026-02-23T21:32:40.170737306Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":6}]'
+    error_history: '[{"timestamp":"2026-02-23T21:32:31.746177742Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-02-23T21:32:33.344506805Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":2},{"timestamp":"2026-02-23T21:32:33.499699206Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":3},{"timestamp":"2026-02-23T21:32:38.647979989Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":4},{"timestamp":"2026-02-23T21:32:39.032501075Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":5},{"timestamp":"2026-02-23T21:32:39.032516627Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":5},{"timestamp":"2026-02-23T21:32:40.170704778Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":6},{"timestamp":"2026-02-23T21:32:40.170737306Z","error":"LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded\n","dispatch":6},{"timestamp":"2026-02-23T21:32:41.105044117Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":7},{"timestamp":"2026-02-23T21:32:41.105071445Z","error":"LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":7}]'
     failed_at: "2026-02-23T02:42:32Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T21:32:40Z"
+    last_run_at: "2026-02-23T21:32:41Z"
     last_run_error: |
-        LLM call failed on iteration 1: unexpected status code 429: api key rate limit exceeded
+        LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded
     loop_detected: "true"
-    loop_detected_at: "2026-02-23T21:32:40Z"
-    loop_detected_reason: Repeated rate limit errors (7 attempts) - exhausted provider quota
+    loop_detected_at: "2026-02-23T21:32:41Z"
+    loop_detected_reason: Repeated rate limit errors (9 attempts) - exhausted provider quota
     loop_detection_reason: Repeated authentication errors (5 attempts) - provider credentials invalid or missing
     loop_iterations: "0"
     progress_summary: No progress data
@@ -72,5 +72,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:21.212258372Z
-updatedat: 2026-02-23T21:32:40.170780746Z
+updatedat: 2026-02-23T21:32:41.105097878Z
 closedat: null
