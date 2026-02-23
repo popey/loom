@@ -7,10 +7,10 @@ id: bd-070
 type: task
 title: 'dispatch_phases: actionHashes/actionTypeCount maps have no sync protection'
 description: 'internal/dispatch/dispatch_phases.go lines ~741-742: actionHashes and actionTypeCount are written without synchronization in ExecuteTaskWithLoop. If called from concurrent goroutines, data races occur. Fix: protect with sync.RWMutex or use sync.Map.'
-status: in_progress
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Devops Engineer (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,11 +21,11 @@ context:
     agent_id: agent-1771534515-Devops Engineer (Default)
     close_reason: Code already refactored — actionHashes/actionTypeCount no longer exist in dispatch_phases.go. skippedReasons map is function-local, not shared across goroutines. No race condition present.
     conversation_session_id: 9e803b27-c8b0-4d2d-962b-3bebba93b84d
-    correlation_id: dispatch-bd-070-1771830971873857828
+    correlation_id: dispatch-bd-070-1771831019320106548
     dispatch_count: "4"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)"]'
     error_history: ""
-    failed_at: "2026-02-23T07:16:11Z"
+    failed_at: "2026-02-23T07:17:00Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-23T07:16:59Z"
@@ -55,5 +55,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:35.093684796Z
-updatedat: 2026-02-23T07:16:59.342381714Z
+updatedat: 2026-02-23T07:17:00.160793797Z
 closedat: null
