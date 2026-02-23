@@ -7,10 +7,10 @@ id: bd-059
 type: task
 title: 'dispatcher: goroutine uses context.Background() instead of request context'
 description: 'internal/dispatch/dispatcher.go ~line 618-648: goroutine spawned with context.Background() instead of the caller''s context. If the parent request/operation is cancelled, the goroutine continues running indefinitely causing goroutine leaks. Fix: pass the request context and propagate cancellation.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-d66f2892
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,13 +35,13 @@ context:
     provider_id: tokenhub
     ralph_blocked_at: "2026-02-23T06:02:33Z"
     ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Identical error repeated 10 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:'
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T06:02:32Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T06:02:44Z"
     revert_status: not_attempted
     terminal_reason: ""
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:23.056787535Z
-updatedat: 2026-02-23T06:02:39.759012921Z
+updatedat: 2026-02-23T06:02:44.630185676Z
 closedat: null
