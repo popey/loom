@@ -7,10 +7,10 @@ id: bd-107
 type: task
 title: 'P2: Dispatcher spawns goroutines with context.Background() — no cancellation propagation'
 description: 'In dispatcher.go line 621, the in-process task execution goroutine uses context.Background() instead of the parent request context. This means: 1) If Loom is shutting down, running tasks can''t be cancelled gracefully, 2) No timeout propagation from the dispatch loop, 3) Goroutines can leak if the provider is unresponsive (only saved by the 5-minute HTTP client timeout). Note: bd-059 already exists for this issue but is blocked. Fix: Use a derived context from the dispatcher''s lifecycle context (not the request context, which has different semantics), with a configurable task timeout.'
-status: open
+status: blocked
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -52,9 +52,9 @@ context:
     progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-23T22:14:55Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (10 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T19:36:01Z"
     remediation_for: ""
     remediation_needed: ""
@@ -72,5 +72,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:25.63879145Z
-updatedat: 2026-02-23T22:14:53.358760748Z
+updatedat: 2026-02-23T22:14:55.86725169Z
 closedat: null
