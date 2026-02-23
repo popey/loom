@@ -7,7 +7,7 @@ id: bd-100
 type: task
 title: 'P2: Provider heartbeat never ran — last_heartbeat_at is zero-time'
 description: 'The provider shows last_heartbeat_at=''0001-01-01T00:00:00Z'' (Go zero time), meaning the heartbeat activity never executed against this provider. The provider is marked ''healthy'' but that status was set at registration time, not from an actual health check. Without heartbeats, Loom can''t detect when TokenHub goes down, and the ''healthy'' status is a lie. Fix: 1) Verify the Temporal heartbeat workflow is running, 2) Check that the heartbeat activity can reach the provider endpoint, 3) The heartbeat should flip status to ''unhealthy'' if TokenHub is unreachable.'
-status: in_progress
+status: open
 priority: 2
 projectid: loom
 assignedto: agent-1771534515-Code Reviewer (Default)
@@ -18,7 +18,7 @@ parent: ""
 children: []
 tags: []
 context:
-    agent_id: agent-1771534515-Devops Engineer (Default)
+    agent_id: agent-1771534515-Code Reviewer (Default)
     agent_output: |-
         {
           "actions": [
@@ -33,14 +33,14 @@ context:
     agent_tokens: "151159"
     agent_worker_id: worker-agent-1771534515-Product Manager (Default)-1771718701
     conversation_session_id: 44949303-a6c5-4e2a-acbd-c79ff1a17032
-    correlation_id: dispatch-bd-100-1771805645258927431
+    correlation_id: dispatch-bd-100-1771805738664984446
     dispatch_count: "9"
-    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)"]'
+    dispatch_history: '["agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: ""
-    failed_at: "2026-02-23T00:14:05Z"
+    failed_at: "2026-02-23T00:15:38Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-23T00:14:05Z"
+    last_run_at: "2026-02-23T00:15:38Z"
     last_run_error: |
         action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required
     loop_detected: "false"
@@ -68,5 +68,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:10.561634102Z
-updatedat: 2026-02-23T00:15:36.176997777Z
+updatedat: 2026-02-23T00:15:38.679510361Z
 closedat: null
