@@ -23,14 +23,14 @@ context:
     conversation_session_id: 9e803b27-c8b0-4d2d-962b-3bebba93b84d
     correlation_id: dispatch-bd-070-1771830911340421467
     dispatch_count: "1"
-    dispatch_history: ""
+    dispatch_history: '["agent-1771534515-Engineering Manager (Default)"]'
     error_history: ""
     failed_at: "2026-02-23T07:15:11Z"
     last_error: command parameter required
     last_failed_at: ""
-    last_run_at: "2026-02-21T07:36:06Z"
-    last_run_error: ""
-    loop_detected: ""
+    last_run_at: "2026-02-23T07:15:11Z"
+    last_run_error: 'action loop failed: context canceled'
+    loop_detected: "false"
     loop_detection_reason: ""
     loop_iterations: ""
     progress_summary: No progress data
@@ -55,5 +55,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:35.093684796Z
-updatedat: 2026-02-23T07:15:11.34527803Z
+updatedat: 2026-02-23T07:15:11.360180636Z
 closedat: null
