@@ -7,7 +7,7 @@ id: bd-093
 type: task
 title: 'P0: Provider endpoint points to Docker hostname http://tokenhub:8080/v1 instead of http://localhost:8090/v1'
 description: 'The registered TokenHub provider endpoint is ''http://tokenhub:8080/v1'' — a Docker Compose internal hostname that doesn''t resolve outside Docker. The actual TokenHub instance runs on http://localhost:8090/v1. This means EVERY LLM request from Loom fails at the TCP level (connection refused or DNS failure). Fix: Update the provider registration endpoint via the API or bootstrap script to point to the correct URL. This is the single biggest blocker — nothing works until the endpoint is correct.'
-status: in_progress
+status: open
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -34,11 +34,11 @@ context:
     agent_tokens: "173540"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771727093
     conversation_session_id: 2ecdecac-088c-40bf-b760-c6c557b117a9
-    correlation_id: dispatch-bd-093-1771803782748362091
+    correlation_id: dispatch-bd-093-1771811178416566695
     dispatch_count: "1"
     dispatch_history: ""
     error_history: '[{"timestamp":"2026-02-22T23:41:06.341880889Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":25},{"timestamp":"2026-02-22T23:41:59.932032115Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":26},{"timestamp":"2026-02-22T23:42:30.021517109Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":27},{"timestamp":"2026-02-22T23:43:01.11362375Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":28},{"timestamp":"2026-02-22T23:52:56.269335629Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":29},{"timestamp":"2026-02-23T01:35:31.775095601Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":29}]'
-    failed_at: "2026-02-22T23:43:02Z"
+    failed_at: "2026-02-23T01:46:18Z"
     last_error: command parameter required
     last_failed_at: ""
     last_run_at: "2026-02-22T23:43:02Z"
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:36.866423493Z
-updatedat: 2026-02-23T01:46:17.217247553Z
+updatedat: 2026-02-23T01:46:18.419202568Z
 closedat: null
