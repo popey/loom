@@ -25,7 +25,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771727178
     conversation_session_id: b7828a5d-d960-4c0d-ac72-d64891a786e6
     correlation_id: dispatch-bd-049-1771813448666430100
-    dispatch_count: "10"
+    dispatch_count: "11"
     dispatch_history: '["agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
     error_history: '[{"timestamp":"2026-02-22T23:41:11.671075833Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":65},{"timestamp":"2026-02-22T23:41:47.120753906Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":66},{"timestamp":"2026-02-22T23:42:40.392535349Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":67},{"timestamp":"2026-02-22T23:43:12.558435774Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":68},{"timestamp":"2026-02-22T23:52:40.219200958Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":69},{"timestamp":"2026-02-23T01:35:04.741330243Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":69}]'
     failed_at: "2026-02-23T02:24:08Z"
@@ -59,5 +59,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:13:12.266569589Z
-updatedat: 2026-02-23T02:24:14.25274495Z
+updatedat: 2026-02-23T02:25:01.835926788Z
 closedat: null
