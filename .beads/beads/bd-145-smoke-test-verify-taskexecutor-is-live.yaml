@@ -21,7 +21,7 @@ context:
     agent_id: agent-1771534515-Code Reviewer (Default)
     conversation_session_id: 73c679e7-90ee-4ed2-a191-f1ca2326fef4
     correlation_id: dispatch-bd-145-1771811427597087061
-    dispatch_count: "2"
+    dispatch_count: "3"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)"]'
     error_history: '[{"timestamp":"2026-02-23T00:17:46.791255575Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":20},{"timestamp":"2026-02-23T00:18:26.929678403Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:18:28.303062041Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:19:16.071602452Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:19:46.874693526Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23}]'
     failed_at: "2026-02-23T01:50:30Z"
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-22T23:40:51.187974927Z
-updatedat: 2026-02-23T01:50:30.798072241Z
+updatedat: 2026-02-23T01:51:08.433395635Z
 closedat: null
