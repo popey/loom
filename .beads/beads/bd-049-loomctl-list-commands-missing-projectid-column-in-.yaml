@@ -7,7 +7,7 @@ id: bd-049
 type: task
 title: 'loomctl list commands: missing project_id column in cross-project output'
 description: 'When running loomctl commands without a --project filter (listing all resources), the output tables omit the project_id column. This makes it impossible to identify which project a bead/agent/workflow belongs to in cross-project listings. Fix: all list commands (bead list, agent list, workflow list, event list, conversation list) must include project_id as a column in the default table output when no --project filter is active. When --project is specified, the column can be omitted as redundant.'
-status: blocked
+status: open
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)

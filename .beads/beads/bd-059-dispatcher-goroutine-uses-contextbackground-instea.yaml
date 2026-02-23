@@ -7,7 +7,7 @@ id: bd-059
 type: task
 title: 'dispatcher: goroutine uses context.Background() instead of request context'
 description: 'internal/dispatch/dispatcher.go ~line 618-648: goroutine spawned with context.Background() instead of the caller''s context. If the parent request/operation is cancelled, the goroutine continues running indefinitely causing goroutine leaks. Fix: pass the request context and propagate cancellation.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)

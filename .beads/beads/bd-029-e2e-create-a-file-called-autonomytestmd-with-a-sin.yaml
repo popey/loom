@@ -7,7 +7,7 @@ id: bd-029
 type: task
 title: '[E2E] Create a file called AUTONOMY_TEST.md with a single line: Loom is autonomous'
 description: ""
-status: blocked
+status: open
 priority: 2
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
