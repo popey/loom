@@ -25,7 +25,7 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771718701
     conversation_session_id: e951763d-616b-448f-beab-7fbda444f5c2
     correlation_id: dispatch-bd-096-1771812938773998421
-    dispatch_count: "2"
+    dispatch_count: "3"
     dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
     error_history: ""
     failed_at: "2026-02-23T02:15:38Z"
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:44.695433593Z
-updatedat: 2026-02-23T20:36:27.939255631Z
+updatedat: 2026-02-23T20:36:50.059649348Z
 closedat: null
