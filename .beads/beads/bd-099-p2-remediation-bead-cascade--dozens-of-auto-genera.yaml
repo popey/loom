@@ -51,8 +51,8 @@ context:
     provider_model: aws/anthropic/claude-opus-4-5
     ralph_blocked_at: "2026-02-23T02:30:41Z"
     ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Identical error repeated 10 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:'
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T02:30:39Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T02:31:53Z"
     remediation_for: ""
     remediation_needed: ""
     remediation_requested_at: ""
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:09.200915985Z
-updatedat: 2026-02-23T02:31:51.413658282Z
+updatedat: 2026-02-23T02:31:53.306588397Z
 closedat: null
