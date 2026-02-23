@@ -51,8 +51,8 @@ context:
     provider_model: aws/anthropic/claude-opus-4-5
     ralph_blocked_at: ""
     ralph_blocked_reason: ""
-    redispatch_requested: "false"
-    redispatch_requested_at: "2026-02-23T07:47:02Z"
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-23T19:36:03Z"
     remediation_for: ""
     remediation_needed: ""
     remediation_requested_at: ""
@@ -69,5 +69,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:10.561634102Z
-updatedat: 2026-02-23T19:33:35.874074213Z
+updatedat: 2026-02-23T19:36:03.787103537Z
 closedat: null
