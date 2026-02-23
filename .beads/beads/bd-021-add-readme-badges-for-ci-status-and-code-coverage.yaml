@@ -7,10 +7,10 @@ id: bd-021
 type: task
 title: Add README badges for CI status and code coverage
 description: Add shields.io badges to the README.md showing CI build status, code coverage percentage, and Go version. This is a small, self-contained task to verify the autonomous work pipeline.
-status: open
+status: in_progress
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-be930aeb
 blockedby: []
 blocks: []
 relatedto: []
@@ -51,5 +51,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-19T20:58:08.869596237Z
-updatedat: 2026-02-23T02:56:26.635046007Z
+updatedat: 2026-02-23T02:56:59.359158182Z
 closedat: null
