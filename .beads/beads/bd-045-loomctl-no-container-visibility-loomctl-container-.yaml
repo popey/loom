@@ -7,7 +7,7 @@ id: bd-045
 type: task
 title: 'loomctl: no container visibility (loomctl container list/status)'
 description: 'loomctl has no container subcommand. Operators cannot see which project containers are running, their health, startup logs, or resource usage without ''docker ps'' or ''docker logs''. Required commands: ''loomctl container list'' (show all project containers, status, uptime), ''loomctl container logs <project>'' (tail container logs), ''loomctl container restart <project>'' (restart project container), ''loomctl container status <project>'' (health + registered agents). The backend Orchestrator already tracks container state — this needs CLI exposure.'
-status: open
+status: blocked
 priority: 0
 projectid: loom
 assignedto: agent-1771534515-Engineering Manager (Default)
@@ -27,7 +27,7 @@ context:
     correlation_id: dispatch-bd-045-1771813410700749911
     dispatch_count: "20"
     dispatch_history: '["agent-1771397315-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T00:10:19.399769463Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20},{"timestamp":"2026-02-23T00:10:50.969092157Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:11:22.236998855Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:12:04.57702708Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T00:12:36.498643594Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-23T00:13:12.593792911Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":25},{"timestamp":"2026-02-23T02:24:06.888387992Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T05:51:19.211179451Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20}]'
+    error_history: '[{"timestamp":"2026-02-23T00:10:19.399769463Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 429: rate limit exceeded\n","dispatch":20},{"timestamp":"2026-02-23T00:10:50.969092157Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":21},{"timestamp":"2026-02-23T00:11:22.236998855Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":22},{"timestamp":"2026-02-23T00:12:04.57702708Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":23},{"timestamp":"2026-02-23T00:12:36.498643594Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":24},{"timestamp":"2026-02-23T00:13:12.593792911Z","error":"action loop failed: LLM call failed on iteration 1: unexpected status code 401: authorization required\n","dispatch":25},{"timestamp":"2026-02-23T02:24:06.888387992Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T05:51:19.211179451Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20},{"timestamp":"2026-02-23T07:42:35.350238112Z","error":"action loop failed: LLM call failed on iteration 1: failed to send request: Post \"http://172.17.0.1:8090/v1/chat/completions\": context canceled","dispatch":20}]'
     failed_at: "2026-02-23T02:23:30Z"
     last_error: command parameter required
     last_failed_at: ""
@@ -39,9 +39,9 @@ context:
     progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    ralph_blocked_at: "2026-02-23T05:51:19Z"
+    ralph_blocked_at: "2026-02-23T07:42:35Z"
     ralph_blocked_reason: 'dispatch_count=20 exceeded max_hops=20, stuck in loop: Repeated authentication errors (5 attempts) - provider credentials invalid or missing'
-    redispatch_requested: "true"
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T01:48:18Z"
     remediation_for: ""
     remediation_needed: ""
@@ -59,5 +59,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:30.483868481Z
-updatedat: 2026-02-23T05:52:46.455296256Z
+updatedat: 2026-02-23T07:42:35.35028616Z
 closedat: null
