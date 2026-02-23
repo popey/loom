@@ -10,7 +10,7 @@ description: 'internal/dispatch/dispatcher.go line ~667 and internal/dispatch/lo
 status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Code Reviewer (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -60,5 +60,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:29.960739994Z
-updatedat: 2026-02-23T03:09:10.578881936Z
+updatedat: 2026-02-23T03:38:36.132724651Z
 closedat: null
