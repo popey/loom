@@ -10,7 +10,7 @@ description: 'Community PR from lesserevil (https://github.com/jordanhubbard/loo
 status: closed
 priority: 0
 projectid: loom
-assignedto: exec-loom-2029c097
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -80,5 +80,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-24T01:31:01.856368Z
-updatedat: 2026-02-24T03:11:05.896980273Z
+updatedat: 2026-02-24T03:11:08.372604185Z
 closedat: 2026-02-24T03:11:05.025667293Z
