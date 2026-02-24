@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.10] - 2026-02-24
+
+### Added
+- `public-relations-manager` added to `allowed_roles` in `config.yaml` — enables automatic creation of PR manager agents for all projects (loom, aviation, tokenhub) on startup; agents now monitor GitHub issues, PRs, and community interactions via the motivation system
+- Filed beads for all open GitHub issues and PRs across loom (PRs #23, #24, #25), tokenhub (issues #3, #4, #7 and PRs #5, #6, #8, #9), and Aviation (issues #109, #110 and 23 Dependabot PRs)
+
+### Changed
+- `internal/dispatch/dispatcher.go`: `rolesMatch(a, b string) bool` helper added to normalize role name comparisons, replacing repeated inline `normalizeRoleName()` calls in `dispatch_phases.go`
+
+### Fixed
+- `make clean` now removes `site/` MkDocs build artifact directory
+
 ## [0.1.9] - 2026-02-23
 
 ### Added
