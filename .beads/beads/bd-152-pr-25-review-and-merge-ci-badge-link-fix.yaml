@@ -1,0 +1,29 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-152
+type: task
+title: 'PR #25: Review and merge CI badge link fix'
+description: 'Community PR from mbrukman (https://github.com/jordanhubbard/loom/pull/25): ''fix: add link for the CI badge to point to status''. Review the changes to the README CI badge so it links to the GitHub Actions workflow status page. Straightforward documentation/config fix — review and merge.'
+status: open
+priority: 2
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context:
+    redispatch_reason: Provider restored (vault unlocked)
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-24T01:37:02Z"
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-24T01:31:01.719014672Z
+updatedat: 2026-02-24T01:37:02.195566227Z
+closedat: null
