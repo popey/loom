@@ -7,10 +7,10 @@ id: bd-153
 type: task
 title: 'PR #23: Review provider API key persistence across restarts'
 description: 'Community PR from lesserevil (https://github.com/jordanhubbard/loom/pull/23): ''Fix/persist provider api keys across restarts''. This is a significant feature — currently provider API keys are lost on restart. Review the implementation carefully: check how keys are stored, security implications, test coverage. Provide feedback or merge if the approach is sound.'
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -26,9 +26,12 @@ context:
     loop_detected: "true"
     loop_detected_at: "2026-02-24T01:34:06Z"
     loop_detected_reason: Repeated provider errors (6 attempts) - provider unavailable or unhealthy
+    ralph_blocked_at: "2026-02-24T01:34:06Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-24T01:31:01.856368Z
-updatedat: 2026-02-24T01:34:06.310841976Z
+updatedat: 2026-02-24T01:34:06.809688544Z
 closedat: null
