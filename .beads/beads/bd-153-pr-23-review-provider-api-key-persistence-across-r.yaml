@@ -7,7 +7,7 @@ id: bd-153
 type: task
 title: 'PR #23: Review provider API key persistence across restarts'
 description: 'Community PR from lesserevil (https://github.com/jordanhubbard/loom/pull/23): ''Fix/persist provider api keys across restarts''. This is a significant feature — currently provider API keys are lost on restart. Review the implementation carefully: check how keys are stored, security implications, test coverage. Provide feedback or merge if the approach is sound.'
-status: in_progress
+status: closed
 priority: 0
 projectid: loom
 assignedto: exec-loom-2029c097
@@ -18,6 +18,34 @@ parent: ""
 children: []
 tags: []
 context:
+    close_reason: |-
+        **PR #23 Review Complete - ESCALATED TO CEO**
+
+        ## Summary
+        PR #23 'Fix/persist provider api keys across restarts' is severely mislabeled. While it does contain a valid one-line fix for key persistence, it bundles massive architectural changes that would be a regression if merged.
+
+        ## The Actual Key Persistence Fix (VALID)
+        ```go
+        - keyStorePath := filepath.Join(".", ".keys.json")
+        + keyStorePath := filepath.Join(".", "data", "keys", ".keys.json")
+        ```
+        This moves the keystore into the `/app/data` volume, which persists across container restarts. This fix is correct and should be merged.
+
+        ## Bundled Changes (CONCERNING)
+        - **531 files changed**, 49,183 deletions, 10,063 insertions
+        - Removes PostgreSQL, NATS, PgBouncer, TokenHub, connectors-service
+        - Removes agent types: loom-project-agent, agent-coder, agent-reviewer, agent-qa
+        - Breaking changes: Port 8080→8081, removed token-based git auth
+        - Deletes MEMORY.md, CHANGELOG.md, reduces AGENTS.md
+        - Removes 678-line e2e test, 307-line NATS test, 258-line pipeline test
+
+        ## Recommendation
+        Request contributor split into separate PRs:
+        1. **PR A**: Key persistence fix (one-liner) → APPROVE
+        2. **PR B**: Infrastructure simplification → Needs architectural review
+        3. **PR C**: Documentation updates → Needs review
+
+        Escalated to CEO for decision on how to proceed.
     dispatch_count: "50"
     error_history: '[{"timestamp":"2026-02-24T02:40:31.436714124Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":41},{"timestamp":"2026-02-24T02:40:31.436751276Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":41},{"timestamp":"2026-02-24T02:41:27.652814205Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":42},{"timestamp":"2026-02-24T02:41:27.652859181Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":42},{"timestamp":"2026-02-24T02:46:31.31395104Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":43},{"timestamp":"2026-02-24T02:46:31.313989952Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":43},{"timestamp":"2026-02-24T02:48:43.397391345Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":44},{"timestamp":"2026-02-24T02:48:43.397465313Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":44},{"timestamp":"2026-02-24T02:59:49.331462694Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":45},{"timestamp":"2026-02-24T02:59:49.331539303Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":45},{"timestamp":"2026-02-24T03:04:19.604537072Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":46},{"timestamp":"2026-02-24T03:04:19.604613136Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":46},{"timestamp":"2026-02-24T03:05:03.065397614Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":47},{"timestamp":"2026-02-24T03:05:03.065501103Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":47},{"timestamp":"2026-02-24T03:05:50.161066737Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":48},{"timestamp":"2026-02-24T03:05:50.161147042Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":48},{"timestamp":"2026-02-24T03:07:09.784953853Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":49},{"timestamp":"2026-02-24T03:07:09.785015213Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":49},{"timestamp":"2026-02-24T03:09:38.620918866Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":50},{"timestamp":"2026-02-24T03:09:38.620986849Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":50}]'
     escalated_to_ceo_at: "2026-02-24T02:45:27Z"
@@ -52,5 +80,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-24T01:31:01.856368Z
-updatedat: 2026-02-24T03:10:44.763325987Z
-closedat: null
+updatedat: 2026-02-24T03:11:05.025670541Z
+closedat: 2026-02-24T03:11:05.025667293Z
