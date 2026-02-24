@@ -7,10 +7,10 @@ id: bd-073
 type: task
 title: 'dispatcher: normalizeRoleName() called 10+ times, similar pattern in dispatch_phases'
 description: 'internal/dispatch/dispatcher.go lines 1038-1060 and dispatch_phases.go lines 413-415: role name normalization logic is repeated. normalizeRoleName() is called everywhere but similar inline normalization exists in dispatch_phases. Fix: consolidate into one role-matching helper and use it consistently.'
-status: open
+status: closed
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-2029c097
 blockedby: []
 blocks: []
 relatedto: []
@@ -19,6 +19,7 @@ children: []
 tags: []
 context:
     agent_id: agent-1771534515-Code Reviewer (Default)
+    close_reason: 'Completed: Added rolesMatch(a, b string) bool helper function in dispatcher.go that consolidates role comparison logic. Updated dispatch_phases.go to use rolesMatch instead of direct normalizeRoleName comparisons at lines 275 and 449. Changes verified in codebase and pushed to remote.'
     conversation_session_id: 8419b5e7-9916-4ffc-b52b-ed09604a75dd
     correlation_id: dispatch-bd-073-1771813184237382676
     dispatch_count: "31"
@@ -48,5 +49,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:39.724986148Z
-updatedat: 2026-02-24T02:53:53.055236636Z
-closedat: null
+updatedat: 2026-02-24T03:03:05.054731329Z
+closedat: 2026-02-24T03:03:05.054727505Z
