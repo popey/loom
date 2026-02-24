@@ -7,10 +7,10 @@ id: bd-017
 type: task
 title: 'Bug: activity_feed FK violation on startup - agent activity recorded before agent row exists'
 description: 'At every startup, multiple errors appear: Failed to record activity: pq: insert or update on table activity_feed violates foreign key constraint activity_feed_agent_id_fkey. This happens during workermanager restore of paused agents - the agent activity is being written before the agent row is committed to the agents table, or the FK references an agent ID format that does not match the agents table primary key. Impact: activity feed is missing data, startup logs noisy. Fix: ensure agent row is committed before recording activity, or use INSERT ... ON CONFLICT DO NOTHING for the activity record, or defer activity recording until after agent initialization completes.'
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,14 +35,14 @@ context:
     loop_detection_reason: Repeated provider errors (5 attempts) - provider unavailable or unhealthy
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-24T13:59:29Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T19:33:47Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:22.715268753Z
-updatedat: 2026-02-24T13:59:24.639163794Z
+updatedat: 2026-02-24T13:59:29.871674288Z
 closedat: null
