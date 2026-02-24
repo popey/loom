@@ -7,10 +7,10 @@ id: bd-061
 type: task
 title: 'Observability: provider metrics show 0 requests/tokens despite active LLM usage'
 description: 'The providers API returns total_requests=0, success_requests=0, total_tokens=0 for the tokenhub provider even though agents have been making LLM calls for 12 hours. The provider metrics counter is only incremented on the old dispatch path and not by the taskexecutor path. This means: (1) Per-project token budgets cannot be enforced. (2) Operator cannot see which projects are consuming the most tokens. (3) Cost tracking is broken. Fix: in taskexecutor actionloop, after each successful LLM completion, increment the provider metrics via the existing metrics recording path. Also add per-project and per-agent token usage tracking to the analytics schema. The CEO dashboard should show a token usage breakdown by project and agent as a first-class metric.'
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,14 +35,14 @@ context:
     loop_detection_reason: 'Identical error repeated 5 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:'
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-24T07:15:33Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (10 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T19:35:52Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:37.272606874Z
-updatedat: 2026-02-24T07:15:31.204927246Z
+updatedat: 2026-02-24T07:15:33.424372588Z
 closedat: null
