@@ -7,10 +7,10 @@ id: bd-153
 type: task
 title: 'PR #23: Review provider API key persistence across restarts'
 description: 'Community PR from lesserevil (https://github.com/jordanhubbard/loom/pull/23): ''Fix/persist provider api keys across restarts''. This is a significant feature — currently provider API keys are lost on restart. Review the implementation carefully: check how keys are stored, security implications, test coverage. Provide feedback or merge if the approach is sound.'
-status: open
-priority: 1
+status: in_progress
+priority: 0
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-2029c097
 blockedby: []
 blocks: []
 relatedto: []
@@ -20,6 +20,23 @@ tags: []
 context:
     dispatch_count: "42"
     error_history: '[{"timestamp":"2026-02-24T02:31:29.114012209Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":33},{"timestamp":"2026-02-24T02:31:29.114082001Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":33},{"timestamp":"2026-02-24T02:32:30.134632656Z","error":"LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":34},{"timestamp":"2026-02-24T02:32:30.134718145Z","error":"LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":34},{"timestamp":"2026-02-24T02:33:33.398489472Z","error":"LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":35},{"timestamp":"2026-02-24T02:33:33.398537457Z","error":"LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":35},{"timestamp":"2026-02-24T02:34:07.386744852Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":36},{"timestamp":"2026-02-24T02:34:07.386784677Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":36},{"timestamp":"2026-02-24T02:38:02.388431092Z","error":"LLM call failed on iteration 4: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":37},{"timestamp":"2026-02-24T02:38:02.388508549Z","error":"LLM call failed on iteration 4: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":37},{"timestamp":"2026-02-24T02:38:26.29222879Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":38},{"timestamp":"2026-02-24T02:38:26.292297382Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":38},{"timestamp":"2026-02-24T02:39:00.416077137Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":39},{"timestamp":"2026-02-24T02:39:00.416132418Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":39},{"timestamp":"2026-02-24T02:40:06.427819706Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":40},{"timestamp":"2026-02-24T02:40:06.427858586Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":40},{"timestamp":"2026-02-24T02:40:31.436714124Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":41},{"timestamp":"2026-02-24T02:40:31.436751276Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":41},{"timestamp":"2026-02-24T02:41:27.652814205Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":42},{"timestamp":"2026-02-24T02:41:27.652859181Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":42}]'
+    escalated_to_ceo_at: "2026-02-24T02:45:27Z"
+    escalated_to_ceo_decision_id: bd-dec-1771901127-2
+    escalated_to_ceo_reason: |-
+        PR #23 'Fix/persist provider api keys across restarts' is severely mislabeled. The actual key persistence fix is a single line change (moving .keys.json into the data volume). However, the PR bundles 531 files changed with 49,183 deletions including:
+
+        1. **Removed infrastructure**: PostgreSQL, NATS, PgBouncer, TokenHub, connectors-service
+        2. **Removed agent types**: loom-project-agent, agent-coder, agent-reviewer, agent-qa
+        3. **Breaking changes**: Port 8080→8081, removed token-based git auth
+        4. **Deleted docs**: MEMORY.md, CHANGELOG.md, AGENTS.md (50 lines)
+        5. **Removed tests**: 678-line e2e test, 307-line NATS test, 258-line pipeline test
+
+        **Recommendation**: Request the contributor split this into separate PRs:
+        - PR A: Key persistence fix (the one-liner) - APPROVE
+        - PR B: Infrastructure simplification - needs architectural review
+        - PR C: Documentation updates - needs review
+
+        Merging this as-is would be a major regression disguised as a bug fix.
     last_run_at: "2026-02-24T02:41:27Z"
     last_run_error: |
         LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
@@ -35,5 +52,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-24T01:31:01.856368Z
-updatedat: 2026-02-24T02:41:27.652901118Z
+updatedat: 2026-02-24T02:45:27.311544887Z
 closedat: null
