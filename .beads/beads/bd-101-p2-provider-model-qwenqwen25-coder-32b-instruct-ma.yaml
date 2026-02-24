@@ -7,10 +7,10 @@ id: bd-101
 type: task
 title: 'P2: Provider model ''Qwen/Qwen2.5-Coder-32B-Instruct'' may not be available in TokenHub'
 description: 'The Loom provider is configured with model ''Qwen/Qwen2.5-Coder-32B-Instruct'' but this model may not be registered or enabled in the local TokenHub instance. One bead shows a 404 ''model not found'' error. The registry has model auto-rediscovery (registry.go lines 209-224) that retries with the first available model, but this only works if the HTTP connection succeeds at all. Fix: 1) After fixing the endpoint, verify model availability with ''curl http://localhost:8090/v1/models'', 2) Update the Loom provider config to use a model that TokenHub actually has, 3) Consider making the bootstrap script query TokenHub''s model list and auto-configure.'
-status: open
+status: in_progress
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-ef158d85
 blockedby: []
 blocks: []
 relatedto: []
@@ -72,5 +72,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:15.816454061Z
-updatedat: 2026-02-24T14:47:02.440543533Z
+updatedat: 2026-02-24T14:48:49.953647617Z
 closedat: null
