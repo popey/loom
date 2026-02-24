@@ -7,10 +7,10 @@ id: bd-018
 type: task
 title: 'Resilience: tokenhub returns 502 all-providers-failed when workers burst simultaneously'
 description: 'After unblocking 96 aviation beads, the taskexecutor started many workers simultaneously and tokenhub returned 502 all providers failed and no eligible models registered for a burst period. This is because all workers hit tokenhub concurrently with no rate limiting or backpressure. Fix: (1) Add concurrency limiter in taskexecutor - max N simultaneous LLM requests per project (configurable, default 3-5). (2) Add exponential backoff with jitter in actionloop on 502/503 responses instead of failing the task immediately. (3) Tokenhub should implement a request queue with configurable concurrency per backend rather than returning 502 immediately when all backends are busy. (4) The taskexecutor waking M workers for M ready beads causes this burst - instead wake workers gradually (N workers per wake cycle with a delay between each).'
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -21,28 +21,28 @@ context:
     agent_id: agent-1771534515-Engineering Manager (Default)
     conversation_session_id: 1958d71d-4274-4da6-aabf-4258d8e8c48f
     correlation_id: dispatch-bd-018-1771870772423474040
-    dispatch_count: "5"
+    dispatch_count: "0"
     dispatch_history: '["agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Devops Engineer (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Code Reviewer (Default)","agent-1771534515-CEO (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)"]'
-    error_history: '[{"timestamp":"2026-02-23T23:47:26.313632959Z","error":"LLM call failed on iteration 5: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-02-23T23:49:47.805550192Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":2},{"timestamp":"2026-02-23T23:51:26.117387092Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":3},{"timestamp":"2026-02-24T01:07:26.921023802Z","error":"LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":4},{"timestamp":"2026-02-24T01:32:05.602082313Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5},{"timestamp":"2026-02-24T01:32:05.602103145Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5}]'
+    error_history: ""
     failed_at: "2026-02-23T18:19:32Z"
     last_error: command parameter required
     last_run_at: "2026-02-24T01:32:05Z"
     last_run_error: |
         LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
-    loop_detected: "true"
+    loop_detected: ""
     loop_detected_at: "2026-02-24T01:32:05Z"
-    loop_detected_reason: Repeated provider errors (6 attempts) - provider unavailable or unhealthy
+    loop_detected_reason: ""
     loop_detection_reason: 'Identical error repeated 8 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:'
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: "2026-02-24T01:32:07Z"
-    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
-    redispatch_requested: "false"
+    ralph_blocked_at: ""
+    ralph_blocked_reason: ""
+    redispatch_requested: "true"
     redispatch_requested_at: "2026-02-23T20:15:00Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:44.382532351Z
-updatedat: 2026-02-24T01:32:07.218860605Z
+updatedat: 2026-02-24T02:02:44.264772761Z
 closedat: null
