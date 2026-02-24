@@ -7,10 +7,10 @@ id: bd-147
 type: task
 title: 'Feature: proactive health alerts - loom should notify CEO when intervention needed'
 description: 'After 12 hours of operation, 100% of agents were idle with 0 tokens flowing and required external human diagnosis. Loom should self-diagnose and alert. Required: (1) A health watchdog that runs every 5 minutes and checks: (a) Are any projects stuck with 0 in_progress beads and N+ open beads for >30 minutes? (b) Is the context-canceled error rate above a threshold? (c) Are any beads zombie (in_progress, stale executor ID, >30min)? (d) Is ralph blocking >50% of a projects beads? (2) When a health issue is detected, create a P0 bead assigned to the CEO asking them to investigate. (3) Add a health status section to the CEO dashboard that shows: system health score, top blocking issues, beads needing attention. (4) Optionally: send notifications via configured channels (Slack webhook, email). The CEO should never need to ask how the system is doing - it should tell them proactively.'
-status: open
+status: blocked
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,14 +35,14 @@ context:
     loop_detection_reason: Repeated provider errors (5 attempts) - provider unavailable or unhealthy
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-24T10:38:28Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T19:33:15Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:51:00.646239935Z
-updatedat: 2026-02-24T10:38:26.003474055Z
+updatedat: 2026-02-24T10:38:28.297818916Z
 closedat: null
