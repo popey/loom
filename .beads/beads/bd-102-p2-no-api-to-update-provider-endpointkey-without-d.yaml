@@ -10,7 +10,7 @@ description: 'The provider CRUD was simplified in the TokenHub-only refactoring,
 status: closed
 priority: 2
 projectid: loom
-assignedto: exec-loom-ef158d85
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -74,5 +74,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:17.017190243Z
-updatedat: 2026-02-24T02:30:31.352750499Z
+updatedat: 2026-02-24T02:30:43.764273663Z
 closedat: 2026-02-24T02:30:28.477515614Z
