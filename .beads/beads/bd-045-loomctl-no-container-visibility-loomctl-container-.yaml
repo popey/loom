@@ -7,10 +7,10 @@ id: bd-045
 type: task
 title: 'loomctl: no container visibility (loomctl container list/status)'
 description: 'loomctl has no container subcommand. Operators cannot see which project containers are running, their health, startup logs, or resource usage without ''docker ps'' or ''docker logs''. Required commands: ''loomctl container list'' (show all project containers, status, uptime), ''loomctl container logs <project>'' (tail container logs), ''loomctl container restart <project>'' (restart project container), ''loomctl container status <project>'' (health + registered agents). The backend Orchestrator already tracks container state — this needs CLI exposure.'
-status: open
+status: blocked
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -42,9 +42,9 @@ context:
     progress_summary: No progress data
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-24T12:27:35Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T20:28:51Z"
     remediation_for: ""
     remediation_needed: ""
@@ -62,5 +62,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:30.483868481Z
-updatedat: 2026-02-24T12:27:29.050928326Z
+updatedat: 2026-02-24T12:27:35.677932635Z
 closedat: null
