@@ -10,7 +10,7 @@ description: 'Bead loom-fpmlv (auto-filed P0 Project readiness failed) has been 
 status: closed
 priority: 1
 projectid: loom
-assignedto: exec-loom-2029c097
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -73,5 +73,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:21.212258372Z
-updatedat: 2026-02-24T05:40:12.34051754Z
+updatedat: 2026-02-24T05:40:13.743703184Z
 closedat: 2026-02-24T05:40:11.33659994Z
