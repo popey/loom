@@ -7,10 +7,10 @@ id: bd-096
 type: task
 title: 'P1: TokenHub monthly budget exhausted — 34 beads blocked with 429 budget errors'
 description: '34 beads show 429 errors: {"budget_usd":100,"error":"monthly budget exceeded"}. The TokenHub instance has a $100 monthly budget limit that has been hit. All subsequent LLM requests are rejected. Fix options: 1) Increase the budget via tokenhubctl (routing set or admin API), 2) Reset the budget counter if this is a development instance, 3) Add budget monitoring/alerting to Loom so operators know before agents are blocked. This is the second-most-common error after connection_refused.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-ef158d85
 blockedby: []
 blocks: []
 relatedto: []
@@ -62,5 +62,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:44.695433593Z
-updatedat: 2026-02-24T13:06:14.723651378Z
+updatedat: 2026-02-24T13:07:38.538733609Z
 closedat: null
