@@ -7,10 +7,10 @@ id: bd-106
 type: task
 title: 'P1: Bootstrap script needs to verify TokenHub connectivity before registering provider'
 description: 'The bootstrap.local script registers the TokenHub provider with Loom, but doesn''t verify that: 1) TokenHub is actually reachable at the configured endpoint, 2) The API key is valid (can list models), 3) At least one model is available. This means Loom can start with a provider pointing to a dead endpoint (which is exactly what happened — http://tokenhub:8080/v1 is a Docker-internal hostname). Fix: Add pre-flight checks to bootstrap.local: curl the TokenHub health endpoint, validate the API key with a model list, and fail loudly if either check fails. The tokenhubctl tool can be used for this: ''tokenhubctl status'' and ''tokenhubctl model list''.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-2029c097
 blockedby: []
 blocks: []
 relatedto: []
@@ -48,5 +48,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:23.94070884Z
-updatedat: 2026-02-24T13:36:28.380965722Z
+updatedat: 2026-02-24T13:39:28.196589404Z
 closedat: null
