@@ -7,10 +7,10 @@ id: bd-020
 type: task
 title: 'Feature: GitHub connector and public-relations-manager agents for all GitHub projects'
 description: 'Three GitHub-backed projects exist (loom, aviation, tokenhub) and none have public relations coverage. The default/public-relations-manager persona exists and is well-defined (monitors GitHub issues, responds to contributors, communicates releases) but no agents are deployed and there is no GitHub connector to receive events. Required: (1) Implement a GitHub connector in the connectors service that polls or receives webhooks for issues and PRs. Should inject new beads when issues/PRs are created or commented on. (2) Spawn a public-relations-manager agent for each of loom, aviation, and tokenhub projects. (3) The PR agent persona should be extended with GitHub-specific action types: post_github_comment, close_github_issue, label_github_issue, approve_github_pr. (4) Add connector config to docker-compose for a GitHub webhook receiver. (5) The PR agent should respond in-persona: professional, project-aware, referencing the agent system where appropriate (i.e. it knows the codebase is developed by AI agents). Priority: loom project first since it is most active on GitHub.'
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,14 +35,14 @@ context:
     loop_detection_reason: Repeated provider errors (5 attempts) - provider unavailable or unhealthy
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-24T11:08:07Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T19:35:53Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:07.817930439Z
-updatedat: 2026-02-24T11:07:58.859604529Z
+updatedat: 2026-02-24T11:08:07.429529054Z
 closedat: null
