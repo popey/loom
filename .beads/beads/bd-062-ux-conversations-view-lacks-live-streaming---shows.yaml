@@ -7,10 +7,10 @@ id: bd-062
 type: task
 title: 'UX: Conversations view lacks live streaming - shows historical DAGs only'
 description: 'The Conversations tab renders beautiful Cytoscape DAGs of completed conversations, but shows no live activity. When an agent is actively working on a bead, the user cannot watch it think in real time. The CEO cannot see what any agent is currently doing. Required: (1) Add a live conversation pane that shows the current in-progress agent task in real time, streaming each action as it is logged. Use the existing SSE/streaming infrastructure. (2) The active conversation should auto-select when a bead is in_progress. (3) Show a live iteration counter and elapsed time. (4) Allow the CEO to inject a message into the active conversation (override/guidance while the agent is working). This is the most important UX gap - watching agents work is core to the experience of operating an autonomous agent system.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-46169302
 blockedby: []
 blocks: []
 relatedto: []
@@ -44,5 +44,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:55.13549753Z
-updatedat: 2026-02-24T20:24:52.421860512Z
+updatedat: 2026-02-24T20:28:24.646923044Z
 closedat: null
