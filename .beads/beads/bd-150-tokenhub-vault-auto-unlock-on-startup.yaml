@@ -7,10 +7,10 @@ id: bd-150
 type: bug
 title: 'tokenhub: vault auto-unlock on startup'
 description: 'The tokenhub vault locks on service restart but TOKENHUB_VAULT_PASSWORD is available in the container environment. The service should auto-unlock using this env var at startup, or the loom healthcheck should detect a locked vault and auto-unlock it. Currently the vault silently goes locked after restart, causing 100% 502 errors until manually unlocked with ''tokenhubctl vault unlock tokenmeh''. This has caused multiple outages. Fix: tokenhub should check TOKENHUB_VAULT_PASSWORD on startup and auto-unlock if set.'
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -26,12 +26,12 @@ context:
     loop_detected: "true"
     loop_detected_at: "2026-02-24T07:02:36Z"
     loop_detected_reason: Repeated provider errors (6 attempts) - provider unavailable or unhealthy
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-24T07:02:40Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T22:09:34.62849408Z
-updatedat: 2026-02-24T07:02:36.003163168Z
+updatedat: 2026-02-24T07:02:40.383315159Z
 closedat: null
