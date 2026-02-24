@@ -7,10 +7,10 @@ id: bd-018
 type: task
 title: 'Resilience: tokenhub returns 502 all-providers-failed when workers burst simultaneously'
 description: 'After unblocking 96 aviation beads, the taskexecutor started many workers simultaneously and tokenhub returned 502 all providers failed and no eligible models registered for a burst period. This is because all workers hit tokenhub concurrently with no rate limiting or backpressure. Fix: (1) Add concurrency limiter in taskexecutor - max N simultaneous LLM requests per project (configurable, default 3-5). (2) Add exponential backoff with jitter in actionloop on 502/503 responses instead of failing the task immediately. (3) Tokenhub should implement a request queue with configurable concurrency per backend rather than returning 502 immediately when all backends are busy. (4) The taskexecutor waking M workers for M ready beads causes this burst - instead wake workers gradually (N workers per wake cycle with a delay between each).'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-eb3a8527
 blockedby: []
 blocks: []
 relatedto: []
@@ -44,5 +44,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:44.382532351Z
-updatedat: 2026-02-24T17:53:55.854483884Z
+updatedat: 2026-02-24T18:01:36.209232575Z
 closedat: null
