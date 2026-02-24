@@ -7,7 +7,7 @@ id: bd-104
 type: task
 title: 'P1: Bead loom-fpmlv dispatched 11,329 times — max_hops guard failed'
 description: 'Bead loom-fpmlv (auto-filed P0 Project readiness failed) has been dispatched 11,329 times despite max_hops defaulting to 20. The ralph auto-block should have stopped it at dispatch 20, but it somehow reached 11,329. Investigation needed: 1) Was max_hops not set when this bead was running? 2) Did the bead get unblocked by something and re-enter the dispatch loop? 3) Is there a race condition in the dispatch count check? This bead consumed enormous resources for nothing. Fix: Audit the dispatch count check in selectCandidate() and the ralph auto-block logic. Consider adding a hard ceiling (e.g., 100 dispatches) that blocks regardless of progress detection.'
-status: in_progress
+status: closed
 priority: 1
 projectid: loom
 assignedto: exec-loom-2029c097
@@ -33,6 +33,7 @@ context:
     agent_task_id: task-bd-104-1771721424823657814
     agent_tokens: "195203"
     agent_worker_id: worker-agent-1771534515-QA Engineer (Default)-1771718701
+    close_reason: 'Root cause analysis complete. The 11,329 dispatch issue occurred because: (1) No hard upper bound existed before commit 3500a951e (Feb 21, 2026) - the only protection was the loop detector''s IsStuckInLoop check. (2) Loop detector returned false - if IsStuckInLoop detected progress (e.g., different actions each iteration), the bead continued dispatching indefinitely. (3) maxHops check was soft - the checkHopLimit function allowed beads to continue if they appeared to be making progress. Fix already applied in commit 3500a951e: Added hard ceiling of maxHops*10 (minimum 200 dispatches), force-blocks beads via ralphAutoBlock regardless of progress detection. No additional changes needed.'
     conversation_session_id: 9a7382e8-fdbc-4946-83dd-3f8b680cf571
     correlation_id: dispatch-bd-104-1771814552054046141
     dispatch_count: "3"
@@ -72,5 +73,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:21.212258372Z
-updatedat: 2026-02-24T05:39:43.632332309Z
-closedat: null
+updatedat: 2026-02-24T05:40:11.33660346Z
+closedat: 2026-02-24T05:40:11.33659994Z
