@@ -7,7 +7,7 @@ id: bd-102
 type: task
 title: 'P2: No API to update provider endpoint/key without delete+re-register'
 description: 'The provider CRUD was simplified in the TokenHub-only refactoring, but there''s no PATCH/PUT endpoint to update a provider''s endpoint URL or API key. The only way to change the endpoint is to delete and re-register (or use the Upsert method in the registry, but that''s not exposed via API). The handlers_providers.go has POST (create) and DELETE, but no PATCH. Fix: Add a PATCH /api/v1/providers/{id} endpoint that calls registry.Upsert() so operators can update endpoint/key without downtime. This is especially important for the bootstrap workflow where the provider needs reconfiguration.'
-status: in_progress
+status: closed
 priority: 2
 projectid: loom
 assignedto: exec-loom-ef158d85
@@ -34,6 +34,7 @@ context:
     agent_task_id: task-bd-102-1771725156348158796
     agent_tokens: "197361"
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771724872
+    close_reason: 'The UpdateProvider method is already fully implemented in internal/loom/loom.go at line 2523. The implementation includes: database persistence, in-memory registry updates, event bus notifications, heartbeat triggering, and comprehensive error handling. Tests exist in internal/loom/loom_coverage_test.go covering basic updates, error cases, default values, and no-database scenarios. The API handler in internal/api/handlers_providers.go properly calls this method for PUT /api/v1/providers/{id} requests.'
     conversation_session_id: 4aea7594-31b7-41ce-8aaa-1995cf7fcb88
     correlation_id: dispatch-bd-102-1771805665625729316
     dispatch_count: "1"
@@ -73,5 +74,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:17.017190243Z
-updatedat: 2026-02-24T02:30:13.684137124Z
-closedat: null
+updatedat: 2026-02-24T02:30:28.477520494Z
+closedat: 2026-02-24T02:30:28.477515614Z
