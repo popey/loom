@@ -7,10 +7,10 @@ id: bd-017
 type: task
 title: 'Bug: activity_feed FK violation on startup - agent activity recorded before agent row exists'
 description: 'At every startup, multiple errors appear: Failed to record activity: pq: insert or update on table activity_feed violates foreign key constraint activity_feed_agent_id_fkey. This happens during workermanager restore of paused agents - the agent activity is being written before the agent row is committed to the agents table, or the FK references an agent ID format that does not match the agents table primary key. Impact: activity feed is missing data, startup logs noisy. Fix: ensure agent row is committed before recording activity, or use INSERT ... ON CONFLICT DO NOTHING for the activity record, or defer activity recording until after agent initialization completes.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-ef158d85
 blockedby: []
 blocks: []
 relatedto: []
@@ -44,5 +44,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:22.715268753Z
-updatedat: 2026-02-24T17:59:59.67257978Z
+updatedat: 2026-02-24T18:04:34.309485243Z
 closedat: null
