@@ -7,10 +7,10 @@ id: bd-061
 type: task
 title: 'Observability: provider metrics show 0 requests/tokens despite active LLM usage'
 description: 'The providers API returns total_requests=0, success_requests=0, total_tokens=0 for the tokenhub provider even though agents have been making LLM calls for 12 hours. The provider metrics counter is only incremented on the old dispatch path and not by the taskexecutor path. This means: (1) Per-project token budgets cannot be enforced. (2) Operator cannot see which projects are consuming the most tokens. (3) Cost tracking is broken. Fix: in taskexecutor actionloop, after each successful LLM completion, increment the provider metrics via the existing metrics recording path. Also add per-project and per-agent token usage tracking to the analytics schema. The CEO dashboard should show a token usage breakdown by project and agent as a first-class metric.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-46c1ed19
 blockedby: []
 blocks: []
 relatedto: []
@@ -44,5 +44,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:37.272606874Z
-updatedat: 2026-02-24T19:25:19.751980943Z
+updatedat: 2026-02-24T19:29:31.64530941Z
 closedat: null
