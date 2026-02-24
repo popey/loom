@@ -7,10 +7,10 @@ id: bd-028
 type: task
 title: 'Bug: Motivation engine not initialized at startup - agents lack self-direction'
 description: 'Startup logs: Warning: Motivation engine not initialized. The motivation engine is responsible for agents proactively generating their own beads and directions rather than passively waiting for assigned work. Without it, agents have no intrinsic goals and can only process externally-created beads. This contributes to the idle state when bead queues drain. Fix: investigate why the motivation engine fails to initialize (missing config? dependency not ready?). Ensure it starts before agents become idle. The motivation engine should be creating beads for each project based on project health signals: failing tests, unreviewed PRs, low code coverage, stale documentation, performance regressions. Once working, validate that agents are creating their own improvement beads rather than waiting to be told what to do.'
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-46c1ed19
 blockedby: []
 blocks: []
 relatedto: []
@@ -44,5 +44,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:50:14.040426967Z
-updatedat: 2026-02-24T19:16:22.930698647Z
+updatedat: 2026-02-24T19:17:00.539382033Z
 closedat: null
