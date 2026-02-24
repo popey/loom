@@ -7,10 +7,10 @@ id: bd-013
 type: task
 title: 'Bug: NATS JetStream consumer leak causes cascade context cancellations on restart'
 description: 'At startup, loom logs: consumer is already bound to a subscription. The durable NATS consumer from the previous process was not cleaned up on shutdown. This prevents the PDA orchestrator from subscribing to loom.results.*, causing worker goroutines for named agents to get immediately-cancelled contexts. Result: 9,474 context canceled errors since 2026-02-19, ralph blocking beads, compounding gridlock. Fix: (1) Drain NATS connection on SIGTERM with 5s timeout, deleting durable consumers. (2) On startup, if consumer bind fails with already-bound, force-delete and recreate. (3) Consider ephemeral consumers for the results subscription so they auto-delete on disconnect. The context-canceled cascade from this bug was responsible for 85 of 97 aviation beads being ralph-blocked and the system grinding to a halt.'
-status: open
+status: blocked
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,14 +35,14 @@ context:
     loop_detection_reason: 'Identical error repeated 5 times - error pattern: action loop failed: context canceled'
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-24T12:43:38Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T19:33:35Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:48:37.361209442Z
-updatedat: 2026-02-24T12:43:32.919805859Z
+updatedat: 2026-02-24T12:43:38.82734261Z
 closedat: null
