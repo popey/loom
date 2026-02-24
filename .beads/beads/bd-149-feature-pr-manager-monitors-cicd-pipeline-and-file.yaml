@@ -17,10 +17,10 @@ description: |-
     - Files bead via internal API when a workflow is red
     - Deduplicates: check for existing open bead with same title prefix before filing
     - 24h escalation path to Engineering Manager
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -42,14 +42,14 @@ context:
     loop_detection_reason: Repeated provider errors (5 attempts) - provider unavailable or unhealthy
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-24T11:15:29Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T20:09:30Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T20:00:22.120615395Z
-updatedat: 2026-02-24T11:15:26.119542703Z
+updatedat: 2026-02-24T11:15:29.756929976Z
 closedat: null
