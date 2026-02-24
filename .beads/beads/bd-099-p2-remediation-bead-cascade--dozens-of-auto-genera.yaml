@@ -7,10 +7,10 @@ id: bd-099
 type: task
 title: 'P2: Remediation bead cascade — dozens of auto-generated P0 remediation beads from infrastructure failures'
 description: 'The auto-remediation system creates P0 beads when agents get stuck. But when the root cause is infrastructure (wrong endpoint, budget exhaustion), remediation beads are created for the remediation beads, creating chains: bd-051 -> bd-078,bd-079,bd-080,bd-081,bd-084,bd-085,bd-086,bd-087,bd-088,bd-090. The depth-1 limit (line 1109 in dispatcher.go) prevents infinite cascades, but the system still generates massive numbers of useless remediation beads. Fix: 1) Add provider-error detection — don''t create remediation beads for connection_refused, 429, or 502 errors, 2) Batch-close all remediation beads whose root cause was a provider failure, 3) Consider rate-limiting remediation bead creation per root bead.'
-status: open
+status: in_progress
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-eb3a8527
 blockedby: []
 blocks: []
 relatedto: []
@@ -72,5 +72,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:09.200915985Z
-updatedat: 2026-02-24T15:03:19.813806623Z
+updatedat: 2026-02-24T15:10:25.841704697Z
 closedat: null
