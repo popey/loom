@@ -24,9 +24,12 @@ context:
     last_run_error: |
         LLM call failed on iteration 2: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
     loop_detected: "false"
+    redispatch_reason: Provider restored (vault unlocked)
+    redispatch_requested: "true"
+    redispatch_requested_at: "2026-02-24T01:37:00Z"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-24T01:30:51.399302302Z
-updatedat: 2026-02-24T01:35:17.712633296Z
+updatedat: 2026-02-24T01:37:00.777577564Z
 closedat: null
