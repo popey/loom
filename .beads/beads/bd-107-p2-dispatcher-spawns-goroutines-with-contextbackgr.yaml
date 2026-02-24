@@ -7,7 +7,7 @@ id: bd-107
 type: task
 title: 'P2: Dispatcher spawns goroutines with context.Background() — no cancellation propagation'
 description: 'In dispatcher.go line 621, the in-process task execution goroutine uses context.Background() instead of the parent request context. This means: 1) If Loom is shutting down, running tasks can''t be cancelled gracefully, 2) No timeout propagation from the dispatch loop, 3) Goroutines can leak if the provider is unresponsive (only saved by the 5-minute HTTP client timeout). Note: bd-059 already exists for this issue but is blocked. Fix: Use a derived context from the dispatcher''s lifecycle context (not the request context, which has different semantics), with a configurable task timeout.'
-status: in_progress
+status: closed
 priority: 2
 projectid: loom
 assignedto: exec-loom-2029c097
@@ -33,6 +33,7 @@ context:
     agent_task_id: task-bd-107-1771724999487483086
     agent_tokens: "228231"
     agent_worker_id: worker-agent-1771534515-Devops Engineer (Default)-1771718701
+    close_reason: Fixed dispatcher goroutine context handling. Added SetLifecycleContext() and SetTaskTimeout() methods, plus DefaultTaskTimeout constant. The task goroutine now derives its context from the dispatcher's lifecycle context with a configurable timeout (default 30 minutes), enabling graceful shutdown cancellation and preventing goroutine leaks.
     conversation_session_id: f6912326-b00c-408f-8d3a-5007ecbd0057
     correlation_id: dispatch-bd-107-1771805628287953803
     dispatch_count: "25"
@@ -72,5 +73,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:28:25.63879145Z
-updatedat: 2026-02-24T03:22:25.377441433Z
-closedat: null
+updatedat: 2026-02-24T03:22:38.426547675Z
+closedat: 2026-02-24T03:22:38.426542635Z
