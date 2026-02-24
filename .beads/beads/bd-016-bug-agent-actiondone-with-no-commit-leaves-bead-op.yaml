@@ -7,10 +7,10 @@ id: bd-016
 type: task
 title: 'Bug: agent action=done with no commit leaves bead open instead of closing it'
 description: 'bd-055 had context.terminal_reason=completed and context.agent_output containing {"action": "done", "reason": "changes already applied and verified. No further changes were needed."} but remained in_progress indefinitely. The agent correctly determined the work was already done and issued a done action, but the system did not close the bead. Root cause: the dispatch_phases.go completed case or taskexecutor closeout logic may require a git commit SHA to be present before closing, or the done action is not being detected when terminal_reason=completed is set but the executor context was already stale. Fix: if agent emits action=done OR action=skip AND provides a reason, close the bead as closed with the agent reason as close_reason, regardless of whether a git commit was made. Work that was already done upstream should be validatable.'
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,14 +35,14 @@ context:
     loop_detection_reason: 'Identical error repeated 10 times - error pattern: action loop failed: LLM call failed on iteration 1: failed to send request: Post "http://172.17.0.1:'
     progress_summary: No progress data
     provider_id: tokenhub
-    ralph_blocked_at: ""
-    ralph_blocked_reason: ""
-    redispatch_requested: "true"
+    ralph_blocked_at: "2026-02-24T02:11:02Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T19:33:57Z"
     revert_status: not_attempted
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-23T17:49:09.957448896Z
-updatedat: 2026-02-24T02:10:55.022491566Z
+updatedat: 2026-02-24T02:11:02.085373076Z
 closedat: null
