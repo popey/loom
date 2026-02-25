@@ -1,0 +1,67 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-257
+type: bug
+title: '[auto-filed] [frontend] API Error: Bootstrap failed: failed to initialize beads: failed to run bd init: exit status'
+description: |
+    ## Auto-Filed Bug Report
+
+    **Source:** frontend
+    **Error Type:** api_error
+    **Severity:** critical
+    **Occurred At:** 2026-02-25T08:55:13Z
+
+    ### Error Message
+    Bootstrap failed: failed to initialize beads: failed to run bd init: exit status 1
+
+    ### Stack Trace
+
+
+    ### Context
+    ```json
+    {
+      "column": 0,
+      "endpoint": "/projects/bootstrap",
+      "line": 0,
+      "method": "POST",
+      "response": "Bootstrap failed: failed to initialize beads: failed to run bd init: exit status 1",
+      "source_file": "frontend",
+      "state": {
+        "agents": 28,
+        "beads": 509,
+        "projects": 3
+      },
+      "status": 500,
+      "timestamp": "2026-02-25T08:55:13.834Z",
+      "url": "http://sparky.local:8080/",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "viewport": "1710x873"
+    }
+    ```
+
+    ---
+    *This bug was automatically filed by the Loom error tracking system.*
+    *Will be automatically routed to the appropriate specialist for investigation.*
+status: open
+priority: 0
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags:
+    - auto-filed
+    - frontend
+    - api_error
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-25T08:55:13.889831418Z
+updatedat: 2026-02-25T08:55:13.89637426Z
+closedat: null
