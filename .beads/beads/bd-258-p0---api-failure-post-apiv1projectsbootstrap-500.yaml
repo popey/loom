@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-258
+type: task
+title: P0 - API failure POST /api/v1/projects/bootstrap 500
+description: "API request failed\n\nMethod: POST\nPath: /api/v1/projects/bootstrap\nStatus: 500\nQuery: \nRemote: 172.19.0.1:48130\nUser: admin\nTimestamp: 2026-02-25T09:43:39Z\n"
+status: open
+priority: 0
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-25T09:43:39.319918654Z
+updatedat: 2026-02-25T09:44:09.183880314Z
+closedat: null
