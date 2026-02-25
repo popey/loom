@@ -1,0 +1,26 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-259
+type: task
+title: P0 - API failure POST /api/v1/agents 500
+description: "API request failed\n\nMethod: POST\nPath: /api/v1/agents\nStatus: 500\nQuery: \nRemote: 172.19.0.1:42796\nUser: admin\nTimestamp: 2026-02-25T18:22:46Z\n"
+status: open
+priority: 0
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-25T18:22:46.406245775Z
+updatedat: 2026-02-25T18:29:34.66659336Z
+closedat: null
