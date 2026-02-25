@@ -1,0 +1,67 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-260
+type: bug
+title: '[auto-filed] [frontend] API Error: no active providers registered'
+description: |
+    ## Auto-Filed Bug Report
+
+    **Source:** frontend
+    **Error Type:** api_error
+    **Severity:** critical
+    **Occurred At:** 2026-02-25T18:22:46Z
+
+    ### Error Message
+    no active providers registered
+
+    ### Stack Trace
+
+
+    ### Context
+    ```json
+    {
+      "column": 0,
+      "endpoint": "/agents",
+      "line": 0,
+      "method": "POST",
+      "response": "no active providers registered",
+      "source_file": "frontend",
+      "state": {
+        "agents": 28,
+        "beads": 511,
+        "projects": 4
+      },
+      "status": 500,
+      "timestamp": "2026-02-25T18:22:46.389Z",
+      "url": "http://sparky.local:8080/",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "viewport": "1539x851"
+    }
+    ```
+
+    ---
+    *This bug was automatically filed by the Loom error tracking system.*
+    *Will be automatically routed to the appropriate specialist for investigation.*
+status: open
+priority: 0
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags:
+    - auto-filed
+    - frontend
+    - api_error
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-25T18:22:46.451761133Z
+updatedat: 2026-02-25T18:22:46.451969162Z
+closedat: null
