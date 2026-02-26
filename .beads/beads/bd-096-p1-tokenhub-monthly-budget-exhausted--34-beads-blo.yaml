@@ -7,10 +7,10 @@ id: bd-096
 type: task
 title: 'P1: TokenHub monthly budget exhausted — 34 beads blocked with 429 budget errors'
 description: '34 beads show 429 errors: {"budget_usd":100,"error":"monthly budget exceeded"}. The TokenHub instance has a $100 monthly budget limit that has been hit. All subsequent LLM requests are rejected. Fix options: 1) Increase the budget via tokenhubctl (routing set or admin API), 2) Reset the budget counter if this is a development instance, 3) Add budget monitoring/alerting to Loom so operators know before agents are blocked. This is the second-most-common error after connection_refused.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -25,9 +25,9 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771718701
     conversation_session_id: e951763d-616b-448f-beab-7fbda444f5c2
     correlation_id: dispatch-bd-096-1771812938773998421
-    dispatch_count: "5"
+    dispatch_count: "0"
     dispatch_history: '["agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-26T00:35:31.329604509Z","error":"LLM call failed on iteration 6: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-02-26T00:36:00.178184237Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":2},{"timestamp":"2026-02-26T00:38:53.065274042Z","error":"LLM call failed on iteration 3: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":3},{"timestamp":"2026-02-26T00:42:13.491785828Z","error":"LLM call failed on iteration 14: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":4},{"timestamp":"2026-02-26T00:42:13.760156977Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5},{"timestamp":"2026-02-26T00:42:13.760179922Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"no eligible models registered\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5}]'
+    error_history: ""
     failed_at: "2026-02-23T02:15:38Z"
     last_error: command parameter required
     last_failed_at: ""
@@ -43,7 +43,7 @@ context:
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
     ralph_blocked_at: "2026-02-26T00:42:20Z"
-    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    ralph_blocked_reason: ""
     redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T19:33:38Z"
     remediation_for: ""
@@ -62,5 +62,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-21T22:27:44.695433593Z
-updatedat: 2026-02-26T00:42:20.916135828Z
+updatedat: 2026-02-26T00:59:26.541026403Z
 closedat: null
