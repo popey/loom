@@ -1,0 +1,63 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-261
+type: bug
+title: '[auto-filed] [console.error] UI Error: Error loading motivations: TypeError: Failed to fetch'
+description: |
+    ## Auto-Filed Bug Report
+
+    **Source:** console.error
+    **Error Type:** js_error
+    **Severity:** high
+    **Occurred At:** 2026-02-26T02:10:05Z
+
+    ### Error Message
+    Error loading motivations: TypeError: Failed to fetch
+
+    ### Stack Trace
+
+
+    ### Context
+    ```json
+    {
+      "column": 0,
+      "line": 0,
+      "source_file": "console.error",
+      "state": {
+        "agents": 46,
+        "beads": 508,
+        "projects": 3
+      },
+      "timestamp": "2026-02-26T02:10:05.829Z",
+      "url": "http://sparky.local:8080/",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "viewport": "1803x990"
+    }
+    ```
+
+    ---
+    *This bug was automatically filed by the Loom error tracking system.*
+    *Will be automatically routed to the appropriate specialist for investigation.*
+status: open
+priority: 1
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags:
+    - auto-filed
+    - console.error
+    - js_error
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-02-26T02:27:19.137181975Z
+updatedat: 2026-02-26T02:27:19.137335345Z
+closedat: null
