@@ -29,8 +29,8 @@ parent: ""
 children: []
 tags: []
 context:
-    dispatch_count: "2"
-    error_history: '[{"timestamp":"2026-02-26T08:15:55.052466928Z","error":"LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.1150844}\n","dispatch":1},{"timestamp":"2026-02-26T08:15:59.384574937Z","error":"LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.1150844}\n","dispatch":2}]'
+    dispatch_count: "3"
+    error_history: '[{"timestamp":"2026-02-26T08:15:55.052466928Z","error":"LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.1150844}\n","dispatch":1},{"timestamp":"2026-02-26T08:15:59.384574937Z","error":"LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.1150844}\n","dispatch":2},{"timestamp":"2026-02-26T08:15:59.985911572Z","error":"LLM call failed on iteration 1: unexpected status code 429: {\"budget_usd\":100,\"error\":\"monthly budget exceeded\",\"spent_usd\":100.1150844}\n","dispatch":3}]'
     last_run_at: "2026-02-26T08:15:59Z"
     last_run_error: |
         LLM call failed on iteration 1: unexpected status code 429: {"budget_usd":100,"error":"monthly budget exceeded","spent_usd":100.1150844}
@@ -39,5 +39,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-26T08:15:54.97828592Z
-updatedat: 2026-02-26T08:15:59.384584537Z
+updatedat: 2026-02-26T08:15:59.985920516Z
 closedat: null
