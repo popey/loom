@@ -7,10 +7,10 @@ id: bd-255
 type: task
 title: P0 - API failure POST /api/v1/projects/bootstrap 500
 description: "API request failed\n\nMethod: POST\nPath: /api/v1/projects/bootstrap\nStatus: 500\nQuery: \nRemote: 10.11.101.245:51910\nUser: admin\nTimestamp: 2026-02-25T08:54:34Z\n"
-status: open
+status: blocked
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -26,9 +26,12 @@ context:
     loop_detected: "true"
     loop_detected_at: "2026-02-26T00:42:25Z"
     loop_detected_reason: Repeated provider errors (6 attempts) - provider unavailable or unhealthy
+    ralph_blocked_at: "2026-02-26T00:42:28Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-25T08:54:34.96498076Z
-updatedat: 2026-02-26T00:42:25.947868972Z
+updatedat: 2026-02-26T00:42:28.581580548Z
 closedat: null
