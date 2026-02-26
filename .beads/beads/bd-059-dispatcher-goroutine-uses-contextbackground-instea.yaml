@@ -7,7 +7,7 @@ id: bd-059
 type: task
 title: 'dispatcher: goroutine uses context.Background() instead of request context'
 description: 'internal/dispatch/dispatcher.go ~line 618-648: goroutine spawned with context.Background() instead of the caller''s context. If the parent request/operation is cancelled, the goroutine continues running indefinitely causing goroutine leaks. Fix: pass the request context and propagate cancellation.'
-status: in_progress
+status: closed
 priority: 1
 projectid: loom
 assignedto: exec-loom-e6651f21
@@ -19,7 +19,7 @@ children: []
 tags: []
 context:
     agent_id: agent-1771534515-Product Manager (Default)
-    close_reason: ""
+    close_reason: Fixed dispatcher goroutine context leak. Changed baseCtx fallback from context.Background() to ctx to ensure proper cancellation propagation and prevent goroutine leaks when parent request is cancelled.
     conversation_session_id: 1a8aa7e8-eefb-4b75-b247-7cb694effe85
     correlation_id: dispatch-bd-059-1771816064488908879
     dispatch_count: "23"
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:23.056787535Z
-updatedat: 2026-02-26T05:30:23.701164431Z
-closedat: null
+updatedat: 2026-02-26T05:30:32.686463174Z
+closedat: 2026-02-26T05:30:32.68645983Z
