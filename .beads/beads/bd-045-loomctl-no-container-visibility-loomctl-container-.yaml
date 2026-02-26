@@ -7,10 +7,10 @@ id: bd-045
 type: task
 title: 'loomctl: no container visibility (loomctl container list/status)'
 description: 'loomctl has no container subcommand. Operators cannot see which project containers are running, their health, startup logs, or resource usage without ''docker ps'' or ''docker logs''. Required commands: ''loomctl container list'' (show all project containers, status, uptime), ''loomctl container logs <project>'' (tail container logs), ''loomctl container restart <project>'' (restart project container), ''loomctl container status <project>'' (health + registered agents). The backend Orchestrator already tracks container state — this needs CLI exposure.'
-status: blocked
+status: open
 priority: 0
 projectid: loom
-assignedto: agent-1771534515-Engineering Manager (Default)
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -25,9 +25,9 @@ context:
     agent_worker_id: worker-agent-1771534515-Engineering Manager (Default)-1771727178
     conversation_session_id: 5d73b244-087b-4829-a3a6-551fd3ff5b0f
     correlation_id: dispatch-bd-045-1771813410700749911
-    dispatch_count: "5"
+    dispatch_count: "0"
     dispatch_history: '["agent-1771397315-Project Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-Engineering Manager (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)","agent-1771534515-QA Engineer (Default)"]'
-    error_history: '[{"timestamp":"2026-02-25T04:00:40.962404267Z","error":"LLM call failed on iteration 8: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-02-25T04:01:24.139454034Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":2},{"timestamp":"2026-02-26T00:25:06.889148599Z","error":"LLM call failed on iteration 10: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":3},{"timestamp":"2026-02-26T00:36:06.853402236Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":4},{"timestamp":"2026-02-26T00:36:29.627104223Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5},{"timestamp":"2026-02-26T00:36:29.627128655Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5}]'
+    error_history: ""
     failed_at: "2026-02-23T02:23:30Z"
     last_error: command parameter required
     last_failed_at: ""
@@ -43,7 +43,7 @@ context:
     provider_id: tokenhub
     provider_model: aws/anthropic/claude-opus-4-5
     ralph_blocked_at: "2026-02-26T00:36:38Z"
-    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    ralph_blocked_reason: ""
     redispatch_requested: "false"
     redispatch_requested_at: "2026-02-23T20:28:51Z"
     remediation_for: ""
@@ -62,5 +62,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:12:30.483868481Z
-updatedat: 2026-02-26T00:36:38.572498085Z
+updatedat: 2026-02-26T00:59:36.944731121Z
 closedat: null
