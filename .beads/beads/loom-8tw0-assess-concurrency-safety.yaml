@@ -7,10 +7,10 @@ id: loom-8tw0
 type: task
 title: Assess concurrency safety
 description: Identify goroutine leaks and race‑prone code
-status: in_progress
+status: closed
 priority: 2
 projectid: loom
-assignedto: exec-loom-a2748fca
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -67,5 +67,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-06T14:23:40Z
-updatedat: 2026-02-26T00:27:05.356861704Z
-closedat: null
+updatedat: 2026-02-26T00:27:11.491816595Z
+closedat: 2026-02-26T00:27:11.491815907Z
