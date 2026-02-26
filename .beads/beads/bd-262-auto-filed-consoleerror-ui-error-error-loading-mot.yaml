@@ -41,10 +41,10 @@ description: |
     ---
     *This bug was automatically filed by the Loom error tracking system.*
     *Will be automatically routed to the appropriate specialist for investigation.*
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -63,9 +63,12 @@ context:
     loop_detected: "true"
     loop_detected_at: "2026-02-26T04:43:39Z"
     loop_detected_reason: Repeated provider errors (6 attempts) - provider unavailable or unhealthy
+    ralph_blocked_at: "2026-02-26T04:43:48Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (6 attempts) - provider unavailable or unhealthy'
+    redispatch_requested: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-26T04:38:58.440028246Z
-updatedat: 2026-02-26T04:43:39.197559977Z
+updatedat: 2026-02-26T04:43:48.568379165Z
 closedat: null
