@@ -10,7 +10,7 @@ description: 'internal/dispatch/dispatcher.go ~line 618-648: goroutine spawned w
 status: closed
 priority: 1
 projectid: loom
-assignedto: exec-loom-e6651f21
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-20T23:40:23.056787535Z
-updatedat: 2026-02-26T05:30:34.20250504Z
+updatedat: 2026-02-26T05:30:35.973731301Z
 closedat: 2026-02-26T05:30:32.68645983Z
