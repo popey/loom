@@ -7,7 +7,7 @@ id: loom-02ep
 type: task
 title: Add proper defer cleanup in error paths
 description: Insert defer statements for file handles and DB connections in error handling paths.
-status: in_progress
+status: closed
 priority: 2
 projectid: loom
 assignedto: exec-loom-c8b82013
@@ -19,7 +19,7 @@ children: []
 tags: []
 context:
     agent_id: agent-1771534515-CEO (Default)
-    close_reason: ""
+    close_reason: Fixed resource leak by adding defer statements to db.Close() calls in error paths within NewPostgreSQL function. All bare db.Close() calls in error handling have been replaced with defer db.Close() to ensure proper cleanup. Changes compiled and tested successfully.
     conversation_session_id: dab5875d-0c82-4729-a4cd-097604253e50
     correlation_id: dispatch-loom-02ep-1771817043644609107
     dispatch_count: "3"
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-06T13:19:04Z
-updatedat: 2026-03-01T23:24:58.750104035Z
-closedat: null
+updatedat: 2026-03-01T23:25:01.533808951Z
+closedat: 2026-03-01T23:25:01.533805575Z
