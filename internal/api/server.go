@@ -348,6 +348,11 @@ func (s *Server) SetupRoutes() http.Handler {
 	// Actually, we'll use a pattern that matches /beads/{id}/comments
 	mux.HandleFunc("/api/v1/comments/", s.handleComment)
 
+	// Meetings
+	mux.HandleFunc("/api/v1/meetings", s.handleMeetings)
+	mux.HandleFunc("/api/v1/meetings/", s.handleMeeting)
+	mux.HandleFunc("/api/v1/meetings/active", s.handleActiveMeetings)
+
 	// Conversations
 	mux.HandleFunc("/api/v1/conversations", s.handleConversationsList)
 	mux.HandleFunc("/api/v1/conversations/", s.handleConversation)
