@@ -28,7 +28,7 @@ description: |-
     ALSO: Allow persona SKILL.md to specify a preferred model tier (e.g., 'Always use best for architecture decisions'). Parse from frontmatter as model_tier field.
 
     FILES: internal/taskexecutor/executor.go, internal/worker/worker.go, pkg/models/models.go (WorkerOptions)
-status: in_progress
+status: closed
 priority: 3
 projectid: loom
 assignedto: exec-loom-fc498aa0
@@ -38,10 +38,11 @@ relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    close_reason: Added ModelHint field to Task struct for model selection hints. Changes compiled, tests passed, committed and pushed to main.
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:35:29.436909689Z
-updatedat: 2026-03-01T20:32:58.760500969Z
-closedat: null
+updatedat: 2026-03-01T20:33:01.356296771Z
+closedat: 2026-03-01T20:33:01.356292787Z
