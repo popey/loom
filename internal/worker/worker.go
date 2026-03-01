@@ -910,7 +910,12 @@ func (w *Worker) ExecuteTaskWithLoop(ctx context.Context, task *Task, config *Lo
 				return loopResult, nil
 			}
 
-			feedback := fmt.Sprintf("## Parse Error (attempt %d/5)\n\nFailed to parse your response as valid JSON: %v\n\nYou MUST respond with a SINGLE JSON object in this exact format:\n{\"action\": \"scope\", \"path\": \".\"}\n\nValid actions: scope, read, search, edit, write, build, test, bash, git_commit, git_push, done\n\nDo NOT wrap in an array. Do NOT include any text outside the JSON object.", consecutiveParseFailures, parseErr)
+			var feedback string
+			if config.TextMode {
+				feedback = fmt.Sprintf("## Parse Error (attempt %d/5)\n\nFailed to parse your response as valid JSON: %v\n\nYou MUST respond with a SINGLE JSON object in this exact format:\n{\"action\": \"scope\", \"path\": \".\"}\n\nValid actions: scope, read, search, edit, write, build, test, bash, git_commit, git_push, done\n\nDo NOT wrap in an array. Do NOT include any text outside the JSON object.", consecutiveParseFailures, parseErr)
+			} else {
+				feedback = fmt.Sprintf("## Parse Error (attempt %d/5)\n\nFailed to parse your response as valid JSON: %v\n\nYou MUST respond with a JSON object in this exact format:\n{\"actions\": [{\"type\": \"read_tree\", \"path\": \".\"}], \"notes\": \"your reasoning\"}\n\nDo NOT use markdown fences. Do NOT include any text outside the JSON object.", consecutiveParseFailures, parseErr)
+			}
 			messages = append(messages, provider.ChatMessage{Role: "user", Content: feedback})
 			if conversationCtx != nil {
 				conversationCtx.AddMessage("user", feedback, len(feedback)/4)

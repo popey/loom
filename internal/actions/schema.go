@@ -88,6 +88,13 @@ const (
 	ActionSendAgentMessage = "send_agent_message"
 	ActionDelegateTask     = "delegate_task"
 
+	// Collaboration actions (organizational layer)
+	ActionCallMeeting  = "call_meeting"
+	ActionConsultAgent = "consult_agent"
+	ActionInvokeSkill  = "invoke_skill"
+	ActionPostToBoard  = "post_to_board"
+	ActionVote         = "vote"
+
 	// Remediation/meta-analysis actions
 	ActionReadBeadConversation = "read_bead_conversation"
 	ActionReadBeadContext      = "read_bead_context"
@@ -211,6 +218,32 @@ type Action struct {
 	TaskPriority    int    `json:"task_priority,omitempty"`    // Priority for delegated task (0-4)
 	ParentBeadID    string `json:"parent_bead_id,omitempty"`   // Parent bead that created this delegation
 
+	// Meeting fields
+	MeetingTitle        string   `json:"meeting_title,omitempty"`        // Title for call_meeting
+	MeetingParticipants []string `json:"meeting_participants,omitempty"` // Agent IDs or roles to invite
+	MeetingAgenda       []struct {
+		Topic       string `json:"topic"`
+		Description string `json:"description,omitempty"`
+	} `json:"meeting_agenda,omitempty"` // Agenda items
+
+	// Consultation fields
+	ConsultAgentID   string `json:"consult_agent_id,omitempty"`   // Agent to consult
+	ConsultAgentRole string `json:"consult_agent_role,omitempty"` // Alternative: role to consult
+	ConsultQuestion  string `json:"consult_question,omitempty"`   // Question to ask
+
+	// Skill portability fields
+	SkillName    string `json:"skill_name,omitempty"`    // Persona skill to invoke (e.g., "coder", "qa-engineer")
+	SkillContext string `json:"skill_context,omitempty"` // Context/instruction for the skill
+
+	// Status board fields
+	BoardCategory string `json:"board_category,omitempty"` // Category: meeting_notes, status_report, announcement
+	BoardContent  string `json:"board_content,omitempty"`  // Content to post
+
+	// Voting fields
+	VoteDecisionID string `json:"vote_decision_id,omitempty"` // Decision to vote on
+	VoteChoice     string `json:"vote_choice,omitempty"`      // approve, reject, abstain
+	VoteRationale  string `json:"vote_rationale,omitempty"`   // Reason for the vote
+
 	Bead *BeadPayload `json:"bead,omitempty"`
 
 	Reason     string `json:"reason,omitempty"` // Reason for bead operations or phase transitions
@@ -255,6 +288,9 @@ func DecodeStrict(payload []byte) (*ActionEnvelope, error) {
 
 // DecodeLenient attempts strict decode first, then tries to recover a JSON object
 // from responses that include extra text (e.g., markdown fences, model traces, or <think> blocks).
+// As a final fallback it tries ParseSimpleJSON, which handles the short
+// {"action": "scope", ...} format that frontier models sometimes emit even when
+// prompted for the full {"actions": [...]} schema.
 func DecodeLenient(payload []byte) (*ActionEnvelope, error) {
 	env, err := DecodeStrict(payload)
 	if err == nil {
@@ -264,10 +300,22 @@ func DecodeLenient(payload []byte) (*ActionEnvelope, error) {
 	trimmed = stripCodeFences(trimmed)
 	trimmed = stripThinkTags(trimmed)
 	extracted, extractErr := extractJSONObject(trimmed)
-	if extractErr != nil {
-		return nil, err
+	if extractErr == nil {
+		if env2, err2 := DecodeStrict(extracted); err2 == nil {
+			return env2, nil
+		}
+		// Model produced valid JSON but used the simple {"action":"..."} schema instead
+		// of the full {"actions":[...]} schema.  Accept it rather than looping on
+		// parse failures.
+		if env3, err3 := ParseSimpleJSON(extracted); err3 == nil {
+			return env3, nil
+		}
 	}
-	return DecodeStrict(extracted)
+	// Also try simple parse on the trimmed payload directly (no JSON object found above).
+	if env4, err4 := ParseSimpleJSON(trimmed); err4 == nil {
+		return env4, nil
+	}
+	return nil, err
 }
 
 func stripCodeFences(payload []byte) []byte {
