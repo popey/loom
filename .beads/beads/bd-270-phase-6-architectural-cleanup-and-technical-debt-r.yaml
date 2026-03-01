@@ -7,10 +7,10 @@ id: bd-270
 type: epic
 title: 'Phase 6: Architectural cleanup and technical debt reduction'
 description: Ongoing maintenance to prevent debt from growing. Split loom.go (4156 lines, god object) into loom_projects.go, loom_agents.go, loom_beads.go, loom_providers.go, loom_lifecycle.go. Remove or cleanly park the Dispatcher (~3000 lines dead weight). Consolidate separate HTML pages (workflows.html, connectors.html, persona-editor.html) into the main SPA. Extract app.js (5062 lines) into ES modules. Update OpenAPI spec to cover all endpoints.
-status: in_progress
+status: open
 priority: 3
 projectid: loom
-assignedto: exec-loom-1e3523dc
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -18,14 +18,14 @@ parent: ""
 children: []
 tags: []
 context:
-    dispatch_count: "2"
-    error_history: '[{"timestamp":"2026-03-01T16:13:39.708257739Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":1},{"timestamp":"2026-03-01T16:55:03.63167327Z","error":"parse_failures: model failed to produce valid actions after 12 iterations","dispatch":2}]'
-    last_run_at: "2026-03-01T16:55:03Z"
-    last_run_error: 'parse_failures: model failed to produce valid actions after 12 iterations'
+    dispatch_count: "3"
+    error_history: '[{"timestamp":"2026-03-01T16:13:39.708257739Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":1},{"timestamp":"2026-03-01T16:55:03.63167327Z","error":"parse_failures: model failed to produce valid actions after 12 iterations","dispatch":2},{"timestamp":"2026-03-01T17:15:58.25591859Z","error":"parse_failures: model failed to produce valid actions after 10 iterations","dispatch":3}]'
+    last_run_at: "2026-03-01T17:15:58Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 10 iterations'
     loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:31:21.621333128Z
-updatedat: 2026-03-01T17:15:48.022131122Z
+updatedat: 2026-03-01T17:15:58.255935886Z
 closedat: null
