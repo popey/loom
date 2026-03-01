@@ -1,0 +1,48 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-280
+type: task
+title: Fix agent cards to show display names, performance grades, and status correctly
+description: |-
+    PARENT: bd-267 (Phase 3 epic)
+    DEPENDS ON: bd-276 (reviews API)
+
+    Agent cards in the Agents tab currently show:
+    - Raw agent ID as name (e.g. 'agent-1771534515-ceo (Default)') instead of display name ('Morgan Webb')
+    - No performance grade (A/B/C/D/F)
+    - No motivation summary
+    - Status shows text only, no visual indicator
+
+    FIXES in web/static/js/app.js renderAgents():
+
+    1. DISPLAY NAME: Use agent.display_name if available, falling back to formatAgentDisplayName(). The display_name should come from the Agent model (populated from persona frontmatter).
+
+    2. PERFORMANCE GRADE: Fetch /api/v1/reviews and join to agent list by agent_id. Show grade as a badge: A=green, B=blue, C=yellow, D=orange, F=red.
+
+    3. MOTIVATION TAGLINE: If agent has a motivation summary field, show a one-line italic quote under the name.
+
+    4. WORKING ON: When status is 'working', show the bead title (not just the bead ID). Resolve bead_id against state.beads.
+
+    5. STATUS BADGE: Add colored dot before status text matching the D3 STATUS_COLORS palette already defined in d3-charts.js.
+
+    VERIFICATION: The Agents tab should read like an org directory — named individuals, their current focus, their recent performance.
+status: in_progress
+priority: 2
+projectid: loom
+assignedto: exec-loom-c657ef72
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:33:48.503229443Z
+updatedat: 2026-03-01T14:24:42.475108663Z
+closedat: null
