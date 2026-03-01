@@ -35,10 +35,10 @@ description: |-
     - Recent conversations (link to Conversations tab)
 
     ACTIONS: Clone Persona, Retire Agent, Send Message (CEO REPL pre-filled with agent selected).
-status: open
+status: in_progress
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-1b886842
 blockedby: []
 blocks: []
 relatedto: []
@@ -55,5 +55,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:57.381382689Z
-updatedat: 2026-03-01T15:27:37.328268584Z
+updatedat: 2026-03-01T15:37:07.661661378Z
 closedat: null
