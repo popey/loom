@@ -38,14 +38,14 @@ parent: ""
 children: []
 tags: []
 context:
-    dispatch_count: "3"
-    error_history: '[{"timestamp":"2026-03-01T14:42:31.265556981Z","error":"parse_failures: model failed to produce valid actions after 13 iterations","dispatch":1},{"timestamp":"2026-03-01T14:51:38.475633708Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":2},{"timestamp":"2026-03-01T15:07:03.730125164Z","error":"parse_failures: model failed to produce valid actions after 39 iterations","dispatch":3}]'
-    last_run_at: "2026-03-01T15:07:03Z"
-    last_run_error: 'parse_failures: model failed to produce valid actions after 39 iterations'
+    dispatch_count: "4"
+    error_history: '[{"timestamp":"2026-03-01T14:42:31.265556981Z","error":"parse_failures: model failed to produce valid actions after 13 iterations","dispatch":1},{"timestamp":"2026-03-01T14:51:38.475633708Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":2},{"timestamp":"2026-03-01T15:07:03.730125164Z","error":"parse_failures: model failed to produce valid actions after 39 iterations","dispatch":3},{"timestamp":"2026-03-01T15:24:03.621445559Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":4}]'
+    last_run_at: "2026-03-01T15:24:03Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 5 iterations'
     loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:33:34.785806555Z
-updatedat: 2026-03-01T15:07:03.730156268Z
+updatedat: 2026-03-01T15:24:03.621469576Z
 closedat: null
