@@ -10,7 +10,7 @@ description: 'Six complete subsystems (meetings, status board, consensus, collab
 status: closed
 priority: 0
 projectid: loom
-assignedto: exec-loom-1b886842
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -32,5 +32,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:30:40.205041244Z
-updatedat: 2026-03-01T13:54:55.389624634Z
+updatedat: 2026-03-01T13:54:56.890073447Z
 closedat: 2026-03-01T13:54:54.442714006Z
