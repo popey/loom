@@ -28,7 +28,7 @@ description: |-
     RECOMMENDATION: Option A is cleanest. The TaskExecutor is superior. Run go coverage to confirm dispatch is genuinely untested, then delete.
 
     VERIFICATION: go build ./... passes. Loom starts normally. No heartbeat logs from dispatch.
-status: in_progress
+status: closed
 priority: 3
 projectid: loom
 assignedto: exec-loom-730dc1a6
@@ -38,10 +38,11 @@ relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    close_reason: Dispatcher cleanly parked. LoopDetector extracted to standalone loopdetector package. TaskExecutor is now the sole active execution engine. Dispatch package marked with prominent PARKED comment documenting its status. No production code imports dispatch anymore.
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:36:28.534811481Z
-updatedat: 2026-03-01T20:51:16.378294203Z
-closedat: null
+updatedat: 2026-03-01T20:51:20.047950168Z
+closedat: 2026-03-01T20:51:20.047947464Z
