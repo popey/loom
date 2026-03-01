@@ -24,10 +24,10 @@ description: |-
     This is the entry point for the customer feedback loop described in ORGANIZATIONAL_LAYER.md.
 
     VERIFICATION: External systems (or the UI feedback form in Phase 4) can POST feedback and see it appear as a P1 feedback bead in the Kanban assigned to the PM.
-status: open
+status: blocked
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -42,9 +42,12 @@ context:
     loop_detected: "true"
     loop_detected_at: "2026-03-01T14:04:36Z"
     loop_detected_reason: 'Identical error repeated 5 times - error pattern: parse_failures: model failed to produce valid actions after 5 iterations'
+    ralph_blocked_at: "2026-03-01T17:10:10Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Identical error repeated 5 times - error pattern: parse_failures: model failed to produce valid actions after 5 iterations'
+    redispatch_requested: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:33:01.646360849Z
-updatedat: 2026-03-01T17:10:03.203657256Z
+updatedat: 2026-03-01T17:10:10.778096912Z
 closedat: null
