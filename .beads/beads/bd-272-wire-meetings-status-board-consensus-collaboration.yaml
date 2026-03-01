@@ -1,0 +1,43 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-272
+type: task
+title: Wire meetings, status board, consensus, collaboration, and motivation engine into loom.go
+description: |-
+    PARENT: bd-265 (Phase 1 epic)
+
+    Five subsystems are fully built, tested, and compile cleanly — but are never instantiated in internal/loom/loom.go. Each needs ~10-50 lines of wiring.
+
+    1. MEETINGS (internal/meetings/meeting.go): Instantiate meetings.NewManager(). Wire to actions.Router.Meetings field. Implement the Callback interface using the worker package to send prompts to agents.
+
+    2. STATUS BOARD (internal/statusboard/board.go): Instantiate statusboard.NewBoard(). Wire to actions.Router.Board field.
+
+    3. CONSENSUS (internal/consensus/decision.go): Instantiate consensus.NewDecisionManager(). Wire to actions.Router.Voter field.
+
+    4. COLLABORATION (internal/collaboration/context.go): Instantiate collaboration.NewContextStore(). Wire to actions.Router.Consulter field. Implement AgentConsulter interface to forward prompts to idle agents via the worker.
+
+    5. MOTIVATION ENGINE: In internal/loom/loom.go Initialize() or StartTaskExecutor(), add: go a.motivationEngine.Start(ctx)
+
+    VERIFICATION: After fix, agents should be able to call meetings (call_meeting action), consult each other (consult_agent), vote (vote), post to the board (post_to_board), and motivation triggers should fire on schedule.
+
+    FILES: internal/loom/loom.go, internal/actions/router.go
+status: in_progress
+priority: 0
+projectid: loom
+assignedto: exec-loom-0a1d7199
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:31:50.526035639Z
+updatedat: 2026-03-01T01:02:44.491853258Z
+closedat: null
