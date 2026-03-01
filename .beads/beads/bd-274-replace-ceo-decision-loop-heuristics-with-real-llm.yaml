@@ -7,10 +7,10 @@ id: bd-274
 type: task
 title: Replace CEO decision loop heuristics with real LLM call using CEO persona
 description: "PARENT: bd-265 (Phase 1 epic)\n\nPROBLEM: makeCEODecision() in internal/taskexecutor/oversight.go is a switch statement:\n- irrecoverable → cull\n- escalated → reassign  \n- everything else → approve\n\nNo LLM call. The CEO persona (Morgan Webb) with SKILL.md, MOTIVATION.md (unblock the team, customer impact first), and PERSONALITY.md (direct, calm, judges by outcomes) is never loaded for decision-making. The most strategically important agent is a 3-case switch.\n\nFIX: Replace makeCEODecision() with an LLM call that:\n1. Loads the CEO persona via personaManager.LoadPersona('ceo')\n2. Builds a prompt with the decision bead's full context (title, description, error history, dispatch count, escalation reason)\n3. Asks the CEO to choose: approve / reassign / cull / defer — and give a rationale\n4. Parses the response and executes the chosen action\n5. Posts the rationale to the decision bead as a comment\n\nVERIFICATION: Decision beads processed by the CEO loop should have LLM-generated rationales in their context, not just 'auto-approved' or 'auto-culled'.\n\nFILES: internal/taskexecutor/oversight.go, internal/worker/worker.go (reuse ExecuteTask)"
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-ebba4774
 blockedby: []
 blocks: []
 relatedto: []
@@ -22,5 +22,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:32:16.94867163Z
-updatedat: 2026-03-01T00:59:00.775830551Z
+updatedat: 2026-03-01T01:06:28.102410458Z
 closedat: null
