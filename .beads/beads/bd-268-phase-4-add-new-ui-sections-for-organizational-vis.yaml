@@ -7,20 +7,25 @@ id: bd-268
 type: epic
 title: 'Phase 4: Add new UI sections for organizational visibility'
 description: 'New UI sections that surface Loom''s organizational layer: Meeting Rooms view (agendas, transcripts, action items), Status Board feed (manager reports, org health), Performance Reviews dashboard (agent grades, trends, fire/warn history), Agent Detail modal (full three-file persona + grade history), Epic hierarchy view in Kanban, Customer Feedback queue. Depends on Phase 2 endpoints.'
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-0a1d7199
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    dispatch_count: "1"
+    error_history: '[{"timestamp":"2026-03-01T14:48:58.480084864Z","error":"parse_failures: model failed to produce valid actions after 15 iterations","dispatch":1}]'
+    last_run_at: "2026-03-01T14:48:58Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 15 iterations'
+    loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:31:03.25124862Z
-updatedat: 2026-03-01T14:48:10.216561501Z
+updatedat: 2026-03-01T14:48:58.480099488Z
 closedat: null
