@@ -29,20 +29,25 @@ description: |-
     5. STATUS BADGE: Add colored dot before status text matching the D3 STATUS_COLORS palette already defined in d3-charts.js.
 
     VERIFICATION: The Agents tab should read like an org directory — named individuals, their current focus, their recent performance.
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-c657ef72
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    dispatch_count: "1"
+    error_history: '[{"timestamp":"2026-03-01T14:28:41.250754725Z","error":"parse_failures: model failed to produce valid actions after 17 iterations","dispatch":1}]'
+    last_run_at: "2026-03-01T14:28:41Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 17 iterations'
+    loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:33:48.503229443Z
-updatedat: 2026-03-01T14:28:12.737788542Z
+updatedat: 2026-03-01T14:28:41.25077423Z
 closedat: null
