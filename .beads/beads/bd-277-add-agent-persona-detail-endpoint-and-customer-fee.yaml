@@ -24,20 +24,25 @@ description: |-
     This is the entry point for the customer feedback loop described in ORGANIZATIONAL_LAYER.md.
 
     VERIFICATION: External systems (or the UI feedback form in Phase 4) can POST feedback and see it appear as a P1 feedback bead in the Kanban assigned to the PM.
-status: in_progress
+status: open
 priority: 1
 projectid: loom
-assignedto: exec-loom-1b886842
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    dispatch_count: "1"
+    error_history: '[{"timestamp":"2026-03-01T13:28:56.19368028Z","error":"parse_failures: model failed to produce valid actions after 19 iterations","dispatch":1}]'
+    last_run_at: "2026-03-01T13:28:56Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 19 iterations'
+    loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:33:01.646360849Z
-updatedat: 2026-03-01T13:27:35.917540553Z
+updatedat: 2026-03-01T13:28:56.193729767Z
 closedat: null
