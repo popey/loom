@@ -1,0 +1,52 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-284
+type: task
+title: 'Add Performance Reviews tab: agent grade history, trends, and accountability timeline'
+description: |-
+    PARENT: bd-268 (Phase 4 epic)
+    DEPENDS ON: bd-276 (reviews API)
+
+    Add a 'Performance Reviews' tab to the main SPA.
+
+    LAYOUT:
+
+    TOP SECTION — Grade Distribution:
+    - D3 bar chart: count of agents at each grade (A/B/C/D/F). Color-coded.
+    - Summary cards: 'X agents on warning', 'Y agents at risk of firing', 'Z agents eligible for promotion'
+
+    AGENT TABLE:
+    Columns: Display Name | Role | Current Grade | Last 3 Grades (trend arrows) | Beads Closed | Beads Blocked | Efficiency | Status
+    Clicking a row expands to show full review history.
+
+    REVIEW HISTORY DETAIL (expanded row or modal):
+    - Timeline of review cycles with grade, score breakdown (completion %, efficiency %, assist credits)
+    - Events: warnings issued, self-optimization triggered, fired status
+    - Bead list for the review period
+
+    ACTIONS (for humans):
+    - 'Override Grade' — admin can override a grade with a note
+    - 'Retire Agent' — fire an agent manually, with confirmation
+    - 'Reset Warnings' — clear consecutive low count
+
+    NAVIGATION: Add tab in the Team section (between Agents and Personas).
+status: in_progress
+priority: 2
+projectid: loom
+assignedto: exec-loom-1b886842
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:34:44.325703889Z
+updatedat: 2026-03-01T14:16:43.861056388Z
+closedat: null
