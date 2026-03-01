@@ -1,0 +1,47 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-290
+type: task
+title: Split loom.go (4156 lines) into domain-focused files
+description: |-
+    PARENT: bd-270 (Phase 6 epic)
+
+    internal/loom/loom.go is 4156 lines — the largest file in the codebase and a maintenance hazard. Every change to beads, agents, providers, or projects touches this file.
+
+    TARGET SPLIT:
+    - loom.go — keep only: Loom struct definition, New(), Initialize(), Start(), Stop(), and lifecycle wiring (~300 lines)
+    - loom_projects.go — project CRUD, registration, bootstrap, git operations (~700 lines)
+    - loom_agents.go — agent spawn, stop, list, status, assignment, escalation (~500 lines)
+    - loom_beads.go — bead create, update, claim, list, filtering, wake (~600 lines)
+    - loom_providers.go — provider registration, reconciliation, health, heartbeat (~400 lines)
+    - loom_decisions.go — decision create, claim, decide, CEO routing (~300 lines)
+    - loom_wiring.go — subsystem instantiation and interface wiring for Phase 1 additions (~200 lines)
+
+    APPROACH: Move functions without changing signatures. All methods on *Loom remain on *Loom. No behavior changes — this is pure structural refactoring.
+
+    VERIFICATION: go build ./... passes. go test ./... passes. No functional change.
+status: open
+priority: 3
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context:
+    dispatch_count: "1"
+    error_history: '[{"timestamp":"2026-03-01T16:32:53.307064424Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":1}]'
+    last_run_at: "2026-03-01T16:32:53Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 5 iterations'
+    loop_detected: "false"
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:36:13.925023065Z
+updatedat: 2026-03-01T16:32:53.307077976Z
+closedat: null
