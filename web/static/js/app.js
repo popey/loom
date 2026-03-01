@@ -2273,8 +2273,13 @@ async function cloneAgentPersona(agentId) {
 function renderDecisions() {
     const items = (state.decisions || []).filter(d => d.status !== 'closed');
     const filterValue = (uiState.decision && uiState.decision.filter) || 'all';
-    const filteredItems = filterValue === 'all' ? items : items.filter(d => d.status === filterValue);
-    const html = filteredItems.map(decision => {
+    
+    // Separate decisions by type
+    const humanEscalations = items.filter(d => d.context && d.context.requires_human === 'true');
+    const agentHandled = items.filter(d => !(d.context && d.context.requires_human === 'true'));
+    
+    // Render human escalation section
+    const humanHtml = humanEscalations.map(decision => {
         const p0Class = decision.priority === 0 ? 'p0' : '';
         const claimKey = `claimDecision:${decision.id}`;
         const decideKey = `makeDecision:${decision.id}`;
@@ -2301,12 +2306,67 @@ function renderDecisions() {
             </div>
         `;
     }).join('');
-
+    
+    // Render agent-handled section
+    const agentHtml = agentHandled.map(decision => {
+        const p0Class = decision.priority === 0 ? 'p0' : '';
+        const displayText = decision.question || decision.title || decision.description || '(no description)';
+        const assignedAgent = decision.assigned_to || 'system';
+        const agentObj = (state.agents || []).find(a => a.id === assignedAgent);
+        const agentName = agentObj ? (agentObj.display_name || agentObj.name || assignedAgent) : assignedAgent;
+        return `
+            <div class="decision-card ${p0Class}">
+                <div class="decision-question">${escapeHtml(displayText)}</div>
+                <div>
+                    <strong>Priority:</strong> P${decision.priority}
+                    <strong>Status:</strong> ${escapeHtml(decision.status || 'open')}
+                    <br><strong>Handled by:</strong> ${escapeHtml(agentName)}
+                    ${decision.recommendation ? `<br><strong>Recommendation:</strong> ${escapeHtml(decision.recommendation)}` : ''}
+                </div>
+                <div class="decision-actions">
+                    <button class="secondary" onclick="viewBead('${decision.id}')">View</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+    
+    // Render recently closed decisions
+    const closedDecisions = (state.decisions || []).filter(d => d.status === 'closed').slice(0, 10);
+    const closedHtml = closedDecisions.map(decision => {
+        const displayText = decision.question || decision.title || decision.description || '(no description)';
+        const assignedAgent = decision.assigned_to || 'system';
+        const agentObj = (state.agents || []).find(a => a.id === assignedAgent);
+        const agentName = agentObj ? (agentObj.display_name || agentObj.name || assignedAgent) : assignedAgent;
+        const rationale = decision.context && decision.context.rationale ? decision.context.rationale : '';
+        return `
+            <div class="decision-card" style="opacity: 0.8;">
+                <div class="decision-question">${escapeHtml(displayText)}</div>
+                <div>
+                    <strong>Decided by:</strong> ${escapeHtml(agentName)}
+                    ${rationale ? `<br><strong>Rationale:</strong> ${escapeHtml(rationale)}` : ''}
+                </div>
+                <div class="decision-actions">
+                    <button class="secondary" onclick="viewBead('${decision.id}')">View</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+ 
     const decisionListEl = document.getElementById('decision-list');
     if (!decisionListEl) return;
-    decisionListEl.innerHTML =
-        html ||
-        renderEmptyState('No pending decisions', 'When agents escalate work requiring human input, it appears here.');
+    
+    let content = '';
+    if (humanEscalations.length > 0) {
+        content += `<div style="margin-bottom: 2rem;"><h3 style="color: var(--primary-color); margin-top: 0;">Requires Human Review (${humanEscalations.length})</h3>${humanHtml}</div>`;
+    }
+    if (agentHandled.length > 0) {
+        content += `<div style="margin-bottom: 2rem;"><h3 style="color: var(--primary-color); margin-top: 0;">In Progress by Agent (${agentHandled.length})</h3>${agentHtml}</div>`;
+    }
+    if (closedDecisions.length > 0) {
+        content += `<div style="margin-bottom: 2rem;"><h3 style="color: var(--primary-color); margin-top: 0;">Recently Decided (${closedDecisions.length})</h3>${closedHtml}</div>`;
+    }
+    
+    decisionListEl.innerHTML = content || renderEmptyState('No decisions pending human review', 'Agents are handling decisions autonomously.');
 }
 function renderCeoDashboard() {
     const container = document.getElementById('ceo-dashboard-summary');
