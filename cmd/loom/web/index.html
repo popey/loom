@@ -14,47 +14,97 @@
         </header>
 
         <div class="dashboard">
-            <!-- Create Work Section -->
-            <section class="card">
-                <h2>Create New Work</h2>
-                <form id="workForm">
-                    <textarea id="workDescription" placeholder="Describe the work to be done..." rows="3" required></textarea>
-                    <button type="submit">Create Work</button>
-                </form>
-            </section>
+            <!-- Tab Navigation -->
+            <div class="main-tabs">
+                <button class="main-tab-btn active" data-main-tab="overview">Overview</button>
+                <button class="main-tab-btn" data-main-tab="meetings">Meeting Rooms</button>
+            </div>
 
-            <!-- Work in Progress Section -->
-            <section class="card">
-                <h2>Work in Progress</h2>
-                <div id="workList" class="data-list">
-                    <p class="loading">Loading...</p>
-                </div>
-            </section>
+            <!-- Overview Tab -->
+            <div id="overview-tab" class="main-tab-content active">
+                <!-- Create Work Section -->
+                <section class="card">
+                    <h2>Create New Work</h2>
+                    <form id="workForm">
+                        <textarea id="workDescription" placeholder="Describe the work to be done..." rows="3" required></textarea>
+                        <button type="submit">Create Work</button>
+                    </form>
+                </section>
 
-            <!-- Agents Section -->
-            <section class="card">
-                <h2>Active Agents</h2>
-                <div id="agentsList" class="data-list">
-                    <p class="loading">Loading...</p>
-                </div>
-                <h3>Agent Communications</h3>
-                <div id="communicationsList" class="communications-list">
-                    <p class="empty-state">No communications yet</p>
-                </div>
-            </section>
+                <!-- Work in Progress Section -->
+                <section class="card">
+                    <h2>Work in Progress</h2>
+                    <div id="workList" class="data-list">
+                        <p class="loading">Loading...</p>
+                    </div>
+                </section>
 
-            <!-- Service Endpoints Section -->
-            <section class="card">
-                <h2>Service Endpoints</h2>
-                <div class="tabs">
-                    <button class="tab-btn active" data-tab="all">All Services</button>
-                    <button class="tab-btn" data-tab="active">Active Only</button>
-                    <button class="tab-btn" data-tab="preferred">Preferred Order</button>
-                </div>
-                <div id="servicesList" class="services-list">
-                    <p class="loading">Loading...</p>
-                </div>
-            </section>
+                <!-- Agents Section -->
+                <section class="card">
+                    <h2>Active Agents</h2>
+                    <div id="agentsList" class="data-list">
+                        <p class="loading">Loading...</p>
+                    </div>
+                    <h3>Agent Communications</h3>
+                    <div id="communicationsList" class="communications-list">
+                        <p class="empty-state">No communications yet</p>
+                    </div>
+                </section>
+
+                <!-- Service Endpoints Section -->
+                <section class="card">
+                    <h2>Service Endpoints</h2>
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="all">All Services</button>
+                        <button class="tab-btn" data-tab="active">Active Only</button>
+                        <button class="tab-btn" data-tab="preferred">Preferred Order</button>
+                    </div>
+                    <div id="servicesList" class="services-list">
+                        <p class="loading">Loading...</p>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Meeting Rooms Tab -->
+            <div id="meetings-tab" class="main-tab-content">
+                <!-- Create Meeting Section -->
+                <section class="card">
+                    <h2>Schedule New Meeting</h2>
+                    <form id="meetingForm">
+                        <div class="form-group">
+                            <label for="meetingTitle">Meeting Title:</label>
+                            <input type="text" id="meetingTitle" placeholder="e.g., Sprint Planning" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="meetingParticipants">Participants (comma-separated):</label>
+                            <input type="text" id="meetingParticipants" placeholder="e.g., Alice, Bob, Charlie">
+                        </div>
+                        <button type="submit">Create Meeting</button>
+                    </form>
+                </section>
+
+                <!-- Active Meetings Section -->
+                <section class="card">
+                    <h2>Active Meetings</h2>
+                    <div id="activeMeetingsList" class="data-list">
+                        <p class="loading">Loading...</p>
+                    </div>
+                </section>
+
+                <!-- All Meetings Section -->
+                <section class="card">
+                    <h2>All Meetings</h2>
+                    <div class="tabs">
+                        <button class="meeting-filter-btn active" data-filter="all">All</button>
+                        <button class="meeting-filter-btn" data-filter="scheduled">Scheduled</button>
+                        <button class="meeting-filter-btn" data-filter="in_progress">In Progress</button>
+                        <button class="meeting-filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                    <div id="meetingsList" class="data-list">
+                        <p class="loading">Loading...</p>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 
@@ -87,6 +137,17 @@
                 </div>
                 <button type="submit">Update Costs</button>
             </form>
+        </div>
+    </div>
+
+    <!-- Modal for meeting details -->
+    <div id="meetingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="meetingModalTitle">Meeting Details</h2>
+            <div id="meetingModalContent">
+                <!-- Content will be populated dynamically -->
+            </div>
         </div>
     </div>
 
