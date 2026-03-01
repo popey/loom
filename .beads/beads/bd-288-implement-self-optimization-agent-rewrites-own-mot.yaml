@@ -1,0 +1,53 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-288
+type: task
+title: 'Implement self-optimization: agent rewrites own MOTIVATION.md or PERSONALITY.md on bad review'
+description: |-
+    PARENT: bd-269 (Phase 5 epic)
+
+    PROBLEM: triggerSelfOptimization() in internal/taskexecutor/reviews.go logs 'agent should self-optimize' and sets p.SelfOptimized = true — but never actually rewrites any files.
+
+    REAL IMPLEMENTATION:
+
+    When an agent receives its second consecutive D or F grade:
+
+    1. Create a new bead assigned to the agent itself with:
+       - title: '[self-optimize] Rewrite motivation or personality to improve performance'
+       - description: Include the agent's current grades, score breakdown, and what specific metric is weakest (completion? efficiency? collaboration?)
+       - type: 'task', priority: P1
+       - tag: 'self-optimization'
+
+    2. The agent works the bead normally through the LLM action loop. In its system prompt, include its current MOTIVATION.md and PERSONALITY.md.
+
+    3. The agent's response should use a write_file action to update MOTIVATION.md or PERSONALITY.md with revised content.
+
+    4. Call personaManager.SavePersonaFile() to persist the change.
+
+    5. Invalidate the persona cache so the next execution uses the new content.
+
+    6. Log the change with a diff of what changed.
+
+    This creates a real feedback loop: poor performance → self-examination → rewrite → retry.
+
+    FILES: internal/taskexecutor/reviews.go, internal/beads/manager.go (bead creation), internal/persona/manager.go (cache invalidation)
+status: in_progress
+priority: 3
+projectid: loom
+assignedto: exec-loom-0a1d7199
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:35:42.672087392Z
+updatedat: 2026-03-01T16:43:10.390210479Z
+closedat: null
