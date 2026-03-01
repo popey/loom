@@ -28,7 +28,7 @@ description: |-
     Add proper request/response schemas for each. Tag endpoints by category. Fix the server URL (currently shows 8080, Loom runs on 8081).
 
     ACCEPTANCE: Running 'npx swagger-validator api/openapi.yaml' (or equivalent) passes. All UI-facing endpoints are documented.
-status: blocked
+status: open
 priority: 1
 projectid: loom
 assignedto: ""
@@ -43,14 +43,14 @@ context:
     error_history: '[{"timestamp":"2026-03-01T09:57:02.538130317Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":27},{"timestamp":"2026-03-01T09:57:02.538208286Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":27},{"timestamp":"2026-03-01T10:05:48.125491515Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":28},{"timestamp":"2026-03-01T10:05:48.125580028Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":28},{"timestamp":"2026-03-01T10:15:22.389554077Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":29},{"timestamp":"2026-03-01T10:15:22.389631662Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":29},{"timestamp":"2026-03-01T10:39:30.905728968Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":30},{"timestamp":"2026-03-01T10:39:30.90582449Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":30},{"timestamp":"2026-03-01T10:50:36.592754559Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":31},{"timestamp":"2026-03-01T10:50:36.592868929Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":31},{"timestamp":"2026-03-01T11:09:44.916150876Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":32},{"timestamp":"2026-03-01T11:09:44.916300959Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":32},{"timestamp":"2026-03-01T11:50:25.878813727Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":33},{"timestamp":"2026-03-01T11:50:25.878988977Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":33},{"timestamp":"2026-03-01T12:00:17.290576106Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":34},{"timestamp":"2026-03-01T12:00:17.290648283Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":34},{"timestamp":"2026-03-01T12:10:41.413235452Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":35},{"timestamp":"2026-03-01T12:10:41.41337779Z","error":"LLM call failed on iteration 2: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":35},{"timestamp":"2026-03-01T13:24:22.050150675Z","error":"parse_failures: model failed to produce valid actions after 18 iterations","dispatch":36},{"timestamp":"2026-03-01T13:24:22.050212482Z","error":"parse_failures: model failed to produce valid actions after 18 iterations","dispatch":36}]'
     last_run_at: "2026-03-01T13:24:22Z"
     last_run_error: 'parse_failures: model failed to produce valid actions after 18 iterations'
-    loop_detected: "true"
-    loop_detected_at: "2026-03-01T13:24:22Z"
-    loop_detected_reason: Repeated provider errors (8 attempts) - provider unavailable or unhealthy
-    recovered_at: "2026-03-01T12:13:42Z"
+    loop_detected: "false"
+    loop_detected_at: ""
+    loop_detected_reason: ""
+    recovered_at: "2026-03-01T13:28:40Z"
     recovery_reason: transient infrastructure failure resolved — re-queued by recovery sweep
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:33:15.447199666Z
-updatedat: 2026-03-01T13:24:22.050271921Z
+updatedat: 2026-03-01T13:28:40.918981997Z
 closedat: null
