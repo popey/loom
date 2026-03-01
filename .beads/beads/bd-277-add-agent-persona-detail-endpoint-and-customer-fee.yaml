@@ -24,10 +24,10 @@ description: |-
     This is the entry point for the customer feedback loop described in ORGANIZATIONAL_LAYER.md.
 
     VERIFICATION: External systems (or the UI feedback form in Phase 4) can POST feedback and see it appear as a P1 feedback bead in the Kanban assigned to the PM.
-status: in_progress
+status: open
 priority: 1
 projectid: loom
-assignedto: exec-loom-ebba4774
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -39,5 +39,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:33:01.646360849Z
-updatedat: 2026-03-01T03:26:13.40711287Z
+updatedat: 2026-03-01T03:26:14.338605Z
 closedat: null
