@@ -18,10 +18,10 @@ description: |-
     VERIFICATION: After fix, oversight loops should log 'found N agents for manager X' instead of silently skipping. Manager oversight should begin actually checking stale beads for subordinate agents.
 
     FILES: internal/agent/worker_manager.go, internal/taskexecutor/oversight.go, pkg/models/orgchart.go
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-c657ef72
 blockedby: []
 blocks: []
 relatedto: []
@@ -39,5 +39,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:31:36.759456069Z
-updatedat: 2026-03-01T00:42:40.501990746Z
+updatedat: 2026-03-01T00:46:42.707056508Z
 closedat: null
