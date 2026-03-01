@@ -7,7 +7,7 @@ id: bd-274
 type: task
 title: Replace CEO decision loop heuristics with real LLM call using CEO persona
 description: "PARENT: bd-265 (Phase 1 epic)\n\nPROBLEM: makeCEODecision() in internal/taskexecutor/oversight.go is a switch statement:\n- irrecoverable → cull\n- escalated → reassign  \n- everything else → approve\n\nNo LLM call. The CEO persona (Morgan Webb) with SKILL.md, MOTIVATION.md (unblock the team, customer impact first), and PERSONALITY.md (direct, calm, judges by outcomes) is never loaded for decision-making. The most strategically important agent is a 3-case switch.\n\nFIX: Replace makeCEODecision() with an LLM call that:\n1. Loads the CEO persona via personaManager.LoadPersona('ceo')\n2. Builds a prompt with the decision bead's full context (title, description, error history, dispatch count, escalation reason)\n3. Asks the CEO to choose: approve / reassign / cull / defer — and give a rationale\n4. Parses the response and executes the chosen action\n5. Posts the rationale to the decision bead as a comment\n\nVERIFICATION: Decision beads processed by the CEO loop should have LLM-generated rationales in their context, not just 'auto-approved' or 'auto-culled'.\n\nFILES: internal/taskexecutor/oversight.go, internal/worker/worker.go (reuse ExecuteTask)"
-status: blocked
+status: open
 priority: 0
 projectid: loom
 assignedto: ""
@@ -23,14 +23,14 @@ context:
     last_run_at: "2026-03-01T02:38:42Z"
     last_run_error: |
         LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
-    loop_detected: "true"
-    loop_detected_at: "2026-03-01T02:38:42Z"
-    loop_detected_reason: Repeated provider errors (10 attempts) - provider unavailable or unhealthy
-    recovered_at: "2026-03-01T02:33:42Z"
+    loop_detected: "false"
+    loop_detected_at: ""
+    loop_detected_reason: ""
+    recovered_at: "2026-03-01T02:43:41Z"
     recovery_reason: transient infrastructure failure resolved — re-queued by recovery sweep
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:32:16.94867163Z
-updatedat: 2026-03-01T02:38:42.437654095Z
+updatedat: 2026-03-01T02:43:41.884582998Z
 closedat: null
