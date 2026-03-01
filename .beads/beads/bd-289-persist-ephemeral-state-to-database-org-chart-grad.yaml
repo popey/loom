@@ -1,0 +1,48 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-289
+type: task
+title: 'Persist ephemeral state to database: org chart, grades, status board, meeting summaries'
+description: |-
+    PARENT: bd-269 (Phase 5 epic)
+
+    Every Loom restart loses the following state, breaking continuity:
+    - Org chart agent assignments (positions show as vacant)
+    - Performance review grades and history (all agents start fresh)
+    - Status board entries (all posts lost)
+    - Meeting summaries (all meetings lost)
+    - Motivation trigger state (all counts reset)
+
+    IMPLEMENTATION (by priority):
+
+    1. ORG CHART ASSIGNMENTS: Add an org_chart_assignments table. Schema: (project_id, position_id, agent_id, assigned_at). Load on startup in RegisterAgentsForProject, update on assignment change.
+
+    2. PERFORMANCE GRADES: Add a performance_reviews table. Schema: (agent_id, review_date, grade, score, completion_pct, efficiency_pct, assist_pct, action, notes). Load agent's history in ReviewManager startup.
+
+    3. STATUS BOARD: Add a status_board_entries table. Schema: (id, project_id, author_agent_id, content, category, created_at). Board.Post() writes to DB. Board.List() reads from DB.
+
+    4. MEETING SUMMARIES: Add a meeting_summaries table. Schema: (id, project_id, title, participants, summary, action_item_bead_ids, created_at, completed_at). Store summary only — not full transcripts (too large).
+
+    5. MOTIVATION STATE: Already uses the motivations/motivation_triggers tables per the export-import docs. Ensure the engine reads these on startup.
+
+    FILES: internal/db/migrations/ (new tables), respective manager files
+status: in_progress
+priority: 3
+projectid: loom
+assignedto: exec-loom-ebba4774
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:35:58.346624419Z
+updatedat: 2026-03-01T16:33:04.103660478Z
+closedat: null
