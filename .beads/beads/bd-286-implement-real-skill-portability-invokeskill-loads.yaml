@@ -1,0 +1,42 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-286
+type: task
+title: 'Implement real skill portability: invoke_skill loads and injects target persona'
+description: |-
+    PARENT: bd-269 (Phase 5 epic)
+
+    PROBLEM: The invoke_skill action in internal/actions/router.go returns a static string 'Skill invoked...' — it is a no-op. When an agent invokes another agent's skill, nothing actually changes.
+
+    REAL IMPLEMENTATION:
+
+    1. Parse the target skill name from the action parameters (e.g., 'qa-engineer')
+    2. Call personaManager.LoadPersona(targetSkill) to get the target persona's Instructions (merged SKILL+MOTIVATION+PERSONALITY)
+    3. Return the persona content as the action result so it becomes part of the conversation context
+    4. The worker's next LLM turn will have the skill content in its context and can reason from that perspective
+
+    The key insight: we don't need to change the system prompt mid-flight. We just need the skill content to appear in the conversation as a tool result. The LLM will incorporate it naturally.
+
+    OPTIONAL ENHANCEMENT: Add a 'skill_context' field to the WorkerOptions so the worker can prepend skill content to the system prompt for the duration of the bead execution, not just one turn.
+
+    FILES: internal/actions/router.go (invoke_skill handler), internal/worker/worker.go (optional skill_context injection)
+status: in_progress
+priority: 3
+projectid: loom
+assignedto: exec-loom-1e3523dc
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:35:16.724269519Z
+updatedat: 2026-03-01T16:24:12.825623998Z
+closedat: null
