@@ -10,7 +10,7 @@ description: 'Once Phase 1 subsystems are wired and running, they need HTTP endp
 status: closed
 priority: 1
 projectid: loom
-assignedto: exec-loom-0a1d7199
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -33,5 +33,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:30:47.290021704Z
-updatedat: 2026-03-01T14:03:39.656498801Z
+updatedat: 2026-03-01T14:03:41.379622825Z
 closedat: 2026-03-01T14:03:38.646477046Z
