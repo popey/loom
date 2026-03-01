@@ -1,0 +1,47 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-278
+type: task
+title: Update OpenAPI spec to document all registered API endpoints
+description: |-
+    PARENT: bd-266 (Phase 2 epic)
+
+    PROBLEM: api/openapi.yaml documents 15 endpoints. internal/api/server.go registers 115+ handlers. The spec is 7x out of date and misleads anyone trying to integrate with Loom.
+
+    SCOPE: Document all endpoints added in Phase 1 and Phase 2 plus the major undocumented existing endpoints:
+    - All analytics endpoints (/api/v1/analytics/*)
+    - Auth endpoints (/api/v1/auth/*)
+    - Conversations (/api/v1/conversations/*)
+    - Decisions (/api/v1/decisions/*)
+    - Events (/api/v1/events/*)
+    - Motivations (/api/v1/motivations/*)
+    - Notifications (/api/v1/notifications/*)
+    - Workflows (/api/v1/workflows/*)
+    - CEO REPL (/api/v1/repl)
+    - Pair programming (/api/v1/pair)
+    - Git operations (/api/v1/projects/git/*)
+    - New Phase 2 endpoints (meetings, statusboard, reviews, org-chart/live, feedback)
+
+    Add proper request/response schemas for each. Tag endpoints by category. Fix the server URL (currently shows 8080, Loom runs on 8081).
+
+    ACCEPTANCE: Running 'npx swagger-validator api/openapi.yaml' (or equivalent) passes. All UI-facing endpoints are documented.
+status: in_progress
+priority: 1
+projectid: loom
+assignedto: exec-loom-c657ef72
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:33:15.447199666Z
+updatedat: 2026-03-01T02:34:01.151372428Z
+closedat: null
