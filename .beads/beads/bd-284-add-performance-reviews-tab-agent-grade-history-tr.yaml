@@ -33,20 +33,25 @@ description: |-
     - 'Reset Warnings' — clear consecutive low count
 
     NAVIGATION: Add tab in the Team section (between Agents and Personas).
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-1b886842
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    dispatch_count: "1"
+    error_history: '[{"timestamp":"2026-03-01T14:19:13.388566923Z","error":"parse_failures: model failed to produce valid actions after 26 iterations","dispatch":1}]'
+    last_run_at: "2026-03-01T14:19:13Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 26 iterations'
+    loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:44.325703889Z
-updatedat: 2026-03-01T14:17:39.999860952Z
+updatedat: 2026-03-01T14:19:13.388580571Z
 closedat: null
