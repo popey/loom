@@ -1,0 +1,41 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-275
+type: task
+title: 'Add API endpoints for meetings: list, detail, transcript, summaries'
+description: |-
+    PARENT: bd-266 (Phase 2 epic)
+    DEPENDS ON: bd-272 (meetings wired into loom.go)
+
+    Add the following endpoints to internal/api/server.go and implement handlers:
+
+    GET  /api/v1/meetings           — list recent meetings (last 50), with status, participants, created_at
+    GET  /api/v1/meetings/{id}      — full meeting detail: agenda items, transcript entries, action items created, summary
+    GET  /api/v1/meetings/active    — meetings currently in progress (for CEO real-time view)
+
+    Response shape for a meeting:
+    { id, title, status, participants: [...], agenda: [...], transcript: [{speaker, content, timestamp}], action_items: [{bead_id, title}], summary, created_at, completed_at }
+
+    Wire handlers to the meetings.Manager instantiated in bd-272. Register routes in SetupRoutes().
+
+    VERIFICATION: CEO tab can display active meeting list. SSE stream (optional) for live transcript updates.
+status: in_progress
+priority: 1
+projectid: loom
+assignedto: exec-loom-ebba4774
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:32:36.750151602Z
+updatedat: 2026-03-01T01:25:28.049361353Z
+closedat: null
