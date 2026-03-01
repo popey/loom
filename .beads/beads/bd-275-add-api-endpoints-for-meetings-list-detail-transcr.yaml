@@ -22,10 +22,10 @@ description: |-
     Wire handlers to the meetings.Manager instantiated in bd-272. Register routes in SetupRoutes().
 
     VERIFICATION: CEO tab can display active meeting list. SSE stream (optional) for live transcript updates.
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-1b886842
 blockedby: []
 blocks: []
 relatedto: []
@@ -37,5 +37,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:32:36.750151602Z
-updatedat: 2026-03-01T01:27:19.614655066Z
+updatedat: 2026-03-01T01:45:44.831057741Z
 closedat: null
