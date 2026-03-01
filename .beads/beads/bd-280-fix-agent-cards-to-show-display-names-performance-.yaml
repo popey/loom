@@ -29,10 +29,10 @@ description: |-
     5. STATUS BADGE: Add colored dot before status text matching the D3 STATUS_COLORS palette already defined in d3-charts.js.
 
     VERIFICATION: The Agents tab should read like an org directory — named individuals, their current focus, their recent performance.
-status: open
+status: in_progress
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-0a1d7199
 blockedby: []
 blocks: []
 relatedto: []
@@ -49,5 +49,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:33:48.503229443Z
-updatedat: 2026-03-01T14:50:53.428341215Z
+updatedat: 2026-03-01T14:57:44.714661175Z
 closedat: null
