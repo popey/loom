@@ -420,6 +420,10 @@ async function loadAll() {
             loadMotivations().catch(err => { console.error('[Loom] Failed to load motivations:', err); })
         ]);
         await loadCeoBeads().catch(err => { console.error('[Loom] Failed to load CEO beads:', err); state.ceoBeads = []; });
+        await loadActiveMeetings().catch(err => { console.error('[Loom] Failed to load active meetings:', err); state.activeMeetings = []; });
+        await loadStatusBoardFeed().catch(err => { console.error('[Loom] Failed to load status board feed:', err); state.statusBoardFeed = []; });
+        await loadOrgHealth().catch(err => { console.error('[Loom] Failed to load org health:', err); state.orgHealth = {}; });
+        await loadReviewSummary().catch(err => { console.error('[Loom] Failed to load review summary:', err); state.reviewSummary = {}; });
         console.log('[Loom] Data loaded successfully:', {
             beads: state.beads?.length || 0,
             projects: state.projects?.length || 0,
@@ -4318,6 +4322,46 @@ async function loadMotivations() {
 function populateMotivationRoleFilter() {
     const select = document.getElementById('motivation-role-filter');
     if (!select || !motivationsState.roles) return;
+
+// Load Active Meetings
+async function loadActiveMeetings() {
+    try {
+        state.activeMeetings = await apiCall('/api/v1/meetings/active');
+    } catch (err) {
+        console.error('[Loom] Failed to load active meetings:', err);
+        state.activeMeetings = [];
+    }
+}
+
+// Load Status Board Feed
+async function loadStatusBoardFeed() {
+    try {
+        state.statusBoardFeed = await apiCall('/api/v1/statusboard');
+    } catch (err) {
+        console.error('[Loom] Failed to load status board feed:', err);
+        state.statusBoardFeed = [];
+    }
+}
+
+// Load Org Health
+async function loadOrgHealth() {
+    try {
+        state.orgHealth = await apiCall('/api/v1/org-chart/live');
+    } catch (err) {
+        console.error('[Loom] Failed to load org health:', err);
+        state.orgHealth = {};
+    }
+}
+
+// Load Review Summary
+async function loadReviewSummary() {
+    try {
+        state.reviewSummary = await apiCall('/api/v1/reviews');
+    } catch (err) {
+        console.error('[Loom] Failed to load review summary:', err);
+        state.reviewSummary = {};
+    }
+}
     
     // Keep the "All Roles" option
     select.innerHTML = '<option value="">All Roles</option>';

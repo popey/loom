@@ -1051,7 +1051,22 @@ func (e *Executor) handleBeadError(bead *models.Bead, execErr error) {
 }
 
 // personaForBead picks a persona name based on bead tags.
+// personaForBead picks a persona name based on bead tags.
 func personaForBead(bead *models.Bead) string {
+	for _, tag := range bead.Tags {
+		switch strings.ToLower(tag) {
+		case "devops", "infra", "infrastructure":
+			return "devops-engineer"
+		case "review", "pr", "code-review":
+			return "code-reviewer"
+		case "qa", "test", "testing":
+			return "qa-engineer"
+		case "docs", "documentation":
+			return "documentation-manager"
+	}
+	}
+	return "engineering-manager"
+}
 	for _, tag := range bead.Tags {
 		switch strings.ToLower(tag) {
 		case "devops", "infra", "infrastructure":
