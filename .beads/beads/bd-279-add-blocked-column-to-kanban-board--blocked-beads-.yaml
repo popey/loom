@@ -27,20 +27,25 @@ description: |-
     ALSO: Add 'blocked' as a drag target so users can manually block a bead by dragging it to the column.
 
     VERIFICATION: A blocked bead should appear in the Blocked column immediately when its status changes. The column should be empty (not missing) when no beads are blocked.
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-1b886842
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    dispatch_count: "1"
+    error_history: '[{"timestamp":"2026-03-01T14:42:31.265556981Z","error":"parse_failures: model failed to produce valid actions after 13 iterations","dispatch":1}]'
+    last_run_at: "2026-03-01T14:42:31Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 13 iterations'
+    loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:33:34.785806555Z
-updatedat: 2026-03-01T14:42:03.959127559Z
+updatedat: 2026-03-01T14:42:31.265572069Z
 closedat: null
