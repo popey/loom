@@ -218,6 +218,8 @@ func (s *Server) handleAgentAction(w http.ResponseWriter, r *http.Request, id, a
 	switch action {
 	case "clone":
 		s.handleCloneAgent(w, r, id)
+	case "persona":
+		s.handleAgentPersonaDetail(w, r, id)
 	default:
 		s.respondError(w, http.StatusNotFound, "Unknown action")
 	}
