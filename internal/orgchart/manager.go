@@ -2,6 +2,7 @@ package orgchart
 
 import (
 	"fmt"
+	"log"
 	"sync"
 	"time"
 
@@ -13,6 +14,7 @@ type Manager struct {
 	charts   map[string]*models.OrgChart // key: project ID or template ID
 	template *models.OrgChart            // default template
 	mu       sync.RWMutex
+	db       interface{ UpsertOrgChart(*models.OrgChart) error }
 }
 
 // NewManager creates a new org chart manager with the default template
@@ -22,6 +24,13 @@ func NewManager() *Manager {
 	}
 	m.template = m.createDefaultTemplate()
 	return m
+}
+
+// SetDatabase sets the database for persistence
+func (m *Manager) SetDatabase(db interface{ UpsertOrgChart(*models.OrgChart) error }) {
+	m.mu.Lock()
+	defer m.mu.Unlock()
+	m.db = db
 }
 
 // createDefaultTemplate builds the system-wide default org chart template
@@ -99,6 +108,16 @@ func (m *Manager) GetByProject(projectID string) (*models.OrgChart, error) {
 	return chart, nil
 }
 
+// persistChart persists the org chart to the database
+func (m *Manager) persistChart(chart *models.OrgChart) {
+	if chart == nil || m.db == nil {
+		return
+	}
+	if err := m.db.UpsertOrgChart(chart); err != nil {
+		log.Printf("[OrgChart] Failed to persist org chart %s: %v", chart.ID, err)
+	}
+}
+
 // AssignAgent assigns an agent to a position in a project's org chart
 func (m *Manager) AssignAgent(projectID, positionID, agentID string) error {
 	m.mu.Lock()
@@ -124,6 +143,7 @@ func (m *Manager) AssignAgent(projectID, positionID, agentID string) error {
 
 	pos.AgentIDs = append(pos.AgentIDs, agentID)
 	chart.UpdatedAt = time.Now()
+	m.persistChart(chart)
 	return nil
 }
 
@@ -152,6 +172,7 @@ func (m *Manager) AssignAgentToRole(projectID, roleName, agentID string) error {
 
 	pos.AgentIDs = append(pos.AgentIDs, agentID)
 	chart.UpdatedAt = time.Now()
+	m.persistChart(chart)
 	return nil
 }
 
@@ -175,6 +196,7 @@ func (m *Manager) UnassignAgent(projectID, positionID, agentID string) error {
 		if id == agentID {
 			pos.AgentIDs = append(pos.AgentIDs[:i], pos.AgentIDs[i+1:]...)
 			chart.UpdatedAt = time.Now()
+			m.persistChart(chart)
 			return nil
 		}
 	}
@@ -208,6 +230,7 @@ func (m *Manager) RemoveAgentFromAll(projectID, agentID string) error {
 
 	if changed {
 		chart.UpdatedAt = time.Now()
+		m.persistChart(chart)
 	}
 	return nil
 }
@@ -257,6 +280,7 @@ func (m *Manager) AddPosition(projectID string, position models.Position) error 
 
 	chart.Positions = append(chart.Positions, position)
 	chart.UpdatedAt = time.Now()
+	m.persistChart(chart)
 	return nil
 }
 
@@ -274,6 +298,7 @@ func (m *Manager) RemovePosition(projectID, positionID string) error {
 		if p.ID == positionID {
 			chart.Positions = append(chart.Positions[:i], chart.Positions[i+1:]...)
 			chart.UpdatedAt = time.Now()
+			m.persistChart(chart)
 			return nil
 		}
 	}
@@ -326,5 +351,6 @@ func (m *Manager) ImportFromLegacy(projectID, projectName string, agentRoles map
 	}
 
 	chart.UpdatedAt = time.Now()
+	m.persistChart(chart)
 	return chart, nil
 }

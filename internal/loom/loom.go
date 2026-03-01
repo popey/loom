@@ -278,7 +278,7 @@ func New(cfg *config.Config) (*Loom, error) {
 	// Initialize meetings manager
 	var meetingsMgr *meetings.Manager
 	if db != nil {
-		meetingsMgr = meetings.NewManager(db)
+		meetingsMgr = meetings.NewManager()
 	}
 	// Initialize pattern manager and analytics logger if database is available
 	var patternMgr *patterns.Manager
