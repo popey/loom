@@ -1255,6 +1255,13 @@ This is a simple verification task. Do NOT search for bugs or make changes. Just
 		}
 	}
 
+	// Start motivation engine
+	if a.motivationEngine != nil {
+		if err := a.motivationEngine.Start(ctx); err != nil {
+			log.Printf("[Loom] Warning: Failed to start motivation engine: %v", err)
+		}
+	}
+
 	log.Printf("[Loom] DEBUG: Initialize completed successfully")
 	return nil
 }
