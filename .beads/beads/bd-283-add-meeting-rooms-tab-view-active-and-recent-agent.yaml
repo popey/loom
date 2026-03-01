@@ -1,0 +1,44 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-283
+type: task
+title: 'Add Meeting Rooms tab: view active and recent agent meetings with transcripts'
+description: |-
+    PARENT: bd-268 (Phase 4 epic)
+    DEPENDS ON: bd-275 (meetings API)
+
+    Add a new 'Meeting Rooms' tab to the main SPA (index.html + app.js).
+
+    LAYOUT:
+    - Left pane: list of meetings (active first, then recent). Each card shows: title, participants (display names), status (in-progress / completed), created_at.
+    - Right pane: selected meeting detail.
+      - Agenda section: numbered agenda items with status
+      - Transcript: chronological chat-like view. Each entry shows agent display name (with avatar initial), message content, timestamp. Style like a Slack thread.
+      - Action Items: list of beads created from this meeting, with links to view them in Kanban.
+      - Summary: the LLM-generated summary paragraph.
+
+    LIVE UPDATES: For in-progress meetings, poll /api/v1/meetings/{id} every 5 seconds (or SSE if implemented) to update the transcript in real time.
+
+    CEO SHORTCUT: The CEO tab's 'Active Meetings' section (bd-282) links to this tab for full detail.
+
+    NAVIGATION: Add tab button between Conversations and CEO.
+status: in_progress
+priority: 2
+projectid: loom
+assignedto: exec-loom-1e3523dc
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:34:32.444065459Z
+updatedat: 2026-03-01T08:25:50.635748737Z
+closedat: null
