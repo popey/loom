@@ -1,0 +1,46 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-279
+type: task
+title: Add Blocked column to Kanban board — blocked beads are currently invisible
+description: |-
+    PARENT: bd-267 (Phase 3 epic)
+
+    PROBLEM: The Kanban board shows only three columns: Open, In Progress, Closed. Beads with status='blocked' are filtered out of all three and disappear from view. Blocked beads are the most operationally important signal — they mean an agent tried and failed.
+
+    FIX in web/static/index.html:
+    Add a fourth .kanban-column div with data-status='blocked' between In Progress and Closed:
+    <div class='kanban-column kanban-dropzone' data-status='blocked'>
+      <h3>⚠ Blocked</h3>
+      <div id='blocked-beads' class='bead-list'></div>
+    </div>
+
+    FIX in web/static/js/app.js renderKanban():
+    Add: const blockedBeads = filtered.filter(b => b.status === 'blocked');
+    Render blockedBeads into #blocked-beads.
+
+    STYLING: Give the Blocked column a distinct visual treatment (amber/red left border) so it stands out. Consider adding a count badge on the column header.
+
+    ALSO: Add 'blocked' as a drag target so users can manually block a bead by dragging it to the column.
+
+    VERIFICATION: A blocked bead should appear in the Blocked column immediately when its status changes. The column should be empty (not missing) when no beads are blocked.
+status: in_progress
+priority: 2
+projectid: loom
+assignedto: exec-loom-1b886842
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:33:34.785806555Z
+updatedat: 2026-03-01T14:41:45.603780585Z
+closedat: null
