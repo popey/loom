@@ -14,6 +14,9 @@
     <script src="/static/js/meetings.js"></script>
     <script src="/static/js/file-locks.js"></script>
     <script src="/static/js/pair.js?v=1"></script>
+    <script src="/static/js/workflows.js"></script>
+    <script src="/static/js/connectors.js"></script>
+    <script src="/static/js/persona-editor.js"></script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -442,6 +445,60 @@
         </div>
     </div>
 </section>
+<!-- Workflows Section -->
+<section id="workflows" class="view-panel" role="tabpanel" aria-label="Workflows" hidden>
+    <h2><span aria-hidden="true">⚙️</span> Workflows</h2>
+    <p class="small" style="margin-bottom: 1rem;">Define, manage, and monitor automated workflows and automation rules.</p>
+    <div class="toolbar" role="region" aria-label="Workflow controls">
+        <div class="toolbar-row">
+            <button type="button" class="primary" onclick="showCreateWorkflowModal()" aria-haspopup="dialog">Create Workflow</button>
+            <div class="field" style="flex: 1; margin-left: 1rem;">
+                <label for="workflow-search">Search</label>
+                <input type="text" id="workflow-search" placeholder="Search workflows..." autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div id="workflows-list" class="workflows-container">
+        <!-- Workflows will be loaded here -->
+    </div>
+</section>
+
+<!-- Connectors Section -->
+<section id="connectors" class="view-panel" role="tabpanel" aria-label="Connectors" hidden>
+    <h2><span aria-hidden="true">🔌</span> Connectors</h2>
+    <p class="small" style="margin-bottom: 1rem;">Manage integrations and external service connectors.</p>
+    <div class="toolbar" role="region" aria-label="Connector controls">
+        <div class="toolbar-row">
+            <button type="button" class="primary" onclick="showCreateConnectorModal()" aria-haspopup="dialog">Add Connector</button>
+            <div class="field" style="flex: 1; margin-left: 1rem;">
+                <label for="connector-search">Search</label>
+                <input type="text" id="connector-search" placeholder="Search connectors..." autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div id="connectors-list" class="connectors-container">
+        <!-- Connectors will be loaded here -->
+    </div>
+</section>
+
+<!-- Persona Editor Section -->
+<section id="persona-editor" class="view-panel" role="tabpanel" aria-label="Persona Editor" hidden>
+    <h2><span aria-hidden="true">✏️</span> Persona Editor</h2>
+    <p class="small" style="margin-bottom: 1rem;">Create and edit agent personas with skill, motivation, and personality definitions.</p>
+    <div class="toolbar" role="region" aria-label="Persona editor controls">
+        <div class="toolbar-row">
+            <button type="button" class="primary" onclick="showCreatePersonaModal()" aria-haspopup="dialog">New Persona</button>
+            <div class="field" style="flex: 1; margin-left: 1rem;">
+                <label for="persona-editor-search">Search</label>
+                <input type="text" id="persona-editor-search" placeholder="Search personas..." autocomplete="off">
+            </div>
+        </div>
+    </div>
+    <div id="persona-editor-list" class="persona-editor-container">
+        <!-- Personas will be loaded here -->
+    </div>
+</section>
+
 
         <!-- Personas Section -->
         <section id="personas" class="view-panel" role="tabpanel" aria-label="Personas" hidden>
