@@ -24,10 +24,10 @@ description: |-
     5. FILTER: Add a filter for decision type: All / Pending Human / In Progress by Agent / Recently Closed.
 
     VERIFICATION: The tab should make it clear that agent autonomy is the norm. Human intervention is the exception.
-status: open
+status: blocked
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -42,9 +42,12 @@ context:
     loop_detected: "true"
     loop_detected_at: "2026-03-01T15:45:29Z"
     loop_detected_reason: 'Identical error repeated 5 times - error pattern: parse_failures: model failed to produce valid actions after 5 iterations'
+    ralph_blocked_at: "2026-03-01T17:10:30Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Identical error repeated 5 times - error pattern: parse_failures: model failed to produce valid actions after 5 iterations'
+    redispatch_requested: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:03.828304802Z
-updatedat: 2026-03-01T17:10:22.89938455Z
+updatedat: 2026-03-01T17:10:30.791271491Z
 closedat: null
