@@ -1,0 +1,45 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-276
+type: task
+title: Add API endpoints for status board, performance reviews, and live org chart
+description: |-
+    PARENT: bd-266 (Phase 2 epic)
+    DEPENDS ON: bd-272 (subsystems wired)
+
+    Three endpoints, one bead since they are small:
+
+    1. STATUS BOARD
+    GET /api/v1/statusboard          — list entries (last 100), sorted by timestamp
+    Response: { entries: [{id, author_agent_id, content, category, created_at}] }
+
+    2. PERFORMANCE REVIEWS
+    GET /api/v1/reviews              — list all agents' current grades and recent history
+    GET /api/v1/reviews/{agent_id}   — individual agent review history with bead counts, scores, actions taken
+    Response: { agent_id, display_name, current_grade, score_history: [{date, grade, score, action}], consecutive_low_count }
+
+    3. LIVE ORG CHART
+    GET /api/v1/org-chart/live       — org chart with positions showing which agent (by display name + ID) is assigned
+    Response: { positions: [{role, display_name, agent_id, agent_display_name, status, reports_to}] }
+
+    Wire handlers to their respective managers. Register routes in SetupRoutes().
+status: in_progress
+priority: 1
+projectid: loom
+assignedto: exec-loom-ebba4774
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:32:47.402936524Z
+updatedat: 2026-03-01T02:01:07.776557539Z
+closedat: null
