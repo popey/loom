@@ -1,0 +1,47 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-287
+type: task
+title: 'Implement model selection: map bead priority to model tier and pass to TokenHub'
+description: |-
+    PARENT: bd-269 (Phase 5 epic)
+
+    PROBLEM: executeBead() in executor.go uses providers[0] — the first active provider — for every bead regardless of complexity. Agents always use whatever model TokenHub returns for the default model string.
+
+    IMPLEMENTATION:
+
+    1. Add a selectModel(bead *models.Bead) string helper in executor.go that maps:
+       - P0 → 'best' (strongest available model — let TokenHub pick)
+       - P1 → 'strong' (balanced capability/cost)
+       - P2 → 'standard' (default)
+       - P3 → 'fast' (cheapest/fastest for simple tasks)
+
+    2. Pass the model preference as a hint to the provider when creating the worker. Add a ModelHint field to worker.Options.
+
+    3. In worker.go, if ModelHint is set, include it in the chat completion request. TokenHub can honor or ignore the hint based on availability.
+
+    This gives agents effective model selection without requiring them to know specific model names. The bead's priority is a natural proxy for complexity.
+
+    ALSO: Allow persona SKILL.md to specify a preferred model tier (e.g., 'Always use best for architecture decisions'). Parse from frontmatter as model_tier field.
+
+    FILES: internal/taskexecutor/executor.go, internal/worker/worker.go, pkg/models/models.go (WorkerOptions)
+status: in_progress
+priority: 3
+projectid: loom
+assignedto: exec-loom-ebba4774
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:35:29.436909689Z
+updatedat: 2026-03-01T16:09:43.000740448Z
+closedat: null
