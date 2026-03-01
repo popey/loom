@@ -28,10 +28,10 @@ description: |-
     Add proper request/response schemas for each. Tag endpoints by category. Fix the server URL (currently shows 8080, Loom runs on 8081).
 
     ACCEPTANCE: Running 'npx swagger-validator api/openapi.yaml' (or equivalent) passes. All UI-facing endpoints are documented.
-status: in_progress
+status: open
 priority: 1
 projectid: loom
-assignedto: exec-loom-0a1d7199
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -52,5 +52,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:33:15.447199666Z
-updatedat: 2026-03-01T13:43:28.72703174Z
+updatedat: 2026-03-01T13:43:29.740653346Z
 closedat: null
