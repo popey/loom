@@ -1,0 +1,55 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-292
+type: task
+title: Consolidate separate HTML pages into the main SPA and extract app.js into ES modules
+description: |-
+    PARENT: bd-270 (Phase 6 epic)
+
+    TWO RELATED CLEANUP TASKS:
+
+    1. CONSOLIDATE HTML PAGES
+    Three features live on separate, disconnected HTML pages:
+    - workflows.html — not linked from main navigation
+    - connectors.html — inconsistent styling
+    - persona-editor.html — uses old single-file persona format, broken for three-file system
+
+    Actions:
+    - Move workflow management into the main SPA as a tab (or inline into the Projects tab)
+    - Move connector management into main SPA as a tab (or inline into Dev Tools)
+    - Rebuild persona-editor.html as the persona modal in the main SPA, supporting all three files (SKILL/MOTIVATION/PERSONALITY) as separate text areas with preview
+    - Delete the standalone HTML files
+
+    2. EXTRACT app.js INTO ES MODULES
+    app.js is 5062 lines of global functions and state. Split into:
+    - app.js — main entry, load order, global event listeners, shared state
+    - kanban.js — Kanban rendering and drag-and-drop
+    - agents.js — agent list, agent cards, spawn modal
+    - decisions.js — decisions tab rendering
+    - ceo.js — CEO dashboard and REPL
+    - meetings.js — meeting rooms tab (new)
+    - reviews.js — performance reviews tab (new)
+    - personas.js — persona display and editing
+    Use <script type='module'> in index.html. No bundler required.
+
+    VERIFICATION: All tabs work. Lighthouse accessibility score maintained. No CDN dependency changes.
+status: in_progress
+priority: 3
+projectid: loom
+assignedto: exec-loom-8ed4c087
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:36:43.427401092Z
+updatedat: 2026-03-01T19:44:14.571511655Z
+closedat: null
