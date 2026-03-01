@@ -25,10 +25,10 @@ description: |-
     5. REVIEW SUMMARY (from /api/v1/reviews): Grade distribution chart (D3 bar: count of A/B/C/D/F agents). Agents on warning. Agents at risk of firing.
 
     Keep the REPL — it is useful. Move it below the organizational overview sections.
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-fc498aa0
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:18.082843875Z
-updatedat: 2026-03-01T18:45:24.501637099Z
+updatedat: 2026-03-01T18:45:25.454597805Z
 closedat: null
