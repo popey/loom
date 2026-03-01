@@ -34,10 +34,10 @@ description: |-
     This creates a real feedback loop: poor performance → self-examination → rewrite → retry.
 
     FILES: internal/taskexecutor/reviews.go, internal/beads/manager.go (bead creation), internal/persona/manager.go (cache invalidation)
-status: in_progress
+status: open
 priority: 3
 projectid: loom
-assignedto: exec-loom-730dc1a6
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -49,5 +49,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:35:42.672087392Z
-updatedat: 2026-03-01T20:40:18.858367215Z
+updatedat: 2026-03-01T20:40:19.772490388Z
 closedat: null
