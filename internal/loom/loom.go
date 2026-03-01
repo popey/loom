@@ -25,7 +25,6 @@ import (
 	"github.com/jordanhubbard/loom/internal/containers"
 	"github.com/jordanhubbard/loom/internal/database"
 	"github.com/jordanhubbard/loom/internal/decision"
-	"github.com/jordanhubbard/loom/internal/dispatch"
 	"github.com/jordanhubbard/loom/internal/ephemeralstate"
 	"github.com/jordanhubbard/loom/internal/eventbus"
 	"github.com/jordanhubbard/loom/internal/executor"
@@ -82,7 +81,6 @@ type Loom struct {
 	orgChartManager       *orgchart.Manager
 	providerRegistry      *provider.Registry
 	database              *database.Database
-	dispatcher            *dispatch.Dispatcher
 	eventBus              *eventbus.EventBus
 	modelCatalog          *modelcatalog.Catalog
 	gitopsManager         *gitops.Manager

@@ -25,7 +25,6 @@ import (
 	"github.com/jordanhubbard/loom/internal/containers"
 	"github.com/jordanhubbard/loom/internal/database"
 	"github.com/jordanhubbard/loom/internal/decision"
-	"github.com/jordanhubbard/loom/internal/dispatch"
 	"github.com/jordanhubbard/loom/internal/eventbus"
 	"github.com/jordanhubbard/loom/internal/executor"
 	"github.com/jordanhubbard/loom/internal/files"
@@ -79,7 +78,6 @@ type Loom struct {
 	orgChartManager       *orgchart.Manager
 	providerRegistry      *provider.Registry
 	database              *database.Database
-	dispatcher            *dispatch.Dispatcher
 	eventBus              *eventbus.EventBus
 	modelCatalog          *modelcatalog.Catalog
 	gitopsManager         *gitops.Manager
@@ -414,42 +412,23 @@ func New(cfg *config.Config) (*Loom, error) {
 	agentMgr.SetMaxLoopIterations(100) // Increased to 100 to allow full development cycle (explore + plan + edit + build + test + commit)
 	if db != nil {
 		agentMgr.SetDatabase(db)
-		lessonsProvider := dispatch.NewLessonsProvider(db)
-		if lessonsProvider != nil {
-			agentMgr.SetLessonsProvider(lessonsProvider)
-		}
 		arb.memoryManager = memory.NewMemoryManager(db)
 	}
 
-	arb.dispatcher = dispatch.NewDispatcher(arb.beadsManager, arb.projectManager, arb.agentManager, arb.providerRegistry, eb)
 	arb.readinessCache = make(map[string]projectReadinessState)
 	arb.readinessFailures = make(map[string]time.Time)
-	arb.dispatcher.SetReadinessCheck(arb.CheckProjectReadiness)
-arb.dispatcher.SetReadinessMode(dispatch.ReadinessMode(cfg.Readiness.Mode))
-	arb.dispatcher.SetMaxDispatchHops(cfg.Dispatch.MaxHops)
-	arb.dispatcher.SetEscalator(arb)
-	// Enable conversation context support for multi-turn conversations
-	if db != nil {
-		arb.dispatcher.SetDatabase(db)
-	}
-	// Enable NATS message bus for async agent communication
+
+	// Configure container orchestrator with message bus if available
 	if messageBus != nil {
 		if mb, ok := messageBus.(*messagebus.NatsMessageBus); ok {
-			arb.dispatcher.SetMessageBus(mb)
-			// Also configure container orchestrator with message bus
 			if containerOrch != nil {
 				containerOrch.SetMessageBus(mb)
 			}
 		}
 	}
 
-	// Wire git worktree manager for parallel agent isolation
-	worktreeManager := gitops.NewGitWorktreeManager(projectKeyDir)
-	arb.dispatcher.SetWorktreeManager(worktreeManager)
-
 	// Wire container orchestrator for per-project isolation
 	if containerOrch != nil {
-		arb.dispatcher.SetContainerOrchestrator(containerOrch)
 		if shellExec != nil {
 			shellExec.SetContainerOrchestrator(containerOrch, arb.projectManager)
 			shellExec.SetEnvReadyHook(func(ctx context.Context, projectID string, agent *containers.ProjectAgentClient) {
@@ -1044,7 +1023,7 @@ func (a *Loom) Initialize(ctx context.Context) error {
 
 	// Start the Ralph Loop — a plain goroutine ticker that runs maintenance
 	// every 10 seconds (resets stuck agents, auto-blocks looped beads, etc.).
-	ralphActs := ralph.New(a.database, a.dispatcher, a.beadsManager, a.agentManager)
+	ralphActs := ralph.New(a.database, nil, a.beadsManager, a.agentManager)
 	go func() {
 		ticker := time.NewTicker(10 * time.Second)
 		defer ticker.Stop()
@@ -1135,14 +1114,7 @@ This is a simple verification task. Do NOT search for bugs or make changes. Just
 			}
 		} else {
 			log.Printf("Default workflows directory not found: %s", workflowsDir)
-		}
-
-		// Set workflow engine in dispatcher for workflow-aware routing
-		if a.dispatcher != nil {
-			a.dispatcher.SetWorkflowEngine(a.workflowEngine)
-			log.Printf("Workflow engine connected to dispatcher")
-		}
-	}
+		}	}
 
 	// ── Multi-service pub/sub wiring ───────────────────────────────────
 	// Start the NATS ↔ EventBus bridge so cross-container events flow.
@@ -1153,9 +1125,7 @@ This is a simple verification task. Do NOT search for bugs or make changes. Just
 	}
 
 	// Apply UseNATSDispatch feature flag from config.
-	if a.config.Dispatch.UseNATSDispatch && a.messageBus != nil {
-		a.dispatcher.SetUseNATSDispatch(true)
-		log.Printf("[Loom] NATS dispatch enabled – tasks will be routed to agent containers")
+	if a.config.Dispatch.UseNATSDispatch && a.messageBus != nil {		log.Printf("[Loom] NATS dispatch enabled – tasks will be routed to agent containers")
 	}
 
 	// Start PDA orchestrator if enabled.
@@ -1192,13 +1162,7 @@ This is a simple verification task. Do NOT search for bugs or make changes. Just
 			endpoint := fmt.Sprintf("http://%s:%d", hostname, port)
 			if err := a.swarmManager.Start(ctx, []string{"control-plane"}, projectIDs, endpoint); err != nil {
 				log.Printf("[Loom] Warning: Failed to start swarm manager: %v", err)
-			}
-			// Wire swarm manager to dispatcher for dynamic service discovery routing.
-			if a.dispatcher != nil {
-				a.dispatcher.SetSwarmManager(a.swarmManager)
-				if a.memoryManager != nil {
-					a.dispatcher.SetMemoryManager(a.memoryManager)
-				}
+			}				if a.memoryManager != nil {				}
 			}
 
 			// Federation with peer NATS instances
@@ -1342,8 +1306,7 @@ func (a *Loom) SetKeyManager(km *keymanager.KeyManager) {
 func (a *Loom) GetKeyManager() *keymanager.KeyManager {
 	return a.keyManager
 }
-func (a *Loom) GetDispatcher() *dispatch.Dispatcher {
-	return a.dispatcher
+func (a *Loom) GetDispatcher() *dispatch.Dispatcher {return nil
 }
 
 // GetPersonaManager returns the persona manager
@@ -1871,19 +1834,11 @@ func (a *Loom) ListModelCatalog() []internalmodels.ModelSpec {
 //
 // This runs once at startup, immediately after ResetStuckAgents, so the task
 // executor can reclaim the work on its very first tick.
-	debugWrite("/tmp/dispatch-loop-entered.txt", []byte(fmt.Sprintf("a=%v dispatcher=%v\n", a != nil, a != nil && a.dispatcher != nil)))
-	defer func() {
+		defer func() {
 		if r := recover(); r != nil {
 			log.Printf("[DispatchLoop] PANIC recovered: %v", r)
 		}
-	}()
-
-	if a == nil || a.dispatcher == nil {
-		debugWrite("/tmp/dispatch-loop-nil-dispatcher.txt", []byte("DISPATCHER IS NIL\n"))
-		log.Printf("[DispatchLoop] No dispatcher configured, skipping")
-		return
-	}
-	debugWrite("/tmp/dispatch-loop-past-nil-check.txt", []byte("PAST NIL CHECK\n"))
+	}()	debugWrite("/tmp/dispatch-loop-past-nil-check.txt", []byte("PAST NIL CHECK\n"))
 	if interval <= 0 {
 		interval = 10 * time.Second
 	}

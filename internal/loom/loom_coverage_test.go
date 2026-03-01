@@ -2143,17 +2143,11 @@ func TestProjectReadinessState(t *testing.T) {
 func TestLoom_StartDispatchLoop_NilDispatcher(t *testing.T) {
 	l, tmpDir := testLoom(t)
 	defer os.RemoveAll(tmpDir)
-
-	saved := l.dispatcher
-	l.dispatcher = nil
-
 	ctx, cancel := context.WithTimeout(context.Background(), 50*time.Millisecond)
 	defer cancel()
 
 	// Should return immediately without panicking
-	l.StartDispatchLoop(ctx, time.Second)
-	l.dispatcher = saved
-}
+	l.StartDispatchLoop(ctx, time.Second)}
 
 func TestLoom_StartDispatchLoop_ZeroInterval(t *testing.T) {
 	l, tmpDir := testLoom(t)
