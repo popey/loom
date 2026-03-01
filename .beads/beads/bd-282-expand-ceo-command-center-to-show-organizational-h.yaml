@@ -25,10 +25,10 @@ description: |-
     5. REVIEW SUMMARY (from /api/v1/reviews): Grade distribution chart (D3 bar: count of A/B/C/D/F agents). Agents on warning. Agents at risk of firing.
 
     Keep the REPL — it is useful. Move it below the organizational overview sections.
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-ebba4774
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -36,14 +36,14 @@ parent: ""
 children: []
 tags: []
 context:
-    dispatch_count: "2"
-    error_history: '[{"timestamp":"2026-03-01T15:00:46.259885872Z","error":"parse_failures: model failed to produce valid actions after 22 iterations","dispatch":1},{"timestamp":"2026-03-01T15:11:54.071067891Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":2}]'
-    last_run_at: "2026-03-01T15:11:54Z"
-    last_run_error: 'parse_failures: model failed to produce valid actions after 5 iterations'
+    dispatch_count: "3"
+    error_history: '[{"timestamp":"2026-03-01T15:00:46.259885872Z","error":"parse_failures: model failed to produce valid actions after 22 iterations","dispatch":1},{"timestamp":"2026-03-01T15:11:54.071067891Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":2},{"timestamp":"2026-03-01T15:22:35.708277794Z","error":"parse_failures: model failed to produce valid actions after 9 iterations","dispatch":3}]'
+    last_run_at: "2026-03-01T15:22:35Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 9 iterations'
     loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:18.082843875Z
-updatedat: 2026-03-01T15:20:56.068191104Z
+updatedat: 2026-03-01T15:22:35.708334659Z
 closedat: null
