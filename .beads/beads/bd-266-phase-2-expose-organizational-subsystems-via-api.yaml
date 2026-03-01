@@ -7,7 +7,7 @@ id: bd-266
 type: epic
 title: 'Phase 2: Expose organizational subsystems via API'
 description: 'Once Phase 1 subsystems are wired and running, they need HTTP endpoints so the UI and external clients can consume them. Covers: meetings API, status board API, performance reviews API, agent persona detail API (three-file), live org chart API, customer feedback intake. Also includes updating the OpenAPI spec, which currently documents only 15 of the 115+ registered endpoints.'
-status: blocked
+status: open
 priority: 1
 projectid: loom
 assignedto: ""
@@ -23,14 +23,14 @@ context:
     last_run_at: "2026-03-01T04:14:20Z"
     last_run_error: |
         LLM call failed on iteration 2: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
-    loop_detected: "true"
-    loop_detected_at: "2026-03-01T04:14:20Z"
-    loop_detected_reason: Repeated provider errors (10 attempts) - provider unavailable or unhealthy
-    recovered_at: "2026-03-01T04:03:44Z"
+    loop_detected: "false"
+    loop_detected_at: ""
+    loop_detected_reason: ""
+    recovered_at: "2026-03-01T04:18:41Z"
     recovery_reason: transient infrastructure failure resolved — re-queued by recovery sweep
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:30:47.290021704Z
-updatedat: 2026-03-01T04:14:20.510879833Z
+updatedat: 2026-03-01T04:18:41.879207585Z
 closedat: null
