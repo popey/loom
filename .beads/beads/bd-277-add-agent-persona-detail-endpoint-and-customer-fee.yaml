@@ -1,0 +1,43 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-277
+type: task
+title: Add agent persona detail endpoint and customer feedback intake endpoint
+description: |-
+    PARENT: bd-266 (Phase 2 epic)
+
+    TWO ENDPOINTS:
+
+    1. AGENT PERSONA DETAIL
+    GET /api/v1/agents/{id}/persona
+    Returns the full three-file persona for the named agent:
+    { name, display_name, skill: '...SKILL.md content...', motivation: '...MOTIVATION.md content...', personality: '...PERSONALITY.md content...', current_grade, grade_history, cloned_from, self_optimized }
+    Currently GET /api/v1/agents/{id} returns the Agent model which has persona_name but not the full persona content. This endpoint fills that gap.
+
+    2. CUSTOMER FEEDBACK INTAKE
+    POST /api/v1/feedback
+    Body: { title, description, source, priority_hint }
+    Creates a 'feedback' type bead, sets priority based on priority_hint (default P1), assigns to the Product Manager via tag, calls WakeProject to ensure it gets picked up immediately.
+    This is the entry point for the customer feedback loop described in ORGANIZATIONAL_LAYER.md.
+
+    VERIFICATION: External systems (or the UI feedback form in Phase 4) can POST feedback and see it appear as a P1 feedback bead in the Kanban assigned to the PM.
+status: in_progress
+priority: 1
+projectid: loom
+assignedto: exec-loom-1b886842
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:33:01.646360849Z
+updatedat: 2026-03-01T01:36:33.336707603Z
+closedat: null
