@@ -1,179 +1,290 @@
 package api
 
 import (
+	"encoding/json"
+	"fmt"
 	"net/http"
 	"strings"
-	"time"
 
 	"github.com/jordanhubbard/loom/pkg/models"
 )
 
-// handleOrgChart handles GET/PUT/POST /api/v1/org-charts/{projectId}
+// handleOrgChart handles org chart operations
 func (s *Server) handleOrgChart(w http.ResponseWriter, r *http.Request) {
-	projectID := s.extractID(r.URL.Path, "/api/v1/org-charts")
 	path := strings.TrimPrefix(r.URL.Path, "/api/v1/org-charts/")
 	parts := strings.Split(path, "/")
 
-	switch r.Method {
-	case http.MethodGet:
-		chart, err := s.app.GetOrgChartManager().GetByProject(projectID)
-		if err != nil {
-			// If no org chart exists, create one from the project
-			project, projErr := s.app.GetProjectManager().GetProject(projectID)
-			if projErr != nil {
-				s.respondError(w, http.StatusNotFound, "Project not found")
-				return
+	if len(parts) == 0 || parts[0] == "" {
+		s.respondError(w, http.StatusBadRequest, "Org chart ID is required")
+		return
+	}
+
+	orgChartID := parts[0]
+
+	if len(parts) > 1 && parts[1] == "positions" {
+		if len(parts) > 2 {
+			positionID := parts[2]
+			if len(parts) > 3 && parts[3] == "assign" {
+				s.handleAssignAgentToPosition(w, r, orgChartID, positionID)
+			} else if len(parts) > 3 && parts[3] == "unassign" {
+				s.handleUnassignAgentFromPosition(w, r, orgChartID, positionID)
+			} else {
+				s.handleDeletePosition(w, r, orgChartID, positionID)
 			}
-			chart, err = s.app.GetOrgChartManager().CreateForProject(projectID, project.Name)
-			if err != nil {
-				s.respondError(w, http.StatusInternalServerError, err.Error())
-				return
-			}
+		} else {
+			s.handleAddPosition(w, r, orgChartID)
 		}
-		s.respondJSON(w, http.StatusOK, chart)
-
-	case http.MethodPut:
-		var req struct {
-			Name      string            `json:"name"`
-			Positions []models.Position `json:"positions"`
+	} else {
+		switch r.Method {
+		case http.MethodGet:
+			s.handleGetOrgChart(w, r, orgChartID)
+		case http.MethodPut:
+			s.handleUpdateOrgChart(w, r, orgChartID)
+		default:
+			s.respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
 		}
-		if err := s.parseJSON(r, &req); err != nil {
-			s.respondError(w, http.StatusBadRequest, "Invalid request body")
-			return
-		}
-
-		chart, err := s.app.GetOrgChartManager().GetByProject(projectID)
-		if err != nil {
-			s.respondError(w, http.StatusNotFound, "Org chart not found")
-			return
-		}
-
-		if req.Name != "" {
-			chart.Name = req.Name
-		}
-		if len(req.Positions) > 0 {
-			chart.Positions = req.Positions
-		}
-		chart.UpdatedAt = time.Now()
-
-		s.respondJSON(w, http.StatusOK, chart)
-
-	case http.MethodPost:
-		if len(parts) > 1 {
-			action := parts[1]
-			s.handleOrgChartAction(w, r, projectID, action)
-			return
-		}
-		s.respondError(w, http.StatusBadRequest, "POST requires an action")
-
-	default:
-		s.respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
 	}
 }
 
-// handleOrgChartAction handles POST actions on org charts
-func (s *Server) handleOrgChartAction(w http.ResponseWriter, r *http.Request, projectID, action string) {
+func (s *Server) handleGetOrgChart(w http.ResponseWriter, r *http.Request, orgChartID string) {
+	if r.Method != http.MethodGet {
+		s.respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
+		return
+	}
+
+	type OrgChartGetter interface {
+		GetOrgChart(orgChartID string) (interface{}, error)
+	}
+
+	orgChartManager := s.app.GetOrgChartManager()
+	if orgChartManager == nil {
+		s.respondError(w, http.StatusServiceUnavailable, "Org chart manager not available")
+		return
+	}
+
+	getter, ok := orgChartManager.(OrgChartGetter)
+	if !ok {
+		s.respondError(w, http.StatusInternalServerError, "Invalid org chart manager")
+		return
+	}
+
+	orgChart, err := getter.GetOrgChart(orgChartID)
+	if err != nil {
+		s.respondError(w, http.StatusNotFound, fmt.Sprintf("Org chart not found: %v", err))
+		return
+	}
+
+	s.respondJSON(w, http.StatusOK, orgChart)
+}
+
+func (s *Server) handleUpdateOrgChart(w http.ResponseWriter, r *http.Request, orgChartID string) {
+	if r.Method != http.MethodPut {
+		s.respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
+		return
+	}
+
+	var req struct {
+		Name       string `json:"name,omitempty"`
+		IsTemplate bool   `json:"is_template,omitempty"`
+	}
+
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		s.respondError(w, http.StatusBadRequest, fmt.Sprintf("Invalid request body: %v", err))
+		return
+	}
+
+	type OrgChartUpdater interface {
+		UpdateOrgChart(orgChartID, name string, isTemplate bool) error
+	}
+
+	orgChartManager := s.app.GetOrgChartManager()
+	if orgChartManager == nil {
+		s.respondError(w, http.StatusServiceUnavailable, "Org chart manager not available")
+		return
+	}
+
+	updater, ok := orgChartManager.(OrgChartUpdater)
+	if !ok {
+		s.respondError(w, http.StatusInternalServerError, "Invalid org chart manager")
+		return
+	}
+
+	if err := updater.UpdateOrgChart(orgChartID, req.Name, req.IsTemplate); err != nil {
+		s.respondError(w, http.StatusInternalServerError, fmt.Sprintf("Failed to update org chart: %v", err))
+		return
+	}
+
+	s.respondJSON(w, http.StatusOK, map[string]interface{}{"message": "Org chart updated successfully"})
+}
+
+func (s *Server) handleAddPosition(w http.ResponseWriter, r *http.Request, orgChartID string) {
 	if r.Method != http.MethodPost {
 		s.respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
 		return
 	}
 
-	chart, err := s.app.GetOrgChartManager().GetByProject(projectID)
+	var req struct {
+		RoleName     string `json:"role_name"`
+		PersonaPath  string `json:"persona_path"`
+		Required     bool   `json:"required"`
+		MaxInstances int    `json:"max_instances"`
+		ReportsTo    string `json:"reports_to,omitempty"`
+	}
+
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		s.respondError(w, http.StatusBadRequest, fmt.Sprintf("Invalid request body: %v", err))
+		return
+	}
+
+	if req.RoleName == "" {
+		s.respondError(w, http.StatusBadRequest, "role_name is required")
+		return
+	}
+
+	if req.PersonaPath == "" {
+		s.respondError(w, http.StatusBadRequest, "persona_path is required")
+		return
+	}
+
+	type PositionAdder interface {
+		AddPosition(orgChartID, roleName, personaPath, reportsTo string, required bool, maxInstances int) (interface{}, error)
+	}
+
+	orgChartManager := s.app.GetOrgChartManager()
+	if orgChartManager == nil {
+		s.respondError(w, http.StatusServiceUnavailable, "Org chart manager not available")
+		return
+	}
+
+	adder, ok := orgChartManager.(PositionAdder)
+	if !ok {
+		s.respondError(w, http.StatusInternalServerError, "Invalid org chart manager")
+		return
+	}
+
+	position, err := adder.AddPosition(orgChartID, req.RoleName, req.PersonaPath, req.ReportsTo, req.Required, req.MaxInstances)
 	if err != nil {
-		s.respondError(w, http.StatusNotFound, "Org chart not found")
+		s.respondError(w, http.StatusBadRequest, fmt.Sprintf("Failed to add position: %v", err))
 		return
 	}
 
-	switch action {
-	case "positions":
-		s.handleOrgChartPositions(w, r, projectID, chart)
-	case "assign":
-		s.handleOrgChartAssign(w, r, projectID, chart)
-	case "unassign":
-		s.handleOrgChartUnassign(w, r, projectID, chart)
-	default:
-		s.respondError(w, http.StatusBadRequest, "Unknown action")
-	}
+	s.respondJSON(w, http.StatusCreated, position)
 }
 
-// handleOrgChartPositions handles adding/removing positions
-func (s *Server) handleOrgChartPositions(w http.ResponseWriter, r *http.Request, projectID string, chart *models.OrgChart) {
-	var req struct {
-		Action   string         `json:"action"`
-		Position models.Position `json:"position"`
-		ID       string         `json:"id"`
-	}
-	if err := s.parseJSON(r, &req); err != nil {
-		s.respondError(w, http.StatusBadRequest, "Invalid request body")
+func (s *Server) handleDeletePosition(w http.ResponseWriter, r *http.Request, orgChartID, positionID string) {
+	if r.Method != http.MethodDelete {
+		s.respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
 		return
 	}
 
-	switch req.Action {
-	case "add":
-		if err := s.app.GetOrgChartManager().AddPosition(projectID, req.Position); err != nil {
-			s.respondError(w, http.StatusBadRequest, err.Error())
-			return
-		}
-		chart, _ = s.app.GetOrgChartManager().GetByProject(projectID)
-		s.respondJSON(w, http.StatusOK, chart)
-	case "remove":
-		if err := s.app.GetOrgChartManager().RemovePosition(projectID, req.ID); err != nil {
-			s.respondError(w, http.StatusBadRequest, err.Error())
-			return
-		}
-		chart, _ = s.app.GetOrgChartManager().GetByProject(projectID)
-		s.respondJSON(w, http.StatusOK, chart)
-	default:
-		s.respondError(w, http.StatusBadRequest, "Unknown position action")
+	type PositionRemover interface {
+		RemovePosition(orgChartID, positionID string) error
 	}
+
+	orgChartManager := s.app.GetOrgChartManager()
+	if orgChartManager == nil {
+		s.respondError(w, http.StatusServiceUnavailable, "Org chart manager not available")
+		return
+	}
+
+	remover, ok := orgChartManager.(PositionRemover)
+	if !ok {
+		s.respondError(w, http.StatusInternalServerError, "Invalid org chart manager")
+		return
+	}
+
+	if err := remover.RemovePosition(orgChartID, positionID); err != nil {
+		s.respondError(w, http.StatusInternalServerError, fmt.Sprintf("Failed to remove position: %v", err))
+		return
+	}
+
+	w.WriteHeader(http.StatusNoContent)
 }
 
-// handleOrgChartAssign handles agent assignment to positions
-func (s *Server) handleOrgChartAssign(w http.ResponseWriter, r *http.Request, projectID string, chart *models.OrgChart) {
+func (s *Server) handleAssignAgentToPosition(w http.ResponseWriter, r *http.Request, orgChartID, positionID string) {
+	if r.Method != http.MethodPost {
+		s.respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
+		return
+	}
+
 	var req struct {
-		PositionID string `json:"position_id"`
-		AgentID    string `json:"agent_id"`
+		AgentID string `json:"agent_id"`
 	}
-	if err := s.parseJSON(r, &req); err != nil {
-		s.respondError(w, http.StatusBadRequest, "Invalid request body")
+
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		s.respondError(w, http.StatusBadRequest, fmt.Sprintf("Invalid request body: %v", err))
 		return
 	}
 
-	if req.PositionID == "" || req.AgentID == "" {
-		s.respondError(w, http.StatusBadRequest, "position_id and agent_id are required")
+	if req.AgentID == "" {
+		s.respondError(w, http.StatusBadRequest, "agent_id is required")
 		return
 	}
 
-	if err := s.app.GetOrgChartManager().AssignAgent(projectID, req.PositionID, req.AgentID); err != nil {
-		s.respondError(w, http.StatusBadRequest, err.Error())
+	type AgentAssigner interface {
+		AssignAgentToPosition(orgChartID, positionID, agentID string) error
+	}
+
+	orgChartManager := s.app.GetOrgChartManager()
+	if orgChartManager == nil {
+		s.respondError(w, http.StatusServiceUnavailable, "Org chart manager not available")
 		return
 	}
 
-	chart, _ = s.app.GetOrgChartManager().GetByProject(projectID)
-	s.respondJSON(w, http.StatusOK, chart)
+	assigner, ok := orgChartManager.(AgentAssigner)
+	if !ok {
+		s.respondError(w, http.StatusInternalServerError, "Invalid org chart manager")
+		return
+	}
+
+	if err := assigner.AssignAgentToPosition(orgChartID, positionID, req.AgentID); err != nil {
+		s.respondError(w, http.StatusBadRequest, fmt.Sprintf("Failed to assign agent: %v", err))
+		return
+	}
+
+	s.respondJSON(w, http.StatusOK, map[string]interface{}{"message": "Agent assigned successfully"})
 }
 
-// handleOrgChartUnassign handles agent removal from positions
-func (s *Server) handleOrgChartUnassign(w http.ResponseWriter, r *http.Request, projectID string, chart *models.OrgChart) {
+func (s *Server) handleUnassignAgentFromPosition(w http.ResponseWriter, r *http.Request, orgChartID, positionID string) {
+	if r.Method != http.MethodPost {
+		s.respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
+		return
+	}
+
 	var req struct {
-		PositionID string `json:"position_id"`
-		AgentID    string `json:"agent_id"`
+		AgentID string `json:"agent_id"`
 	}
-	if err := s.parseJSON(r, &req); err != nil {
-		s.respondError(w, http.StatusBadRequest, "Invalid request body")
+
+	if err := json.NewDecoder(r.Body).Decode(&req); err != nil {
+		s.respondError(w, http.StatusBadRequest, fmt.Sprintf("Invalid request body: %v", err))
 		return
 	}
 
-	if req.PositionID == "" || req.AgentID == "" {
-		s.respondError(w, http.StatusBadRequest, "position_id and agent_id are required")
+	if req.AgentID == "" {
+		s.respondError(w, http.StatusBadRequest, "agent_id is required")
 		return
 	}
 
-	if err := s.app.GetOrgChartManager().UnassignAgent(projectID, req.PositionID, req.AgentID); err != nil {
-		s.respondError(w, http.StatusBadRequest, err.Error())
+	type AgentUnassigner interface {
+		UnassignAgentFromPosition(orgChartID, positionID, agentID string) error
+	}
+
+	orgChartManager := s.app.GetOrgChartManager()
+	if orgChartManager == nil {
+		s.respondError(w, http.StatusServiceUnavailable, "Org chart manager not available")
 		return
 	}
 
-	chart, _ = s.app.GetOrgChartManager().GetByProject(projectID)
-	s.respondJSON(w, http.StatusOK, chart)
+	unassigner, ok := orgChartManager.(AgentUnassigner)
+	if !ok {
+		s.respondError(w, http.StatusInternalServerError, "Invalid org chart manager")
+		return
+	}
+
+	if err := unassigner.UnassignAgentFromPosition(orgChartID, positionID, req.AgentID); err != nil {
+		s.respondError(w, http.StatusBadRequest, fmt.Sprintf("Failed to unassign agent: %v", err))
+		return
+	}
+
+	s.respondJSON(w, http.StatusOK, map[string]interface{}{"message": "Agent unassigned successfully"})
 }

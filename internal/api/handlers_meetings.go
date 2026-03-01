@@ -151,11 +151,19 @@ func (s *Server) handleUpdateMeeting(w http.ResponseWriter, r *http.Request, id 
 }
 
 // handleDeleteMeeting handles DELETE /api/v1/meetings/{id}
+// handleDeleteMeeting handles DELETE /api/v1/meetings/{id}
 func (s *Server) handleDeleteMeeting(w http.ResponseWriter, r *http.Request, id string) {
+	meetingsMgr := s.app.GetMeetingsManager()
+	if meetingsMgr == nil {
+		s.respondError(w, http.StatusServiceUnavailable, "Meetings manager not available")
+		return
+	}
+
+	// For now, we just return NoContent since the manager doesn't have a delete method
+	// In a real implementation, this would delete from the database
 	w.WriteHeader(http.StatusNoContent)
 }
 
-// handleMeetingTranscript handles transcript operations
 func (s *Server) handleMeetingTranscript(w http.ResponseWriter, r *http.Request, id string) {
 	meetingsMgr := s.app.GetMeetingsManager()
 	if meetingsMgr == nil {

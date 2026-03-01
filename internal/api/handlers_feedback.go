@@ -5,6 +5,8 @@ import (
 	"fmt"
 	"net/http"
 	"strings"
+
+	"github.com/jordanhubbard/loom/internal/auth"
 )
 
 // handleFeedback handles feedback operations
