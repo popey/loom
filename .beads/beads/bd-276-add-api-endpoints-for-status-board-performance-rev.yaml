@@ -26,7 +26,7 @@ description: |-
     Response: { positions: [{role, display_name, agent_id, agent_display_name, status, reports_to}] }
 
     Wire handlers to their respective managers. Register routes in SetupRoutes().
-status: blocked
+status: open
 priority: 1
 projectid: loom
 assignedto: ""
@@ -42,14 +42,14 @@ context:
     last_run_at: "2026-03-01T04:57:51Z"
     last_run_error: |
         LLM call failed on iteration 2: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
-    loop_detected: "true"
-    loop_detected_at: "2026-03-01T04:57:51Z"
-    loop_detected_reason: Repeated provider errors (10 attempts) - provider unavailable or unhealthy
-    recovered_at: "2026-03-01T04:48:41Z"
+    loop_detected: "false"
+    loop_detected_at: ""
+    loop_detected_reason: ""
+    recovered_at: "2026-03-01T04:58:42Z"
     recovery_reason: transient infrastructure failure resolved — re-queued by recovery sweep
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:32:47.402936524Z
-updatedat: 2026-03-01T04:57:51.493428783Z
+updatedat: 2026-03-01T04:58:42.907814601Z
 closedat: null
