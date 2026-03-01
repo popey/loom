@@ -28,10 +28,10 @@ description: |-
     ALSO: Allow persona SKILL.md to specify a preferred model tier (e.g., 'Always use best for architecture decisions'). Parse from frontmatter as model_tier field.
 
     FILES: internal/taskexecutor/executor.go, internal/worker/worker.go, pkg/models/models.go (WorkerOptions)
-status: in_progress
+status: open
 priority: 3
 projectid: loom
-assignedto: exec-loom-8f6755b6
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -43,5 +43,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:35:29.436909689Z
-updatedat: 2026-03-01T20:28:34.913104495Z
+updatedat: 2026-03-01T20:28:35.972986015Z
 closedat: null
