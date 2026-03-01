@@ -35,14 +35,14 @@ parent: ""
 children: []
 tags: []
 context:
-    dispatch_count: "1"
-    error_history: '[{"timestamp":"2026-03-01T14:44:51.561530135Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":1}]'
-    last_run_at: "2026-03-01T14:44:51Z"
+    dispatch_count: "2"
+    error_history: '[{"timestamp":"2026-03-01T14:44:51.561530135Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":1},{"timestamp":"2026-03-01T14:59:52.096243834Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":2}]'
+    last_run_at: "2026-03-01T14:59:52Z"
     last_run_error: 'parse_failures: model failed to produce valid actions after 5 iterations'
     loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:03.828304802Z
-updatedat: 2026-03-01T14:44:51.561546983Z
+updatedat: 2026-03-01T14:59:52.096350795Z
 closedat: null
