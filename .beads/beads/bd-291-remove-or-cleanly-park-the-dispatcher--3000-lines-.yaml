@@ -1,0 +1,47 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-291
+type: task
+title: Remove or cleanly park the Dispatcher — ~3000 lines of dead weight
+description: |-
+    PARENT: bd-270 (Phase 6 epic)
+
+    The Dispatcher (internal/dispatch/dispatcher.go, 1378 lines) runs a heartbeat loop in the background but is configured as 'parked' and processes no beads. The WorkerPool (internal/agent/worker_manager.go, 1097 lines) creates agents but its pool is never used by the TaskExecutor. Together these are ~3000 lines that run, consume memory, log heartbeats, and confuse contributors.
+
+    OPTIONS (in order of preference):
+
+    OPTION A — Remove the dispatch package entirely (recommended if it has no features the TaskExecutor lacks):
+    1. Move WorkerManager (agent registry) to internal/agent/ as a standalone package without dispatch dependency
+    2. Update TaskExecutor to import from the new location
+    3. Delete internal/dispatch/
+    4. Verify go build ./... passes
+
+    OPTION B — Build-tag the dispatcher so it doesn't compile by default:
+    Add //go:build parked to dispatcher.go files. This keeps the code but removes it from production builds.
+
+    OPTION C — Document as parked with a clear comment:
+    If removal is risky, add a prominent package comment: 'PARKED: This package is not active. The TaskExecutor in internal/taskexecutor/ is the active execution engine. This package exists for reference only.'
+
+    RECOMMENDATION: Option A is cleanest. The TaskExecutor is superior. Run go coverage to confirm dispatch is genuinely untested, then delete.
+
+    VERIFICATION: go build ./... passes. Loom starts normally. No heartbeat logs from dispatch.
+status: in_progress
+priority: 3
+projectid: loom
+assignedto: exec-loom-0a1d7199
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:36:28.534811481Z
+updatedat: 2026-03-01T16:29:44.636636163Z
+closedat: null
