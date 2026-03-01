@@ -7,10 +7,10 @@ id: bd-265
 type: epic
 title: 'Phase 1: Wire the disconnected back-end subsystems'
 description: 'Six complete subsystems (meetings, status board, consensus, collaboration, motivation engine, agent consultation) are built and tested but never instantiated or wired into loom.go. This epic covers all P0 foundation fixes: org chart agent population, subsystem wiring, persona/role name unification, and CEO decision LLM integration. Nothing else in the organizational layer can work until this is done.'
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-c657ef72
 blockedby: []
 blocks: []
 relatedto: []
@@ -32,5 +32,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:30:40.205041244Z
-updatedat: 2026-03-01T04:33:41.925500369Z
+updatedat: 2026-03-01T04:40:16.950849913Z
 closedat: null
