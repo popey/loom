@@ -24,10 +24,10 @@ description: |-
     5. FILTER: Add a filter for decision type: All / Pending Human / In Progress by Agent / Recently Closed.
 
     VERIFICATION: The tab should make it clear that agent autonomy is the norm. Human intervention is the exception.
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-1e3523dc
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,14 +35,14 @@ parent: ""
 children: []
 tags: []
 context:
-    dispatch_count: "2"
-    error_history: '[{"timestamp":"2026-03-01T14:44:51.561530135Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":1},{"timestamp":"2026-03-01T14:59:52.096243834Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":2}]'
-    last_run_at: "2026-03-01T14:59:52Z"
-    last_run_error: 'parse_failures: model failed to produce valid actions after 5 iterations'
+    dispatch_count: "3"
+    error_history: '[{"timestamp":"2026-03-01T14:44:51.561530135Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":1},{"timestamp":"2026-03-01T14:59:52.096243834Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":2},{"timestamp":"2026-03-01T15:23:16.042081609Z","error":"parse_failures: model failed to produce valid actions after 8 iterations","dispatch":3}]'
+    last_run_at: "2026-03-01T15:23:16Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 8 iterations'
     loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:03.828304802Z
-updatedat: 2026-03-01T15:23:09.277667902Z
+updatedat: 2026-03-01T15:23:16.042113497Z
 closedat: null
