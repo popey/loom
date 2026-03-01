@@ -33,10 +33,10 @@ description: |-
     - 'Reset Warnings' — clear consecutive low count
 
     NAVIGATION: Add tab in the Team section (between Agents and Personas).
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-1e3523dc
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -44,14 +44,14 @@ parent: ""
 children: []
 tags: []
 context:
-    dispatch_count: "3"
-    error_history: '[{"timestamp":"2026-03-01T14:19:13.388566923Z","error":"parse_failures: model failed to produce valid actions after 26 iterations","dispatch":1},{"timestamp":"2026-03-01T14:21:28.462544287Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":2},{"timestamp":"2026-03-01T14:44:24.064904519Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":3}]'
-    last_run_at: "2026-03-01T14:44:24Z"
-    last_run_error: 'parse_failures: model failed to produce valid actions after 5 iterations'
+    dispatch_count: "4"
+    error_history: '[{"timestamp":"2026-03-01T14:19:13.388566923Z","error":"parse_failures: model failed to produce valid actions after 26 iterations","dispatch":1},{"timestamp":"2026-03-01T14:21:28.462544287Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":2},{"timestamp":"2026-03-01T14:44:24.064904519Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":3},{"timestamp":"2026-03-01T14:57:39.84290553Z","error":"parse_failures: model failed to produce valid actions after 11 iterations","dispatch":4}]'
+    last_run_at: "2026-03-01T14:57:39Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 11 iterations'
     loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:44.325703889Z
-updatedat: 2026-03-01T14:56:50.600147164Z
+updatedat: 2026-03-01T14:57:39.842965931Z
 closedat: null
