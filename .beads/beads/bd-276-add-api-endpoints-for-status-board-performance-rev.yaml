@@ -26,10 +26,10 @@ description: |-
     Response: { positions: [{role, display_name, agent_id, agent_display_name, status, reports_to}] }
 
     Wire handlers to their respective managers. Register routes in SetupRoutes().
-status: open
+status: in_progress
 priority: 1
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-1e3523dc
 blockedby: []
 blocks: []
 relatedto: []
@@ -51,5 +51,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:32:47.402936524Z
-updatedat: 2026-03-01T06:48:40.918894862Z
+updatedat: 2026-03-01T06:53:48.593903699Z
 closedat: null
