@@ -7,10 +7,10 @@ id: bd-270
 type: epic
 title: 'Phase 6: Architectural cleanup and technical debt reduction'
 description: Ongoing maintenance to prevent debt from growing. Split loom.go (4156 lines, god object) into loom_projects.go, loom_agents.go, loom_beads.go, loom_providers.go, loom_lifecycle.go. Remove or cleanly park the Dispatcher (~3000 lines dead weight). Consolidate separate HTML pages (workflows.html, connectors.html, persona-editor.html) into the main SPA. Extract app.js (5062 lines) into ES modules. Update OpenAPI spec to cover all endpoints.
-status: in_progress
+status: closed
 priority: 3
 projectid: loom
-assignedto: exec-loom-8f6755b6
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -27,5 +27,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:31:21.621333128Z
-updatedat: 2026-03-01T19:41:55.287343844Z
-closedat: null
+updatedat: 2026-03-01T19:41:56.89688793Z
+closedat: 2026-03-01T19:41:56.896887162Z
