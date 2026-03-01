@@ -1,0 +1,37 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-271
+type: task
+title: Fix org chart agent population — write agent IDs into Position.AgentIDs on registration
+description: |-
+    PARENT: bd-265 (Phase 1 epic)
+
+    PROBLEM: WorkerManager.RegisterAgentsForProject creates agents with IDs like 'agent-<timestamp>-ceo (Default)' but never writes these IDs back into Position.AgentIDs on the org chart. As a result, every system that traverses the org chart hierarchy (oversight loops, manager lookups, CEO escalation routing) finds zero agents per position and silently skips all work.
+
+    FIX: In internal/agent/worker_manager.go, after creating an agent for a position, call orgChart.AssignAgent(position.ID, agent.ID) or equivalent. Then persist the org chart to the database so assignments survive restarts.
+
+    ALSO: Change oversightForManager in internal/taskexecutor/oversight.go to match agents by role name (agent.Role == position.Role) as a fallback when AgentIDs is empty, so the system degrades gracefully if persistence fails.
+
+    VERIFICATION: After fix, oversight loops should log 'found N agents for manager X' instead of silently skipping. Manager oversight should begin actually checking stale beads for subordinate agents.
+
+    FILES: internal/agent/worker_manager.go, internal/taskexecutor/oversight.go, pkg/models/orgchart.go
+status: in_progress
+priority: 0
+projectid: loom
+assignedto: exec-loom-1b886842
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:31:36.759456069Z
+updatedat: 2026-03-01T00:40:26.737135584Z
+closedat: null
