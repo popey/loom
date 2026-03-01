@@ -1,0 +1,59 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-285
+type: task
+title: 'Add Agent Detail modal: full three-file persona, grade history, and bead activity'
+description: |-
+    PARENT: bd-268 (Phase 4 epic)
+    DEPENDS ON: bd-277 (agent persona detail API), bd-276 (reviews API)
+
+    When a user clicks on any agent card (in Agents tab, CEO org health view, or bead assigned-to field), open a modal with full agent detail.
+
+    MODAL SECTIONS:
+
+    HEADER: Large display name (Morgan Webb), role badge (CEO), status indicator, performance grade badge.
+
+    IDENTITY TAB:
+    - Skill: formatted SKILL.md content (primary skill, available skills, collaboration actions, model selection)
+    - Motivation: MOTIVATION.md content (primary drive, success metrics, trade-offs, frustrations)
+    - Personality: PERSONALITY.md content (communication style, temperament, humor, working style)
+    Three-tab layout within the modal.
+
+    PERFORMANCE TAB:
+    - Current grade with score breakdown (completion/efficiency/assist percentages)
+    - Grade trend sparkline (last 5 reviews)
+    - Consecutive low count and warning status
+    - Whether agent has self-optimized
+
+    ACTIVITY TAB:
+    - Beads currently assigned (working + open)
+    - Beads closed this week
+    - Beads blocked this week
+    - Recent conversations (link to Conversations tab)
+
+    ACTIONS: Clone Persona, Retire Agent, Send Message (CEO REPL pre-filled with agent selected).
+status: open
+priority: 2
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context:
+    dispatch_count: "1"
+    error_history: '[{"timestamp":"2026-03-01T14:45:44.30296053Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":1}]'
+    last_run_at: "2026-03-01T14:45:44Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 5 iterations'
+    loop_detected: "false"
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:34:57.381382689Z
+updatedat: 2026-03-01T14:45:44.302978466Z
+closedat: null
