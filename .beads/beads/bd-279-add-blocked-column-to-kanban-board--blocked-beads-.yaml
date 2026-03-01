@@ -27,10 +27,10 @@ description: |-
     ALSO: Add 'blocked' as a drag target so users can manually block a bead by dragging it to the column.
 
     VERIFICATION: A blocked bead should appear in the Blocked column immediately when its status changes. The column should be empty (not missing) when no beads are blocked.
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-c657ef72
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -47,5 +47,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:33:34.785806555Z
-updatedat: 2026-03-01T15:34:13.224414847Z
+updatedat: 2026-03-01T15:34:14.198897256Z
 closedat: null
