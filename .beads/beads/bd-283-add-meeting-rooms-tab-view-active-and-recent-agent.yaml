@@ -25,10 +25,10 @@ description: |-
     CEO SHORTCUT: The CEO tab's 'Active Meetings' section (bd-282) links to this tab for full detail.
 
     NAVIGATION: Add tab button between Conversations and CEO.
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-1b886842
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -36,14 +36,14 @@ parent: ""
 children: []
 tags: []
 context:
-    dispatch_count: "2"
-    error_history: '[{"timestamp":"2026-03-01T08:27:38.58371036Z","error":"LLM call failed on iteration 8: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-03-01T14:36:33.60079242Z","error":"parse_failures: model failed to produce valid actions after 11 iterations","dispatch":2}]'
-    last_run_at: "2026-03-01T14:36:33Z"
-    last_run_error: 'parse_failures: model failed to produce valid actions after 11 iterations'
+    dispatch_count: "3"
+    error_history: '[{"timestamp":"2026-03-01T08:27:38.58371036Z","error":"LLM call failed on iteration 8: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-03-01T14:36:33.60079242Z","error":"parse_failures: model failed to produce valid actions after 11 iterations","dispatch":2},{"timestamp":"2026-03-01T14:38:36.095330058Z","error":"parse_failures: model failed to produce valid actions after 9 iterations","dispatch":3}]'
+    last_run_at: "2026-03-01T14:38:36Z"
+    last_run_error: 'parse_failures: model failed to produce valid actions after 9 iterations'
     loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:32.444065459Z
-updatedat: 2026-03-01T14:38:30.096052989Z
+updatedat: 2026-03-01T14:38:36.095378618Z
 closedat: null
