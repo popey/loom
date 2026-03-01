@@ -25,10 +25,10 @@ description: |-
     CEO SHORTCUT: The CEO tab's 'Active Meetings' section (bd-282) links to this tab for full detail.
 
     NAVIGATION: Add tab button between Conversations and CEO.
-status: open
+status: in_progress
 priority: 2
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-fc498aa0
 blockedby: []
 blocks: []
 relatedto: []
@@ -50,5 +50,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:32.444065459Z
-updatedat: 2026-03-01T18:14:28.552529466Z
+updatedat: 2026-03-01T18:16:07.110913199Z
 closedat: null
