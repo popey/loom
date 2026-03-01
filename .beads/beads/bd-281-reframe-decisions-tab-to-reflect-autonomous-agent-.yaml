@@ -24,7 +24,7 @@ description: |-
     5. FILTER: Add a filter for decision type: All / Pending Human / In Progress by Agent / Recently Closed.
 
     VERIFICATION: The tab should make it clear that agent autonomy is the norm. Human intervention is the exception.
-status: in_progress
+status: closed
 priority: 2
 projectid: loom
 assignedto: exec-loom-8ed4c087
@@ -35,6 +35,7 @@ parent: ""
 children: []
 tags: []
 context:
+    close_reason: 'Decisions tab successfully reframed to reflect autonomous agent handling. Implemented all requirements: (1) Updated empty state message to emphasize agent autonomy, (2) Added agent assignment display with agent name lookup, (3) Separated decisions into three sections (Requires Human Review, In Progress by Agent, Recently Decided), (4) Added decision type filtering, (5) Removed duplicate function declaration. Changes committed and pushed to main branch.'
     dispatch_count: "7"
     error_history: '[{"timestamp":"2026-03-01T14:44:51.561530135Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":1},{"timestamp":"2026-03-01T14:59:52.096243834Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":2},{"timestamp":"2026-03-01T15:23:16.042081609Z","error":"parse_failures: model failed to produce valid actions after 8 iterations","dispatch":3},{"timestamp":"2026-03-01T15:28:02.958741628Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":4},{"timestamp":"2026-03-01T15:32:13.418817646Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":5},{"timestamp":"2026-03-01T15:32:13.41884347Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":5},{"timestamp":"2026-03-01T15:45:29.016209033Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":6},{"timestamp":"2026-03-01T15:45:29.016254393Z","error":"parse_failures: model failed to produce valid actions after 5 iterations","dispatch":6},{"timestamp":"2026-03-01T18:58:52.847490471Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://host.docker.internal:8090/v1/chat/completions\": dial tcp 172.17.0.1:8090: connect: connection refused","dispatch":7},{"timestamp":"2026-03-01T18:58:52.847508231Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://host.docker.internal:8090/v1/chat/completions\": dial tcp 172.17.0.1:8090: connect: connection refused","dispatch":7}]'
     last_run_at: "2026-03-01T18:58:52Z"
@@ -49,5 +50,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:34:03.828304802Z
-updatedat: 2026-03-01T19:26:58.640331044Z
-closedat: null
+updatedat: 2026-03-01T19:27:03.010453274Z
+closedat: 2026-03-01T19:27:03.01045145Z
