@@ -10,7 +10,7 @@ description: 'Features that require new back-end design (not just wiring). Skill
 status: closed
 priority: 3
 projectid: loom
-assignedto: exec-loom-730dc1a6
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -38,5 +38,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-01T00:31:12.037673531Z
-updatedat: 2026-03-01T19:53:54.859649058Z
+updatedat: 2026-03-01T19:53:56.612281963Z
 closedat: 2026-03-01T19:53:53.731452589Z
