@@ -1,0 +1,44 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-282
+type: task
+title: Expand CEO Command Center to show organizational health, not just counts
+description: |-
+    PARENT: bd-267 (Phase 3 epic)
+    DEPENDS ON: bd-275 (meetings API), bd-276 (statusboard + reviews + org-chart APIs)
+
+    The CEO tab currently has a REPL, a count summary (beads/agents/decisions), and a list of beads assigned to the CEO. It should be the organizational nerve center.
+
+    ADD the following sections to the CEO tab (web/static/index.html + app.js):
+
+    1. ACTIVE MEETINGS (from /api/v1/meetings/active): Show any meetings in progress — title, participants, start time. Click to expand transcript.
+
+    2. STATUS BOARD FEED (from /api/v1/statusboard): Last 10 entries from managers, most recent first. Show author display name, content, timestamp.
+
+    3. ESCALATION QUEUE: Decision beads that have requires_human=true. Already shown in Decisions tab but CEO needs quick access with full context.
+
+    4. ORG HEALTH (from /api/v1/org-chart/live): 4-column grid: who is working, who is idle, who is blocked, which positions are vacant.
+
+    5. REVIEW SUMMARY (from /api/v1/reviews): Grade distribution chart (D3 bar: count of A/B/C/D/F agents). Agents on warning. Agents at risk of firing.
+
+    Keep the REPL — it is useful. Move it below the organizational overview sections.
+status: in_progress
+priority: 2
+projectid: loom
+assignedto: exec-loom-ebba4774
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:34:18.082843875Z
+updatedat: 2026-03-01T14:51:58.06987408Z
+closedat: null
