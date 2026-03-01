@@ -4150,6 +4150,16 @@ func (a *Loom) GetSwarmManager() *swarm.Manager {
 	return a.swarmManager
 }
 
+// GetCollaborationStore returns the collaboration context store
+func (a *Loom) GetCollaborationStore() *collaboration.ContextStore {
+	return a.collaborationStore
+}
+
+// GetConsensusManager returns the consensus decision manager
+func (a *Loom) GetConsensusManager() *consensus.DecisionManager {
+	return a.consensusManager
+}
+
 // StartedAt returns when this Loom instance was created.
 func (a *Loom) StartedAt() time.Time {
 	return a.startedAt
