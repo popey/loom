@@ -1,0 +1,40 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-273
+type: task
+title: Fix persona/role name mismatch between personaForBead and roleForBead
+description: |-
+    PARENT: bd-265 (Phase 1 epic)
+
+    PROBLEM: Two functions in internal/taskexecutor/executor.go map bead tags to agent roles but return inconsistent values:
+
+    - personaForBead() returns short names like 'devops', 'review', 'qa' (used in fallback path)
+    - roleForBead() returns full names like 'devops-engineer', 'code-reviewer', 'qa-engineer' (used for named agent matching)
+
+    When no named agent is found, personaForBead() is called and returns 'devops' — but the persona loader looks for personas/default/devops/SKILL.md which does not exist (the directory is devops-engineer). This causes the fallback to use hardcoded one-line persona descriptions instead of the rich three-file personas.
+
+    FIX: Unify into a single function that returns valid persona directory names matching the directories under personas/default/. Update the hardcoded fallback map to use the correct directory names. Remove personaForBead() and replace all call sites with the unified function.
+
+    VERIFICATION: When no named agent is available, the executor should still load the full SKILL.md + MOTIVATION.md + PERSONALITY.md for the assigned role.
+
+    FILES: internal/taskexecutor/executor.go
+status: in_progress
+priority: 0
+projectid: loom
+assignedto: exec-loom-ebba4774
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-01T00:32:02.868771865Z
+updatedat: 2026-03-01T00:39:11.590381756Z
+closedat: null
