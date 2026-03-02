@@ -1,11 +1,6 @@
 package loom
 
-import (
-
-)
-
-
-
+import ()
 
 // extractPersonaFromMessage extracts persona hint from "persona: message" format
 // Returns (personaHint, cleanMessage)

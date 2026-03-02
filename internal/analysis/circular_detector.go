@@ -19,14 +19,14 @@ type CircularDependency struct {
 
 // CircularDetector detects circular dependencies in Go code
 type CircularDetector struct {
-	packages      map[string]*PackageInfo
-	functions     map[string]*FunctionInfo
-	importGraph   map[string][]string
-	callGraph     map[string][]string
-	cycles        []CircularDependency
-	visited       map[string]bool
-	recStack      map[string]bool
-	path          []string
+	packages    map[string]*PackageInfo
+	functions   map[string]*FunctionInfo
+	importGraph map[string][]string
+	callGraph   map[string][]string
+	cycles      []CircularDependency
+	visited     map[string]bool
+	recStack    map[string]bool
+	path        []string
 }
 
 // PackageInfo holds information about a package

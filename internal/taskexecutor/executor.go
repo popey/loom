@@ -823,7 +823,7 @@ func (e *Executor) executeBead(ctx context.Context, bead *models.Bead, workerID 
 			AgentID:   agentID,
 			BeadID:    bead.ID,
 			ProjectID: bead.ProjectID,
-			Model:     func() string {
+			Model: func() string {
 				if prov != nil && prov.Config != nil {
 					if prov.Config.SelectedModel != "" {
 						return prov.Config.SelectedModel
@@ -1072,7 +1072,7 @@ func personaForBead(bead *models.Bead) string {
 			return "qa-engineer"
 		case "docs", "documentation":
 			return "documentation-manager"
-	}
+		}
 	}
 	return "engineering-manager"
 }

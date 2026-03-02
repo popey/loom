@@ -11,8 +11,8 @@ import (
 
 	"github.com/jordanhubbard/loom/internal/beads"
 	"github.com/jordanhubbard/loom/internal/eventbus"
-	"github.com/jordanhubbard/loom/internal/motivation"
 	"github.com/jordanhubbard/loom/internal/gitops"
+	"github.com/jordanhubbard/loom/internal/motivation"
 	"github.com/jordanhubbard/loom/internal/observability"
 	"github.com/jordanhubbard/loom/pkg/models"
 )

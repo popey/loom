@@ -1823,24 +1823,6 @@ func TestLoom_CloneAgentPersona_Errors(t *testing.T) {
 }
 
 // ---------------------------------------------------------------------------
-// Loom method tests: ResumeAgentsWaitingForProvider
-// ---------------------------------------------------------------------------
-
-func TestLoom_ResumeAgentsWaitingForProvider_NilManagers(t *testing.T) {
-	l, tmpDir := testLoom(t, func(c *config.Config) {
-		c.Database = config.DatabaseConfig{}
-	})
-	defer os.RemoveAll(tmpDir)
-
-	ctx := context.Background()
-	// Should return nil when no database
-	err := l.ResumeAgentsWaitingForProvider(ctx, "provider-1")
-	if err != nil {
-		t.Errorf("ResumeAgentsWaitingForProvider() error = %v", err)
-	}
-}
-
-// ---------------------------------------------------------------------------
 // Loom method tests: maybeFileReadinessBead
 // ---------------------------------------------------------------------------
 
@@ -2136,26 +2118,3 @@ func TestProjectReadinessState(t *testing.T) {
 	}
 }
 
-// ---------------------------------------------------------------------------
-// Loom method tests: Dispatch-related
-// ---------------------------------------------------------------------------
-
-func TestLoom_StartDispatchLoop_NilDispatcher(t *testing.T) {
-	l, tmpDir := testLoom(t)
-	defer os.RemoveAll(tmpDir)
-	ctx, cancel := context.WithTimeout(context.Background(), 50*time.Millisecond)
-	defer cancel()
-
-	// Should return immediately without panicking
-	l.StartDispatchLoop(ctx, time.Second)}
-
-func TestLoom_StartDispatchLoop_ZeroInterval(t *testing.T) {
-	l, tmpDir := testLoom(t)
-	defer os.RemoveAll(tmpDir)
-
-	ctx, cancel := context.WithTimeout(context.Background(), 50*time.Millisecond)
-	defer cancel()
-
-	// Zero interval should default to 10s, test completes via ctx cancel
-	l.StartDispatchLoop(ctx, 0)
-}

@@ -10,9 +10,6 @@ import (
 	"github.com/jordanhubbard/loom/pkg/models"
 )
 
-
-
-
 func isSSHRepo(repo string) bool {
 	repo = strings.TrimSpace(repo)
 	return strings.HasPrefix(repo, "git@") || strings.HasPrefix(repo, "ssh://")
@@ -248,4 +245,3 @@ func debugWrite(path string, data []byte) {
 		log.Printf("[DispatchLoop] debug write to %s failed: %v", path, err)
 	}
 }
-

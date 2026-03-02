@@ -27,7 +27,7 @@ func MakeCEODecision(ctx context.Context, beadID string, bead *models.Bead, reas
 		return nil, fmt.Errorf("failed to load CEO persona: %w", err)
 	}
 
-	beadContext := fmt.Sprintf("Bead ID: %s\nTitle: %s\nDescription: %s\nStatus: %s\nPriority: %s\nAssigned To: %s\nCreated At: %s\nEscalation Reason: %s\n", bead.ID, bead.Title, bead.Description, bead.Status, bead.Priority, bead.AssignedTo, bead.CreatedAt.Format(time.RFC3339), reason)
+	beadContext := fmt.Sprintf("Bead ID: %s\nTitle: %s\nDescription: %s\nStatus: %s\nPriority: %d\nAssigned To: %s\nCreated At: %s\nEscalation Reason: %s\n", bead.ID, bead.Title, bead.Description, bead.Status, bead.Priority, bead.AssignedTo, bead.CreatedAt.Format(time.RFC3339), reason)
 
 	prompt := fmt.Sprintf("You are %s. %s\n\nA bead (work item) requires your decision:\n\n%s\n\nBased on the escalation reason and the bead's context, decide what to do:\n- approve: Accept the bead as-is and close it\n- reassign: Reassign to a different agent or team\n- cull: Cancel/reject the bead as not worth pursuing\n- defer: Defer the decision and return to the original agent for more information\n\nRespond with ONLY:\nACTION: <action>\nRATIONALE: <your reasoning>\n\nBe direct and concise. Focus on outcomes and impact.", ceoPers.Name, ceoPers.Instructions, beadContext)
 

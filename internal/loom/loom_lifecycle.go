@@ -23,16 +23,16 @@ import (
 	"github.com/jordanhubbard/loom/internal/database"
 	"github.com/jordanhubbard/loom/internal/decision"
 
+	"github.com/jordanhubbard/loom/internal/dispatch"
 	"github.com/jordanhubbard/loom/internal/eventbus"
 	"github.com/jordanhubbard/loom/internal/executor"
 	"github.com/jordanhubbard/loom/internal/files"
 	"github.com/jordanhubbard/loom/internal/gitops"
-	"github.com/jordanhubbard/loom/internal/dispatch"
 	"github.com/jordanhubbard/loom/internal/keymanager"
 	"github.com/jordanhubbard/loom/internal/logging"
+	"github.com/jordanhubbard/loom/internal/meetings"
 	"github.com/jordanhubbard/loom/internal/memory"
 	"github.com/jordanhubbard/loom/internal/messagebus"
-	"github.com/jordanhubbard/loom/internal/meetings"
 	"github.com/jordanhubbard/loom/internal/metrics"
 	"github.com/jordanhubbard/loom/internal/modelcatalog"
 	internalmodels "github.com/jordanhubbard/loom/internal/models"
@@ -55,9 +55,6 @@ import (
 	"github.com/jordanhubbard/loom/pkg/connectors"
 	"github.com/jordanhubbard/loom/pkg/models"
 )
-
-
-
 
 func New(cfg *config.Config) (*Loom, error) {
 	personaPath := cfg.Agents.DefaultPersonaPath
@@ -1057,8 +1054,8 @@ This is a simple verification task. Do NOT search for bugs or make changes. Just
 			}
 		} else {
 			log.Printf("Default workflows directory not found: %s", workflowsDir)
-			}
 		}
+	}
 
 	// ── Multi-service pub/sub wiring ───────────────────────────────────
 	// Start the NATS ↔ EventBus bridge so cross-container events flow.
@@ -1069,7 +1066,8 @@ This is a simple verification task. Do NOT search for bugs or make changes. Just
 	}
 
 	// Apply UseNATSDispatch feature flag from config.
-	if a.config.Dispatch.UseNATSDispatch && a.messageBus != nil {		log.Printf("[Loom] NATS dispatch enabled – tasks will be routed to agent containers")
+	if a.config.Dispatch.UseNATSDispatch && a.messageBus != nil {
+		log.Printf("[Loom] NATS dispatch enabled – tasks will be routed to agent containers")
 	}
 
 	// Start PDA orchestrator if enabled.
@@ -1141,7 +1139,6 @@ func (a *Loom) Shutdown() {
 		if a.agentManager != nil {
 			a.agentManager.StopAll()
 		}
-
 
 		if a.connectorManager != nil {
 			_ = a.connectorManager.Close()
@@ -1276,7 +1273,6 @@ func (a *Loom) GetKeyManager() *keymanager.KeyManager {
 func (a *Loom) GetDispatcher() *dispatch.Dispatcher {
 	return nil
 }
-
 
 // GetPersonaManager returns the persona manager
 func (a *Loom) GetPersonaManager() *persona.Manager {
@@ -1561,7 +1557,6 @@ func (a *Loom) ensureOrgChart(ctx context.Context, projectID string) error {
 	return nil
 }
 
-
 func (a *Loom) RequestFileAccess(projectID, filePath, agentID, beadID string) (*models.FileLock, error) {
 	// Verify agent exists
 	if _, err := a.agentManager.GetAgent(agentID); err != nil {
@@ -1709,7 +1704,6 @@ func (a *Loom) StartTaskExecutor(ctx context.Context) {
 		a.database,
 	)
 
-
 	// Wire in the persona manager so workers use rich persona definitions
 	// instead of the hardcoded fallback map.
 	if a.personaManager != nil {
@@ -1812,7 +1806,6 @@ func (a *Loom) CastVote(ctx context.Context, decisionID, agentID, choice, ration
 func (a *Loom) GetCurrentTime() time.Time {
 	return time.Now()
 }
-
 
 // PublishMotivationFired publishes a motivation fired event to the event bus.
 func (a *Loom) PublishMotivationFired(trigger *motivation.MotivationTrigger) error {

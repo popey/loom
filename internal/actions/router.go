@@ -135,31 +135,31 @@ type VoteCaster interface {
 }
 
 type Router struct {
-	Beads         BeadCreator
-	Closer        BeadCloser
-	Escalator     BeadEscalator
-	Commands      CommandExecutor
-	Tests         TestRunner
-	Linter        LinterRunner
-	Builder       BuildRunner
-	Files         FileManager
-	Git           GitOperator
-	Logger        ActionLogger
-	Workflow      WorkflowOperator
-	LSP           LSPOperator
-	MessageBus    MessageSender
-	BeadReader    BeadReader
-	Projects      ProjectGetter
-	ContainerOrch ContainerOrchestrator
-	BuildEnv      *BuildEnvManager
-	Meetings      MeetingCaller
-	Consulter     AgentConsulter
-	Board         StatusBoardPoster
-	Voter         VoteCaster
+	Beads          BeadCreator
+	Closer         BeadCloser
+	Escalator      BeadEscalator
+	Commands       CommandExecutor
+	Tests          TestRunner
+	Linter         LinterRunner
+	Builder        BuildRunner
+	Files          FileManager
+	Git            GitOperator
+	Logger         ActionLogger
+	Workflow       WorkflowOperator
+	LSP            LSPOperator
+	MessageBus     MessageSender
+	BeadReader     BeadReader
+	Projects       ProjectGetter
+	ContainerOrch  ContainerOrchestrator
+	BuildEnv       *BuildEnvManager
+	Meetings       MeetingCaller
+	Consulter      AgentConsulter
+	Board          StatusBoardPoster
+	Voter          VoteCaster
 	PersonaManager *persona.Manager
-	BeadType      string
-	BeadTags      []string
-	DefaultP0     bool
+	BeadType       string
+	BeadTags       []string
+	DefaultP0      bool
 }
 
 // getProjectWorkDir returns the working directory for a project

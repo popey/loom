@@ -834,7 +834,6 @@ func TestLoom_setupProviderMetrics(t *testing.T) {
 	loom.setupProviderMetrics()
 }
 
-
 func TestLoom_GetCollaborationStore(t *testing.T) {
 	loom, tmpDir := testLoom(t)
 	defer os.RemoveAll(tmpDir)

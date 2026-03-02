@@ -24,13 +24,13 @@ func NewOptimizer(personaManager *persona.Manager) *Optimizer {
 
 // OptimizationTrigger represents a trigger for self-optimization
 type OptimizationTrigger struct {
-	AgentID              string    // The agent being optimized
-	AgentRole            string    // The agent's role (e.g., "coder", "qa-engineer")
-	PerformanceGrade     string    // The grade received (A-F)
-	ConsecutiveFailures  int       // Number of consecutive poor grades
-	ReviewFeedback       string    // Feedback from the performance review
-	SuggestedOptimization string   // What to optimize: "motivation" or "personality"
-	TriggeredAt          time.Time // When the trigger fired
+	AgentID               string    // The agent being optimized
+	AgentRole             string    // The agent's role (e.g., "coder", "qa-engineer")
+	PerformanceGrade      string    // The grade received (A-F)
+	ConsecutiveFailures   int       // Number of consecutive poor grades
+	ReviewFeedback        string    // Feedback from the performance review
+	SuggestedOptimization string    // What to optimize: "motivation" or "personality"
+	TriggeredAt           time.Time // When the trigger fired
 }
 
 // ShouldOptimize determines if an agent should self-optimize based on performance
@@ -159,12 +159,12 @@ func (o *Optimizer) ApplyOptimization(personaName, optimizationType, newContent 
 
 // OptimizationResult represents the result of a self-optimization
 type OptimizationResult struct {
-	AgentID              string    // The agent that optimized
-	OptimizationType     string    // What was optimized (motivation or personality)
-	PreviousContent      string    // The previous content
-	NewContent           string    // The new content
-	OptimizedAt          time.Time // When it was optimized
-	NextReviewScheduled  time.Time // When the next review is scheduled
+	AgentID             string    // The agent that optimized
+	OptimizationType    string    // What was optimized (motivation or personality)
+	PreviousContent     string    // The previous content
+	NewContent          string    // The new content
+	OptimizedAt         time.Time // When it was optimized
+	NextReviewScheduled time.Time // When the next review is scheduled
 }
 
 // RecordOptimization records that an optimization occurred

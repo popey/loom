@@ -12,9 +12,6 @@ import (
 	"github.com/jordanhubbard/loom/pkg/models"
 )
 
-
-
-
 func (a *Loom) GetProjectManager() *project.Manager {
 	return a.projectManager
 }

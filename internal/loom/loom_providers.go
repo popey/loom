@@ -12,9 +12,6 @@ import (
 	"github.com/jordanhubbard/loom/internal/provider"
 )
 
-
-
-
 func (a *Loom) setupProviderMetrics() {
 	if a.metrics == nil || a.providerRegistry == nil {
 		return

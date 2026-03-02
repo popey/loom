@@ -74,7 +74,7 @@ func outputJSON(detector *analysis.CircularDetector) {
 			if j > 0 {
 				fmt.Printf(", ")
 			}
-			fmt.Printf("\"%%s\"", node)
+			fmt.Printf("\"%s\"", node)
 		}
 		fmt.Printf("] }")
 		if i < len(cycles)-1 {

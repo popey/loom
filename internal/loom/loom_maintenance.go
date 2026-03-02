@@ -8,9 +8,6 @@ import (
 	"github.com/jordanhubbard/loom/pkg/models"
 )
 
-
-
-
 func (a *Loom) resetZombieBeads() int {
 	if a.beadsManager == nil {
 		return 0

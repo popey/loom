@@ -10,9 +10,6 @@ import (
 	"github.com/jordanhubbard/loom/pkg/models"
 )
 
-
-
-
 func (a *Loom) GetDecisionManager() *decision.Manager {
 	return a.decisionManager
 }

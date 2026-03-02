@@ -17,9 +17,9 @@ import (
 
 // Activities supplies the Ralph Loop maintenance operations.
 type Activities struct {
-	database   *database.Database
-	beadsMgr   *beads.Manager
-	agentMgr   *agent.WorkerManager
+	database *database.Database
+	beadsMgr *beads.Manager
+	agentMgr *agent.WorkerManager
 }
 
 // New creates a new Activities instance.

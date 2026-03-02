@@ -11,9 +11,9 @@ import (
 type ModelTier string
 
 const (
-	TierLightweight ModelTier = "lightweight"  // Fast, cheap, for trivial tasks
-	TierMidTier     ModelTier = "mid-tier"     // Balanced capability and cost
-	TierStrong      ModelTier = "strong"       // Strongest available, for complex decisions
+	TierLightweight ModelTier = "lightweight" // Fast, cheap, for trivial tasks
+	TierMidTier     ModelTier = "mid-tier"    // Balanced capability and cost
+	TierStrong      ModelTier = "strong"      // Strongest available, for complex decisions
 )
 
 // Selector maps bead priority and complexity to model tier and passes preference to TokenHub
@@ -118,11 +118,11 @@ func (s *Selector) BuildTokenHubPreference(tier ModelTier) string {
 
 // ModelPreference represents a preference to pass to TokenHub
 type ModelPreference struct {
-	Tier           ModelTier // The tier of model to use
-	Model          string    // Specific model name
-	CostPriority   bool      // Whether to prioritize cost over capability
-	LatencyPriority bool     // Whether to prioritize latency
-	QualityPriority bool     // Whether to prioritize quality
+	Tier            ModelTier // The tier of model to use
+	Model           string    // Specific model name
+	CostPriority    bool      // Whether to prioritize cost over capability
+	LatencyPriority bool      // Whether to prioritize latency
+	QualityPriority bool      // Whether to prioritize quality
 }
 
 // BuildPreference builds a ModelPreference for a bead

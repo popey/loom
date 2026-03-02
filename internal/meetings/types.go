@@ -6,23 +6,23 @@ import (
 
 // Meeting represents a meeting record
 type Meeting struct {
-	ID           string              `json:"id"`
-	Title        string              `json:"title"`
-	Status       MeetingStatus       `json:"status"`
-	Participants []Participant       `json:"participants"`
-	AgendaItems  []AgendaItem        `json:"agenda"`
-	Transcript   []TranscriptEntry   `json:"transcript"`
-	ActionItems  []ActionItem        `json:"action_items"`
-	Summary      string              `json:"summary"`
-	CreatedAt    time.Time           `json:"created_at"`
-	CompletedAt  *time.Time          `json:"completed_at,omitempty"`
+	ID           string            `json:"id"`
+	Title        string            `json:"title"`
+	Status       MeetingStatus     `json:"status"`
+	Participants []Participant     `json:"participants"`
+	AgendaItems  []AgendaItem      `json:"agenda"`
+	Transcript   []TranscriptEntry `json:"transcript"`
+	ActionItems  []ActionItem      `json:"action_items"`
+	Summary      string            `json:"summary"`
+	CreatedAt    time.Time         `json:"created_at"`
+	CompletedAt  *time.Time        `json:"completed_at,omitempty"`
 }
 
 // MeetingStatus represents the status of a meeting
 type MeetingStatus string
 
 const (
-	MeetingStatusScheduled MeetingStatus = "scheduled"
+	MeetingStatusScheduled  MeetingStatus = "scheduled"
 	MeetingStatusInProgress MeetingStatus = "in_progress"
 	MeetingStatusCompleted  MeetingStatus = "completed"
 	MeetingStatusCancelled  MeetingStatus = "cancelled"
@@ -30,10 +30,10 @@ const (
 
 // Participant represents a meeting participant
 type Participant struct {
-	ID       string `json:"id"`
-	Name     string `json:"name"`
-	Email    string `json:"email,omitempty"`
-	Role     string `json:"role,omitempty"`
+	ID       string    `json:"id"`
+	Name     string    `json:"name"`
+	Email    string    `json:"email,omitempty"`
+	Role     string    `json:"role,omitempty"`
 	JoinedAt time.Time `json:"joined_at"`
 }
 
@@ -58,13 +58,13 @@ type TranscriptEntry struct {
 
 // ActionItem represents an action item created during a meeting
 type ActionItem struct {
-	ID        string    `json:"id"`
-	BeadID    string    `json:"bead_id,omitempty"`
-	Title     string    `json:"title"`
-	Owner     string    `json:"owner,omitempty"`
+	ID        string     `json:"id"`
+	BeadID    string     `json:"bead_id,omitempty"`
+	Title     string     `json:"title"`
+	Owner     string     `json:"owner,omitempty"`
 	DueDate   *time.Time `json:"due_date,omitempty"`
-	Status    string    `json:"status"`
-	CreatedAt time.Time `json:"created_at"`
+	Status    string     `json:"status"`
+	CreatedAt time.Time  `json:"created_at"`
 }
 
 // CreateMeetingRequest is the request to create a new meeting
@@ -76,10 +76,10 @@ type CreateMeetingRequest struct {
 
 // UpdateMeetingRequest is the request to update a meeting
 type UpdateMeetingRequest struct {
-	Title       *string       `json:"title,omitempty"`
+	Title       *string        `json:"title,omitempty"`
 	Status      *MeetingStatus `json:"status,omitempty"`
-	Summary     *string       `json:"summary,omitempty"`
-	AgendaItems []AgendaItem  `json:"agenda,omitempty"`
+	Summary     *string        `json:"summary,omitempty"`
+	AgendaItems []AgendaItem   `json:"agenda,omitempty"`
 }
 
 // AddTranscriptEntryRequest is the request to add a transcript entry

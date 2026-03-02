@@ -14,9 +14,6 @@ import (
 	"github.com/jordanhubbard/loom/pkg/models"
 )
 
-
-
-
 func (a *Loom) GetAgentManager() *agent.WorkerManager {
 	return a.agentManager
 }
@@ -221,7 +218,7 @@ func (a *Loom) ConsultAgent(ctx context.Context, fromAgentID, toAgentID, toRole,
 	if a.agentManager == nil {
 		return "", fmt.Errorf("agent manager not available")
 	}
-	
+
 	// Find the target agent
 	var targetAgent *models.Agent
 	if toAgentID != "" {

@@ -10,14 +10,14 @@ type SchemaVersion string
 
 const (
 	// Current schema versions for each entity type
-	AgentSchemaVersion    SchemaVersion = "1.0"
-	ProjectSchemaVersion  SchemaVersion = "1.0"
-	ProviderSchemaVersion SchemaVersion = "1.0"
-	OrgChartSchemaVersion SchemaVersion = "1.0"
-	PositionSchemaVersion SchemaVersion = "1.0"
-	PersonaSchemaVersion  SchemaVersion = "1.0"
-	BeadSchemaVersion     SchemaVersion = "1.0"
-	ReviewSchemaVersion   SchemaVersion = "1.0"
+	AgentSchemaVersion             SchemaVersion = "1.0"
+	ProjectSchemaVersion           SchemaVersion = "1.0"
+	ProviderSchemaVersion          SchemaVersion = "1.0"
+	OrgChartSchemaVersion          SchemaVersion = "1.0"
+	PositionSchemaVersion          SchemaVersion = "1.0"
+	PersonaSchemaVersion           SchemaVersion = "1.0"
+	BeadSchemaVersion              SchemaVersion = "1.0"
+	ReviewSchemaVersion            SchemaVersion = "1.0"
 	PerformanceReviewSchemaVersion SchemaVersion = "1.0"
 )
 
@@ -25,23 +25,23 @@ const (
 type EntityType string
 
 const (
-	EntityTypeAgent    EntityType = "agent"
-	EntityTypeProject  EntityType = "project"
-	EntityTypeProvider EntityType = "provider"
-	EntityTypeOrgChart EntityType = "orgchart"
-	EntityTypePosition EntityType = "position"
-	EntityTypePersona  EntityType = "persona"
-	EntityTypeBead     EntityType = "bead"
-	EntityTypeReview   EntityType = "review"
+	EntityTypeAgent             EntityType = "agent"
+	EntityTypeProject           EntityType = "project"
+	EntityTypeProvider          EntityType = "provider"
+	EntityTypeOrgChart          EntityType = "orgchart"
+	EntityTypePosition          EntityType = "position"
+	EntityTypePersona           EntityType = "persona"
+	EntityTypeBead              EntityType = "bead"
+	EntityTypeReview            EntityType = "review"
 	EntityTypePerformanceReview EntityType = "performance_review"
 )
 
 // EntityMetadata contains versioning and extensibility fields for all entities
 type EntityMetadata struct {
-	SchemaVersion SchemaVersion `json:"schema_version,omitempty"`
-	Attributes map[string]any `json:"attributes,omitempty"`
-	MigratedAt *time.Time `json:"migrated_at,omitempty"`
-	MigratedFrom SchemaVersion `json:"migrated_from,omitempty"`
+	SchemaVersion SchemaVersion  `json:"schema_version,omitempty"`
+	Attributes    map[string]any `json:"attributes,omitempty"`
+	MigratedAt    *time.Time     `json:"migrated_at,omitempty"`
+	MigratedFrom  SchemaVersion  `json:"migrated_from,omitempty"`
 }
 
 // NewEntityMetadata creates metadata with the given schema version
@@ -179,18 +179,18 @@ func NeedsMigration(entity VersionedEntity, targetVersion SchemaVersion) bool {
 }
 
 const (
-	AttrUIColor       = "ui.color"
-	AttrUIIcon        = "ui.icon"
-	AttrUIDisplayName = "ui.display_name"
-	AttrUIHidden      = "ui.hidden"
+	AttrUIColor            = "ui.color"
+	AttrUIIcon             = "ui.icon"
+	AttrUIDisplayName      = "ui.display_name"
+	AttrUIHidden           = "ui.hidden"
 	AttrMetricsLastRun     = "metrics.last_run"
 	AttrMetricsRunCount    = "metrics.run_count"
 	AttrMetricsErrorCount  = "metrics.error_count"
 	AttrMetricsAvgDuration = "metrics.avg_duration_ms"
-	AttrFeatureEnabled  = "feature.enabled"
-	AttrFeatureBeta     = "feature.beta"
-	AttrFeatureInternal = "feature.internal"
-	AttrBehaviorPriority  = "behavior.priority"
-	AttrBehaviorRetryable = "behavior.retryable"
-	AttrBehaviorTimeout   = "behavior.timeout_ms"
+	AttrFeatureEnabled     = "feature.enabled"
+	AttrFeatureBeta        = "feature.beta"
+	AttrFeatureInternal    = "feature.internal"
+	AttrBehaviorPriority   = "behavior.priority"
+	AttrBehaviorRetryable  = "behavior.retryable"
+	AttrBehaviorTimeout    = "behavior.timeout_ms"
 )

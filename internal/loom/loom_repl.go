@@ -154,7 +154,6 @@ func (a *Loom) RunReplQuery(ctx context.Context, message string) (*ReplResult, e
 	}, nil
 }
 
-
 // extractPersonaFromMessage extracts persona hint from "persona: message" format
 // Returns (personaHint, cleanMessage)
 func extractPersonaFromMessage(message string) (string, string) {

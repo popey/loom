@@ -224,7 +224,6 @@ func sortColumns(columns []string, filterApplied bool) []string {
 	return columns
 }
 
-
 // outputTable formats data as a table
 func outputTable(v interface{}, filterApplied bool) error {
 	// Handle array of objects (most common case for list commands)
