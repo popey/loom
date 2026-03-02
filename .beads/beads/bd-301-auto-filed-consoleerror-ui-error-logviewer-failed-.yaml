@@ -37,10 +37,10 @@ description: |
     ---
     *This bug was automatically filed by the Loom error tracking system.*
     *Will be automatically routed to the appropriate specialist for investigation.*
-status: in_progress
+status: open
 priority: 1
 projectid: loom
-assignedto: exec-loom-39b9206e
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -64,5 +64,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-02T06:55:58.64979161Z
-updatedat: 2026-03-02T09:07:06.709838454Z
+updatedat: 2026-03-02T09:07:11.759910072Z
 closedat: null
