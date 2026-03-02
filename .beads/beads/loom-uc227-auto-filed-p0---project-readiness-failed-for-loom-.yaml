@@ -10,7 +10,7 @@ description: "Project readiness failed for loom-self.\n\nIssues:\n- git remote a
 status: closed
 priority: 0
 projectid: loom
-assignedto: exec-loom-138d33ae
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -80,5 +80,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-09T09:29:18Z
-updatedat: 2026-03-02T02:43:23.276460328Z
+updatedat: 2026-03-02T02:43:24.843375803Z
 closedat: 2026-03-02T02:43:22.178025472Z
