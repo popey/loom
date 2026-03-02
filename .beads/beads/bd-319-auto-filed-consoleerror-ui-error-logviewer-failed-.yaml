@@ -37,7 +37,7 @@ description: |
     ---
     *This bug was automatically filed by the Loom error tracking system.*
     *Will be automatically routed to the appropriate specialist for investigation.*
-status: in_progress
+status: closed
 priority: 1
 projectid: loom
 assignedto: exec-loom-743f8d80
@@ -50,10 +50,11 @@ tags:
     - auto-filed
     - console.error
     - js_error
-context: {}
+context:
+    close_reason: 'Fixed ReferenceError: apiCall is not defined in LogViewer and pushed the changes.'
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-02T10:04:08.397138837Z
-updatedat: 2026-03-02T11:28:28.09068678Z
-closedat: null
+updatedat: 2026-03-02T11:28:34.037985819Z
+closedat: 2026-03-02T11:28:34.037984907Z
