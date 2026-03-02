@@ -442,7 +442,9 @@ func (a *Loom) Initialize(ctx context.Context) error {
 					Context:         p.Context,
 					Status:          models.ProjectStatusOpen,
 				}
-				_ = a.database.UpsertProject(proj)
+    if err := a.database.UpsertProject(proj); err != nil {
+    	log.Printf("[Loom] Warning: failed to persist project %s to database: %v", proj.ID, err)
+    }
 				projects = append(projects, proj)
 			}
 		} else {
@@ -465,7 +467,9 @@ func (a *Loom) Initialize(ctx context.Context) error {
 					Context:         p.Context,
 					Status:          models.ProjectStatusOpen,
 				}
-				_ = a.database.UpsertProject(proj)
+    if err := a.database.UpsertProject(proj); err != nil {
+    	log.Printf("[Loom] Warning: failed to persist project %s to database: %v", proj.ID, err)
+    }
 				projects = append(projects, proj)
 			}
 		}
@@ -555,7 +559,9 @@ func (a *Loom) Initialize(ctx context.Context) error {
 	if a.database != nil {
 		for i := range projectValues {
 			p := projectValues[i]
-			_ = a.database.UpsertProject(&p)
+   if err := a.database.UpsertProject(&p); err != nil {
+   	log.Printf("[Loom] Warning: failed to persist project %s to database: %v", p.ID, err)
+   }
 		}
 	}
 
@@ -684,7 +690,9 @@ func (a *Loom) Initialize(ctx context.Context) error {
 
 		// Update project in database with git metadata
 		if a.database != nil {
-			_ = a.database.UpsertProject(p)
+   if err := a.database.UpsertProject(p); err != nil {
+   	log.Printf("[Loom] Warning: failed to persist project %s to database: %v", p.ID, err)
+   }
 		}
 
 		// Setup git worktrees for project
@@ -714,7 +722,9 @@ func (a *Loom) Initialize(ctx context.Context) error {
 		a.beadsManager.SetGitStorage(p.ID, wtManager, beadsBranch, a.config.Beads.UseGitStorage, string(p.GitAuthMethod), p.GitRepo)
 		// Load project prefix from config
 		configPath := filepath.Join(beadsWorktree, p.BeadsPath)
-		_ = a.beadsManager.LoadProjectPrefixFromConfig(p.ID, configPath)
+			if err := a.beadsManager.LoadProjectPrefixFromConfig(p.ID, configPath); err != nil {
+				log.Printf("[Loom] Warning: failed to load project prefix for %s: %v", p.ID, err)
+			}
 		// Use project's BeadPrefix if set in the model
 		if p.BeadPrefix != "" {
 			a.beadsManager.SetProjectPrefix(p.ID, p.BeadPrefix)
@@ -724,12 +734,16 @@ func (a *Loom) Initialize(ctx context.Context) error {
 		mainWorktree := wtManager.GetWorktreePath(p.ID, "main")
 		mainBeadsPath := filepath.Join(mainWorktree, p.BeadsPath)
 		if mainBeadsPath != beadsPath {
-			_ = a.beadsManager.LoadBeadsFromFilesystem(p.ID, mainBeadsPath)
+			if err := a.beadsManager.LoadBeadsFromFilesystem(p.ID, mainBeadsPath); err != nil {
+				log.Printf("[Loom] Warning: failed to load beads from filesystem for %s: %v", p.ID, err)
+			}
 		}
 
 		// Load from beads worktree (beads-sync branch) last - overwrites stale
 		// main-worktree copies with authoritative beads-sync state.
-		_ = a.beadsManager.LoadBeadsFromGit(ctx, p.ID, beadsPath)
+			if err := a.beadsManager.LoadBeadsFromGit(ctx, p.ID, beadsPath); err != nil {
+				log.Printf("[Loom] Warning: failed to load beads from git for %s: %v", p.ID, err)
+			}
 
 		// Spawn isolated container for project if configured.
 		// Run asynchronously so a slow Docker build/pull does not block startup.
@@ -823,7 +837,11 @@ func (a *Loom) Initialize(ctx context.Context) error {
 				if _, regErr := a.RegisterProvider(ctx, seed, envAPIKey); regErr != nil {
 					log.Printf("[Loom] Failed to bootstrap provider from env: %v", regErr)
 				}
-				providers, _ = a.database.ListProviders()
+				providers, err := a.database.ListProviders()
+		if err != nil {
+			log.Printf("[Loom] Warning: failed to list providers: %v", err)
+			providers = []*internalmodels.Provider{}
+		}
 			} else {
 				for _, p := range providers {
 					if p.ID == "tokenhub" && p.Endpoint != envURL {
@@ -847,12 +865,15 @@ func (a *Loom) Initialize(ctx context.Context) error {
 			}
 			var apiKey string
 			if p.KeyID != "" && a.keyManager != nil && a.keyManager.IsUnlocked() {
-				apiKey, _ = a.keyManager.GetKey(p.KeyID)
+				apiKey, err := a.keyManager.GetKey(p.KeyID)
+				if err != nil {
+					log.Printf("[Loom] Warning: failed to get key for provider %s: %v", p.ID, err)
+				}
 			}
 			if apiKey == "" {
 				apiKey = p.APIKey // fall back to key stored directly in provider record
 			}
-			_ = a.providerRegistry.Upsert(&provider.ProviderConfig{
+			if err := a.providerRegistry.Upsert(&provider.ProviderConfig{
 				ID:                     p.ID,
 				Name:                   p.Name,
 				Type:                   p.Type,
@@ -864,7 +885,9 @@ func (a *Loom) Initialize(ctx context.Context) error {
 				Status:                 p.Status,
 				LastHeartbeatAt:        p.LastHeartbeatAt,
 				LastHeartbeatLatencyMs: p.LastHeartbeatLatencyMs,
-			})
+			}; err != nil {
+				log.Printf("[Loom] Warning: failed to upsert provider %s: %v", p.ID, err)
+			}
 		}
 
 		// Count providers ready for dispatch; re-probe any that aren't healthy.
@@ -909,8 +932,13 @@ func (a *Loom) Initialize(ctx context.Context) error {
 				}
 				ag.ProviderID = providers[0].Config.ID
 			}
-			_, _ = a.agentManager.RestoreAgentWorker(ctx, ag)
-			_ = a.projectManager.AddAgentToProject(ag.ProjectID, ag.ID)
+			_, err := a.agentManager.RestoreAgentWorker(ctx, ag)
+			if err != nil {
+				log.Printf("[Loom] Warning: failed to restore agent worker %s: %v", ag.ID, err)
+			}
+			if err := a.projectManager.AddAgentToProject(ag.ProjectID, ag.ID); err != nil {
+				log.Printf("[Loom] Warning: failed to add agent %s to project %s: %v", ag.ID, ag.ProjectID, err)
+			}
 		}
 	}
 
@@ -932,7 +960,9 @@ func (a *Loom) Initialize(ctx context.Context) error {
 		if p.ID == "" {
 			continue
 		}
-		_ = a.ensureDefaultAgents(ctx, p.ID)
+		if err := a.ensureDefaultAgents(ctx, p.ID); err != nil {
+			log.Printf("[Loom] Warning: failed to ensure default agents for project %s: %v", p.ID, err)
+		}
 	}
 
 	// After restoring agents from DB, reset any that were left in "working" state.
@@ -1141,7 +1171,9 @@ func (a *Loom) Shutdown() {
 		}
 
 		if a.connectorManager != nil {
-			_ = a.connectorManager.Close()
+		if err := a.connectorManager.Close(); err != nil {
+			log.Printf("[Loom] Warning: failed to close connector manager: %v", err)
+		}
 		}
 		if a.pdaOrchestrator != nil {
 			a.pdaOrchestrator.Close()
@@ -1166,11 +1198,15 @@ func (a *Loom) Shutdown() {
 		}
 		if a.messageBus != nil {
 			if mb, ok := a.messageBus.(*messagebus.NatsMessageBus); ok {
-				_ = mb.Close()
+			if err := mb.Close(); err != nil {
+				log.Printf("[Loom] Warning: failed to close message bus: %v", err)
+			}
 			}
 		}
 		if a.database != nil {
-			_ = a.database.Close()
+		if err := a.database.Close(); err != nil {
+			log.Printf("[Loom] Warning: failed to close database: %v", err)
+		}
 		}
 	})
 }
@@ -1458,7 +1494,10 @@ func (a *Loom) ensureOrgChart(ctx context.Context, projectID string) error {
 				log.Printf("[OrgChart] Backfilled missing position %q for project %s", tmplPos.RoleName, projectID)
 			}
 			// Refresh chart reference after mutation
-			chart, _ = a.orgChartManager.CreateForProject(projectID, project.Name)
+			chart, err := a.orgChartManager.CreateForProject(projectID, project.Name)
+		if err != nil {
+			log.Printf("[Loom] Warning: failed to create org chart for project %s: %v", projectID, err)
+		}
 		}
 	}
 
@@ -1551,7 +1590,9 @@ func (a *Loom) ensureOrgChart(ctx context.Context, projectID string) error {
 		}
 
 		// Assign agent to position in org chart
-		_ = a.orgChartManager.AssignAgentToRole(projectID, pos.RoleName, agent.ID)
+			if err := a.orgChartManager.AssignAgentToRole(projectID, pos.RoleName, agent.ID); err != nil {
+				log.Printf("[Loom] Warning: failed to assign agent %s to role %s: %v", agent.ID, pos.RoleName, err)
+			}
 	}
 
 	return nil
@@ -1638,7 +1679,9 @@ func (a *Loom) StartMaintenanceLoop(ctx context.Context) {
 			for _, agent := range a.agentManager.ListAgents() {
 				if agent.LastActive.Before(staleThreshold) {
 					// Log: agent stale, releasing locks
-					_ = a.fileLockManager.ReleaseAgentLocks(agent.ID)
+			if err := a.fileLockManager.ReleaseAgentLocks(agent.ID); err != nil {
+				log.Printf("[Loom] Warning: failed to release file locks for agent %s: %v", agent.ID, err)
+			}
 				}
 			}
 
@@ -1821,7 +1864,7 @@ func (a *Loom) PublishMotivationFired(trigger *motivation.MotivationTrigger) err
 		data["agent_role"] = trigger.Motivation.AgentRole
 		data["project_id"] = trigger.Motivation.ProjectID
 	}
-	_ = a.eventBus.Publish(&eventbus.Event{
+		if err := a.eventBus.Publish(&eventbus.Event{
 		Type:   eventbus.EventTypeConfigUpdated,
 		Source: "motivation-engine",
 		Data:   data,
