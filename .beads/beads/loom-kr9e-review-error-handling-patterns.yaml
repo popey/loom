@@ -7,10 +7,10 @@ id: loom-kr9e
 type: task
 title: Review error handling patterns
 description: Check for missing error returns and proper defer cleanup
-status: in_progress
+status: open
 priority: 2
 projectid: loom
-assignedto: exec-loom-138d33ae
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -67,5 +67,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-06T14:23:40Z
-updatedat: 2026-03-02T02:49:36.005328053Z
+updatedat: 2026-03-02T02:49:36.967701143Z
 closedat: null
