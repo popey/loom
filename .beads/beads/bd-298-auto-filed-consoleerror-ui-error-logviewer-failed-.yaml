@@ -37,7 +37,7 @@ description: |
     ---
     *This bug was automatically filed by the Loom error tracking system.*
     *Will be automatically routed to the appropriate specialist for investigation.*
-status: blocked
+status: open
 priority: 1
 projectid: loom
 assignedto: ""
@@ -55,14 +55,14 @@ context:
     error_history: '[{"timestamp":"2026-03-02T07:01:56.535531179Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":1},{"timestamp":"2026-03-02T07:02:03.769911507Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":2},{"timestamp":"2026-03-02T07:02:10.879992878Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":3},{"timestamp":"2026-03-02T07:02:16.368098976Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":4},{"timestamp":"2026-03-02T07:02:21.629726843Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":5},{"timestamp":"2026-03-02T07:02:21.629793533Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":5},{"timestamp":"2026-03-02T07:05:04.886197696Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":6},{"timestamp":"2026-03-02T07:05:04.886280897Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":6},{"timestamp":"2026-03-02T07:10:52.170500509Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":7},{"timestamp":"2026-03-02T07:10:52.170580558Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":7},{"timestamp":"2026-03-02T07:15:33.253510694Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":8},{"timestamp":"2026-03-02T07:15:33.253568535Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":8},{"timestamp":"2026-03-02T07:20:19.625852884Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":9},{"timestamp":"2026-03-02T07:20:19.62597559Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":9},{"timestamp":"2026-03-02T07:25:04.220263788Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":10},{"timestamp":"2026-03-02T07:25:04.220388254Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":10},{"timestamp":"2026-03-02T07:30:11.685077847Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":11},{"timestamp":"2026-03-02T07:30:11.68519828Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":11}]'
     last_run_at: "2026-03-02T07:30:11Z"
     last_run_error: 'LLM call failed on iteration 1: failed to send request: Post "http://tokenhub:8080/v1/chat/completions": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving'
-    loop_detected: "true"
-    loop_detected_at: "2026-03-02T07:30:11Z"
-    loop_detected_reason: 'Identical error repeated 10 times - error pattern: LLM call failed on iteration 1: failed to send request: Post "http://tokenhub:8080/v1/chat/completio'
-    recovered_at: "2026-03-02T07:29:32Z"
+    loop_detected: "false"
+    loop_detected_at: ""
+    loop_detected_reason: ""
+    recovered_at: "2026-03-02T07:34:36Z"
     recovery_reason: transient infrastructure failure resolved — re-queued by recovery sweep
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-02T06:55:48.574841774Z
-updatedat: 2026-03-02T07:30:11.685354538Z
+updatedat: 2026-03-02T07:34:36.493011068Z
 closedat: null
