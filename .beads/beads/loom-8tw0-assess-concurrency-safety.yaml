@@ -7,7 +7,7 @@ id: loom-8tw0
 type: task
 title: Assess concurrency safety
 description: Identify goroutine leaks and race‑prone code
-status: closed
+status: open
 priority: 2
 projectid: loom
 assignedto: ""
@@ -28,7 +28,6 @@ context:
     agent_task_id: task-loom-8tw0-1770669401226157000
     agent_tokens: "118278"
     agent_worker_id: worker-agent-1770537362-Project Manager (Default)-1770666986
-    close_reason: Fixed race condition in readinessMu locking by adding defer statement in maybeFileReadinessBead(). The mutex is now guaranteed to be released even if a panic occurs, preventing potential deadlocks. Changes verified to compile successfully.
     conversation_session_id: 8e2f7bc6-9d1b-42ab-a2ff-5f5ddf2c87f9
     correlation_id: dispatch-loom-8tw0-1771812404044517687
     dispatch_count: "995"
@@ -68,5 +67,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-06T14:23:40Z
-updatedat: 2026-03-02T02:58:06.859004423Z
-closedat: 2026-03-02T02:58:04.29201146Z
+updatedat: 2026-03-02T05:45:51.929665221Z
+closedat: null
