@@ -40,7 +40,7 @@ description: |
 status: closed
 priority: 1
 projectid: loom
-assignedto: exec-loom-fb5f2d18
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -65,5 +65,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-02T06:54:58.57247368Z
-updatedat: 2026-03-02T09:18:06.139793667Z
+updatedat: 2026-03-02T09:18:07.951587847Z
 closedat: 2026-03-02T09:18:04.966461829Z
