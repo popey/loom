@@ -4,7 +4,7 @@
 const LogViewer = {
     maxLogs: 1000,
     logs: [],
-    apiCall: window.apiCall || function() { throw new Error('apiCall is not defined'); },
+    apiCall: window.apiCall || app.apiCall,
     filters: {
         level: 'all', // all, debug, info, warn, error
         source: 'all', // all, agent, provider, dispatcher, database, actions
