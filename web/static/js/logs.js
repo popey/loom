@@ -4,7 +4,7 @@
 const LogViewer = {
     maxLogs: 1000,
     logs: [],
-    apiCall: window.apiCall || app.apiCall,
+    apiCall: window.apiCall || (window.app ? window.app.apiCall : undefined),
     filters: {
         level: 'all', // all, debug, info, warn, error
         source: 'all', // all, agent, provider, dispatcher, database, actions
