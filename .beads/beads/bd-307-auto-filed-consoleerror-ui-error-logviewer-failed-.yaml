@@ -40,7 +40,7 @@ description: |
 status: in_progress
 priority: 1
 projectid: loom
-assignedto: exec-loom-9ab4012e
+assignedto: exec-loom-743f8d80
 blockedby: []
 blocks: []
 relatedto: []
@@ -64,5 +64,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-02T06:57:09.095464495Z
-updatedat: 2026-03-02T07:36:24.029890288Z
+updatedat: 2026-03-02T09:30:41.113965178Z
 closedat: null
