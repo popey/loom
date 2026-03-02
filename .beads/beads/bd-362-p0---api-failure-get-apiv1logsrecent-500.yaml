@@ -16,10 +16,10 @@ description: |
     Remote: 10.11.101.193:55002
     User: admin
     Timestamp: 2026-03-02T10:27:22Z
-status: in_progress
+status: blocked
 priority: 0
 projectid: loom
-assignedto: exec-loom-743f8d80
+assignedto: agent-1771534515-Engineering Manager (Default)
 blockedby: []
 blocks: []
 relatedto: []
@@ -35,11 +35,14 @@ context:
     loop_detected: "true"
     loop_detected_at: "2026-03-02T14:00:15Z"
     loop_detected_reason: Repeated provider errors (10 attempts) - provider unavailable or unhealthy
+    ralph_blocked_at: "2026-03-02T14:00:27Z"
+    ralph_blocked_reason: 'auto-blocked by Ralph: Repeated provider errors (10 attempts) - provider unavailable or unhealthy'
     recovered_at: "2026-03-02T12:12:17Z"
     recovery_reason: transient infrastructure failure resolved — re-queued by recovery sweep
+    redispatch_requested: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-02T10:50:56.782865248Z
-updatedat: 2026-03-02T14:00:22.573055007Z
+updatedat: 2026-03-02T14:00:27.297695723Z
 closedat: null
