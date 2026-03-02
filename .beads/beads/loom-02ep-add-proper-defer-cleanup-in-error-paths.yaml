@@ -7,10 +7,10 @@ id: loom-02ep
 type: task
 title: Add proper defer cleanup in error paths
 description: Insert defer statements for file handles and DB connections in error handling paths.
-status: in_progress
+status: open
 priority: 0
 projectid: loom
-assignedto: exec-loom-79b80811
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -48,5 +48,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-06T13:19:04Z
-updatedat: 2026-03-02T01:04:14.722271184Z
+updatedat: 2026-03-02T01:04:15.71011073Z
 closedat: null
