@@ -10,7 +10,7 @@ description: Loom API binds to :8081 (main.go:161) but docker-compose exposes 80
 status: closed
 priority: 1
 projectid: loom
-assignedto: exec-loom-d9c423af
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -43,5 +43,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-07T03:19:16Z
-updatedat: 2026-03-02T05:47:00.8910318Z
+updatedat: 2026-03-02T05:47:02.4958612Z
 closedat: 2026-03-02T05:46:59.870117357Z
