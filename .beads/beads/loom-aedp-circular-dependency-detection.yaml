@@ -10,7 +10,7 @@ description: Identify circular function calls and package import cycles
 status: closed
 priority: 1
 projectid: loom
-assignedto: exec-loom-73df0498
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -46,5 +46,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-06T15:24:36Z
-updatedat: 2026-03-02T05:55:35.267442937Z
+updatedat: 2026-03-02T05:55:37.13093359Z
 closedat: 2026-03-02T05:55:34.154848565Z
