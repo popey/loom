@@ -1,0 +1,35 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-362
+type: task
+title: P0 - API failure GET /api/v1/logs/recent 500
+description: |
+    API request failed
+
+    Method: GET
+    Path: /api/v1/logs/recent
+    Status: 500
+    Query: limit=200
+    Remote: 10.11.101.193:55002
+    User: admin
+    Timestamp: 2026-03-02T10:27:22Z
+status: in_progress
+priority: 0
+projectid: loom
+assignedto: exec-loom-fb5f2d18
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-02T10:50:56.782865248Z
+updatedat: 2026-03-02T11:00:00.640597165Z
+closedat: null
