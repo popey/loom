@@ -10,7 +10,7 @@ description: Identify goroutine leaks and race‑prone code
 status: closed
 priority: 2
 projectid: loom
-assignedto: exec-loom-dcea3a4e
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -68,5 +68,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-06T14:23:40Z
-updatedat: 2026-03-02T06:05:23.385989083Z
+updatedat: 2026-03-02T06:05:24.960992195Z
 closedat: 2026-03-02T06:05:22.414748932Z
