@@ -1,0 +1,59 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-293
+type: bug
+title: '[auto-filed] [http://sparky.local:8081/static/js/app.js?v=21] UI Error: Uncaught SyntaxError: Unexpected identifier ''title'''
+description: |
+    ## Auto-Filed Bug Report
+
+    **Source:** http://sparky.local:8081/static/js/app.js?v=21
+    **Error Type:** js_error
+    **Severity:** high
+    **Occurred At:** 2026-03-02T06:54:48Z
+
+    ### Error Message
+    Uncaught SyntaxError: Unexpected identifier 'title'
+
+    ### Stack Trace
+    SyntaxError: Unexpected identifier 'title'
+
+    ### Context
+    ```json
+    {
+      "column": 25,
+      "line": 1549,
+      "source_file": "http://sparky.local:8081/static/js/app.js?v=21",
+      "state": "state not available",
+      "timestamp": "2026-03-02T06:54:48.326Z",
+      "url": "http://sparky.local:8081/",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "viewport": "1539x851"
+    }
+    ```
+
+    ---
+    *This bug was automatically filed by the Loom error tracking system.*
+    *Will be automatically routed to the appropriate specialist for investigation.*
+status: open
+priority: 1
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags:
+    - auto-filed
+    - http://sparky.local:8081/static/js/app.js?v=21
+    - js_error
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-02T06:54:48.865033849Z
+updatedat: 2026-03-02T06:54:48.972407923Z
+closedat: null
