@@ -7,7 +7,6 @@ import (
 	"time"
 )
 
-// EventType represents the type of event
 type EventType string
 
 const (
@@ -32,54 +31,47 @@ const (
 	EventTypeLogMessage         EventType = "log.message"
 	EventTypeWorkflowStarted    EventType = "workflow.started"
 	EventTypeWorkflowCompleted  EventType = "workflow.completed"
-
-	// Motivation system events
 	EventTypeMotivationFired     EventType = "motivation.fired"
 	EventTypeMotivationEnabled   EventType = "motivation.enabled"
 	EventTypeMotivationDisabled  EventType = "motivation.disabled"
 	EventTypeDeadlineApproaching EventType = "deadline.approaching"
 	EventTypeDeadlinePassed      EventType = "deadline.passed"
 	EventTypeSystemIdle          EventType = "system.idle"
-
-	// OpenClaw messaging gateway events
 	EventTypeOpenClawMessageSent     EventType = "openclaw.message_sent"
 	EventTypeOpenClawMessageFailed   EventType = "openclaw.message_failed"
 	EventTypeOpenClawMessageReceived EventType = "openclaw.message_received"
 	EventTypeOpenClawReplyProcessed  EventType = "openclaw.reply_processed"
 )
 
-// Event represents a system event
 type Event struct {
 	ID        string                 `json:"id"`
 	Type      EventType              `json:"type"`
 	Timestamp time.Time              `json:"timestamp"`
-	Source    string                 `json:"source"` // Component that generated the event
-	Data      map[string]interface{} `json:"data"`   // Event payload
+	Source    string                 `json:"source"`
+	Data      map[string]interface{} `json:"data"`
 	ProjectID string                 `json:"project_id,omitempty"`
 }
 
-// Subscriber represents an event subscriber
 type Subscriber struct {
 	ID      string
 	Channel chan *Event
-	Filter  func(*Event) bool // Optional filter function
+	Filter  func(*Event) bool
 }
 
-// EventBus provides in-memory pub/sub event messaging
 type EventBus struct {
 	subscribers map[string]*Subscriber
 	mu          sync.RWMutex
 	ctx         context.Context
 	cancel      context.CancelFunc
 	buffer      chan *Event
-
-	// Ring buffer for recent event history (ephemeral, lost on restart)
+	closed      bool
+	closedMu    sync.Mutex
+	wg          sync.WaitGroup
 	recentEvents []*Event
 	recentIdx    int
 	recentCount  int
 }
 
-// NewEventBus creates a new event bus
 func NewEventBus() *EventBus {
 	ctx, cancel := context.WithCancel(context.Background())
 
@@ -91,29 +83,32 @@ func NewEventBus() *EventBus {
 		recentEvents: make([]*Event, 1000),
 	}
 
-	// Start event processing goroutine
+	eb.wg.Add(1)
 	go eb.processEvents()
 
 	return eb
 }
 
-// Publish publishes an event to all subscribers
 func (eb *EventBus) Publish(event *Event) error {
+	eb.closedMu.Lock()
+	if eb.closed {
+		eb.closedMu.Unlock()
+		return fmt.Errorf("event bus is closed")
+	}
+	eb.closedMu.Unlock()
+
 	if event == nil {
 		return fmt.Errorf("event cannot be nil")
 	}
 
-	// Set timestamp if not already set
 	if event.Timestamp.IsZero() {
 		event.Timestamp = time.Now()
 	}
 
-	// Generate ID if not set
 	if event.ID == "" {
 		event.ID = fmt.Sprintf("%s-%d", event.Type, time.Now().UnixNano())
 	}
 
-	// Add to buffer for async processing
 	select {
 	case eb.buffer <- event:
 		return nil
@@ -122,20 +117,17 @@ func (eb *EventBus) Publish(event *Event) error {
 	}
 }
 
-// Subscribe creates a new subscription to events
 func (eb *EventBus) Subscribe(subscriberID string, filter func(*Event) bool) *Subscriber {
 	eb.mu.Lock()
 	defer eb.mu.Unlock()
 
-	// Check if subscriber already exists
 	if sub, exists := eb.subscribers[subscriberID]; exists {
 		return sub
 	}
 
-	// Create new subscriber
 	sub := &Subscriber{
 		ID:      subscriberID,
-		Channel: make(chan *Event, 100), // Buffered channel for subscriber
+		Channel: make(chan *Event, 100),
 		Filter:  filter,
 	}
 
@@ -143,20 +135,15 @@ func (eb *EventBus) Subscribe(subscriberID string, filter func(*Event) bool) *Su
 	return sub
 }
 
-// Unsubscribe removes a subscriber
 func (eb *EventBus) Unsubscribe(subscriberID string) {
 	eb.mu.Lock()
 	defer eb.mu.Unlock()
 
-	// Don't close the channel here — distributeEvent may still be
-	// sending on it outside the lock. The channel will be collected
-	// once all references are gone. Consumers should select on
-	// ctx.Done() to detect shutdown.
 	delete(eb.subscribers, subscriberID)
 }
 
-// processEvents processes events from the buffer and distributes to subscribers
 func (eb *EventBus) processEvents() {
+	defer eb.wg.Done()
 	for {
 		select {
 		case <-eb.ctx.Done():
@@ -170,9 +157,7 @@ func (eb *EventBus) processEvents() {
 	}
 }
 
-// distributeEvent sends event to all matching subscribers
 func (eb *EventBus) distributeEvent(event *Event) {
-	// Store in ring buffer for history queries
 	eb.mu.Lock()
 	eb.recentEvents[eb.recentIdx] = event
 	eb.recentIdx = (eb.recentIdx + 1) % len(eb.recentEvents)
@@ -189,29 +174,23 @@ func (eb *EventBus) distributeEvent(event *Event) {
 	eb.mu.RUnlock()
 
 	for _, sub := range subs {
-		// Apply filter if present
 		if sub.Filter != nil && !sub.Filter(event) {
 			continue
 		}
 
-		// Non-blocking send to subscriber
 		select {
 		case sub.Channel <- event:
 		default:
-			// Subscriber channel is full, skip
 		}
 	}
 }
 
-// SubscriberCount returns the number of active subscribers.
 func (eb *EventBus) SubscriberCount() int {
 	eb.mu.RLock()
 	defer eb.mu.RUnlock()
 	return len(eb.subscribers)
 }
 
-// GetRecentEvents returns recent events from the ring buffer, filtered by optional projectID and eventType.
-// Results are returned newest-first, up to limit.
 func (eb *EventBus) GetRecentEvents(limit int, projectID, eventType string) []*Event {
 	eb.mu.RLock()
 	defer eb.mu.RUnlock()
@@ -221,7 +200,6 @@ func (eb *EventBus) GetRecentEvents(limit int, projectID, eventType string) []*E
 	}
 
 	result := make([]*Event, 0, limit)
-	// Walk backwards from most recent
 	for i := 0; i < eb.recentCount && len(result) < limit; i++ {
 		idx := (eb.recentIdx - 1 - i + len(eb.recentEvents)) % len(eb.recentEvents)
 		ev := eb.recentEvents[idx]
@@ -239,10 +217,18 @@ func (eb *EventBus) GetRecentEvents(limit int, projectID, eventType string) []*E
 	return result
 }
 
-// Close shuts down the event bus
 func (eb *EventBus) Close() {
+	eb.closedMu.Lock()
+	if eb.closed {
+		eb.closedMu.Unlock()
+		return
+	}
+	eb.closed = true
+	eb.closedMu.Unlock()
+
 	eb.cancel()
 	close(eb.buffer)
+	eb.wg.Wait()
 
 	eb.mu.Lock()
 	defer eb.mu.Unlock()
@@ -253,7 +239,6 @@ func (eb *EventBus) Close() {
 	eb.subscribers = make(map[string]*Subscriber)
 }
 
-// PublishAgentEvent publishes an agent-related event
 func (eb *EventBus) PublishAgentEvent(eventType EventType, agentID, projectID string, data map[string]interface{}) error {
 	if data == nil {
 		data = make(map[string]interface{})
@@ -268,7 +253,6 @@ func (eb *EventBus) PublishAgentEvent(eventType EventType, agentID, projectID st
 	})
 }
 
-// PublishBeadEvent publishes a bead-related event
 func (eb *EventBus) PublishBeadEvent(eventType EventType, beadID, projectID string, data map[string]interface{}) error {
 	if data == nil {
 		data = make(map[string]interface{})
@@ -283,7 +267,6 @@ func (eb *EventBus) PublishBeadEvent(eventType EventType, beadID, projectID stri
 	})
 }
 
-// PublishLogMessage publishes a log message event
 func (eb *EventBus) PublishLogMessage(level, message, source, projectID string) error {
 	return eb.Publish(&Event{
 		Type:      EventTypeLogMessage,
