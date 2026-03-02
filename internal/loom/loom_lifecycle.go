@@ -753,6 +753,7 @@ func (a *Loom) Initialize(ctx context.Context) error {
 		// Spawn isolated container for project if configured.
 		// Run asynchronously so a slow Docker build/pull does not block startup.
 		if p.UseContainer {
+			a.goroutineWg.Add(1)
 			projCopy := *p
 			go func() {
 				defer func() {
@@ -760,6 +761,7 @@ func (a *Loom) Initialize(ctx context.Context) error {
 						fmt.Fprintf(os.Stderr, "[Loom] PANIC in EnsureProjectContainer for %s: %v\n", projCopy.ID, r)
 					}
 				}()
+				defer a.goroutineWg.Done()
 				fmt.Fprintf(os.Stderr, "[Loom] Spawning isolated container for project %s (async)\n", projCopy.ID)
 				bgCtx := context.Background()
 				if err := a.containerOrchestrator.EnsureProjectContainer(bgCtx, &projCopy); err != nil {
@@ -778,8 +780,12 @@ func (a *Loom) Initialize(ctx context.Context) error {
 			if syncInterval == 0 {
 				syncInterval = 30 * time.Second // Default to 30 seconds
 			}
+			a.goroutineWg.Add(1)
 			coordinator := beads.NewGitCoordinator(p.ID, wtManager, syncInterval)
-			go coordinator.StartSyncLoop(ctx, a.beadsManager)
+			go func() {
+				defer a.goroutineWg.Done()
+				coordinator.StartSyncLoop(ctx, a.beadsManager)
+			}()
 			log.Printf("[Loom] Started GitCoordinator for project %s", p.ID)
 		}
 
