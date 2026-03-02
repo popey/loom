@@ -10,7 +10,7 @@ description: Insert defer statements for file handles and DB connections in erro
 status: closed
 priority: 2
 projectid: loom
-assignedto: exec-loom-d9c423af
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -45,5 +45,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-06T13:19:04Z
-updatedat: 2026-03-02T05:53:53.227155439Z
+updatedat: 2026-03-02T05:53:54.822290398Z
 closedat: 2026-03-02T05:53:52.224195248Z
