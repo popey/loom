@@ -10,7 +10,7 @@ description: Check for missing error returns and proper defer cleanup
 status: closed
 priority: 2
 projectid: loom
-assignedto: exec-loom-a640e5a2
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -68,5 +68,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-02-06T14:23:40Z
-updatedat: 2026-03-02T03:02:16.343012867Z
+updatedat: 2026-03-02T03:02:17.858531663Z
 closedat: 2026-03-02T03:02:15.344392136Z
