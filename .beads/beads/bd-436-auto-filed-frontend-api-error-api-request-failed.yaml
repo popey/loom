@@ -1,0 +1,67 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-436
+type: bug
+title: '[auto-filed] [frontend] API Error: API request failed'
+description: |
+    ## Auto-Filed Bug Report
+
+    **Source:** frontend
+    **Error Type:** api_error
+    **Severity:** critical
+    **Occurred At:** 2026-03-02T14:31:50Z
+
+    ### Error Message
+    API request failed
+
+    ### Stack Trace
+
+
+    ### Context
+    ```json
+    {
+      "column": 0,
+      "endpoint": "/logs/recent?limit=200",
+      "line": 0,
+      "method": "GET",
+      "response": "API request failed",
+      "source_file": "frontend",
+      "state": {
+        "agents": 46,
+        "beads": 681,
+        "projects": 3
+      },
+      "status": 500,
+      "timestamp": "2026-03-02T14:31:50.779Z",
+      "url": "http://sparky.local:8080/",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "viewport": "3440x1440"
+    }
+    ```
+
+    ---
+    *This bug was automatically filed by the Loom error tracking system.*
+    *Will be automatically routed to the appropriate specialist for investigation.*
+status: open
+priority: 0
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags:
+    - auto-filed
+    - frontend
+    - api_error
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-02T14:35:35.77496833Z
+updatedat: 2026-03-02T14:35:35.7969852Z
+closedat: null
