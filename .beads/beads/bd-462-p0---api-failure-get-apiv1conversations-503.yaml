@@ -1,0 +1,35 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-462
+type: task
+title: P0 - API failure GET /api/v1/conversations 503
+description: |
+    API request failed
+
+    Method: GET
+    Path: /api/v1/conversations
+    Status: 503
+    Query: project_id=loom&limit=50
+    Remote: 10.11.101.193:62525
+    User: admin
+    Timestamp: 2026-03-02T16:41:57Z
+status: open
+priority: 0
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-02T16:41:57.451343145Z
+updatedat: 2026-03-02T16:42:12.088060415Z
+closedat: null
