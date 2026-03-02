@@ -100,7 +100,7 @@ func (cd *CircularDetector) analyzeFile(filePath string) error {
 		currentPkg:  pkgName,
 		currentFile: filePath,
 	}
-	ast.Walk(visitor)
+	ast.Walk(visitor, file)
 
 	return nil
 }

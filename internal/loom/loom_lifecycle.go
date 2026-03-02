@@ -22,11 +22,12 @@ import (
 	"github.com/jordanhubbard/loom/internal/containers"
 	"github.com/jordanhubbard/loom/internal/database"
 	"github.com/jordanhubbard/loom/internal/decision"
-	"github.com/jordanhubbard/loom/internal/dispatch"
+
 	"github.com/jordanhubbard/loom/internal/eventbus"
 	"github.com/jordanhubbard/loom/internal/executor"
 	"github.com/jordanhubbard/loom/internal/files"
 	"github.com/jordanhubbard/loom/internal/gitops"
+	"github.com/jordanhubbard/loom/internal/dispatch"
 	"github.com/jordanhubbard/loom/internal/keymanager"
 	"github.com/jordanhubbard/loom/internal/logging"
 	"github.com/jordanhubbard/loom/internal/memory"
@@ -965,7 +966,7 @@ func (a *Loom) Initialize(ctx context.Context) error {
 
 	// Start the Ralph Loop — a plain goroutine ticker that runs maintenance
 	// every 10 seconds (resets stuck agents, auto-blocks looped beads, etc.).
-	ralphActs := ralph.New(a.database, nil, a.beadsManager, a.agentManager)
+	ralphActs := ralph.New(a.database, a.beadsManager, a.agentManager)
 	go func() {
 		ticker := time.NewTicker(10 * time.Second)
 		defer ticker.Stop()
@@ -1141,70 +1142,6 @@ func (a *Loom) Shutdown() {
 			a.agentManager.StopAll()
 		}
 
-		// Close task executor
-		if a.taskExecutor != nil {
-			_ = a.taskExecutor.Close()
-		}
-
-		// Close container orchestrator - stops Docker containers
-		if a.containerOrchestrator != nil {
-			_ = a.containerOrchestrator.Close()
-		}
-
-		// Close gitops manager - stops git processes
-		if a.gitopsManager != nil {
-			_ = a.gitopsManager.Close()
-		}
-
-		// Close shell executor - stops running shell commands
-		if a.shellExecutor != nil {
-			_ = a.shellExecutor.Close()
-		}
-
-		// Close logging manager
-		if a.logManager != nil {
-			_ = a.logManager.Close()
-		}
-
-		// Close activity manager
-		if a.activityManager != nil {
-			_ = a.activityManager.Close()
-		}
-
-		// Close notification manager
-		if a.notificationManager != nil {
-			_ = a.notificationManager.Close()
-		}
-
-		// Close comments manager
-		if a.commentsManager != nil {
-			_ = a.commentsManager.Close()
-		}
-
-		// Close workflow engine
-		if a.workflowEngine != nil {
-			_ = a.workflowEngine.Close()
-		}
-
-		// Close motivation engine
-		if a.motivationEngine != nil {
-			_ = a.motivationEngine.Close()
-		}
-
-		// Close idle detector
-		if a.idleDetector != nil {
-			_ = a.idleDetector.Close()
-		}
-
-		// Close memory manager
-		if a.memoryManager != nil {
-			_ = a.memoryManager.Close()
-		}
-
-		// Close metrics
-		if a.metrics != nil {
-			_ = a.metrics.Close()
-		}
 
 		if a.connectorManager != nil {
 			_ = a.connectorManager.Close()
@@ -1333,6 +1270,11 @@ func (a *Loom) SetKeyManager(km *keymanager.KeyManager) {
 
 func (a *Loom) GetKeyManager() *keymanager.KeyManager {
 	return a.keyManager
+}
+
+// GetDispatcher is deprecated; the dispatch loop was replaced by TaskExecutor.
+func (a *Loom) GetDispatcher() *dispatch.Dispatcher {
+	return nil
 }
 
 
@@ -1619,42 +1561,6 @@ func (a *Loom) ensureOrgChart(ctx context.Context, projectID string) error {
 	return nil
 }
 
-func (a *Loom) attemptSelfHeal(ctx context.Context, project *models.Project, issues []string) bool {
-	if project == nil || len(issues) == 0 {
-		return false
-	}
-
-	healed := false
-	for _, issue := range issues {
-		lower := strings.ToLower(issue)
-
-		// Self-heal: beads path missing -> create it
-		if strings.Contains(lower, "beads path missing") {
-			beadsPath := project.BeadsPath
-			if project.GitRepo != "" && project.GitRepo != "." {
-				beadsPath = filepath.Join(a.gitopsManager.GetProjectWorkDir(project.ID), project.BeadsPath)
-			}
-			if err := os.MkdirAll(beadsPath, 0755); err == nil {
-				log.Printf("[SelfHeal] Created missing beads path %s for project %s", beadsPath, project.ID)
-				healed = true
-			}
-		}
-
-		// Self-heal: git remote access failed with token auth -> ensure token is set
-		if strings.Contains(lower, "git remote access failed") && project.GitAuthMethod == "token" {
-			// Try to refresh git credentials from env
-			if token := os.Getenv("GITHUB_TOKEN"); token != "" {
-				log.Printf("[SelfHeal] GITHUB_TOKEN available, retrying git access for %s", project.ID)
-				healed = true
-			} else if token := os.Getenv("GITLAB_TOKEN"); token != "" {
-				log.Printf("[SelfHeal] GITLAB_TOKEN available, retrying git access for %s", project.ID)
-				healed = true
-			}
-		}
-	}
-
-	return healed
-}
 
 func (a *Loom) RequestFileAccess(projectID, filePath, agentID, beadID string) (*models.FileLock, error) {
 	// Verify agent exists

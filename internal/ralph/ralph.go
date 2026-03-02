@@ -23,7 +23,7 @@ type Activities struct {
 }
 
 // New creates a new Activities instance.
-func New(db *database.Database, d *dispatch.Dispatcher, b *beads.Manager, a *agent.WorkerManager) *Activities {
+func New(db *database.Database, b *beads.Manager, a *agent.WorkerManager) *Activities {
 	return &Activities{
 		database: db,
 		beadsMgr: b,
