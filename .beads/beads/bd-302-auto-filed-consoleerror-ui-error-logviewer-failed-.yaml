@@ -50,10 +50,15 @@ tags:
     - auto-filed
     - console.error
     - js_error
-context: {}
+context:
+    dispatch_count: "1"
+    error_history: '[{"timestamp":"2026-03-02T07:02:05.495027821Z","error":"LLM call failed on iteration 1: failed to send request: Post \"http://tokenhub:8080/v1/chat/completions\": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving","dispatch":1}]'
+    last_run_at: "2026-03-02T07:02:05Z"
+    last_run_error: 'LLM call failed on iteration 1: failed to send request: Post "http://tokenhub:8080/v1/chat/completions": dial tcp: lookup tokenhub on 127.0.0.11:53: server misbehaving'
+    loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-02T06:56:08.558681102Z
-updatedat: 2026-03-02T06:56:08.559142019Z
+updatedat: 2026-03-02T07:02:05.495069598Z
 closedat: null
