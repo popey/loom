@@ -2117,4 +2117,3 @@ func TestProjectReadinessState(t *testing.T) {
 		t.Error("state.checkedAt should not be zero")
 	}
 }
-
