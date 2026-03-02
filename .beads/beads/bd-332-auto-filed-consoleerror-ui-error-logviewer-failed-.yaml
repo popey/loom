@@ -37,10 +37,10 @@ description: |
     ---
     *This bug was automatically filed by the Loom error tracking system.*
     *Will be automatically routed to the appropriate specialist for investigation.*
-status: in_progress
+status: open
 priority: 1
 projectid: loom
-assignedto: exec-loom-fb5f2d18
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -50,10 +50,16 @@ tags:
     - auto-filed
     - console.error
     - js_error
-context: {}
+context:
+    dispatch_count: "1"
+    error_history: '[{"timestamp":"2026-03-02T11:11:34.768578016Z","error":"LLM call failed on iteration 9: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1}]'
+    last_run_at: "2026-03-02T11:11:34Z"
+    last_run_error: |
+        LLM call failed on iteration 9: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
+    loop_detected: "false"
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-02T10:06:18.41835654Z
-updatedat: 2026-03-02T11:06:54.137170099Z
+updatedat: 2026-03-02T11:11:34.768592177Z
 closedat: null
