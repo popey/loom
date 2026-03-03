@@ -123,12 +123,31 @@ type FederationPeer struct {
 
 // AgentsConfig configures agent behavior
 type AgentsConfig struct {
-	MaxConcurrent      int           `yaml:"max_concurrent"`
-	DefaultPersonaPath string        `yaml:"default_persona_path"`
-	HeartbeatInterval  time.Duration `yaml:"heartbeat_interval"`
-	FileLockTimeout    time.Duration `yaml:"file_lock_timeout"`
-	CorpProfile        string        `yaml:"corp_profile" json:"corp_profile,omitempty"`
-	AllowedRoles       []string      `yaml:"allowed_roles" json:"allowed_roles,omitempty"`
+	MaxConcurrent      int                  `yaml:"max_concurrent"`
+	DefaultPersonaPath string               `yaml:"default_persona_path"`
+	HeartbeatInterval  time.Duration        `yaml:"heartbeat_interval"`
+	FileLockTimeout    time.Duration        `yaml:"file_lock_timeout"`
+	CorpProfile        string               `yaml:"corp_profile" json:"corp_profile,omitempty"`
+	AllowedRoles       []string             `yaml:"allowed_roles" json:"allowed_roles,omitempty"`
+	PreCommitChecks    PreCommitChecksConfig `yaml:"pre_commit_checks" json:"pre_commit_checks,omitempty"`
+	ModelCheck         ModelCheckConfig      `yaml:"model_check" json:"model_check,omitempty"`
+}
+
+// PreCommitChecksConfig controls which quality gates block commits
+type PreCommitChecksConfig struct {
+	Build         bool `yaml:"build"`
+	Vet           bool `yaml:"vet"`
+	SyntaxCheckJS bool `yaml:"syntax_check_js"`
+	TestsBlocking bool `yaml:"tests_blocking"`
+}
+
+// ModelCheckConfig controls startup model-tier validation
+type ModelCheckConfig struct {
+	Enabled          bool     `yaml:"enabled"`
+	MinTier          string   `yaml:"min_tier"`
+	Allowlist        []string `yaml:"allowlist,omitempty"`
+	DenylistPatterns []string `yaml:"denylist_patterns,omitempty"`
+	OnViolation      string   `yaml:"on_violation"`
 }
 
 // ReadinessConfig controls readiness gating behavior

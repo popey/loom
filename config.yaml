@@ -53,6 +53,30 @@ agents:
     - devops-engineer
     - remediation-specialist
     - public-relations-manager
+  pre_commit_checks:
+    build: true
+    vet: true
+    syntax_check_js: true
+    tests_blocking: false
+  model_check:
+    enabled: true
+    min_tier: "sonnet"
+    allowlist: []
+    denylist_patterns:
+      - "*-mini"
+      - "*-nano"
+      - "*-tiny"
+      - "*-small"
+      - "minimax*"
+      - "claude-haiku-*"
+      - "gemini-*-flash-lite"
+      - "gemini-*-flash-thinking-exp"
+      - "phi-*"
+      - "*-1b"
+      - "*-3b"
+      - "*-7b"
+      - "*-8b"
+    on_violation: "warn"
 
 dispatch:
   max_hops: 20

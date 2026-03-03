@@ -95,7 +95,6 @@ func (s *Server) handleGetActivityFeed(w http.ResponseWriter, r *http.Request) {
 		// if len(userProjects) > 0 {
 		//     filters.ProjectIDs = userProjects
 		// }
-		_ = userID // userID will be used for project filtering in future
 	}
 
 	activities, err := activityMgr.GetActivities(filters)
@@ -128,7 +127,6 @@ func (s *Server) handleActivityFeedStream(w http.ResponseWriter, r *http.Request
 
 	// Check authentication
 	userID := auth.GetUserIDFromRequest(r)
-	_ = userID // TODO: Use for permission filtering
 
 	// If auth is enabled and no user is authenticated, return unauthorized
 	if userID == "" && s.config.Security.EnableAuth {

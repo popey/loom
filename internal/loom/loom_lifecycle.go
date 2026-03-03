@@ -346,6 +346,7 @@ func New(cfg *config.Config) (*Loom, error) {
 		Meetings:      arb.meetingsManager,
 		Consulter:     arb,
 		Voter:         arb,
+		Cfg:           cfg,
 	}
 	arb.actionRouter = actionRouter
 	motivationEngine = motivation.NewEngine(motivationRegistry, NewLoomStateProvider(arb), arb)
@@ -955,6 +956,11 @@ func (a *Loom) Initialize(ctx context.Context) error {
 				log.Printf("Successfully persisted project %s to database", p.ID)
 			}
 		}
+	}
+
+	// Paranoid model check: validate provider models meet minimum intelligence tier.
+	if err := a.runModelCheck(ctx); err != nil {
+		return err // only non-nil when on_violation=="block"
 	}
 
 	// Ensure default agents are assigned for each project.

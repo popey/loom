@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"strings"
 	"time"
@@ -174,7 +175,7 @@ func (s *Server) handleGitHubWebhook(w http.ResponseWriter, r *http.Request) {
 	if triggerReview, ok := webhookEvent.Data["trigger_code_review"].(bool); ok && triggerReview {
 		if err := s.createCodeReviewBead(webhookEvent); err != nil {
 			// Log error but don't fail the webhook
-			_ = err // TODO: Add logging
+			log.Printf("[Webhook] createCodeReviewBead failed (non-fatal): %v", err)
 		}
 	}
 

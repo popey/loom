@@ -10,6 +10,7 @@ import (
 	"github.com/jordanhubbard/loom/internal/executor"
 	"github.com/jordanhubbard/loom/internal/files"
 	"github.com/jordanhubbard/loom/internal/persona"
+	"github.com/jordanhubbard/loom/pkg/config"
 	"github.com/jordanhubbard/loom/pkg/models"
 )
 
@@ -160,6 +161,7 @@ type Router struct {
 	BeadType       string
 	BeadTags       []string
 	DefaultP0      bool
+	Cfg            *config.Config
 }
 
 // getProjectWorkDir returns the working directory for a project
@@ -204,6 +206,21 @@ func (r *Router) runBuildForProject(ctx context.Context, actx ActionContext, exp
 		Command:    buildCmd,
 		WorkingDir: workDir,
 		Timeout:    300,
+	})
+}
+
+// runCommandInProject runs an arbitrary shell command in the project work directory.
+func (r *Router) runCommandInProject(ctx context.Context, actx ActionContext, command string, timeoutSecs int) (*executor.ExecuteCommandResult, error) {
+	if r.Commands == nil {
+		return nil, nil
+	}
+	return r.Commands.ExecuteCommand(ctx, executor.ExecuteCommandRequest{
+		AgentID:    actx.AgentID,
+		BeadID:     actx.BeadID,
+		ProjectID:  actx.ProjectID,
+		Command:    command,
+		WorkingDir: r.getProjectWorkDir(actx.ProjectID),
+		Timeout:    timeoutSecs,
 	})
 }
 
@@ -1802,7 +1819,16 @@ func (r *Router) runQualityGate(ctx context.Context, actx ActionContext, action 
 			buildResult.ExitCode, buildResult.Stdout, buildResult.Stderr)
 	}
 
-	// Test gate (best-effort, non-blocking for now)
+	// go vet gate (blocking for Go projects when enabled)
+	if r.Cfg == nil || r.Cfg.Agents.PreCommitChecks.Vet {
+		vetResult, _ := r.runCommandInProject(ctx, actx, "if [ -f go.mod ]; then go vet ./...; fi", 120)
+		if vetResult != nil && !vetResult.Success && vetResult.ExitCode > 0 {
+			return fmt.Sprintf("commit blocked: go vet failed (exit %d).\n\nFix all vet errors before committing.\n\nstdout:\n%s\nstderr:\n%s",
+				vetResult.ExitCode, vetResult.Stdout, vetResult.Stderr)
+		}
+	}
+
+	// Test gate (blocking when TestsBlocking=true, non-blocking otherwise)
 	if r.Tests != nil {
 		projectPath := r.getProjectWorkDir(actx.ProjectID)
 		testResult, testErr := r.Tests.Run(ctx, projectPath, "", "", 120)
@@ -1810,8 +1836,20 @@ func (r *Router) runQualityGate(ctx context.Context, actx ActionContext, action 
 			log.Printf("[QualityGate] Test runner error (non-blocking): %v", testErr)
 		} else if testResult != nil {
 			if passed, ok := testResult["passed"].(bool); ok && !passed {
+				if r.Cfg != nil && r.Cfg.Agents.PreCommitChecks.TestsBlocking {
+					return fmt.Sprintf("commit blocked: tests failed.\n\n%v", testResult)
+				}
 				log.Printf("[QualityGate] Tests failed for %s (non-blocking): %v", actx.ProjectID, testResult)
 			}
+		}
+	}
+
+	// JS syntax gate (blocking when SyntaxError detected)
+	if r.Cfg == nil || r.Cfg.Agents.PreCommitChecks.SyntaxCheckJS {
+		jsResult, _ := r.runCommandInProject(ctx, actx,
+			`git diff --staged --name-only --diff-filter=ACMR | grep '\.js$' | xargs -r node --check 2>&1 || true`, 30)
+		if jsResult != nil && strings.Contains(jsResult.Stdout, "SyntaxError") {
+			return fmt.Sprintf("commit blocked: JavaScript syntax error detected.\n\n%s", jsResult.Stdout)
 		}
 	}
 

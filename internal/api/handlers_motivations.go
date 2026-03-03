@@ -3,6 +3,7 @@ package api
 import (
 	"encoding/json"
 	"net/http"
+	"strconv"
 	"strings"
 	"time"
 
@@ -448,9 +449,8 @@ func (s *Server) handleMotivationHistory(w http.ResponseWriter, r *http.Request)
 	// Get limit from query (default 50)
 	limit := 50
 	if l := r.URL.Query().Get("limit"); l != "" {
-		if parsedLimit, err := json.Marshal(l); err == nil {
-			// Parse limit
-			_ = parsedLimit // TODO: Implement limit parsing
+		if n, err := strconv.Atoi(l); err == nil && n > 0 {
+			limit = n
 		}
 	}
 
