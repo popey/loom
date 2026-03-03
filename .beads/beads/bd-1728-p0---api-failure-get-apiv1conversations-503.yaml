@@ -16,7 +16,7 @@ description: |
     Remote: 10.11.101.193:54208
     User: admin
     Timestamp: 2026-03-03T05:12:53Z
-status: in_progress
+status: closed
 priority: 0
 projectid: loom
 assignedto: exec-loom-c9547d3a
@@ -26,10 +26,11 @@ relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    close_reason: Fixed GET /api/v1/conversations 503 error. The issue was in ListConversationContextsByProject where PostgreSQL parameter placeholders (?) were incorrectly used for the LIMIT clause. PostgreSQL only supports parameter placeholders in WHERE clauses and value expressions, not for LIMIT. Changed to use fmt.Sprintf to embed the limit value directly in the query string while keeping the projectID as a parameter. The limit is validated by the handler to be a positive integer before being passed to the database function. Fix committed and pushed to main.
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-03T05:12:53.570680393Z
-updatedat: 2026-03-03T09:48:38.774743983Z
-closedat: null
+updatedat: 2026-03-03T09:48:43.624159469Z
+closedat: 2026-03-03T09:48:43.624158509Z
