@@ -1,6 +1,7 @@
 package api
 
 import "log"
+import "context"
 import "time"
 import (
 	"encoding/json"
@@ -217,6 +218,10 @@ func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request)
 
 	// Get query parameters
 	projectID := r.URL.Query().Get("project_id")
+	if projectID == "" {
+		s.respondError(w, http.StatusBadRequest, "project_id parameter is required")
+		return
+	}
 	limitStr := r.URL.Query().Get("limit")
 
 	limit := 50 // Default limit
@@ -231,13 +236,10 @@ func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request)
 		}
 	}
 
-	// If no project_id specified, require it
-	if projectID == "" {
-		s.respondError(w, http.StatusBadRequest, "project_id parameter is required")
-		return
-	}
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
 
-	conversations, err := db.ListConversationContextsByProject(projectID, limit)
+	conversations, err := db.ListConversationContextsByProject(ctx, projectID, limit)
 	if err != nil {
 		s.respondError(w, http.StatusInternalServerError, fmt.Sprintf("Failed to list conversations: %v", err))
 		return
