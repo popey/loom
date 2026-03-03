@@ -19,7 +19,7 @@ description: |
 status: closed
 priority: 0
 projectid: loom
-assignedto: exec-loom-7faab797
+assignedto: ""
 blockedby: []
 blocks: []
 relatedto: []
@@ -32,5 +32,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-03T03:04:23.180066928Z
-updatedat: 2026-03-03T08:20:15.158684071Z
+updatedat: 2026-03-03T08:20:16.868050666Z
 closedat: 2026-03-03T08:20:14.076766769Z
