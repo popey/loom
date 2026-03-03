@@ -18,6 +18,12 @@ func (s *Server) HandleLogsRecent(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// Check if logging manager is available
+	if s.logManager == nil {
+		http.Error(w, "Logging service not available", http.StatusServiceUnavailable)
+		return
+	}
+
 	// Parse query parameters
 	limitStr := r.URL.Query().Get("limit")
 	limit := 100
@@ -76,6 +82,12 @@ func (s *Server) HandleLogsRecent(w http.ResponseWriter, r *http.Request) {
 func (s *Server) HandleLogsStream(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	// Check if logging manager is available
+	if s.logManager == nil {
+		http.Error(w, "Logging service not available", http.StatusServiceUnavailable)
 		return
 	}
 
@@ -175,6 +187,12 @@ func (s *Server) HandleLogsStream(w http.ResponseWriter, r *http.Request) {
 func (s *Server) HandleLogsExport(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodGet {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+
+	// Check if logging manager is available
+	if s.logManager == nil {
+		http.Error(w, "Logging service not available", http.StatusServiceUnavailable)
 		return
 	}
 
