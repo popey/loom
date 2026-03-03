@@ -1,0 +1,59 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-2641
+type: bug
+title: '[auto-filed] [console.error] UI Error: [LogViewer] Failed to fetch metrics: ReferenceError: apiCall is not defined'
+description: |
+    ## Auto-Filed Bug Report
+
+    **Source:** console.error
+    **Error Type:** js_error
+    **Severity:** high
+    **Occurred At:** 2026-03-03T14:03:18Z
+
+    ### Error Message
+    [LogViewer] Failed to fetch metrics: ReferenceError: apiCall is not defined
+
+    ### Stack Trace
+
+
+    ### Context
+    ```json
+    {
+      "column": 0,
+      "line": 0,
+      "source_file": "console.error",
+      "state": "state not available",
+      "timestamp": "2026-03-03T14:03:18.264Z",
+      "url": "http://sparky.local:8080/",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36",
+      "viewport": "1710x873"
+    }
+    ```
+
+    ---
+    *This bug was automatically filed by the Loom error tracking system.*
+    *Will be automatically routed to the appropriate specialist for investigation.*
+status: open
+priority: 1
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags:
+    - auto-filed
+    - console.error
+    - js_error
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-03T14:03:18.31394848Z
+updatedat: 2026-03-03T14:03:18.332466255Z
+closedat: null
