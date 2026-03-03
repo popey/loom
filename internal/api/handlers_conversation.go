@@ -9,6 +9,7 @@ import (
 	"strings"
 
 	"github.com/jordanhubbard/loom/internal/database"
+	"github.com/jordanhubbard/loom/pkg/models"
 )
 
 // handleConversation handles operations on a specific conversation session
@@ -212,14 +213,14 @@ func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request)
 
 	if s.app == nil {
 		// Return empty list instead of error when app is not initialized
-		s.respondJSON(w, http.StatusOK, []interface{}{})
+		s.respondJSON(w, http.StatusOK, []*models.ConversationContext{})
 		return
 	}
 
 	db := s.app.GetDatabase()
 	if db == nil {
 		// Return empty list instead of error when database is not available
-		s.respondJSON(w, http.StatusOK, []interface{}{})
+		s.respondJSON(w, http.StatusOK, []*models.ConversationContext{})
 		return
 	}
 
@@ -242,12 +243,12 @@ func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request)
 	conversations, err := db.ListConversationContextsByProject(context.Background(), projectID, limit)
 	if err != nil {
 		log.Printf("Error listing conversations: %v", err)
-		s.respondJSON(w, http.StatusOK, []interface{}{})
+		s.respondJSON(w, http.StatusOK, []*models.ConversationContext{})
 		return
 	}
 
 	if conversations == nil {
-		conversations = []*interface{}{}
+		conversations = []*models.ConversationContext{}
 	}
 
 	s.respondJSON(w, http.StatusOK, conversations)
