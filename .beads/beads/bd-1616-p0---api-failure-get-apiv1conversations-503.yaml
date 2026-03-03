@@ -16,10 +16,10 @@ description: |
     Remote: 10.11.101.193:65420
     User: admin
     Timestamp: 2026-03-03T03:38:53Z
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-9fefcf2f
 blockedby: []
 blocks: []
 relatedto: []
@@ -37,5 +37,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-03T03:38:53.203924182Z
-updatedat: 2026-03-03T07:09:41.833492431Z
+updatedat: 2026-03-03T10:15:58.924358103Z
 closedat: null
