@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"strings"
+	"time"
 
 	"github.com/jordanhubbard/loom/internal/database"
 	"github.com/jordanhubbard/loom/pkg/models"
@@ -206,7 +207,7 @@ func (s *Server) handleBeadConversation(w http.ResponseWriter, r *http.Request) 
 // handleConversationsList handles listing conversations
 // GET /api/v1/conversations - List all conversations for a project
 func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request) {
-	if r.Method != http.MethodGet && r.Method != http.MethodPost {
+	if r.Method != http.MethodGet {
 		s.respondError(w, http.StatusMethodNotAllowed, "Method not allowed")
 		return
 	}
@@ -239,8 +240,12 @@ func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request)
 		}
 	}
 
+	// Create a context with a 30-second timeout for the database query
+	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	defer cancel()
+
 	// List conversations for the project
-	conversations, err := db.ListConversationContextsByProject(context.Background(), projectID, limit)
+	conversations, err := db.ListConversationContextsByProject(ctx, projectID, limit)
 	if err != nil {
 		log.Printf("Error listing conversations: %v", err)
 		s.respondJSON(w, http.StatusOK, []*models.ConversationContext{})
