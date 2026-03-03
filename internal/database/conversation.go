@@ -254,6 +254,11 @@ func (d *Database) ListConversationContextsByProject(ctx context.Context, projec
 		contexts = append(contexts, convCtx)
 	}
 
+	// Check for errors that occurred during iteration
+	if err := rows.Err(); err != nil {
+		return nil, fmt.Errorf("error iterating conversation contexts: %w", err)
+	}
+
 	return contexts, nil
 }
 
