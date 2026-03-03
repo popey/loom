@@ -212,10 +212,10 @@ func (d *Database) DeleteExpiredConversationContexts() (int64, error) {
 	return rows, nil
 }
 
-func (d *Database) ListConversationContextsByProject(ctx context.Context, projectID string, limit int) ([]*models.ConversationContext, error) {
+func (d *Database) ListConversationContextsByProject(queryCtx context.Context, projectID string, limit int) ([]*models.ConversationContext, error) {
 	query := "SELECT session_id, bead_id, project_id, messages, created_at, updated_at, expires_at, token_count, metadata FROM conversation_contexts WHERE project_id = ? ORDER BY updated_at DESC LIMIT ?"
 
-	rows, err := d.db.QueryContext(ctx, rebind(query), projectID, limit)
+	rows, err := d.db.QueryContext(queryCtx, rebind(query), projectID, limit)
 	if err != nil {
 		return nil, fmt.Errorf("failed to list conversation contexts: %w", err)
 	}
