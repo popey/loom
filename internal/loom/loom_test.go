@@ -239,8 +239,10 @@ func TestLoom_GetDispatcher(t *testing.T) {
 	loom, tmpDir := testLoom(t)
 	defer os.RemoveAll(tmpDir)
 
-	if loom.GetDispatcher() == nil {
-		t.Error("GetDispatcher() returned nil")
+	// GetDispatcher is deprecated; the dispatch loop was replaced by TaskExecutor.
+	// It intentionally returns nil and callers must nil-check before use.
+	if loom.GetDispatcher() != nil {
+		t.Error("GetDispatcher() should return nil (deprecated)")
 	}
 }
 
