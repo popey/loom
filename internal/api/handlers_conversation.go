@@ -1,5 +1,6 @@
 package api
 
+import "log"
 import (
 	"encoding/json"
 	"fmt"
@@ -201,6 +202,8 @@ func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request)
 		s.respondError(w, http.StatusServiceUnavailable, "Database not available")
 		return
 	}
+
+    log.Println("Database connection established successfully")
 
 	// Get query parameters
 	projectID := r.URL.Query().Get("project_id")
