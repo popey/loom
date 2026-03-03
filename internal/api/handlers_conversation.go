@@ -209,16 +209,10 @@ func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request)
 	if err := db.Ping(); err != nil {
 		s.respondError(w, http.StatusServiceUnavailable, "Database connection failed")
 		log.Printf("Database connection failed: %v", err)
-		if os.Getenv("RETRY_ON_FAILURE") == "true" {
-			time.Sleep(2 * time.Second)
-		}
 		return
 	}
 
 	log.Println("Database connection established successfully")
-
-	// Add a delay to simulate retry logic
-	time.Sleep(2 * time.Second)
 
 	// Get query parameters
 	projectID := r.URL.Query().Get("project_id")
