@@ -1,6 +1,7 @@
 package api
 
 import "log"
+import "os"
 import "context"
 import "time"
 import (
@@ -208,6 +209,10 @@ func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request)
 
 	if err := db.Ping(); err != nil {
 		s.respondError(w, http.StatusServiceUnavailable, "Database connection failed")
+		log.Printf("Database connection failed: %v", err)
+		if os.Getenv("RETRY_ON_FAILURE") == "true" {
+			time.Sleep(2 * time.Second)
+		}
 		return
 	}
 
