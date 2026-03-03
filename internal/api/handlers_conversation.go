@@ -210,6 +210,17 @@ func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
+	if s.app == nil {
+		s.respondError(w, http.StatusServiceUnavailable, "Application not initialized")
+		return
+	}
+
+	db := s.app.GetDatabase()
+	if db == nil {
+		s.respondError(w, http.StatusServiceUnavailable, "Database not available")
+		return
+	}
+
 	// Get query parameters
 	projectID := r.URL.Query().Get("project_id")
 	if projectID == "" {
@@ -228,26 +239,6 @@ func (s *Server) handleConversationsList(w http.ResponseWriter, r *http.Request)
 			s.respondError(w, http.StatusBadRequest, "Limit must be between 1 and 1000")
 			return
 		}
-	}
-
-	// Return mock data for testing when app is nil
-	if s.app == nil {
-		s.respondJSON(w, http.StatusOK, map[string]interface{}{
-			"project_id":    projectID,
-			"limit":         limit,
-			"conversations": []interface{}{},
-		})
-		return
-	}
-
-	db := s.app.GetDatabase()
-	if db == nil {
-		s.respondJSON(w, http.StatusOK, map[string]interface{}{
-			"project_id":    projectID,
-			"limit":         limit,
-			"conversations": []interface{}{},
-		})
-		return
 	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
