@@ -16,7 +16,7 @@ description: |
     Remote: 10.11.101.193:49754
     User: admin
     Timestamp: 2026-03-02T22:30:39Z
-status: in_progress
+status: closed
 priority: 0
 projectid: loom
 assignedto: exec-loom-698eb63b
@@ -26,10 +26,11 @@ relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    close_reason: Fixed 503 error in conversation list handler. Root cause was using context.Background() instead of r.Context() for the database query timeout. The timeout is now properly relative to the HTTP request rather than absolute. Build and tests pass. Changes committed and pushed to main.
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-02T22:30:39.370293176Z
-updatedat: 2026-03-03T11:01:37.564860686Z
-closedat: null
+updatedat: 2026-03-03T11:01:40.543412013Z
+closedat: 2026-03-03T11:01:40.543410525Z
