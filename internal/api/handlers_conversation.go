@@ -229,6 +229,12 @@ func (s *Server) handleBeadConversation(w http.ResponseWriter, r *http.Request) 
 		return
 	}
 
+	// Check if app is available before accessing it
+	if s.app == nil {
+		s.respondError(w, http.StatusServiceUnavailable, "Application not available")
+		return
+	}
+
 	db := s.app.GetDatabase()
 	if db == nil {
 		s.respondError(w, http.StatusServiceUnavailable, "Database not available")
