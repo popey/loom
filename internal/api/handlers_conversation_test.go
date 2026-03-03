@@ -126,8 +126,8 @@ func TestHandleConversationsList_Success(t *testing.T) {
 	req := httptest.NewRequest(http.MethodGet, "/api/v1/conversations?project_id=loom&limit=50", nil)
 	w := httptest.NewRecorder()
 	s.handleConversationsList(w, req)
-	if w.Code != http.StatusServiceUnavailable {
-		// Expected because db is nil, but the test should not panic
-		t.Logf("got status %d (expected 503 because db is nil)", w.Code)
+	// With graceful degradation, we expect 200 with empty list when db is nil
+	if w.Code != http.StatusOK {
+		t.Errorf("expected 200, got %d", w.Code)
 	}
 }
