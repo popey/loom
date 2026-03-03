@@ -1,0 +1,35 @@
+entitymetadata:
+    schemaversion: ""
+    attributes: {}
+    migratedat: null
+    migratedfrom: ""
+id: bd-1699
+type: task
+title: P0 - API failure GET /api/v1/conversations 503
+description: |
+    API request failed
+
+    Method: GET
+    Path: /api/v1/conversations
+    Status: 503
+    Query: project_id=aviation&limit=50
+    Remote: 172.19.0.1:55928
+    User: admin
+    Timestamp: 2026-03-03T04:54:42Z
+status: open
+priority: 0
+projectid: loom
+assignedto: ""
+blockedby: []
+blocks: []
+relatedto: []
+parent: ""
+children: []
+tags: []
+context: {}
+duedate: null
+milestoneid: ""
+estimatedtime: 0
+createdat: 2026-03-03T04:54:42.313144169Z
+updatedat: 2026-03-03T04:55:33.797492743Z
+closedat: null
