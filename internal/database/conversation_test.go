@@ -1,6 +1,7 @@
 package database
 
 import (
+	"context"
 	"testing"
 	"time"
 
@@ -104,7 +105,9 @@ func TestConversationContext_CRUD(t *testing.T) {
 		}
 
 		// List conversations for project
-		conversations, err := db.ListConversationContextsByProject("proj-789", 10)
+		listCtx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+		defer cancel()
+		conversations, err := db.ListConversationContextsByProject(listCtx, "proj-789", 10)
 		if err != nil {
 			t.Fatalf("Failed to list conversations: %v", err)
 		}
