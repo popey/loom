@@ -16,10 +16,10 @@ description: |
     Remote: 172.19.0.1:59276
     User: admin
     Timestamp: 2026-03-03T04:56:42Z
-status: open
+status: in_progress
 priority: 0
 projectid: loom
-assignedto: ""
+assignedto: exec-loom-7faab797
 blockedby: []
 blocks: []
 relatedto: []
@@ -31,5 +31,5 @@ duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-03T04:56:42.320899423Z
-updatedat: 2026-03-03T05:32:56.71114978Z
+updatedat: 2026-03-03T07:28:48.381064783Z
 closedat: null
