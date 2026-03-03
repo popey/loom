@@ -16,7 +16,7 @@ description: |
     Remote: 10.11.101.193:64916
     User: admin
     Timestamp: 2026-03-03T03:29:53Z
-status: open
+status: blocked
 priority: 0
 projectid: loom
 assignedto: ""
@@ -27,19 +27,19 @@ parent: ""
 children: []
 tags: []
 context:
-    dispatch_count: "6"
-    error_history: '[{"timestamp":"2026-03-03T07:05:01.653290186Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-03-03T12:51:06.264592494Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":2},{"timestamp":"2026-03-03T12:58:57.273391401Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":3},{"timestamp":"2026-03-03T13:42:04.027564761Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":4},{"timestamp":"2026-03-03T14:03:10.984556127Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5},{"timestamp":"2026-03-03T14:03:10.984587743Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5},{"timestamp":"2026-03-03T14:06:23.017775527Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":6},{"timestamp":"2026-03-03T14:06:23.017810744Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":6}]'
-    last_run_at: "2026-03-03T14:06:23Z"
+    dispatch_count: "7"
+    error_history: '[{"timestamp":"2026-03-03T07:05:01.653290186Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":1},{"timestamp":"2026-03-03T12:51:06.264592494Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":2},{"timestamp":"2026-03-03T12:58:57.273391401Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":3},{"timestamp":"2026-03-03T13:42:04.027564761Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":4},{"timestamp":"2026-03-03T14:03:10.984556127Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5},{"timestamp":"2026-03-03T14:03:10.984587743Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":5},{"timestamp":"2026-03-03T14:06:23.017775527Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":6},{"timestamp":"2026-03-03T14:06:23.017810744Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":6},{"timestamp":"2026-03-03T14:58:08.120347045Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":7},{"timestamp":"2026-03-03T14:58:08.120389333Z","error":"LLM call failed on iteration 1: unexpected status code 502: {\"error\":{\"message\":\"all providers failed\",\"type\":\"server_error\",\"code\":null}}\n","dispatch":7}]'
+    last_run_at: "2026-03-03T14:58:08Z"
     last_run_error: |
         LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
-    loop_detected: "false"
-    loop_detected_at: ""
-    loop_detected_reason: ""
+    loop_detected: "true"
+    loop_detected_at: "2026-03-03T14:58:08Z"
+    loop_detected_reason: Repeated provider errors (10 attempts) - provider unavailable or unhealthy
     recovered_at: "2026-03-03T14:08:51Z"
     recovery_reason: transient infrastructure failure resolved — re-queued by recovery sweep
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-03T03:29:53.052026863Z
-updatedat: 2026-03-03T14:08:51.915952671Z
+updatedat: 2026-03-03T14:58:08.120452709Z
 closedat: null
