@@ -215,9 +215,10 @@ func (d *Database) DeleteExpiredConversationContexts() (int64, error) {
 func (d *Database) ListConversationContextsByProject(queryCtx context.Context, projectID string, limit int) ([]*models.ConversationContext, error) {
 	// Query only the metadata columns, not the full messages JSON
 	// This avoids deserializing large message histories when just listing
-	query := "SELECT session_id, bead_id, project_id, created_at, updated_at, expires_at, token_count FROM conversation_contexts WHERE project_id = ? ORDER BY updated_at DESC LIMIT ?"
+	// Note: LIMIT must be a literal value in PostgreSQL, not a parameter
+	query := fmt.Sprintf("SELECT session_id, bead_id, project_id, created_at, updated_at, expires_at, token_count FROM conversation_contexts WHERE project_id = $1 ORDER BY updated_at DESC LIMIT %d", limit)
 
-	rows, err := d.db.QueryContext(queryCtx, rebind(query), projectID, limit)
+	rows, err := d.db.QueryContext(queryCtx, query, projectID)
 	if err != nil {
 		return nil, fmt.Errorf("failed to list conversation contexts: %w", err)
 	}
