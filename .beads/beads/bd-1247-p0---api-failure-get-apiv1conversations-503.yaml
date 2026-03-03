@@ -16,7 +16,7 @@ description: |
     Remote: 10.11.101.193:62602
     User: admin
     Timestamp: 2026-03-02T21:11:32Z
-status: in_progress
+status: closed
 priority: 0
 projectid: loom
 assignedto: exec-loom-74e04929
@@ -26,10 +26,11 @@ relatedto: []
 parent: ""
 children: []
 tags: []
-context: {}
+context:
+    close_reason: Fixed SQL placeholder issue in ListConversationContextsByProject. Changed PostgreSQL-specific $1 placeholder to generic ? and added rebind() call to ensure proper database driver compatibility. This resolves the 503 Service Unavailable error when listing conversations. Fix verified to compile and tests pass.
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-02T21:11:32.241507602Z
-updatedat: 2026-03-03T12:05:36.935911354Z
-closedat: null
+updatedat: 2026-03-03T12:05:40.090845999Z
+closedat: 2026-03-03T12:05:40.090845151Z
