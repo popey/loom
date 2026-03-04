@@ -16,7 +16,7 @@ description: |
     Remote: 10.11.101.193:55657
     User: admin
     Timestamp: 2026-03-03T00:17:38Z
-status: blocked
+status: open
 priority: 0
 projectid: loom
 assignedto: ""
@@ -32,14 +32,14 @@ context:
     last_run_at: "2026-03-04T01:25:44Z"
     last_run_error: |
         LLM call failed on iteration 1: unexpected status code 502: {"error":{"message":"all providers failed","type":"server_error","code":null}}
-    loop_detected: "true"
-    loop_detected_at: "2026-03-04T01:25:44Z"
-    loop_detected_reason: Repeated provider errors (10 attempts) - provider unavailable or unhealthy
-    recovered_at: "2026-03-04T01:02:34Z"
+    loop_detected: "false"
+    loop_detected_at: ""
+    loop_detected_reason: ""
+    recovered_at: "2026-03-04T01:27:34Z"
     recovery_reason: transient infrastructure failure resolved — re-queued by recovery sweep
 duedate: null
 milestoneid: ""
 estimatedtime: 0
 createdat: 2026-03-03T00:17:38.979606324Z
-updatedat: 2026-03-04T01:25:44.483315126Z
+updatedat: 2026-03-04T01:27:34.391537543Z
 closedat: null
