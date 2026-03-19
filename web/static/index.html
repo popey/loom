@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loom - Autonomous Agent Orchestration</title>
-    <link rel="stylesheet" href="/static/css/style.css?v=8">
+    <link rel="stylesheet" href="/static/css/style.css?v=9">
     <script src="/static/js/diagnostic.js?v=6"></script>
     <link rel="stylesheet" href="/static/css/bootstrap.css?v=4">
     <script src="/static/js/bootstrap.js"></script>
@@ -200,6 +200,12 @@
                 <div class="kanban-column kanban-dropzone" data-status="open">
                     <h3>Open</h3>
                     <div id="open-beads" class="bead-list">
+                        <!-- Beads will be loaded here -->
+                    </div>
+                </div>
+                <div class="kanban-column kanban-dropzone" data-status="blocked">
+                    <h3>Blocked</h3>
+                    <div id="blocked-beads" class="bead-list">
                         <!-- Beads will be loaded here -->
                     </div>
                 </div>
