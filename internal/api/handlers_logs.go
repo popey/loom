@@ -83,12 +83,6 @@ func (s *Server) HandleLogsStream(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// Check if logging manager is available
-	if s.logManager == nil {
-		http.Error(w, "Logging service not available", http.StatusServiceUnavailable)
-		return
-	}
-
 	// Disable write timeout for SSE - the server's WriteTimeout (30s default)
 	// would kill long-running streams.
 	rc := http.NewResponseController(w)
@@ -107,10 +101,9 @@ func (s *Server) HandleLogsStream(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if s.logManager == nil {
-		// Keep SSE alive to avoid 503 loops in the UI when logs are unavailable.
+		// Keep the SSE stream alive to avoid tight reconnect loops in the browser.
 		fmt.Fprintf(w, "event: connected\ndata: {\"message\":\"Log stream connected (log manager unavailable)\"}\n\n")
 		flusher.Flush()
-
 		ctx := r.Context()
 		ticker := time.NewTicker(10 * time.Second)
 		defer ticker.Stop()
@@ -239,9 +232,8 @@ func (s *Server) HandleLogsExport(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	// Check if logging manager is available.
 	if s.logManager == nil {
-		http.Error(w, "Logging service not available", http.StatusServiceUnavailable)
+		http.Error(w, "log manager unavailable", http.StatusServiceUnavailable)
 		return
 	}
 

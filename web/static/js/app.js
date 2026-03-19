@@ -538,6 +538,8 @@ async function apiCall(endpoint, options = {}) {
     }
 }
 
+window.apiCall = apiCall;
+
 async function ensureAuth(forcePrompt = false) {
     // Skip authentication if it's disabled
     if (!AUTH_ENABLED) {
@@ -2019,6 +2021,7 @@ async function sendCeoReplQuery() {
     const responseEl = document.getElementById('ceo-repl-response');
     const sendBtn = document.getElementById('ceo-repl-send');
     const agentSelect = document.getElementById('ceo-repl-agent-select');
+    const projectSelect = document.getElementById('ceo-repl-project-select');
     if (!input || !responseEl || !sendBtn) return;
 
     const message = (input.value || '').trim();
@@ -2029,12 +2032,12 @@ async function sendCeoReplQuery() {
 
     // Check if an agent is selected from the dropdown
     const selectedAgentId = agentSelect ? agentSelect.value : '';
-const selectedProjectId = projectSelect ? projectSelect.value : '';
+    const selectedProjectId = projectSelect ? projectSelect.value : '';
     if (selectedAgentId) {
         // Find the selected agent and dispatch to them
         const selectedAgent = (state.agents || []).find(a => a.id === selectedAgentId);
         if (selectedAgent) {
-            return ceoReplDispatchToAgentById(selectedAgent, message, responseEl, sendBtn);
+            return ceoReplDispatchToAgentById(selectedAgent, message, responseEl, sendBtn, selectedProjectId);
         }
     }
 
@@ -2051,7 +2054,7 @@ const selectedProjectId = projectSelect ? projectSelect.value : '';
 }
 
 // Dispatch a task to a specific agent selected from the dropdown
-async function ceoReplDispatchToAgentById(agent, taskMessage, responseEl, sendBtn) {
+async function ceoReplDispatchToAgentById(agent, taskMessage, responseEl, sendBtn, selectedProjectId = '') {
     const projectId = selectedProjectId || agent.project_id || uiState.project.selectedId || ((state.projects || [])[0] || {}).id || '';
     if (!projectId) {
         responseEl.innerHTML = '<span style="color:var(--danger-color)">No project selected. Select a project first.</span>';
@@ -2393,31 +2396,32 @@ function renderCeoDashboard() {
     const beads = state.beads || [];
     const agents = state.agents || [];
     const decisions = state.decisions || [];
+    const projectSelect = document.getElementById('ceo-repl-project-select');
 
     // Populate the CEO REPL project dropdown for agent assignment
-if (projectSelect) {
-    const currentValue = projectSelect.value;
-    
-    // Clear existing options except the first one
-    while (projectSelect.options.length > 1) {
-        projectSelect.remove(1);
-    }
-    
-    // Add all projects
-    for (const project of (state.projects || [])) {
-        const option = document.createElement('option');
-        option.value = project.id;
-        option.textContent = project.name || project.id;
-        projectSelect.appendChild(option);
-    }
-    
-    // Restore previous selection if still valid
-    if (currentValue && Array.from(projectSelect.options).some(o => o.value === currentValue)) {
-        projectSelect.value = currentValue;
-    }
-}
+    if (projectSelect) {
+        const currentValue = projectSelect.value;
 
-// Populate the CEO REPL agent dropdown with ALL agents grouped by project
+        // Clear existing options except the first one
+        while (projectSelect.options.length > 1) {
+            projectSelect.remove(1);
+        }
+
+        // Add all projects
+        for (const project of projects) {
+            const option = document.createElement('option');
+            option.value = project.id;
+            option.textContent = project.name || project.id;
+            projectSelect.appendChild(option);
+        }
+
+        // Restore previous selection if still valid
+        if (currentValue && Array.from(projectSelect.options).some(o => o.value === currentValue)) {
+            projectSelect.value = currentValue;
+        }
+    }
+
+    // Populate the CEO REPL agent dropdown with ALL agents grouped by project
     const agentSelect = document.getElementById('ceo-repl-agent-select');
     if (agentSelect) {
         const currentValue = agentSelect.value;
@@ -2488,29 +2492,6 @@ if (projectSelect) {
                     break;
                 }
             }
-        }
-    }
-    // Populate the CEO REPL project dropdown for agent assignment
-    const projectSelect = document.getElementById('ceo-repl-project-select');
-    if (projectSelect) {
-        const currentValue = projectSelect.value;
-        
-        // Clear existing options except the first one
-        while (projectSelect.options.length > 1) {
-            projectSelect.remove(1);
-        }
-        
-        // Add all projects
-        for (const project of (state.projects || [])) {
-            const option = document.createElement('option');
-            option.value = project.id;
-            option.textContent = project.name || project.id;
-            projectSelect.appendChild(option);
-        }
-        
-        // Restore previous selection if still valid
-        if (currentValue && Array.from(projectSelect.options).some(o => o.value === currentValue)) {
-            projectSelect.value = currentValue;
         }
     }
 
