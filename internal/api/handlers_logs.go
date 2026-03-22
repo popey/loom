@@ -62,7 +62,7 @@ func (s *Server) HandleLogsRecent(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	logs, err = s.logManager.Query(limit, level, source, agentID, beadID, projectID, since, until)
+	logs, err := s.logManager.Query(limit, level, source, agentID, beadID, projectID, since, until)
 	if err != nil {
 		http.Error(w, fmt.Sprintf("Failed to query logs: %v", err), http.StatusInternalServerError)
 		return
