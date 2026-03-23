@@ -258,20 +258,45 @@ func (a *Loom) GetAgentsByRole(role string) ([]string, error) {
 	if a.agentManager == nil {
 		return nil, fmt.Errorf("agent manager not available")
 	}
-	// TODO: Implement role-based agent retrieval
-	return []string{}, nil
+	var result []string
+	for _, ag := range a.agentManager.ListAgents() {
+		if ag != nil && ag.Role == role {
+			result = append(result, ag.ID)
+		}
+	}
+	return result, nil
 }
-func (a *Loom) WakeAgent(agentID string, motivation *motivation.Motivation) error {
+func (a *Loom) WakeAgent(agentID string, m *motivation.Motivation) error {
 	if a.agentManager == nil {
 		return fmt.Errorf("agent manager not available")
 	}
-	// TODO: Implement agent wake-up
+	ag, err := a.agentManager.GetAgent(agentID)
+	if err != nil {
+		return fmt.Errorf("agent not found: %w", err)
+	}
+	// Transition paused agents to idle so the task executor can pick them up.
+	// Agents already in an active state (working, deciding, blocked) are left alone.
+	if ag.Status == "paused" {
+		if err := a.agentManager.UpdateAgentStatus(agentID, "idle"); err != nil {
+			return fmt.Errorf("failed to update agent status: %w", err)
+		}
+	}
+	// Signal the task executor that work may be available for this agent's project.
+	a.WakeProject(ag.ProjectID)
 	return nil
 }
-func (a *Loom) WakeAgentsByRole(role string, motivation *motivation.Motivation) error {
+func (a *Loom) WakeAgentsByRole(role string, m *motivation.Motivation) error {
 	if a.agentManager == nil {
 		return fmt.Errorf("agent manager not available")
 	}
-	// TODO: Implement role-based agent wake-up
+	agentIDs, err := a.GetAgentsByRole(role)
+	if err != nil {
+		return fmt.Errorf("failed to get agents by role: %w", err)
+	}
+	for _, id := range agentIDs {
+		if err := a.WakeAgent(id, m); err != nil {
+			log.Printf("[Loom] Warning: failed to wake agent %s: %v", id, err)
+		}
+	}
 	return nil
 }

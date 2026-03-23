@@ -99,9 +99,16 @@ func (a *Loom) applyCEODecisionToParent(decisionID string) error {
 	return nil
 }
 func (a *Loom) GetPendingDecisions() ([]string, error) {
-	if a.consensusManager == nil {
-		return nil, fmt.Errorf("consensus manager not available")
+	if a.decisionManager == nil {
+		return nil, fmt.Errorf("decision manager not available")
 	}
-	// TODO: Implement pending decision retrieval
-	return []string{}, nil
+	decisions, err := a.decisionManager.GetPendingDecisions(nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to get pending decisions: %w", err)
+	}
+	ids := make([]string, 0, len(decisions))
+	for _, d := range decisions {
+		ids = append(ids, d.ID)
+	}
+	return ids, nil
 }

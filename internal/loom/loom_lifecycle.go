@@ -1883,8 +1883,64 @@ func (a *Loom) PublishMotivationFired(trigger *motivation.MotivationTrigger) err
 	return nil
 }
 
-// StartWorkflow starts a workflow
+// StartWorkflow starts a workflow of the given type. input is a map[string]interface{}
+// that may contain "project_id" and "bead_id" keys.
 func (a *Loom) StartWorkflow(workflowType string, input interface{}) (string, error) {
-	// TODO: Implement workflow start
-	return "", nil
+	if a.workflowEngine == nil {
+		return "", fmt.Errorf("workflow engine not available")
+	}
+	if workflowType == "" {
+		return "", fmt.Errorf("workflow type required")
+	}
+
+	// Extract project and bead context from input.
+	var projectID, beadID string
+	if inputMap, ok := input.(map[string]interface{}); ok {
+		if pid, ok := inputMap["project_id"].(string); ok {
+			projectID = pid
+		}
+		if bid, ok := inputMap["bead_id"].(string); ok {
+			beadID = bid
+		}
+	}
+
+	// Validate the project exists when specified.
+	if projectID != "" {
+		if _, err := a.projectManager.GetProject(projectID); err != nil {
+			return "", fmt.Errorf("project not found: %w", err)
+		}
+	}
+
+	// Look up workflow definition by type.
+	workflows, err := a.workflowEngine.GetDatabase().ListWorkflows(workflowType, projectID)
+	if err != nil {
+		return "", fmt.Errorf("failed to list workflows: %w", err)
+	}
+	if len(workflows) == 0 {
+		return "", fmt.Errorf("no workflow found for type %s", workflowType)
+	}
+	wf := workflows[0]
+
+	// Start the execution (sets state to active and records start timestamp).
+	exec, err := a.workflowEngine.StartWorkflow(beadID, wf.ID, projectID)
+	if err != nil {
+		return "", fmt.Errorf("failed to start workflow: %w", err)
+	}
+
+	// Emit workflow.started event.
+	if a.eventBus != nil {
+		_ = a.eventBus.Publish(&eventbus.Event{
+			Type:      eventbus.EventTypeWorkflowStarted,
+			Source:    "workflow-engine",
+			ProjectID: projectID,
+			Data: map[string]interface{}{
+				"workflow_id":   wf.ID,
+				"workflow_name": wf.Name,
+				"execution_id":  exec.ID,
+				"bead_id":       beadID,
+			},
+		})
+	}
+
+	return exec.ID, nil
 }

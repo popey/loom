@@ -7,6 +7,7 @@ import (
 	"path/filepath"
 	"time"
 
+	"github.com/jordanhubbard/loom/internal/activity"
 	"github.com/jordanhubbard/loom/internal/eventbus"
 	"github.com/jordanhubbard/loom/internal/project"
 	"github.com/jordanhubbard/loom/pkg/models"
@@ -286,6 +287,19 @@ func (a *Loom) WakeProject(projectID string) {
 	}
 }
 func (a *Loom) GetProjectIdle(projectID string, duration time.Duration) (bool, error) {
-	// TODO: Implement project idle checking
-	return false, nil
+	if projectID == "" {
+		return false, fmt.Errorf("project ID required")
+	}
+	if a.activityManager == nil {
+		return false, nil
+	}
+	activities, err := a.activityManager.GetActivities(activity.ActivityFilters{
+		ProjectIDs: []string{projectID},
+		Since:      time.Now().Add(-duration),
+		Limit:      1,
+	})
+	if err != nil {
+		return false, fmt.Errorf("failed to check project activity: %w", err)
+	}
+	return len(activities) == 0, nil
 }
