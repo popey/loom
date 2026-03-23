@@ -533,32 +533,112 @@ func (a *Loom) GetBeadsWithUpcomingDeadlines(withinDays int) ([]motivation.BeadD
 	if a.beadsManager == nil {
 		return nil, fmt.Errorf("beads manager not available")
 	}
-	// TODO: Implement deadline checking
-	return []motivation.BeadDeadlineInfo{}, nil
+	allBeads, err := a.beadsManager.ListBeads(map[string]interface{}{})
+	if err != nil {
+		return nil, err
+	}
+	now := time.Now()
+	cutoff := now.AddDate(0, 0, withinDays)
+	var result []motivation.BeadDeadlineInfo
+	for _, b := range allBeads {
+		if b == nil || b.DueDate == nil {
+			continue
+		}
+		if b.Status == models.BeadStatusClosed {
+			continue
+		}
+		if b.DueDate.After(now) && !b.DueDate.After(cutoff) {
+			daysRemaining := int(b.DueDate.Sub(now).Hours() / 24)
+			result = append(result, motivation.BeadDeadlineInfo{
+				BeadID:        b.ID,
+				Title:         b.Title,
+				ProjectID:     b.ProjectID,
+				DueDate:       *b.DueDate,
+				DaysRemaining: daysRemaining,
+				UrgencyLevel:  beadUrgencyLevel(daysRemaining),
+			})
+		}
+	}
+	return result, nil
 }
 func (a *Loom) GetOverdueBeads() ([]motivation.BeadDeadlineInfo, error) {
 	if a.beadsManager == nil {
 		return nil, fmt.Errorf("beads manager not available")
 	}
-	// TODO: Implement overdue checking
-	return []motivation.BeadDeadlineInfo{}, nil
+	allBeads, err := a.beadsManager.ListBeads(map[string]interface{}{})
+	if err != nil {
+		return nil, err
+	}
+	now := time.Now()
+	var result []motivation.BeadDeadlineInfo
+	for _, b := range allBeads {
+		if b == nil || b.DueDate == nil {
+			continue
+		}
+		if b.Status == models.BeadStatusClosed {
+			continue
+		}
+		if !b.DueDate.After(now) {
+			daysOverdue := int(now.Sub(*b.DueDate).Hours()/24) + 1
+			result = append(result, motivation.BeadDeadlineInfo{
+				BeadID:        b.ID,
+				Title:         b.Title,
+				ProjectID:     b.ProjectID,
+				DueDate:       *b.DueDate,
+				DaysRemaining: -daysOverdue,
+				UrgencyLevel:  motivation.UrgencyLevelCritical,
+			})
+		}
+	}
+	return result, nil
 }
 func (a *Loom) GetBeadsByStatus(status string) ([]string, error) {
 	if a.beadsManager == nil {
 		return nil, fmt.Errorf("beads manager not available")
 	}
-	// TODO: Implement status filtering
-	return []string{}, nil
+	beadsList, err := a.beadsManager.ListBeads(map[string]interface{}{
+		"status": models.BeadStatus(status),
+	})
+	if err != nil {
+		return nil, err
+	}
+	result := make([]string, 0, len(beadsList))
+	for _, b := range beadsList {
+		result = append(result, b.ID)
+	}
+	return result, nil
 }
-func (a *Loom) CreateStimulusBead(motivation *motivation.Motivation, triggerData map[string]interface{}) (string, error) {
+func (a *Loom) CreateStimulusBead(mot *motivation.Motivation, triggerData map[string]interface{}) (string, error) {
 	if a.beadsManager == nil {
 		return "", fmt.Errorf("beads manager not available")
 	}
-	// Create a bead with the motivation as context
-	_ = fmt.Sprintf("Stimulus: %s", motivation.Name)
-	_ = fmt.Sprintf("Triggered by motivation: %s\nTrigger data: %v", motivation.Name, triggerData)
-	// TODO: Use proper bead creation API
-	return "", nil
+	title := fmt.Sprintf("Stimulus: %s", mot.Name)
+	description := fmt.Sprintf("Triggered by motivation: %s\nTrigger data: %v", mot.Name, triggerData)
+	projectID := mot.ProjectID
+	if projectID == "" {
+		projectID = a.config.GetSelfProjectID()
+	}
+	bead, err := a.CreateBead(title, description, models.BeadPriority(mot.Priority), "task", projectID)
+	if err != nil {
+		return "", fmt.Errorf("failed to create stimulus bead: %w", err)
+	}
+	return bead.ID, nil
+}
+
+// beadUrgencyLevel returns the urgency level for a bead with the given days remaining.
+func beadUrgencyLevel(daysRemaining int) motivation.UrgencyLevel {
+	switch {
+	case daysRemaining < 3:
+		return motivation.UrgencyLevelCritical
+	case daysRemaining < 7:
+		return motivation.UrgencyLevelHigh
+	case daysRemaining < 14:
+		return motivation.UrgencyLevelMedium
+	case daysRemaining < 30:
+		return motivation.UrgencyLevelLow
+	default:
+		return motivation.UrgencyLevelNone
+	}
 }
 
 // attemptSelfHeal tries to automatically fix common project readiness issues.
